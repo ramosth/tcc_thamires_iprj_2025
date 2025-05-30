@@ -5,11 +5,42 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[ABNT 2017]{abnt2017nbr13028}
+\abntrefinfo{ABNT}{ABNT}{2017}
+{ABNT, A.~B. de N.~T. \emph{NBR 13028: Mineração - Elaboração e
+  apresentação de projeto de barragens para disposição de rejeitos,
+  contenção de sedimentos e reservação de água}.
+Rio de Janeiro, 2017. Dispon{\'\i}vel em:
+  \url{https://blogdopedlowski.com/wp-content/uploads/2019/03/nbr13028-2018.pdf}.
+  Acesso em: 27 abr. 2025.}
+
+\bibitem[ANM 2022]{anm2022anuario}
+\abntrefinfo{ANM}{ANM}{2022}
+{ANM, A.~N. de M. \emph{Anuário Mineral Brasileiro 2022: prévia}.
+Brasília, 2022. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/anuario-mineral/anuario-mineral-brasileiro/PreviaAMB2022.pdf}.
+  Acesso em: 15 jun. 2024.}
+
+\bibitem[ANM 2023]{anm2023anuario}
+\abntrefinfo{ANM}{ANM}{2023a}
+{ANM, A.~N. de M. \emph{Anuário Mineral Brasileiro: Principais Substâncias
+  Metálicas}.
+Brasília, 2023. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/anuario-mineral/anuario-mineral-brasileiro/amb\_2023.pdf}.
+  Acesso em: 27 abr. 2025.}
+
 \bibitem[ANM 2023]{anm2023informe3}
-\abntrefinfo{ANM}{ANM}{2023}
+\abntrefinfo{ANM}{ANM}{2023b}
 {ANM, A.~N. de M. \emph{Informe Mineral - 3º Trimestre de 2023}.
 [S.l.], 2023. 1--16~p. Dispon{\'\i}vel em:
   \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/informe-mineral/publicacoes-nacionais/informe\_03tri2023.pdf}.
+  Acesso em: 14 jun. 2024.}
+
+\bibitem[ANM 2023]{anm2023informe4}
+\abntrefinfo{ANM}{ANM}{2023c}
+{ANM, A.~N. de M. \emph{Informe Mineral - 4º Trimestre de 2023}.
+[S.l.], 2023. 1--18~p. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/informe-mineral/publicacoes-nacionais/informe04tri2023.pdf}.
   Acesso em: 14 jun. 2024.}
 
 \bibitem[APC 2024]{apc2024industria}
@@ -39,6 +70,56 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em: \url{https://www.bbc.com/portuguese/articles/cxr0vlvqdgqo}.
   Acesso em: 20 abr. 2025.}
 
+\bibitem[BRASIL 1934]{codigoflorestal1934}
+\abntrefinfo{BRASIL}{BRASIL}{1934a}
+{BRASIL. \emph{Decreto Federal nº 23.793, de 23 de janeiro de 1934. Approva o
+  codigo florestal que com este baixa}. Rio de Janeiro: Diário Oficial da
+  União, 1934.
+Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/decreto/1930-1949/D23793.htm}.}
+
+\bibitem[BRASIL 1934]{codigominas1934}
+\abntrefinfo{BRASIL}{BRASIL}{1934b}
+{BRASIL. \emph{Decreto Federal nº 24.642, de 10 de julho de 1934. Decreta o
+  Código de Minas}. Rio de Janeiro: Diário Oficial da União, 1934.
+Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/decreto/1930-1949/d24642.htm}.}
+
+\bibitem[BRASIL 1934]{codigoaguas1934}
+\abntrefinfo{BRASIL}{BRASIL}{1934c}
+{BRASIL. \emph{Decreto Federal nº 24.643, de 10 de julho de 1934. Decreta o
+  Código de Águas}. Rio de Janeiro: Diário Oficial da União, 1934.
+Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/decreto/D24643compilado.htm}.}
+
+\bibitem[BRASIL 1967]{brasil1967decreto}
+\abntrefinfo{BRASIL}{BRASIL}{1967}
+{BRASIL. \emph{Decreto-lei nº 227, de 28 de fevereiro de 1967. Código de
+  Mineração}. Brasília, DF: Diário Oficial da União, 1967.
+Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/decreto-lei/del0227.htm}. Acesso
+  em: 27 abr. 2025.}
+
+\bibitem[BRASIL 2018]{decreto9406_2018}
+\abntrefinfo{BRASIL}{BRASIL}{2018}
+{BRASIL. \emph{Decreto nº 9.406, de 12 de junho de 2018. Regulamenta o
+  Decreto-Lei nº 227, de 28 de fevereiro de 1967, a Lei nº 6.567, de 24 de
+  setembro de 1978, a Lei nº 7.805, de 18 de julho de 1989, e a Lei nº
+  13.575, de 26 de dezembro de 2017}. Brasília: Diário Oficial da União,
+  2018.
+Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/\_Ato2015-2018/2018/Decreto/D9406.htm}.}
+
+\bibitem[Cardozo et al. 2017]{cardozo2017metodos}
+\abntrefinfo{Cardozo et al.}{CARDOZO et al.}{2017}
+{CARDOZO, F. A.~C.; PIMENTA, M.~M.; ZINGANO, A.~C. Métodos construtivos de
+  barragens de rejeitos de mineração -- uma revisão.
+\emph{HOLOS}, Instituto Federal de Educação, Ciência e Tecnologia do Rio
+  Grande do Norte, v.~8, p. 77--85, 2017.
+Dispon{\'\i}vel em:
+  \url{https://www2.ifrn.edu.br/ojs/index.php/HOLOS/article/view/5367}. Acesso
+  em: 7 maio 2025.}
+
 \bibitem[Carvalho et al. 2012]{carvalho2012dependencia}
 \abntrefinfo{Carvalho et al.}{CARVALHO et al.}{2012}
 {CARVALHO, C.~G. et al. A dependência da arrecadação do município de ouro
@@ -47,6 +128,22 @@ Dispon{\'\i}vel em: \url{https://www.bbc.com/portuguese/articles/cxr0vlvqdgqo}.
 Dispon{\'\i}vel em:
   \url{https://www.scielo.br/j/rem/a/JY6LcTRRJy9mhK3k5Ysgqvc/}. Acesso em: 27
   abr. 2025.}
+
+\bibitem[Carvalho et al. 2014]{carvalho2014minerio}
+\abntrefinfo{Carvalho et al.}{CARVALHO et al.}{2014}
+{CARVALHO, P.~L. et al. Minério de ferro.
+\emph{BNDES Setorial}, BNDES, n.~39, p. 197--234, 2014.
+Dispon{\'\i}vel em:
+  \url{https://web.bndes.gov.br/bib/jspui/bitstream/1408/4802/1/BS\%2039\%20min\%c3\%a9rio\%20de\%20ferro\_P.pdf}.
+  Acesso em: 07 mai. 2025.}
+
+\bibitem[Carvalho et al. 2018]{carvalho2018sustentabilidade}
+\abntrefinfo{Carvalho et al.}{CARVALHO et al.}{2018}
+{CARVALHO, P. S. L.~d. et al. Sustentabilidade socioambiental da mineração.
+\emph{BNDES Setorial}, n.~47, p. 333--390, 2018.
+Dispon{\'\i}vel em:
+  \url{https://web.bndes.gov.br/bib/jspui/bitstream/1408/15361/1/BS47\_\_Mineracao\_\_FECHADO.pdf}.
+  Acesso em: 27 abr. 2025.}
 
 \bibitem[Domingues 2022]{domingues2022historia}
 \abntrefinfo{Domingues}{DOMINGUES}{2022}
@@ -93,6 +190,14 @@ Dispon{\'\i}vel em:
   \url{https://www.scielo.br/j/ecos/a/5NrXd8XXCZhtFshHQnzDNqp/}. Acesso em: 27
   abr. 2025.}
 
+\bibitem[Freire et al. 2020]{freire2020rejeitos}
+\abntrefinfo{Freire et al.}{FREIRE et al.}{2020}
+{FREIRE, G. M. C. d.~A.; VIEIRA, L. d.~M.; MARTINS, M. U.~E. (Ed.).
+  \emph{Rejeitos de minério no Brasil: uma análise interdisciplinar}. São
+  Paulo: Pimenta Cultural, 2020. Dispon{\'\i}vel em:
+  \url{https://www.pimentacultural.com/wp-content/uploads/2024/05/eBook\_Rejeitos-minerio-Brasil.pdf}.
+  Acesso em: 07 mai. 2025.}
+
 \bibitem[IBGE 2024]{ibge2024pib}
 \abntrefinfo{IBGE}{IBGE}{2024}
 {IBGE, I.~B. de~Geografia~e E. \emph{PIB cresce 2,9\% em 2023 e fecha o ano em
@@ -108,6 +213,13 @@ Dispon{\'\i}vel em:
 [S.l.], 2025. Dispon{\'\i}vel em:
   \url{https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/42774-pib-cresce-3-4-em-2024-e-fecha-o-ano-em-r-11-7-trilhoes}.
   Acesso em: 27 abr. 2025.}
+
+\bibitem[IBRAM 2016]{ibram2016gestao}
+\abntrefinfo{IBRAM}{IBRAM}{2016}
+{IBRAM, I.~B. de M. \emph{Gestão e Manejo de Rejeitos da Mineração}. 1. ed.
+  Brasília: IBRAM, 2016. Dispon{\'\i}vel em:
+  \url{https://ibram.org.br/wp-content/uploads/2021/02/Gestao-e-Manejo-de-Rejeitos-da-Mineracao-2016.pdf}.
+  Acesso em: 07 mai. 2025.}
 
 \bibitem[IBRAM 2020]{IBRAM2020}
 \abntrefinfo{IBRAM}{IBRAM}{2020}
@@ -144,6 +256,14 @@ Dispon{\'\i}vel em:
 [S.l.], 2017. Acesso em: 08 mai. 2025. Dispon{\'\i}vel em:
   \url{https://repositorio.ipea.gov.br/handle/11058/7916}.}
 
+\bibitem[Jr 2019]{minasjr2019lavra}
+\abntrefinfo{Jr}{JR}{2019}
+{JR, C. M. M.~J. M. \emph{Lavra: o que é, métodos, regulamentação}. 2019.
+  Site institucional.
+Dispon{\'\i}vel em:
+  \url{https://www.minasjr.com.br/lavra-o-que-e-metodos-regulamentacao/}.
+  Acesso em: 19 de junho de 2024.}
+
 \bibitem[Le{\~a}o e Rabelo 2023]{leao2023extensao}
 \abntrefinfo{Le{\~a}o e Rabelo}{LE{\~A}O; RABELO}{2023}
 {LE{\~A}O, R.; RABELO, R. \emph{A Extensão da Cadeia Produtiva da Economia
@@ -157,6 +277,17 @@ Rio de Janeiro, 2023. Dispon{\'\i}vel em:
 {LINS, F. A. d.~F.; LOUREIRO, F. E. d. V.~L.; ALBUQUERQUE, G. d. A. S.~C.
   \emph{Brasil 500 anos. A construção do Brasil e da América Latina pela
   Mineração}. Rio de Janeiro: CETEM/MCTI, 2000.}
+
+\bibitem[Lozano 2006]{erazo2006selecao}
+\abntrefinfo{Lozano}{LOZANO}{2006}
+{LOZANO, F.~A. E.
+\emph{Seleção de locais para barragens de rejeitos usando o método de
+  análise hierárquica}.
+Disserta\c{c}\~{a}o (Dissertação (Mestrado)) --- Universidade de São Paulo,
+  São Paulo, 2006.
+Dispon{\'\i}vel em:
+  \url{http://www.teses.usp.br/teses/disponiveis/3/3145/tde-14122006-123702/}.
+  Acesso em: 07 maio 2025.}
 
 \bibitem[Mining e ICMM 2021]{ICMM2021}
 \abntrefinfo{Mining e ICMM}{MINING; ICMM}{2021}
@@ -173,11 +304,36 @@ Dispon{\'\i}vel em:
   \url{https://www.brasilmineral.com.br/revista/436/Revista\%20Brasil\%20Mineral\%20-\%20436.pdf}.
   Acesso em: 27 abr. 2025.}
 
+\bibitem[Rocha 2020]{rocha2020impacto}
+\abntrefinfo{Rocha}{ROCHA}{2020}
+{ROCHA, C.~M.
+\emph{Impacto macroeconômico da mineração no Brasil}.
+Disserta\c{c}\~{a}o (Dissertação (Mestrado)) --- Escola de Economia de São
+  Paulo, Mestrado Profissional em Economia, Faculdade Getulio Vargas, São
+  Paulo, 2020.
+Dispon{\'\i}vel em:
+  \url{https://repositorio.fgv.br/server/api/core/bitstreams/6f0a8039-7f82-4387-9a4d-d26086334600/content}.
+  Acesso em: 27 abr. 2025.}
+
 \bibitem[Svampa 2019]{svampa2019fronteiras}
 \abntrefinfo{Svampa}{SVAMPA}{2019}
 {SVAMPA, M. \emph{As fronteiras do neoextrativismo na América Latina:
   Conflitos socioambientais, giro ecoterritorial e novas dependências}. São
   Paulo: Elefante, 2019.}
+
+\bibitem[USGS 2022]{usgs2022iron}
+\abntrefinfo{USGS}{USGS}{2022}
+{USGS, U. G.~S. \emph{Iron Ore. Mineral Commodity Summaries 2022}.
+[S.l.], 2022. Dispon{\'\i}vel em:
+  \url{https://pubs.usgs.gov/periodicals/mcs2022/mcs2022-iron-ore.pdf}. Acesso
+  em: 14 jun. 2024.}
+
+\bibitem[USGS 2024]{usgs2024iron}
+\abntrefinfo{USGS}{USGS}{2024}
+{USGS, U. G.~S. \emph{Iron Ore. Mineral Commodity Summaries 2024}.
+[S.l.], 2024. Dispon{\'\i}vel em:
+  \url{https://pubs.usgs.gov/periodicals/mcs2024/mcs2024-iron-ore.pdf}. Acesso
+  em: 14 jun. 2024.}
 
 \bibitem[Villas-B{\^o}as 1995]{villasboas1995mineracao}
 \abntrefinfo{Villas-B{\^o}as}{VILLAS-B{\^O}AS}{1995}

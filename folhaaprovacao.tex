@@ -1,10 +1,8 @@
 \newcommand{\imprimirfolhaaprovacao}{%
 	\begin{folhadeaprovacao}
 		\begin{center}
-			%{\large{\imprimirautor}}\\[1cm]
-            {\imprimirautor}\\[1cm]
+			{\imprimirautor}\\[1cm]
 			\vspace{2cm}
-			%{\Large\bfseries\imprimirtitulo}
             {\bfseries\imprimirtitulo}
 		\end{center}		
 		\vspace{1cm}
@@ -12,22 +10,27 @@
 		\begin{minipage}{.5\textwidth}
 			{\fontsize{12}{12}\selectfont{\imprimirpreambulo}}
 		\end{minipage}%
-		\\\\\\\\
-		\vspace{1cm}
-		Aprovado em XX de XXXXXXXX de 2025.\\
+		
+		\vspace{2cm} % Substituiu os múltiplos \\
+		Aprovado em XX de XXXXXXXX de 2025.
+		
 		\vspace{1.5cm}
 		Banca examinadora:
 		
+		\vspace{1cm} % Espaço antes das assinaturas
 		\assinatura{\flushleft{\imprimirorientador\vspace{0.2cm}\\Instituto Politécnico - UERJ}}
+		
+		\vspace{0.5cm} % Espaço entre assinaturas
 		\assinatura{\flushleft{\membrobancaA\\\intituicaoBancaA}}
+		
+		\vspace{0.5cm} % Espaço entre assinaturas
         \assinatura{\flushleft{\membrobancaB\\\intituicaoBancaB}}
+		
 		\begin{center}
 			\vfill
-			%{\large\imprimirlocal}
 			{\imprimirlocal}
 			\vspace{0.2cm}
 			\par
-			%{\large\the\year}
 			{\the\year}
 		\end{center}		
 	\end{folhadeaprovacao}
