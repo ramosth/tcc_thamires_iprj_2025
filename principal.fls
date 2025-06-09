@@ -1,6 +1,6 @@
-PWD c:\Users\THAMIRES\Documents\documentos pessoais\UERJ\tcc_thamires_iprj_2025
+PWD c:\Users\THAMIRES\OneDrive - iLAB, LLC\Documents\documentos pessoais\UERJ\tcc_thamires_iprj_2025
 INPUT C:\Users\THAMIRES\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\THAMIRES\Documents\documentos pessoais\UERJ\tcc_thamires_iprj_2025\principal.tex
+INPUT c:\Users\THAMIRES\OneDrive - iLAB, LLC\Documents\documentos pessoais\UERJ\tcc_thamires_iprj_2025\principal.tex
 OUTPUT principal.log
 INPUT C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex\latex\abntex2\abntex2.cls
 INPUT C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex\latex\abntex2\abntex2.cls
@@ -623,13 +623,6 @@ INPUT .\figures\image8_estoque_mao_obra.png
 INPUT .\figures\image8_estoque_mao_obra.png
 INPUT .\figures\image8_estoque_mao_obra.png
 INPUT .\figures\image8_estoque_mao_obra.png
-INPUT .\figures\image9_distribuicao_itm.png
-INPUT .\figures\image9_distribuicao_itm.png
-INPUT .\figures\image9_distribuicao_itm.png
-INPUT .\figures\image9_distribuicao_itm.png
-INPUT .\figures\image9_distribuicao_itm.png
-INPUT .\figures\image9_distribuicao_itm.png
-INPUT .\figures\image9_distribuicao_itm.png
 INPUT .\figures\image10_evolucao_saldo_itm.png
 INPUT .\figures\image10_evolucao_saldo_itm.png
 INPUT .\figures\image10_evolucao_saldo_itm.png
@@ -637,6 +630,13 @@ INPUT .\figures\image10_evolucao_saldo_itm.png
 INPUT .\figures\image10_evolucao_saldo_itm.png
 INPUT .\figures\image10_evolucao_saldo_itm.png
 INPUT .\figures\image10_evolucao_saldo_itm.png
+INPUT .\figures\image10_evolucao_saldo_itm_3tri.png
+INPUT .\figures\image10_evolucao_saldo_itm_3tri.png
+INPUT .\figures\image10_evolucao_saldo_itm_3tri.png
+INPUT .\figures\image10_evolucao_saldo_itm_3tri.png
+INPUT .\figures\image10_evolucao_saldo_itm_3tri.png
+INPUT .\figures\image10_evolucao_saldo_itm_3tri.png
+INPUT .\figures\image10_evolucao_saldo_itm_3tri.png
 INPUT .\figures\image11_salarios_admissao.png
 INPUT .\figures\image11_salarios_admissao.png
 INPUT .\figures\image11_salarios_admissao.png
@@ -644,46 +644,32 @@ INPUT .\figures\image11_salarios_admissao.png
 INPUT .\figures\image11_salarios_admissao.png
 INPUT .\figures\image11_salarios_admissao.png
 INPUT .\figures\image11_salarios_admissao.png
-INPUT .\figures\image12_participacao_minerais.png
-INPUT .\figures\image12_participacao_minerais.png
-INPUT .\figures\image12_participacao_minerais.png
-INPUT .\figures\image12_participacao_minerais.png
-INPUT .\figures\image12_participacao_minerais.png
-INPUT .\figures\image12_participacao_minerais.png
-INPUT .\figures\image12_participacao_minerais.png
+INPUT .\figures\image14_etapas_mineracao.png
+INPUT .\figures\image14_etapas_mineracao.png
+INPUT .\figures\image14_etapas_mineracao.png
+INPUT .\figures\image14_etapas_mineracao.png
+INPUT .\figures\image14_etapas_mineracao.png
+INPUT .\figures\image14_etapas_mineracao.png
+INPUT .\figures\image14_etapas_mineracao.png
+INPUT .\figures\image16_operacoes_lavra.png
+INPUT .\figures\image16_operacoes_lavra.png
+INPUT .\figures\image16_operacoes_lavra.png
+INPUT .\figures\image16_operacoes_lavra.png
+INPUT .\figures\image16_operacoes_lavra.png
+INPUT .\figures\image16_operacoes_lavra.png
+INPUT .\figures\image16_operacoes_lavra.png
+INPUT .\figures\image15_metodos_lavra.png
+INPUT .\figures\image15_metodos_lavra.png
+INPUT .\figures\image15_metodos_lavra.png
+INPUT .\figures\image15_metodos_lavra.png
+INPUT .\figures\image15_metodos_lavra.png
+INPUT .\figures\image15_metodos_lavra.png
+INPUT .\figures\image15_metodos_lavra.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
-INPUT .\figures\image13_porte_lavra.png
-INPUT .\figures\image13_porte_lavra.png
-INPUT .\figures\image13_porte_lavra.png
-INPUT .\figures\image13_porte_lavra.png
-INPUT .\figures\image13_porte_lavra.png
-INPUT .\figures\image13_porte_lavra.png
-INPUT .\figures\image13_porte_lavra.png
-INPUT .\figures\image14_etapas_mineracao.png
-INPUT .\figures\image14_etapas_mineracao.png
-INPUT .\figures\image14_etapas_mineracao.png
-INPUT .\figures\image14_etapas_mineracao.png
-INPUT .\figures\image14_etapas_mineracao.png
-INPUT .\figures\image14_etapas_mineracao.png
-INPUT .\figures\image14_etapas_mineracao.png
-INPUT .\figures\image15_metodos_lavra.png
-INPUT .\figures\image15_metodos_lavra.png
-INPUT .\figures\image15_metodos_lavra.png
-INPUT .\figures\image15_metodos_lavra.png
-INPUT .\figures\image15_metodos_lavra.png
-INPUT .\figures\image15_metodos_lavra.png
-INPUT .\figures\image15_metodos_lavra.png
-INPUT .\figures\image16_operacoes_lavra.png
-INPUT .\figures\image16_operacoes_lavra.png
-INPUT .\figures\image16_operacoes_lavra.png
-INPUT .\figures\image16_operacoes_lavra.png
-INPUT .\figures\image16_operacoes_lavra.png
-INPUT .\figures\image16_operacoes_lavra.png
-INPUT .\figures\image16_operacoes_lavra.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8c.tfm
 INPUT .\figures\image17_producao_minerio.png
 INPUT .\figures\image17_producao_minerio.png
 INPUT .\figures\image17_producao_minerio.png
@@ -691,13 +677,120 @@ INPUT .\figures\image17_producao_minerio.png
 INPUT .\figures\image17_producao_minerio.png
 INPUT .\figures\image17_producao_minerio.png
 INPUT .\figures\image17_producao_minerio.png
-INPUT .\figures\image18_metodos_construtivos.png
-INPUT .\figures\image18_metodos_construtivos.png
-INPUT .\figures\image18_metodos_construtivos.png
-INPUT .\figures\image18_metodos_construtivos.png
-INPUT .\figures\image18_metodos_construtivos.png
-INPUT .\figures\image18_metodos_construtivos.png
-INPUT .\figures\image18_metodos_construtivos.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8c.vf
+INPUT .\figures\image18_metodo_montante.png
+INPUT .\figures\image18_metodo_montante.png
+INPUT .\figures\image18_metodo_montante.png
+INPUT .\figures\image18_metodo_montante.png
+INPUT .\figures\image18_metodo_montante.png
+INPUT .\figures\image18_metodo_montante.png
+INPUT .\figures\image18_metodo_montante.png
+INPUT .\figures\image19_jusante.png
+INPUT .\figures\image19_jusante.png
+INPUT .\figures\image19_jusante.png
+INPUT .\figures\image19_jusante.png
+INPUT .\figures\image19_jusante.png
+INPUT .\figures\image19_jusante.png
+INPUT .\figures\image19_jusante.png
+INPUT .\figures\image18_montante_cont.png
+INPUT .\figures\image18_montante_cont.png
+INPUT .\figures\image18_montante_cont.png
+INPUT .\figures\image18_montante_cont.png
+INPUT .\figures\image18_montante_cont.png
+INPUT .\figures\image18_montante_cont.png
+INPUT .\figures\image18_montante_cont.png
+INPUT .\figures\image20_linha_de_centro.png
+INPUT .\figures\image20_linha_de_centro.png
+INPUT .\figures\image20_linha_de_centro.png
+INPUT .\figures\image20_linha_de_centro.png
+INPUT .\figures\image20_linha_de_centro.png
+INPUT .\figures\image20_linha_de_centro.png
+INPUT .\figures\image20_linha_de_centro.png
+INPUT .\figures\image21_distribuicao_barragens_por_metodo_atual.png
+INPUT .\figures\image21_distribuicao_barragens_por_metodo_atual.png
+INPUT .\figures\image21_distribuicao_barragens_por_metodo_atual.png
+INPUT .\figures\image21_distribuicao_barragens_por_metodo_atual.png
+INPUT .\figures\image21_distribuicao_barragens_por_metodo_atual.png
+INPUT .\figures\image21_distribuicao_barragens_por_metodo_atual.png
+INPUT .\figures\image21_distribuicao_barragens_por_metodo_atual.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvrc8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvrc8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT .\figures\image22_categoria_de_risco_ct.png
+INPUT .\figures\image22_categoria_de_risco_ct.png
+INPUT .\figures\image22_categoria_de_risco_ct.png
+INPUT .\figures\image22_categoria_de_risco_ct.png
+INPUT .\figures\image22_categoria_de_risco_ct.png
+INPUT .\figures\image22_categoria_de_risco_ct.png
+INPUT .\figures\image22_categoria_de_risco_ct.png
+INPUT .\figures\image23_categoria_de_risco_ec.png
+INPUT .\figures\image23_categoria_de_risco_ec.png
+INPUT .\figures\image23_categoria_de_risco_ec.png
+INPUT .\figures\image23_categoria_de_risco_ec.png
+INPUT .\figures\image23_categoria_de_risco_ec.png
+INPUT .\figures\image23_categoria_de_risco_ec.png
+INPUT .\figures\image23_categoria_de_risco_ec.png
+INPUT .\figures\image24_categoria_de_risco_ps.png
+INPUT .\figures\image24_categoria_de_risco_ps.png
+INPUT .\figures\image24_categoria_de_risco_ps.png
+INPUT .\figures\image24_categoria_de_risco_ps.png
+INPUT .\figures\image24_categoria_de_risco_ps.png
+INPUT .\figures\image24_categoria_de_risco_ps.png
+INPUT .\figures\image24_categoria_de_risco_ps.png
+INPUT .\figures\image25_dano_potencial.png
+INPUT .\figures\image25_dano_potencial.png
+INPUT .\figures\image25_dano_potencial.png
+INPUT .\figures\image25_dano_potencial.png
+INPUT .\figures\image25_dano_potencial.png
+INPUT .\figures\image25_dano_potencial.png
+INPUT .\figures\image25_dano_potencial.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
+INPUT .\figures\image26_matriz_cri_e_dpa.png
+INPUT .\figures\image26_matriz_cri_e_dpa.png
+INPUT .\figures\image26_matriz_cri_e_dpa.png
+INPUT .\figures\image26_matriz_cri_e_dpa.png
+INPUT .\figures\image26_matriz_cri_e_dpa.png
+INPUT .\figures\image26_matriz_cri_e_dpa.png
+INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
+INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
+INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
+INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
+INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
+INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
+INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
+INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
+INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
+INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
+INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
+INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
+INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
+INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
+INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
+INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
+INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
+INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
+INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
+INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
+INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
+INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
+INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
+INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
+INPUT .\figures\image31_evolucao_classificacao_12_meses.png
+INPUT .\figures\image31_evolucao_classificacao_12_meses.png
+INPUT .\figures\image31_evolucao_classificacao_12_meses.png
+INPUT .\figures\image31_evolucao_classificacao_12_meses.png
+INPUT .\figures\image31_evolucao_classificacao_12_meses.png
+INPUT .\figures\image31_evolucao_classificacao_12_meses.png
+INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
+INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
+INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
+INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
+INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
+INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
 INPUT .\cap2.tex
 INPUT .\cap2.tex
 OUTPUT cap2.aux
@@ -788,6 +881,16 @@ INPUT conclusao.aux
 INPUT .\nocite.aux
 INPUT .\nocite.aux
 INPUT nocite.aux
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvr8a.pfb

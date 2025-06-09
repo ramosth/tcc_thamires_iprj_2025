@@ -5,172 +5,440 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[ABNT 2017]{abnt2017nbr13028}
-\abntrefinfo{ABNT}{ABNT}{2017}
-{ABNT, A.~B. de N.~T. \emph{NBR 13028: Mineração - Elaboração e
-  apresentação de projeto de barragens para disposição de rejeitos,
-  contenção de sedimentos e reservação de água}.
+\bibitem[{ABNT} 2017]{abnt2017}
+\abntrefinfo{{ABNT}}{{ABNT}}{2017}
+{{ABNT}. \emph{NBR 13028: Mineração - Elaboração e apresentação de
+  projeto de barragens para disposição de rejeitos, contenção de sedimentos
+  e reservação de água - Requisitos}.
 Rio de Janeiro, 2017. Dispon{\'\i}vel em:
-  \url{https://blogdopedlowski.com/wp-content/uploads/2019/03/nbr13028-2018.pdf}.
-  Acesso em: 27 abr. 2025.}
+  \url{https://blogdopedlowski.com/wp-content/uploads/2019/03/nbr13028-2018.pdf}.}
 
-\bibitem[ANM 2022]{anm2022anuario}
-\abntrefinfo{ANM}{ANM}{2022}
-{ANM, A.~N. de M. \emph{Anuário Mineral Brasileiro 2022: prévia}.
-Brasília, 2022. Dispon{\'\i}vel em:
-  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/anuario-mineral/anuario-mineral-brasileiro/PreviaAMB2022.pdf}.
-  Acesso em: 15 jun. 2024.}
-
-\bibitem[ANM 2023]{anm2023anuario}
-\abntrefinfo{ANM}{ANM}{2023a}
-{ANM, A.~N. de M. \emph{Anuário Mineral Brasileiro: Principais Substâncias
-  Metálicas}.
-Brasília, 2023. Dispon{\'\i}vel em:
-  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/anuario-mineral/anuario-mineral-brasileiro/amb\_2023.pdf}.
-  Acesso em: 27 abr. 2025.}
-
-\bibitem[ANM 2023]{anm2023informe3}
-\abntrefinfo{ANM}{ANM}{2023b}
-{ANM, A.~N. de M. \emph{Informe Mineral - 3º Trimestre de 2023}.
-[S.l.], 2023. 1--16~p. Dispon{\'\i}vel em:
-  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/informe-mineral/publicacoes-nacionais/informe\_03tri2023.pdf}.
-  Acesso em: 14 jun. 2024.}
-
-\bibitem[ANM 2023]{anm2023informe4}
-\abntrefinfo{ANM}{ANM}{2023c}
-{ANM, A.~N. de M. \emph{Informe Mineral - 4º Trimestre de 2023}.
-[S.l.], 2023. 1--18~p. Dispon{\'\i}vel em:
-  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/informe-mineral/publicacoes-nacionais/informe04tri2023.pdf}.
-  Acesso em: 14 jun. 2024.}
-
-\bibitem[APC 2024]{apc2024industria}
-\abntrefinfo{APC}{APC}{2024}
-{APC, A.~C. \emph{Indústria de mineração no Brasil}. 2024.
+\bibitem[{AGÊNCIA NACIONAL DE MINERAÇÃO} 2019]{anm2019resolucao13}
+\abntrefinfo{{AGÊNCIA NACIONAL DE MINERAÇÃO}}{{AGÊNCIA NACIONAL DE
+  MINERAÇÃO}}{2019a}
+{{AGÊNCIA NACIONAL DE MINERAÇÃO}. \emph{Resolução nº 13, de 8 de agosto
+  de 2019: Estabelece medidas regulatórias objetivando assegurar a
+  estabilidade de barragens de mineração, notadamente aquelas construídas ou
+  alteadas pelo método denominado "a montante" ou por método declarado como
+  desconhecido}. 2019. Diário Oficial da União: Poder Executivo, Brasília,
+  DF, ano 157, n. 154, p. 98, 9 ago. 2019. Seção 1.
 Dispon{\'\i}vel em:
-  \url{https://apc.com.br/industria/industria-de-mineracao-no-brasil/}. Acesso
-  em: 27 abr. 2025.}
+  \url{https://www.snisb.gov.br/Entenda\_Mais/legislacao-aplicada/anm-resolucao-13-2019.pdf}.}
 
-\bibitem[Ar{\'a}oz 2020]{araoz2020mineracao}
-\abntrefinfo{Ar{\'a}oz}{AR{\'A}OZ}{2020}
-{AR{\'A}OZ, M.~H. \emph{Mineração, genealogia do desastre: O extrativismo na
-  América como origem da modernidade}. São Paulo: Elefante, 2020.}
+\bibitem[{AGÊNCIA NACIONAL DE MINERAÇÃO} 2019]{anm2019resolucao4}
+\abntrefinfo{{AGÊNCIA NACIONAL DE MINERAÇÃO}}{{AGÊNCIA NACIONAL DE
+  MINERAÇÃO}}{2019b}
+{{AGÊNCIA NACIONAL DE MINERAÇÃO}. \emph{Resolução nº 4, de 15 de
+  fevereiro de 2019: Estabelece medidas regulatórias objetivando assegurar a
+  estabilidade de barragens de mineração, notadamente aquelas construídas ou
+  alteadas pelo método denominado "a montante" ou por método declarado como
+  desconhecido}. 2019. Diário Oficial da União: Poder Executivo, Brasília,
+  DF, ano 157, n. 34, p. 76, 18 fev. 2019. Seção 1.
+Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/barragens/resolucao-no-4-de-15-de-fevereiro-de-2019}.}
 
-\bibitem[Barreto et al. 2001]{barreto2001mineracao}
+\bibitem[{Agência Brasil} 2019]{agenciabrasil2019}
+\abntrefinfo{{Agência Brasil}}{{Agência Brasil}}{2019}
+{{Agência Brasil}. \emph{Resolução obriga 19 mineradoras a descaracterizar
+  suas barragens}. Brasília, DF: [s.n.], 2019.
+Dispon{\'\i}vel em:
+  \url{https://agenciabrasil.ebc.com.br/geral/noticia/2019-02/resolucao-obriga-19-mineradoras-descaracterizar-suas-barragens}.}
+
+\bibitem[{Agência Nacional de Mineração} 2025]{anm2025boletim}
+\abntrefinfo{{Agência Nacional de Mineração}}{{Agência Nacional de
+  Mineração}}{2025}
+{{Agência Nacional de Mineração}. \emph{Boletim mensal – fevereiro 2025}.
+Brasília, DF, 2025. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/barragens/boletim-de-barragens-de-mineracao/boletim-mensal-fevereiro-2025.pdf}.}
+
+\bibitem[{ANM} 2022]{anm2022}
+\abntrefinfo{{ANM}}{{ANM}}{2022}
+{{ANM}. \emph{Anuário Mineral Brasileiro 2022: prévia}.
+Brasília, 2022. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/anuario-mineral/anuario-mineral-brasileiro/PreviaAMB2022.pdf}.}
+
+\bibitem[{ANM} 2023]{anm2023a}
+\abntrefinfo{{ANM}}{{ANM}}{2023a}
+{{ANM}. \emph{Anuário Mineral Brasileiro}: Principais substâncias metálicas.
+Brasília, 2023. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/anuario-mineral/anuario-mineral-brasileiro/amb\_2023.pdf}.}
+
+\bibitem[{ANM} 2023]{anm2023barragens}
+\abntrefinfo{{ANM}}{{ANM}}{2023b}
+{{ANM}. \emph{Boletim de Barragens de Mineração – Setembro de 2023}.
+Brasília, 2023. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/barragens/boletim-de-barragens-de-mineracao/report\_trimestral\_set\_2023}.}
+
+\bibitem[{ANM} 2023]{anm2023}
+\abntrefinfo{{ANM}}{{ANM}}{2023c}
+{{ANM}. \emph{Informe Mineral}: 3º trimestre de 2023.
+[S.l.], 2023. 1--16~p. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/informe-mineral/publicacoes-nacionais/informe\_03tri2023.pdf}.}
+
+\bibitem[{ANM} 2023]{anm2023c}
+\abntrefinfo{{ANM}}{{ANM}}{2023d}
+{{ANM}. \emph{Informe Mineral}: 3º trimestre de 2023.
+[S.l.], 2023. 1--16~p. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/informe-mineral/publicacoes-nacionais/informe\_03tri2023.pdf}.}
+
+\bibitem[{ANM} 2023]{anm2023d}
+\abntrefinfo{{ANM}}{{ANM}}{2023e}
+{{ANM}. \emph{Informe Mineral}: 4º trimestre de 2023.
+[S.l.], 2023. 1--18~p. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/informe-mineral/publicacoes-nacionais/informe04tri2023.pdf}.}
+
+\bibitem[{ANM SISTEMA} 2020]{anmsistema2020}
+\abntrefinfo{{ANM SISTEMA}}{{ANM SISTEMA}}{2020}
+{{ANM SISTEMA}. \emph{Dashboard Barragens de Mineração}. 2020.
+Dispon{\'\i}vel em:
+  \url{https://geo.anm.gov.br/portal/apps/dashboards/4a9d32d667b14b5ba23f66b3ecc88a65}.
+  Sistema Integrado de Gestão de Barragens de Mineração.}
+
+\bibitem[{APC} 2024]{apc2024}
+\abntrefinfo{{APC}}{{APC}}{2024}
+{{APC}. \emph{Indústria de mineração no Brasil}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://apc.com.br/industria/industria-de-mineracao-no-brasil/}.}
+
+\bibitem[Araujo 2006]{araujo2006}
+\abntrefinfo{Araujo}{ARAUJO}{2006}
+{ARAUJO, C. B.~d.
+\emph{Contribuição ao estudo do comportamento de barragens de rejeito de
+  mineração de ferro}.
+Disserta\c{c}\~{a}o (Dissertação (Mestrado em Engenharia Civil)) ---
+  Universidade Federal do Rio de Janeiro, Rio de Janeiro, 2006.
+Dispon{\'\i}vel em:
+  \url{https://minerva.ufrj.br/F/?func=direct&doc\_number=000667613&local\_base=UFR01}.}
+
+\bibitem[{ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS} 2015]{abnt2015iso14001}
+\abntrefinfo{{ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS}}{{ASSOCIAÇÃO
+  BRASILEIRA DE NORMAS TÉCNICAS}}{2015}
+{{ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS}. \emph{NBR ISO 14001: sistemas
+  de gestão ambiental: requisitos com orientações para uso}.
+Rio de Janeiro, 2015. Dispon{\'\i}vel em:
+  \url{https://www.normas.com.br/visualizar/abnt-nbr-nm/10259/abnt-nbriso14001-sistemas-de-gestao-ambiental-requisitos-com-orientacoes-para-uso}.}
+
+\bibitem[Barreto et al. 2001]{barreto2001}
 \abntrefinfo{Barreto et al.}{BARRETO et al.}{2001}
 {BARRETO, M.~L. et al. \emph{Mineração e desenvolvimento sustentável:
   desafios para o Brasil}. 1. ed. São Paulo: Editora Maria Laura Barreto,
   2001. 215~p. Dispon{\'\i}vel em:
-  \url{https://livroaberto.ibict.br/bitstream/123456789/922/1/mineracao\_desenvolvimento\_sustentavel.pdf}.
-  Acesso em: 27 abr. 2025.}
+  \url{https://livroaberto.ibict.br/bitstream/123456789/922/1/mineracao\_desenvolvimento\_sustentavel.pdf}.}
 
-\bibitem[BBC 2023]{BBC2023}
-\abntrefinfo{BBC}{BBC}{2023}
-{BBC, B. N.~B. \emph{Como agro e mineração superaram a manufatura no PIB
-  brasileiro pela primeira vez em décadas}. 2023.
-Dispon{\'\i}vel em: \url{https://www.bbc.com/portuguese/articles/cxr0vlvqdgqo}.
-  Acesso em: 20 abr. 2025.}
-
-\bibitem[BRASIL 1934]{codigoflorestal1934}
-\abntrefinfo{BRASIL}{BRASIL}{1934a}
-{BRASIL. \emph{Decreto Federal nº 23.793, de 23 de janeiro de 1934. Approva o
-  codigo florestal que com este baixa}. Rio de Janeiro: Diário Oficial da
-  União, 1934.
+\bibitem[Barros 2017]{barros2017legislacao}
+\abntrefinfo{Barros}{BARROS}{2017}
+{BARROS, J.~N.
+\emph{Legislação ambiental aplicada à mineração}.
+86~p. Tese (Trabalho de Conclusão de Curso (Bacharelado em Engenharia
+  Sanitária e Ambiental)) --- Universidade Federal do Recôncavo da Bahia,
+  Cruz das Almas, 2017.
 Dispon{\'\i}vel em:
+  \url{https://educapes.capes.gov.br/bitstream/capes/175231/1/Legislacao\_Juliana.pdf}.}
+
+\bibitem[{BBC News Brasil} 2023]{BBC2023}
+\abntrefinfo{{BBC News Brasil}}{{BBC News Brasil}}{2023}
+{{BBC News Brasil}. \emph{Como agro e mineração superaram a manufatura no PIB
+  brasileiro pela primeira vez em décadas}. 2023.
+Dispon{\'\i}vel em:
+  \url{https://www.bbc.com/portuguese/articles/cxr0vlvqdgqo}.}
+
+\bibitem[{BRASIL} 1934]{brasil1934a}
+\abntrefinfo{{BRASIL}}{{BRASIL}}{1934a}
+{{BRASIL}. \emph{Decreto Federal nº 23.793, de 23 de janeiro de 1934}: Approva
+  o codigo florestal que com este baixa.
+Rio de Janeiro, 1934. Dispon{\'\i}vel em:
   \url{https://www.planalto.gov.br/ccivil\_03/decreto/1930-1949/D23793.htm}.}
 
-\bibitem[BRASIL 1934]{codigominas1934}
-\abntrefinfo{BRASIL}{BRASIL}{1934b}
-{BRASIL. \emph{Decreto Federal nº 24.642, de 10 de julho de 1934. Decreta o
-  Código de Minas}. Rio de Janeiro: Diário Oficial da União, 1934.
-Dispon{\'\i}vel em:
+\bibitem[{BRASIL} 1934]{brasil1934b}
+\abntrefinfo{{BRASIL}}{{BRASIL}}{1934b}
+{{BRASIL}. \emph{Decreto Federal nº 24.642, de 10 de julho de 1934}: Decreta o
+  código de minas.
+Rio de Janeiro, 1934. Dispon{\'\i}vel em:
   \url{https://www.planalto.gov.br/ccivil\_03/decreto/1930-1949/d24642.htm}.}
 
-\bibitem[BRASIL 1934]{codigoaguas1934}
-\abntrefinfo{BRASIL}{BRASIL}{1934c}
-{BRASIL. \emph{Decreto Federal nº 24.643, de 10 de julho de 1934. Decreta o
-  Código de Águas}. Rio de Janeiro: Diário Oficial da União, 1934.
-Dispon{\'\i}vel em:
-  \url{https://www.planalto.gov.br/ccivil\_03/decreto/D24643compilado.htm}.}
+\bibitem[{BRASIL} 1934]{brasil1934c}
+\abntrefinfo{{BRASIL}}{{BRASIL}}{1934c}
+{{BRASIL}. \emph{Decreto Federal nº 24.643, de 10 de julho de 1934}.
+Rio de Janeiro, 1934.}
 
-\bibitem[BRASIL 1967]{brasil1967decreto}
-\abntrefinfo{BRASIL}{BRASIL}{1967}
-{BRASIL. \emph{Decreto-lei nº 227, de 28 de fevereiro de 1967. Código de
-  Mineração}. Brasília, DF: Diário Oficial da União, 1967.
-Dispon{\'\i}vel em:
-  \url{https://www.planalto.gov.br/ccivil\_03/decreto-lei/del0227.htm}. Acesso
-  em: 27 abr. 2025.}
+\bibitem[{BRASIL} 1967]{brasil1967}
+\abntrefinfo{{BRASIL}}{{BRASIL}}{1967}
+{{BRASIL}. \emph{Decreto-lei nº 227, de 28 de fevereiro de 1967}: Código de
+  mineração.
+Brasília, DF, 1967. Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/decreto-lei/del0227.htm}.}
 
-\bibitem[BRASIL 2018]{decreto9406_2018}
-\abntrefinfo{BRASIL}{BRASIL}{2018}
-{BRASIL. \emph{Decreto nº 9.406, de 12 de junho de 2018. Regulamenta o
-  Decreto-Lei nº 227, de 28 de fevereiro de 1967, a Lei nº 6.567, de 24 de
-  setembro de 1978, a Lei nº 7.805, de 18 de julho de 1989, e a Lei nº
-  13.575, de 26 de dezembro de 2017}. Brasília: Diário Oficial da União,
-  2018.
+\bibitem[BRASIL 1981]{brasil1981lei6938}
+\abntrefinfo{BRASIL}{BRASIL}{1981}
+{BRASIL. \emph{Lei nº 6.938, de 31 de agosto de 1981: Dispõe sobre a
+  Política Nacional do Meio Ambiente, seus fins e mecanismos de formulação e
+  aplicação, e dá outras providências}. 1981.
 Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/leis/l6938.htm}.}
+
+\bibitem[BRASIL 1986]{conama1986resolucao001}
+\abntrefinfo{BRASIL}{BRASIL}{1986}
+{BRASIL. \emph{Resolução CONAMA nº 001, de 23 de janeiro de 1986: Dispõe
+  sobre critérios básicos e diretrizes gerais para o uso e implementação da
+  Avaliação de Impacto Ambiental}. 1986.
+Dispon{\'\i}vel em:
+  \url{https://www.ibama.gov.br/sophia/cnia/legislacao/RSO00186.htm}.}
+
+\bibitem[BRASIL 1988]{brasil1988constituicao}
+\abntrefinfo{BRASIL}{BRASIL}{1988}
+{BRASIL. \emph{Constituição da República Federativa do Brasil de 1988}.
+  1988.
+Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/constituicao/constituicao.htm}.}
+
+\bibitem[BRASIL 1998]{brasil1998lei9605}
+\abntrefinfo{BRASIL}{BRASIL}{1998}
+{BRASIL. \emph{Lei nº 9.605, de 12 de fevereiro de 1998: Dispõe sobre as
+  sanções penais e administrativas derivadas de condutas e atividades lesivas
+  ao meio ambiente}. 1998.
+Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/leis/l9605.htm}.}
+
+\bibitem[{BRASIL} 2010]{brasil2010pnsb}
+\abntrefinfo{{BRASIL}}{{BRASIL}}{2010}
+{{BRASIL}. \emph{Lei nº 12.334, de 20 de setembro de 2010}: Estabelece a
+  política nacional de segurança de barragens destinadas à acumulação de
+  água para quaisquer usos, à disposição final ou temporária de rejeitos e
+  à acumulação de resíduos industriais, cria o sistema nacional de
+  informações sobre segurança de barragens e altera a redação do art. 35
+  da lei nº 9.433, de 8 de janeiro de 1997, e do art. 4º da lei nº 9.984, de
+  17 de julho de 2000.
+Brasília, DF, 2010. Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/\_ato2007-2010/2010/lei/l12334.htm}.}
+
+\bibitem[{BRASIL} 2018]{brasil2018}
+\abntrefinfo{{BRASIL}}{{BRASIL}}{2018}
+{{BRASIL}. \emph{Decreto nº 9.406, de 12 de junho de 2018}: Regulamenta o
+  decreto-lei nº 227, de 28 de fevereiro de 1967, a lei nº 6.567, de 24 de
+  setembro de 1978, a lei nº 7.805, de 18 de julho de 1989, e a lei nº
+  13.575, de 26 de dezembro de 2017.
+Brasília, 2018. Dispon{\'\i}vel em:
   \url{https://www.planalto.gov.br/ccivil\_03/\_Ato2015-2018/2018/Decreto/D9406.htm}.}
 
-\bibitem[Cardozo et al. 2017]{cardozo2017metodos}
+\bibitem[{BRASIL. Agência Nacional de Mineração} 2022]{anm2022resolucao95}
+\abntrefinfo{{BRASIL. Agência Nacional de Mineração}}{{BRASIL. Agência
+  Nacional de Mineração}}{2022}
+{{BRASIL. Agência Nacional de Mineração}. \emph{Resolução nº 95, de 7 de
+  fevereiro de 2022: Estabelece medidas regulatórias aplicáveis às barragens
+  de mineração}. 2022. Diário Oficial da União: seção 1, Brasília, DF, 9
+  fev. 2022.
+Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/barragens/legislacao/resolucao-no-95-2022.pdf}.}
+
+\bibitem[{BRASIL. Comissão de Valores Mobiliários} 2009]{cvm2009instrucao480}
+\abntrefinfo{{BRASIL. Comissão de Valores Mobiliários}}{{BRASIL. Comissão de
+  Valores Mobiliários}}{2009}
+{{BRASIL. Comissão de Valores Mobiliários}. \emph{Instrução CVM nº 480, de
+  7 de dezembro de 2009: Dispõe sobre o registro de emissores de valores
+  mobiliários admitidos à negociação em mercados regulamentados}. 2009.
+  Diário Oficial da União: seção 1, Brasília, DF, 9 dez. 2009.
+Dispon{\'\i}vel em:
+  \url{https://conteudo.cvm.gov.br/export/sites/cvm/legislacao/instrucoes/anexos/400/inst480consolid.pdf}.}
+
+\bibitem[{BRASIL. Conselho Nacional do Meio Ambiente}
+  2001]{conama2001resolucao286}
+\abntrefinfo{{BRASIL. Conselho Nacional do Meio Ambiente}}{{BRASIL. Conselho
+  Nacional do Meio Ambiente}}{2001}
+{{BRASIL. Conselho Nacional do Meio Ambiente}. \emph{Resolução CONAMA nº
+  286, de 30 de agosto de 2001: Dispõe sobre o licenciamento ambiental de
+  empreendimentos nas regiões endêmicas de malária}. 2001. Diário Oficial
+  da União: seção 1, Brasília, DF, 31 ago. 2001.
+Dispon{\'\i}vel em: \url{http://www.areaseg.com/conama/2001/286-2001.pdf}.}
+
+\bibitem[{BRASIL. Conselho Nacional do Meio Ambiente (CONAMA)}
+  1987]{conama1987resolucao9}
+\abntrefinfo{{BRASIL. Conselho Nacional do Meio Ambiente (CONAMA)}}{{BRASIL.
+  Conselho Nacional do Meio Ambiente (CONAMA)}}{1987}
+{{BRASIL. Conselho Nacional do Meio Ambiente (CONAMA)}. \emph{Resolução
+  CONAMA nº 9, de 3 de dezembro de 1987: Dispõe sobre a realização de
+  audiências públicas no processo de licenciamento ambiental}. 1987. Diário
+  Oficial da União: seção 1, Brasília, DF, 5 jul. 1990, p. 12945.
+Dispon{\'\i}vel em:
+  \url{https://www.ipaam.am.gov.br/wp-content/uploads/2021/01/Conama-009-87-Audi\%C3\%AAncias-P\%C3\%BAblicas-no-processo-de-LA.pdf}.}
+
+\bibitem[{BRASIL. Conselho Nacional do Meio Ambiente (CONAMA)}
+  1997]{conama1997resolucao237}
+\abntrefinfo{{BRASIL. Conselho Nacional do Meio Ambiente (CONAMA)}}{{BRASIL.
+  Conselho Nacional do Meio Ambiente (CONAMA)}}{1997}
+{{BRASIL. Conselho Nacional do Meio Ambiente (CONAMA)}. \emph{Resolução
+  CONAMA nº 237, de 19 de dezembro de 1997: Dispõe sobre a revisão e
+  complementação dos procedimentos e critérios utilizados para o
+  licenciamento ambiental}. 1997. Diário Oficial da União: seção 1,
+  Brasília, DF, n. 247, p. 30841-30843, 22 dez. 1997.
+Dispon{\'\i}vel em:
+  \url{https://conama.mma.gov.br/?option=com\_sisconama&task=arquivo.download&id=237}.}
+
+\bibitem[{BRASIL. Senado Federal} 2017]{brasil2017senado}
+\abntrefinfo{{BRASIL. Senado Federal}}{{BRASIL. Senado Federal}}{2017}
+{{BRASIL. Senado Federal}. \emph{Lei que cria Agência Nacional de Mineração
+  é sancionada com vetos}. Brasília, DF: Senado Federal, 2017.
+Dispon{\'\i}vel em:
+  \url{https://www12.senado.leg.br/noticias/materias/2017/12/27/lei-que-cria-agencia-nacional-de-mineracao-e-sancionada-com-vetos}.}
+
+\bibitem[{CANADIAN DAM ASSOCIATION} 2007]{cda2007guidelines}
+\abntrefinfo{{CANADIAN DAM ASSOCIATION}}{{CANADIAN DAM ASSOCIATION}}{2007}
+{{CANADIAN DAM ASSOCIATION}. \emph{Dam safety guidelines}. Edmonton: CDA, 2007.
+Dispon{\'\i}vel em:
+  \url{https://cda.ca/publications/cda-guidance-documents/dam-safety-publications}.}
+
+\bibitem[Cardozo et al. 2017]{cardozo2017}
 \abntrefinfo{Cardozo et al.}{CARDOZO et al.}{2017}
 {CARDOZO, F. A.~C.; PIMENTA, M.~M.; ZINGANO, A.~C. Métodos construtivos de
   barragens de rejeitos de mineração -- uma revisão.
 \emph{HOLOS}, Instituto Federal de Educação, Ciência e Tecnologia do Rio
   Grande do Norte, v.~8, p. 77--85, 2017.
 Dispon{\'\i}vel em:
-  \url{https://www2.ifrn.edu.br/ojs/index.php/HOLOS/article/view/5367}. Acesso
-  em: 7 maio 2025.}
+  \url{https://www2.ifrn.edu.br/ojs/index.php/HOLOS/article/view/5367}.}
 
-\bibitem[Carvalho et al. 2012]{carvalho2012dependencia}
-\abntrefinfo{Carvalho et al.}{CARVALHO et al.}{2012}
-{CARVALHO, C.~G. et al. A dependência da arrecadação do município de ouro
-  preto do setor mineral.
-\emph{Revista Escola de Minas}, SciELO Brasil, v.~65, n.~3, 2012.
+\bibitem[Carneiro 2018]{carneiro2018}
+\abntrefinfo{Carneiro}{CARNEIRO}{2018}
+{CARNEIRO, G. S.~G.
+\emph{Estudo das causas, impactos e medidas corretivas do rompimento de uma
+  barragem de rejeitos, usando o caso da barragem de Mariana – MG}.
+24~p. Disserta\c{c}\~{a}o (Trabalho de Conclusão de Curso (Graduação em
+  Engenharia Civil)) --- Universidade Federal de Uberlândia, Uberlândia,
+  2018.
 Dispon{\'\i}vel em:
-  \url{https://www.scielo.br/j/rem/a/JY6LcTRRJy9mhK3k5Ysgqvc/}. Acesso em: 27
-  abr. 2025.}
+  \url{https://repositorio.ufu.br/bitstream/123456789/22203/3/EstudoCausasImpacto.pdf}.}
 
-\bibitem[Carvalho et al. 2014]{carvalho2014minerio}
-\abntrefinfo{Carvalho et al.}{CARVALHO et al.}{2014}
-{CARVALHO, P.~L. et al. Minério de ferro.
-\emph{BNDES Setorial}, BNDES, n.~39, p. 197--234, 2014.
-Dispon{\'\i}vel em:
-  \url{https://web.bndes.gov.br/bib/jspui/bitstream/1408/4802/1/BS\%2039\%20min\%c3\%a9rio\%20de\%20ferro\_P.pdf}.
-  Acesso em: 07 mai. 2025.}
-
-\bibitem[Carvalho et al. 2018]{carvalho2018sustentabilidade}
+\bibitem[Carvalho et al. 2018]{carvalho2018}
 \abntrefinfo{Carvalho et al.}{CARVALHO et al.}{2018}
-{CARVALHO, P. S. L.~d. et al. Sustentabilidade socioambiental da mineração.
-\emph{BNDES Setorial}, n.~47, p. 333--390, 2018.
-Dispon{\'\i}vel em:
-  \url{https://web.bndes.gov.br/bib/jspui/bitstream/1408/15361/1/BS47\_\_Mineracao\_\_FECHADO.pdf}.
-  Acesso em: 27 abr. 2025.}
+{CARVALHO, P. S.~L. et al. \emph{Sustentabilidade socioambiental da
+  mineração}.
+[S.l.], 2018. 333--390~p. Dispon{\'\i}vel em:
+  \url{https://web.bndes.gov.br/bib/jspui/bitstream/1408/15361/1/BS47\_\_Mineracao\_\_FECHADO.pdf}.}
 
-\bibitem[Domingues 2022]{domingues2022historia}
+\bibitem[{Comitê da Bacia Hidrográfica do Rio São Francisco}
+  2020]{cbhsf2020}
+\abntrefinfo{{Comitê da Bacia Hidrográfica do Rio São Francisco}}{{Comitê
+  da Bacia Hidrográfica do Rio São Francisco}}{2020}
+{{Comitê da Bacia Hidrográfica do Rio São Francisco}. \emph{Brasil tem nova
+  lei de segurança de barragem}. 2020.
+Dispon{\'\i}vel em:
+  \url{https://cbhsaofrancisco.org.br/noticias/novidades/brasil-tem-nova-lei-de-seguranca-de-barragem/}.}
+
+\bibitem[Conceição 2018]{conceicao2018}
+\abntrefinfo{Conceição}{CONCEIçãO}{2018}
+{CONCEIçãO, R. A. C.~d.
+\emph{Análise do potencial de risco de rompimento em barragens de rejeito de
+  mineração do Estado do Pará utilizando a metodologia Risk-Based Profiling
+  System (RBPS)}.
+68~p. Disserta\c{c}\~{a}o (Dissertação (Mestrado Profissional em Gestão de
+  Riscos e Desastres Naturais na Amazônia)) --- Universidade Federal do Pará,
+  Belém, 2018.
+Dispon{\'\i}vel em:
+  \url{https://ppggrd.propesp.ufpa.br/ARQUIVOS/dissertacoes/disserta\%C3\%A7oes\%20ppggrd/Disserta\%C3\%A7\%C3\%A3o\%20Almir.pdf}.}
+
+\bibitem[{Conselho Nacional de Recursos Hídricos} 2012]{cnrh2012}
+\abntrefinfo{{Conselho Nacional de Recursos Hídricos}}{{Conselho Nacional de
+  Recursos Hídricos}}{2012}
+{{Conselho Nacional de Recursos Hídricos}. \emph{Resolução CNRH nº 143, de
+  10 de julho de 2012}: Estabelece critérios gerais de classificação de
+  barragens por categoria de risco, dano potencial associado e pelo seu volume,
+  em atendimento ao art. 7º da lei nº 12.334, de 20 de setembro de 2010.
+Brasília, DF, 2012. Seção 1, 4 set. 2012. Dispon{\'\i}vel em:
+  \url{https://www.ceivap.org.br/ligislacao/Resolucoes-CNRH/Resolucao-CNRH\%20143.pdf}.}
+
+\bibitem[Cruz 2024]{cruz2024iso}
+\abntrefinfo{Cruz}{CRUZ}{2024a}
+{CRUZ, C. \emph{A ISO 31000 na mineração}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.linkedin.com/pulse/iso-31000-na-minera\%C3\%A7\%C3\%A3o-claudinei-cruz-gvkzf/}.}
+
+\bibitem[Cruz 2024]{cruz2024}
+\abntrefinfo{Cruz}{CRUZ}{2024b}
+{CRUZ, C.~O.
+\emph{Classificação das barragens de rejeito baseada no risco de eventos
+  indesejáveis utilizando dados do SIGBM – Sistema Integrado de Gestão de
+  Barragens de Mineração da ANM}.
+112~p. Disserta\c{c}\~{a}o (Dissertação (Mestrado Profissional em Engenharia
+  Geotécnica)) --- Universidade Federal de Ouro Preto, Ouro Preto, 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.repositorio.ufop.br/items/8fcbd250-9240-410b-a826-fcecf9aa4c6c}.}
+
+\bibitem[{CTS UFSJ - CAP} 2017]{ctsufsj2017}
+\abntrefinfo{{CTS UFSJ - CAP}}{{CTS UFSJ - CAP}}{2017}
+{{CTS UFSJ - CAP}. \emph{Trabalho de CTS - Instrumentação de monitoramento
+  automatizado de Barragem de Rejeito}. 2017. 1 vídeo (22 min 37 s).
+Dispon{\'\i}vel em: \url{https://www.youtube.com/watch?v=Eh41IJiYqoU}.
+  Publicado pelo canal CTS UFSJ - CAP.}
+
+\bibitem[Darzi 2024]{darzi2024transformacao}
+\abntrefinfo{Darzi}{DARZI}{2024}
+{DARZI, R. \emph{Transformação digital na mineração: a nova era da
+  eficiência e sustentabilidade}. São Paulo: [s.n.], 2024. SciCrop.
+Dispon{\'\i}vel em:
+  \url{https://scicrop.com/2024/07/03/transformacao-digital-na-mineracao-a-nova-era-da-eficiencia-e-sustentabilidade/}.}
+
+\bibitem[Domingues 2022]{domingues2022}
 \abntrefinfo{Domingues}{DOMINGUES}{2022}
 {DOMINGUES, G.~F. História da mineração no território brasileiro: uma
   análise dos tratados políticos que legislam a atividade mineradora
   (1934-1967).
 \emph{Revista Ensaios de História}, v.~23, n.~1, 2022.
 Dispon{\'\i}vel em:
-  \url{https://periodicos.franca.unesp.br/index.php/ensaiosdehistoria/article/view/3881/3261}.
-  Acesso em: 27 abr. 2025.}
+  \url{https://periodicos.franca.unesp.br/index.php/ensaiosdehistoria/article/view/3881/3261}.}
 
-\bibitem[EPA 2019]{EPA2019}
-\abntrefinfo{EPA}{EPA}{2019}
-{EPA, E. P.~A. \emph{Management of Mining Waste: Technical Guidelines}.
+\bibitem[Duarte 2008]{duarte2008}
+\abntrefinfo{Duarte}{DUARTE}{2008}
+{DUARTE, A.~P.
+\emph{Classificação das barragens de contenção de rejeitos de mineração e
+  de resíduos industriais no Estado de Minas Gerais em relação ao potencial
+  de risco}.
+Disserta\c{c}\~{a}o (Mestrado) --- Universidade Federal de Minas Gerais, Belo
+  Horizonte, 2008.
+Dispon{\'\i}vel em:
+  \url{https://repositorio.ufmg.br/bitstream/1843/BUDB-8AUPNJ/1/classifica\_\_o\_das\_barragens\_de\_conten\_\_o.pdf}.}
+
+\bibitem[{Environmental Protection Agency} 2019]{EPA2019}
+\abntrefinfo{{Environmental Protection Agency}}{{Environmental Protection
+  Agency}}{2019}
+{{Environmental Protection Agency}. \emph{Management of Mining Waste: Technical
+  Guidelines}.
 Washington, DC, 2019.}
 
-\bibitem[Fernandes e Araujo 2016]{fernandes2016mineracao}
-\abntrefinfo{Fernandes e Araujo}{FERNANDES; ARAUJO}{2016}
-{FERNANDES, F. R.~C.; ARAUJO, E.~R. \emph{Mineração no Brasil: crescimento
-  econômico e conflitos ambientais}. CETEM/MCTI, 2016. Dispon{\'\i}vel em:
-  \url{http://mineralis.cetem.gov.br/bitstream/cetem/1909/1/conflitos\_ambientais\_cap.2\%20p65.pdf}.
-  Acesso em: 27 abr. 2025.}
+\bibitem[{EQUATOR PRINCIPLES ASSOCIATION} 2020]{equator2020principles}
+\abntrefinfo{{EQUATOR PRINCIPLES ASSOCIATION}}{{EQUATOR PRINCIPLES
+  ASSOCIATION}}{2020}
+{{EQUATOR PRINCIPLES ASSOCIATION}. \emph{The Equator Principles EP4}.
+[S.l.], 2020. Dispon{\'\i}vel em:
+  \url{https://equator-principles.com/app/uploads/The-Equator-Principles\_EP4\_July2020.pdf}.}
 
-\bibitem[Figueir{\^o}a 1997]{figueiroa1997ciencias}
-\abntrefinfo{Figueir{\^o}a}{FIGUEIR{\^O}A}{1997}
-{FIGUEIR{\^O}A, S. \emph{As ciências geológicas no Brasil: Uma história
-  social e institucional, 1875-1934}. São Paulo: HUCITEC, 1997.}
+\bibitem[{EUROPEAN COMMISSION} 2020]{eu2020taxonomy}
+\abntrefinfo{{EUROPEAN COMMISSION}}{{EUROPEAN COMMISSION}}{2020}
+{{EUROPEAN COMMISSION}. \emph{EU taxonomy for sustainable activities}.
+  Brussels: European Commission, 2020.
+Dispon{\'\i}vel em:
+  \url{https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities\_en}.}
+
+\bibitem[{FEAM} 2024]{feam2024}
+\abntrefinfo{{FEAM}}{{FEAM}}{2024}
+{{FEAM}. \emph{Minas avança na descaracterização das barragens alteadas a
+  montante}. Belo Horizonte, 2024.
+Dispon{\'\i}vel em:
+  \url{https://feam.br/w/minas-avanca-na-descaracterizacao-das-barragens-alteadas-a-montante}.
+  Atualizado em: 12 nov. 2024.}
+
+\bibitem[Fernandes e Araujo 2016]{fernandes2016}
+\abntrefinfo{Fernandes e Araujo}{FERNANDES; ARAUJO}{2016}
+{FERNANDES, F. R.~C.; ARAUJO, E.~R. \emph{Mineração no Brasil}: crescimento
+  econômico e conflitos ambientais. CETEM/MCTI, 2016. Dispon{\'\i}vel em:
+  \url{http://mineralis.cetem.gov.br/bitstream/cetem/1909/1/conflitos\_ambientais\_cap.2\%20p65.pdf}.}
+
+\bibitem[Filho 2004]{albuquerque2004}
+\abntrefinfo{Filho}{FILHO}{2004}
+{FILHO, L.~H. A.
+\emph{Avaliação do comportamento geotécnico de barragens de rejeitos de
+  minério de ferro através de ensaios de piezocone}.
+Disserta\c{c}\~{a}o (Dissertação (Mestrado em Engenharia Civil)) ---
+  Universidade Federal de Ouro Preto, Ouro Preto, 2004.
+Dispon{\'\i}vel em:
+  \url{https://propec.ufop.br/uploads/propec\_2022/teses/arquivos/tese75.pdf}.}
 
 \bibitem[Fonseca 2024]{fonseca2024resultados}
 \abntrefinfo{Fonseca}{FONSECA}{2024}
@@ -178,176 +446,310 @@ Washington, DC, 2019.}
   ibram.
 \emph{Synergia Editora}, feb 2024.
 Dispon{\'\i}vel em:
-  \url{https://synergiaeditora.com.br/os-resultados-da-mineracao-no-ano-de-2023-conforme-dados-do-ibram/}.
-  Acesso em: 2 jul. 2024.}
+  \url{https://synergiaeditora.com.br/os-resultados-da-mineracao-no-ano-de-2023-conforme-dados-do-ibram/}.}
 
-\bibitem[Fonseca 2012]{fonseca2012progresso}
+\bibitem[Fonseca 2012]{fonseca2012}
 \abntrefinfo{Fonseca}{FONSECA}{2012}
 {FONSECA, P. C.~D. Do progresso ao desenvolvimento no brasil. In:  BASTOS, P.
   P.~Z.; FONSECA, P. C.~D. (Ed.). \emph{A era Vargas: Desenvolvimento, economia
   e sociedade}. São Paulo: Editora Unesp, 2012. p. 51--68.
 Dispon{\'\i}vel em:
-  \url{https://www.scielo.br/j/ecos/a/5NrXd8XXCZhtFshHQnzDNqp/}. Acesso em: 27
-  abr. 2025.}
+  \url{https://www.scielo.br/j/ecos/a/5NrXd8XXCZhtFshHQnzDNqp/}.}
 
-\bibitem[Freire et al. 2020]{freire2020rejeitos}
+\bibitem[Freire et al. 2020]{freire2020}
 \abntrefinfo{Freire et al.}{FREIRE et al.}{2020}
-{FREIRE, G. M. C. d.~A.; VIEIRA, L. d.~M.; MARTINS, M. U.~E. (Ed.).
-  \emph{Rejeitos de minério no Brasil: uma análise interdisciplinar}. São
-  Paulo: Pimenta Cultural, 2020. Dispon{\'\i}vel em:
-  \url{https://www.pimentacultural.com/wp-content/uploads/2024/05/eBook\_Rejeitos-minerio-Brasil.pdf}.
-  Acesso em: 07 mai. 2025.}
+{FREIRE, G. M. C.~A.; VIEIRA, L.~M.; MARTINS, M. U.~E. \emph{Rejeitos de
+  minério no Brasil: uma análise interdisciplinar}. São Paulo: Pimenta
+  Cultural, 2020. Dispon{\'\i}vel em:
+  \url{https://www.pimentacultural.com/wp-content/uploads/2024/05/eBook\_Rejeitos-minerio-Brasil.pdf}.}
 
-\bibitem[IBGE 2024]{ibge2024pib}
-\abntrefinfo{IBGE}{IBGE}{2024}
-{IBGE, I.~B. de~Geografia~e E. \emph{PIB cresce 2,9\% em 2023 e fecha o ano em
-  R\$ 10,9 trilhões}.
-[S.l.], 2024. Dispon{\'\i}vel em:
-  \url{https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/39303-pib-cresce-2-9-em-2023-e-fecha-o-ano-em-r-10-9-trilhoes}.
-  Acesso em: 1 jul. 2024.}
-
-\bibitem[IBGE 2025]{ibge2025pib}
-\abntrefinfo{IBGE}{IBGE}{2025}
-{IBGE, I.~B. de~Geografia~e E. \emph{PIB cresce 3,4\% em 2024 e fecha o ano em
-  R\$ 11,7 trilhões}.
-[S.l.], 2025. Dispon{\'\i}vel em:
-  \url{https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/42774-pib-cresce-3-4-em-2024-e-fecha-o-ano-em-r-11-7-trilhoes}.
-  Acesso em: 27 abr. 2025.}
-
-\bibitem[IBRAM 2016]{ibram2016gestao}
-\abntrefinfo{IBRAM}{IBRAM}{2016}
-{IBRAM, I.~B. de M. \emph{Gestão e Manejo de Rejeitos da Mineração}. 1. ed.
-  Brasília: IBRAM, 2016. Dispon{\'\i}vel em:
-  \url{https://ibram.org.br/wp-content/uploads/2021/02/Gestao-e-Manejo-de-Rejeitos-da-Mineracao-2016.pdf}.
-  Acesso em: 07 mai. 2025.}
-
-\bibitem[IBRAM 2020]{IBRAM2020}
-\abntrefinfo{IBRAM}{IBRAM}{2020}
-{IBRAM, I.~B. de M. \emph{Relatório Anual de Atividades: Mineração
-  Brasileira}. 2020.
-Dispon{\'\i}vel em: \url{https://ibram.org.br/publicacoes/}. Acesso em: 20 abr.
-  2025.}
-
-\bibitem[IBRAM 2023]{ibram2023coletiva}
-\abntrefinfo{IBRAM}{IBRAM}{2023}
-{IBRAM, I.~B. de M. \emph{Coletiva de Imprensa: Resultados 1S23}.
-Brasília, 2023. Dispon{\'\i}vel em:
-  \url{https://ibram.org.br/wp-content/uploads/2023/07/20230718\_Coletiva-de-Imprensa-Resultados-1S23\_rev02.pdf}.
-  Acesso em: 1 jul. 2024.}
-
-\bibitem[IBRAM 2024]{ibram2024dados}
-\abntrefinfo{IBRAM}{IBRAM}{2024}
-{IBRAM, I.~B. de M. \emph{Dados do setor mineral em 2024}.
-Brasília, 2024. Dispon{\'\i}vel em:
-  \url{https://ibram.org.br/wp-content/uploads/2025/02/DADOS\_Setor-Mineral\_2024\_5FEV2025.pdf}.
-  Acesso em: 27 abr. 2025.}
-
-\bibitem[{IPEA} 2023]{ipea2023comunicacao}
-\abntrefinfo{{IPEA}}{{IPEA}}{2023}
-{{IPEA}. \emph{Ipea e MME lançam estudo sobre a extensão da cadeia produtiva
-  da mineração no PIB brasileiro}. 2023. Comunicação.
+\bibitem[{Geoscan} 2020]{geoscan2020}
+\abntrefinfo{{Geoscan}}{{Geoscan}}{2020}
+{{Geoscan}. \emph{Classificação de barragens}. 2020.
 Dispon{\'\i}vel em:
-  \url{https://www.ipea.gov.br/portal/categorias/45-todas-as-noticias/noticias/14835-ipea-e-mme-lancam-estudo-sobre-a-extensao-da-cadeia-produtiva-da-mineracao-no-pib-brasileiro}.
-  Acesso em: 12 jul. 2024.}
+  \url{https://www.geoscan.com.br/classificacao-de-barragens/}. Atualizado em:
+  14 dez. 2024.}
 
-\bibitem[IPEA 2017]{ipea2017boletim}
-\abntrefinfo{IPEA}{IPEA}{2017}
-{IPEA, I. de P. E.~A. \emph{Boletim Regional, Urbano e Ambiental (BRU)}.
-[S.l.], 2017. Acesso em: 08 mai. 2025. Dispon{\'\i}vel em:
+\bibitem[{GLOBAL REPORTING INITIATIVE} 2013]{gri2013mining}
+\abntrefinfo{{GLOBAL REPORTING INITIATIVE}}{{GLOBAL REPORTING
+  INITIATIVE}}{2013}
+{{GLOBAL REPORTING INITIATIVE}. \emph{G4 Mining and Metals Sector Disclosures}.
+Amsterdam, 2013. Dispon{\'\i}vel em:
+  \url{https://cdn2.hubspot.net/hubfs/2642721/Recursos/Guias\%20y\%20Estandares/Suplementos\%20sectoriales\%20G4/GRI-G4-Mining-and-Metals-Sector-Disclosures\%20(1).pdf}.}
+
+\bibitem[Hartman e Mutmansky 2019]{jr2019}
+\abntrefinfo{Hartman e Mutmansky}{HARTMAN; MUTMANSKY}{2019}
+{HARTMAN, H.~L.; MUTMANSKY, J.~M. \emph{Introductory Mining Engineering}. 2.
+  ed. [S.l.]: John Wiley \& Sons, 2019.}
+
+\bibitem[{IBRAM} 2006]{ibram2006}
+\abntrefinfo{{IBRAM}}{{IBRAM}}{2006}
+{{IBRAM}. \emph{Métodos construtivos de barragens de rejeitos}.
+Brasília, 2006.}
+
+\bibitem[{IBRAM} 2016]{ibram2016}
+\abntrefinfo{{IBRAM}}{{IBRAM}}{2016}
+{{IBRAM}. \emph{Gestão e Manejo de Rejeitos da Mineração}.
+1. ed. Brasília, 2016. Dispon{\'\i}vel em:
+  \url{https://ibram.org.br/wp-content/uploads/2021/02/Gestao-e-Manejo-de-Rejeitos-da-Mineracao-2016.pdf}.}
+
+\bibitem[{IBRAM} 2022]{ibramlivroverde2022}
+\abntrefinfo{{IBRAM}}{{IBRAM}}{2022}
+{{IBRAM}. \emph{Livro Verde da Mineração}.
+[S.l.], 2022. Dispon{\'\i}vel em:
+  \url{https://ibram.org.br/wp-content/uploads/2022/11/IBRAM\_LivroVerde-digital.pdf}.}
+
+\bibitem[{IBRAM} 2023]{pmb2023}
+\abntrefinfo{{IBRAM}}{{IBRAM}}{2023}
+{{IBRAM}. \emph{Panorama da Mineração Brasileira 2023}.
+Brasília, 2023. Dispon{\'\i}vel em:
+  \url{https://ibram.org.br/wp-content/uploads/2023/08/PMB2023.pdf}.}
+
+\bibitem[{IBRAM} 2024]{ibram2024}
+\abntrefinfo{{IBRAM}}{{IBRAM}}{2024}
+{{IBRAM}. \emph{Dados do setor mineral em 2024}.
+Brasília, 2024. Dispon{\'\i}vel em:
+  \url{https://ibram.org.br/wp-content/uploads/2025/02/DADOS\_Setor-Mineral\_2024\_5FEV2025.pdf}.}
+
+\bibitem[{Instituto Brasileiro de Mineração} 2020]{IBRAM2020}
+\abntrefinfo{{Instituto Brasileiro de Mineração}}{{Instituto Brasileiro de
+  Mineração}}{2020}
+{{Instituto Brasileiro de Mineração}. \emph{Relatório Anual de Atividades:
+  Mineração Brasileira}. 2020.
+Dispon{\'\i}vel em: \url{https://ibram.org.br/publicacoes/}.}
+
+\bibitem[{Instituto Brasileiro de Mineração} 2023]{ibram2023coletiva}
+\abntrefinfo{{Instituto Brasileiro de Mineração}}{{Instituto Brasileiro de
+  Mineração}}{2023}
+{{Instituto Brasileiro de Mineração}. \emph{Coletiva de Imprensa: Resultados
+  1S23}.
+Brasília, 2023. Dispon{\'\i}vel em:
+  \url{https://ibram.org.br/wp-content/uploads/2023/07/20230718\_Coletiva-de-Imprensa-Resultados-1S23\_rev02.pdf}.}
+
+\bibitem[{Instituto de Pesquisa Econômica Aplicada} 2017]{ipea2017boletim}
+\abntrefinfo{{Instituto de Pesquisa Econômica Aplicada}}{{Instituto de
+  Pesquisa Econômica Aplicada}}{2017}
+{{Instituto de Pesquisa Econômica Aplicada}. \emph{Boletim Regional, Urbano e
+  Ambiental (BRU)}.
+[S.l.], 2017. Dispon{\'\i}vel em:
   \url{https://repositorio.ipea.gov.br/handle/11058/7916}.}
 
-\bibitem[Jr 2019]{minasjr2019lavra}
-\abntrefinfo{Jr}{JR}{2019}
-{JR, C. M. M.~J. M. \emph{Lavra: o que é, métodos, regulamentação}. 2019.
-  Site institucional.
-Dispon{\'\i}vel em:
-  \url{https://www.minasjr.com.br/lavra-o-que-e-metodos-regulamentacao/}.
-  Acesso em: 19 de junho de 2024.}
+\bibitem[{INTERNATIONAL COMMISSION ON LARGE DAMS} 2001]{icold2001tailings}
+\abntrefinfo{{INTERNATIONAL COMMISSION ON LARGE DAMS}}{{INTERNATIONAL
+  COMMISSION ON LARGE DAMS}}{2001}
+{{INTERNATIONAL COMMISSION ON LARGE DAMS}. \emph{Tailings dams: risk of
+  dangerous occurrences, lessons learnt from practical experiences}.
+Paris, 2001. 144~p.  (Bulletin, 121). Dispon{\'\i}vel em:
+  \url{https://www.icoldchile.cl/boletines/121.pdf}.}
 
-\bibitem[Le{\~a}o e Rabelo 2023]{leao2023extensao}
-\abntrefinfo{Le{\~a}o e Rabelo}{LE{\~A}O; RABELO}{2023}
-{LE{\~A}O, R.; RABELO, R. \emph{A Extensão da Cadeia Produtiva da Economia
-  Mineral no PIB Brasileiro - Sumário Executivo}.
-Rio de Janeiro, 2023. Dispon{\'\i}vel em:
-  \url{https://repositorio.ipea.gov.br/bitstream/11058/12702/1/TD\_2950\_web.pdf}.
-  Acesso em: 27 abr. 2025.}
+\bibitem[{INTERNATIONAL COMMISSION ON LARGE DAMS (ICOLD)}
+  2022]{icold2022tailings}
+\abntrefinfo{{INTERNATIONAL COMMISSION ON LARGE DAMS (ICOLD)}}{{INTERNATIONAL
+  COMMISSION ON LARGE DAMS (ICOLD)}}{2022}
+{{INTERNATIONAL COMMISSION ON LARGE DAMS (ICOLD)}. \emph{Tailings Dam Safety
+  Bulletin}.
+Paris, 2022. Dispon{\'\i}vel em:
+  \url{https://unece.org/sites/default/files/2023-04/S4-1Andy\%20Small\_ENG.pdf}.}
 
-\bibitem[Lins et al. 2000]{lins2000brasil}
-\abntrefinfo{Lins et al.}{LINS et al.}{2000}
-{LINS, F. A. d.~F.; LOUREIRO, F. E. d. V.~L.; ALBUQUERQUE, G. d. A. S.~C.
-  \emph{Brasil 500 anos. A construção do Brasil e da América Latina pela
-  Mineração}. Rio de Janeiro: CETEM/MCTI, 2000.}
-
-\bibitem[Lozano 2006]{erazo2006selecao}
-\abntrefinfo{Lozano}{LOZANO}{2006}
-{LOZANO, F.~A. E.
-\emph{Seleção de locais para barragens de rejeitos usando o método de
-  análise hierárquica}.
-Disserta\c{c}\~{a}o (Dissertação (Mestrado)) --- Universidade de São Paulo,
-  São Paulo, 2006.
-Dispon{\'\i}vel em:
-  \url{http://www.teses.usp.br/teses/disponiveis/3/3145/tde-14122006-123702/}.
-  Acesso em: 07 maio 2025.}
-
-\bibitem[Mining e ICMM 2021]{ICMM2021}
-\abntrefinfo{Mining e ICMM}{MINING; ICMM}{2021}
-{MINING, I.~C. on; ICMM, M. \emph{Global Industry Standard on Tailings
-  Management}.
-[S.l.], 2021. Acesso em: 20 abr. 2025. Dispon{\'\i}vel em:
+\bibitem[{International Council on Mining and Metals} 2021]{ICMM2021}
+\abntrefinfo{{International Council on Mining and Metals}}{{International
+  Council on Mining and Metals}}{2021}
+{{International Council on Mining and Metals}. \emph{Global Industry Standard
+  on Tailings Management}.
+[S.l.], 2021. Dispon{\'\i}vel em:
   \url{https://www.icmm.com/en-gb/our-work/environmental-resilience/tailings}.}
 
-\bibitem[RBM 2024]{rbm2024mineracao}
-\abntrefinfo{RBM}{RBM}{2024}
-{RBM, R. B.~M. \emph{Mineração - Metalurgia - Siderurgia}. São Paulo:
-  [s.n.], 2024. Revista Brasil Mineral.
+\bibitem[{INTERNATIONAL COUNCIL ON MINING AND METALS} et al.
+  2020]{icmm2020global}
+\abntrefinfo{{INTERNATIONAL COUNCIL ON MINING AND METALS} et
+  al.}{{INTERNATIONAL COUNCIL ON MINING AND METALS} et al.}{2020}
+{{INTERNATIONAL COUNCIL ON MINING AND METALS}; {UNITED NATIONS ENVIRONMENT
+  PROGRAMME}; {PRINCIPLES FOR RESPONSIBLE INVESTMENT}. \emph{Global Industry
+  Standard on Tailings Management}.
+London, 2020. Dispon{\'\i}vel em:
+  \url{https://globaltailingsreview.org/wp-content/uploads/2020/08/global-industry-standard-on-tailings-management.pdf}.}
+
+\bibitem[{IPEA} 2023]{ipea2023}
+\abntrefinfo{{IPEA}}{{IPEA}}{2023}
+{{IPEA}. \emph{Ipea e MME lançam estudo sobre a extensão da cadeia produtiva
+  da mineração no PIB brasileiro}. 2023.
 Dispon{\'\i}vel em:
-  \url{https://www.brasilmineral.com.br/revista/436/Revista\%20Brasil\%20Mineral\%20-\%20436.pdf}.
-  Acesso em: 27 abr. 2025.}
+  \url{https://www.ipea.gov.br/portal/categorias/45-todas-as-noticias/noticias/14835-ipea-e-mme-lancam-estudo-sobre-a-extensao-da-cadeia-produtiva-da-mineracao-no-pib-brasileiro}.}
 
-\bibitem[Rocha 2020]{rocha2020impacto}
-\abntrefinfo{Rocha}{ROCHA}{2020}
-{ROCHA, C.~M.
-\emph{Impacto macroeconômico da mineração no Brasil}.
-Disserta\c{c}\~{a}o (Dissertação (Mestrado)) --- Escola de Economia de São
-  Paulo, Mestrado Profissional em Economia, Faculdade Getulio Vargas, São
-  Paulo, 2020.
+\bibitem[Iramina et al. 2009]{iramina2009}
+\abntrefinfo{Iramina et al.}{IRAMINA et al.}{2009}
+{IRAMINA, W.~S. et al. Identificação e controle de riscos ocupacionais em
+  pedreira da região metropolitana de são paulo.
+\emph{Rem: Revista Escola de Minas}, Ouro Preto, v.~62, n.~4, p. 503--509,
+  out./dez. 2009.
 Dispon{\'\i}vel em:
-  \url{https://repositorio.fgv.br/server/api/core/bitstreams/6f0a8039-7f82-4387-9a4d-d26086334600/content}.
-  Acesso em: 27 abr. 2025.}
+  \url{https://www.scielo.br/j/rem/a/zvsdHKwHnKSR3CSdgCXvPKJ/?lang=pt&format=pdf}.}
 
-\bibitem[Svampa 2019]{svampa2019fronteiras}
-\abntrefinfo{Svampa}{SVAMPA}{2019}
-{SVAMPA, M. \emph{As fronteiras do neoextrativismo na América Latina:
-  Conflitos socioambientais, giro ecoterritorial e novas dependências}. São
-  Paulo: Elefante, 2019.}
+\bibitem[JAZIDA 2022]{jazida2022leis}
+\abntrefinfo{JAZIDA}{JAZIDA}{2022}
+{JAZIDA. \emph{As leis que regulamentam a atividade de mineração no Brasil}.
+  2022.
+Dispon{\'\i}vel em:
+  \url{https://blog.jazida.com/as-leis-que-regulamentam-a-atividade-de-mineracao-no-brasil/}.}
 
-\bibitem[USGS 2022]{usgs2022iron}
-\abntrefinfo{USGS}{USGS}{2022}
-{USGS, U. G.~S. \emph{Iron Ore. Mineral Commodity Summaries 2022}.
-[S.l.], 2022. Dispon{\'\i}vel em:
-  \url{https://pubs.usgs.gov/periodicals/mcs2022/mcs2022-iron-ore.pdf}. Acesso
-  em: 14 jun. 2024.}
+\bibitem[Júnior et al. 2018]{desouzajunior2018}
+\abntrefinfo{Júnior et al.}{JúNIOR et al.}{2018}
+{JúNIOR, T.~F. D.~S.; MOREIRA, E.~B.; HEINECK, K.~S. Barragens de contenção
+  de rejeitos de mineração no brasil.
+\emph{HOLOS}, v.~5, p. 2--39, 2018.
+Dispon{\'\i}vel em:
+  \url{https://www2.ifrn.edu.br/ojs/index.php/HOLOS/article/view/7423}.}
 
-\bibitem[USGS 2024]{usgs2024iron}
-\abntrefinfo{USGS}{USGS}{2024}
-{USGS, U. G.~S. \emph{Iron Ore. Mineral Commodity Summaries 2024}.
-[S.l.], 2024. Dispon{\'\i}vel em:
-  \url{https://pubs.usgs.gov/periodicals/mcs2024/mcs2024-iron-ore.pdf}. Acesso
-  em: 14 jun. 2024.}
+\bibitem[Leão e Rabelo 2023]{leao2023}
+\abntrefinfo{Leão e Rabelo}{LEãO; RABELO}{2023}
+{LEãO, R.; RABELO, R. \emph{A Extensão da Cadeia Produtiva da Economia
+  Mineral no PIB Brasileiro}: Sumário executivo.
+Rio de Janeiro, 2023. Dispon{\'\i}vel em:
+  \url{https://repositorio.ipea.gov.br/bitstream/11058/12702/1/TD\_2950\_web.pdf}.}
 
-\bibitem[Villas-B{\^o}as 1995]{villasboas1995mineracao}
-\abntrefinfo{Villas-B{\^o}as}{VILLAS-B{\^O}AS}{1995}
-{VILLAS-B{\^O}AS, A.~L. \emph{Mineração e Desenvolvimento Econômico: A
+\bibitem[Lozano 2006]{lozano2006}
+\abntrefinfo{Lozano}{LOZANO}{2006}
+{LOZANO, F. A.~E.
+\emph{Seleção de locais para barragens de rejeitos usando o método de
+  análise hierárquica}.
+Disserta\c{c}\~{a}o (Mestrado) --- Universidade de São Paulo, São Paulo,
+  2006.
+Dispon{\'\i}vel em:
+  \url{http://www.teses.usp.br/teses/disponiveis/3/3145/tde-14122006-123702/}.}
+
+\bibitem[{MINING ASSOCIATION OF CANADA} 2021]{mac2021guide}
+\abntrefinfo{{MINING ASSOCIATION OF CANADA}}{{MINING ASSOCIATION OF
+  CANADA}}{2021}
+{{MINING ASSOCIATION OF CANADA}. \emph{A guide to the management of tailings
+  facilities}.
+Version 3.2. Ottawa, 2021. Dispon{\'\i}vel em:
+  \url{https://mining.ca/our-focus/tailings-management/tailings-guide/}.}
+
+\bibitem[{MINISTÉRIO DE MINAS E ENERGIA (Brasil)} 2025]{mme2025linha}
+\abntrefinfo{{MINISTÉRIO DE MINAS E ENERGIA (Brasil)}}{{MINISTÉRIO DE MINAS E
+  ENERGIA (Brasil)}}{2025}
+{{MINISTÉRIO DE MINAS E ENERGIA (Brasil)}. \emph{Linha do tempo da
+  regulamentação minerária brasileira}. Brasília, DF: MME, 2025.
+Dispon{\'\i}vel em:
+  \url{https://antigo.mme.gov.br/documents/36108/439734/Linha\_do\_tempo.pdf}.}
+
+\bibitem[{Ministério dos Transportes} 2018]{ministeriotransportes2018}
+\abntrefinfo{{Ministério dos Transportes}}{{Ministério dos
+  Transportes}}{2018}
+{{Ministério dos Transportes}. \emph{ISO 31000 de 2018 – Gestão de Riscos}.
+Brasília, DF, 2018. Dispon{\'\i}vel em:
+  \url{https://www.gov.br/transportes/pt-br/centrais-de-conteudo/iso-31000-de-2018-gestao-de-riscos-pdf}.}
+
+\bibitem[Moecke 2019]{moecke2019}
+\abntrefinfo{Moecke}{MOECKE}{2019}
+{MOECKE, G.~C.
+\emph{Análise da classificação quanto ao dano potencial associado de 15
+  barragens brasileiras com base nos resultados de 90 cenários de ruptura}.
+112~p. Disserta\c{c}\~{a}o (Dissertação (Mestrado em Engenharia Civil)) ---
+  Universidade Federal do Ceará, Fortaleza, 2019.
+Dispon{\'\i}vel em:
+  \url{https://repositorio.ufc.br/bitstream/riufc/49955/3/2019\_dis\_gcmoecke.pdf}.}
+
+\bibitem[{Segurança Tem Futuro} [s.d.]]{segurancatemfuturo}
+\abntrefinfo{{Segurança Tem Futuro}}{{Segurança Tem Futuro}}{[s.d.]}
+{{Segurança Tem Futuro}. \emph{A matriz de risco}. [s.d.].
+Dispon{\'\i}vel em:
+  \url{https://segurancatemfuturo.com.br/index.php/home/gerenciamento-de-riscos/a-matriz-de-risco/}.}
+
+\bibitem[{Sistema ESO} 2021]{sistemaeso2021avaliacao}
+\abntrefinfo{{Sistema ESO}}{{Sistema ESO}}{2021a}
+{{Sistema ESO}. \emph{Avaliação de riscos no PGR}. 2021.
+Dispon{\'\i}vel em:
+  \url{https://sistemaeso.com.br/blog/seguranca-no-trabalho/avaliacao-de-riscos-no-pgr}.}
+
+\bibitem[{Sistema ESO} 2021]{sistemaeso2021matriz}
+\abntrefinfo{{Sistema ESO}}{{Sistema ESO}}{2021b}
+{{Sistema ESO}. \emph{O que é matriz de risco e qual usar no PGR}. 2021.
+Dispon{\'\i}vel em:
+  \url{https://sistemaeso.com.br/blog/seguranca-no-trabalho/o-que-e-matriz-de-risco-e-qual-usar-no-pgr}.}
+
+\bibitem[Soares 2010]{soares2010}
+\abntrefinfo{Soares}{SOARES}{2010}
+{SOARES, L. Barragem de rejeitos. In:  \emph{Tratamento de minérios}. 5. ed.
+  Rio de Janeiro: CETEM/MCT, 2010. cap.~19, p. 831--888.
+Dispon{\'\i}vel em:
+  \url{https://mineralis.cetem.gov.br/bitstream/cetem/769/1/CCL00410010.pdf}.}
+
+\bibitem[{SUSTAINABILITY ACCOUNTING STANDARDS BOARD}
+  2018]{sasb2018sustainability}
+\abntrefinfo{{SUSTAINABILITY ACCOUNTING STANDARDS BOARD}}{{SUSTAINABILITY
+  ACCOUNTING STANDARDS BOARD}}{2018}
+{{SUSTAINABILITY ACCOUNTING STANDARDS BOARD}. \emph{Sustainability Accounting
+  Standard: Metals \& Mining}.
+San Francisco, 2018. Dispon{\'\i}vel em:
+  \url{https://www.hecla.com/wp-content/uploads/2021-Hecla\_SASB\_2020Tables-FINAL.pdf}.}
+
+\bibitem[{Teck Resources Limited} 2019]{teck2019}
+\abntrefinfo{{Teck Resources Limited}}{{Teck Resources Limited}}{2019}
+{{Teck Resources Limited}. \emph{Tailings safety and security at Teck}.
+[S.l.], 2019. Dispon{\'\i}vel em:
+  \url{https://www.teck.com/media/Tailings-Fact-Sheet.pdf}.}
+
+\bibitem[Thomé e Passini 2018]{thome2018}
+\abntrefinfo{Thomé e Passini}{THOMé; PASSINI}{2018}
+{THOMé, R.; PASSINI, M.~L. Barragens de rejeitos de mineração:
+  características do método de alteamento para montante que fundamentaram a
+  suspensão de sua utilização em minas gerais.
+\emph{Ciências Sociais Aplicadas em Revista}, v.~18, n.~34, p. 49--65, 2018.
+Dispon{\'\i}vel em:
+  \url{https://saber.unioeste.br/index.php/csaemrevista/article/view/19480}.}
+
+\bibitem[{UNIÃO EUROPEIA} 1985]{eu1985diretiva337}
+\abntrefinfo{{UNIÃO EUROPEIA}}{{UNIÃO EUROPEIA}}{1985}
+{{UNIÃO EUROPEIA}. \emph{Diretiva 85/337/CEE do Conselho, de 27 de junho de
+  1985: Relativa à avaliação dos efeitos de determinados projetos públicos
+  e privados no ambiente}. 1985. Jornal Oficial das Comunidades Europeias, L
+  175, p. 40-48, 5 jul. 1985.
+Dispon{\'\i}vel em:
+  \url{https://eur-lex.europa.eu/legal-content/PT/TXT/PDF/?uri=CELEX:31985L0337}.}
+
+\bibitem[{Vale} 2024]{vale2024}
+\abntrefinfo{{Vale}}{{Vale}}{2024}
+{{Vale}. \emph{Sobre barragens e rejeitos}. 2024.
+Dispon{\'\i}vel em: \url{https://vale.com/pt/esg/sobre-barragens-e-rejeitos}.}
+
+\bibitem[Vendrame 2023]{vendrame2023}
+\abntrefinfo{Vendrame}{VENDRAME}{2023}
+{VENDRAME, A.~C. \emph{Os riscos da mineração: protegendo os trabalhadores
+  contra acidentes e doenças}. 2023.
+Dispon{\'\i}vel em:
+  \url{https://www.linkedin.com/pulse/os-riscos-da-minera\%C3\%A7\%C3\%A3o-protegendo-trabalhadores-e-antonio-carlos/}.}
+
+\bibitem[Vilaça 2021]{vilaca2021}
+\abntrefinfo{Vilaça}{VILAçA}{2021}
+{VILAçA, L.~A.
+\emph{Avaliação de risco em taludes na mineração}.
+47~p. Disserta\c{c}\~{a}o (Trabalho de Conclusão de Curso (Graduação em
+  Engenharia Ambiental e Sanitária)) --- Centro Federal de Educação
+  Tecnológica de Minas Gerais, Belo Horizonte, 2021.
+Dispon{\'\i}vel em:
+  \url{https://www.eng-ambiental.bh.cefetmg.br/wp-content/uploads/sites/187/2021/09/201522080376\_Lais-Alves.pdf}.}
+
+\bibitem[Villas-Bôas 1995]{villasboas1995}
+\abntrefinfo{Villas-Bôas}{VILLAS-BôAS}{1995}
+{VILLAS-BôAS, A.~L. \emph{Mineração e Desenvolvimento Econômico}: A
   questão nacional nas estratégias de desenvolvimento do setor mineral
-  (1930-1964)}. Rio de Janeiro: CETEM/MCTI, 1995. Dispon{\'\i}vel em:
-  \url{http://mineralis.cetem.gov.br/handle/cetem/278}. Acesso em: 27 abr.
-  2025.}
+  (1930-1964). Rio de Janeiro: CETEM/MCTI, 1995. Dispon{\'\i}vel em:
+  \url{http://mineralis.cetem.gov.br/handle/cetem/278}.}
 
-\bibitem[WPR 2024]{wpr2024mineral}
-\abntrefinfo{WPR}{WPR}{2024}
-{WPR, W. P.~R. \emph{Mineral Production by Country 2024}. 2024.
+\bibitem[Warzynski et al. 2023]{warzynski2023}
+\abntrefinfo{Warzynski et al.}{WARZYNSKI et al.}{2023}
+{WARZYNSKI, V.~P. et al. Barragem de rejeitos.
+\emph{Revista Ibero-Americana de Humanidades, Ciências e Educação}, v.~9,
+  n.~10, p. 440--450, 2023.
 Dispon{\'\i}vel em:
-  \url{https://worldpopulationreview.com/country-rankings/mineral-production-by-country}.
-  Acesso em: 16 jun. 2024.}
+  \url{https://periodicorease.pro.br/rease/article/view/11650}.}
+
+\bibitem[{XENITH CONSULTING} 2025]{xenith2025esg}
+\abntrefinfo{{XENITH CONSULTING}}{{XENITH CONSULTING}}{2025}
+{{XENITH CONSULTING}. \emph{ESG Due Diligence in Mining: A Critical Lens for
+  Project Evaluation}. 2025.
+Dispon{\'\i}vel em:
+  \url{https://www.xenith.com.au/esg-due-diligence-in-mining/}.}
 
 \end{thebibliography}
