@@ -13,9 +13,18 @@
 Rio de Janeiro, 2017. Dispon{\'\i}vel em:
   \url{https://blogdopedlowski.com/wp-content/uploads/2019/03/nbr13028-2018.pdf}.}
 
-\bibitem[{AGÊNCIA NACIONAL DE MINERAÇÃO} 2019]{anm2019resolucao13}
+\bibitem[{AGÊNCIA NACIONAL DE MINERAÇÃO} 2019]{anm2019relatorio}
 \abntrefinfo{{AGÊNCIA NACIONAL DE MINERAÇÃO}}{{AGÊNCIA NACIONAL DE
   MINERAÇÃO}}{2019a}
+{{AGÊNCIA NACIONAL DE MINERAÇÃO}. \emph{Agência Nacional de Mineração
+  conclui o relatório técnico sobre barragem de Brumadinho}. 2019.
+Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/noticias/2019/agencia-nacional-de-mineracao-conclui-o-relatorio-tecnico-sobre-barragem-de-brumadinho}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[{AGÊNCIA NACIONAL DE MINERAÇÃO} 2019]{anm2019resolucao13}
+\abntrefinfo{{AGÊNCIA NACIONAL DE MINERAÇÃO}}{{AGÊNCIA NACIONAL DE
+  MINERAÇÃO}}{2019b}
 {{AGÊNCIA NACIONAL DE MINERAÇÃO}. \emph{Resolução nº 13, de 8 de agosto
   de 2019: Estabelece medidas regulatórias objetivando assegurar a
   estabilidade de barragens de mineração, notadamente aquelas construídas ou
@@ -27,7 +36,7 @@ Dispon{\'\i}vel em:
 
 \bibitem[{AGÊNCIA NACIONAL DE MINERAÇÃO} 2019]{anm2019resolucao4}
 \abntrefinfo{{AGÊNCIA NACIONAL DE MINERAÇÃO}}{{AGÊNCIA NACIONAL DE
-  MINERAÇÃO}}{2019b}
+  MINERAÇÃO}}{2019c}
 {{AGÊNCIA NACIONAL DE MINERAÇÃO}. \emph{Resolução nº 4, de 15 de
   fevereiro de 2019: Estabelece medidas regulatórias objetivando assegurar a
   estabilidade de barragens de mineração, notadamente aquelas construídas ou
@@ -36,6 +45,25 @@ Dispon{\'\i}vel em:
   DF, ano 157, n. 34, p. 76, 18 fev. 2019. Seção 1.
 Dispon{\'\i}vel em:
   \url{https://www.gov.br/anm/pt-br/assuntos/barragens/resolucao-no-4-de-15-de-fevereiro-de-2019}.}
+
+\bibitem[{AGÊNCIA NACIONAL DE MINERAÇÃO} 2020]{anm2020sistema}
+\abntrefinfo{{AGÊNCIA NACIONAL DE MINERAÇÃO}}{{AGÊNCIA NACIONAL DE
+  MINERAÇÃO}}{2020}
+{{AGÊNCIA NACIONAL DE MINERAÇÃO}. \emph{ANM lança sistema público de
+  monitoramento de barragem de mineração}. Brasília: [s.n.], 2020.
+Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/noticias/anm-lanca-sistema-publico-de-monitoramento-de-barragem-de-mineracao}.
+  Acesso em: 1 jun. 2025.}
+
+\bibitem[{AGÊNCIA NACIONAL DE MINERAÇÃO} 2021]{anm2021resolucao56}
+\abntrefinfo{{AGÊNCIA NACIONAL DE MINERAÇÃO}}{{AGÊNCIA NACIONAL DE
+  MINERAÇÃO}}{2021}
+{{AGÊNCIA NACIONAL DE MINERAÇÃO}. \emph{Resolução ANM nº 56, de 28 de
+  janeiro de 2021. Estabelece diretrizes para implementação da Política
+  Nacional de Segurança de Barragens}. Brasília: ANM, 2021.
+Dispon{\'\i}vel em:
+  \url{https://www.gov.br/anm/pt-br/assuntos/barragens/legislacao}. Acesso em:
+  31 maio 2025.}
 
 \bibitem[{Agência Brasil} 2019]{agenciabrasil2019}
 \abntrefinfo{{Agência Brasil}}{{Agência Brasil}}{2019}
@@ -110,6 +138,25 @@ Disserta\c{c}\~{a}o (Dissertação (Mestrado em Engenharia Civil)) ---
 Dispon{\'\i}vel em:
   \url{https://minerva.ufrj.br/F/?func=direct&doc\_number=000667613&local\_base=UFR01}.}
 
+\bibitem[ARNEZ 1999]{arnez1999avaliacao}
+\abntrefinfo{ARNEZ}{ARNEZ}{1999}
+{ARNEZ, F. I.~V.
+\emph{Avaliação das principais causas de acidentes em barragens de
+  contenção de rejeitos devido a fatores geológicos e geotécnicos}.
+Disserta\c{c}\~{a}o (Dissertação (Mestrado em Engenharia Mineral)) --- Escola
+  Politécnica, Universidade de São Paulo, São Paulo, 1999. Acesso em: 31
+  maio 2025.
+Dispon{\'\i}vel em:
+  \url{https://www.teses.usp.br/teses/disponiveis/3/3134/tde-09082024-092752/publico/FernandoIvanVasquezArnezDissert.pdf}.}
+
+\bibitem[ASCENTY 2024]{ascenty2024aiot}
+\abntrefinfo{ASCENTY}{ASCENTY}{2024}
+{ASCENTY. \emph{AIoT: a Inteligência Artificial na Era da Internet das
+  Coisas}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://ascenty.com/blog/artigos/a-inteligencia-artificial-na-era-da-internet-das-coisas/}.
+  Acesso em: 31 maio 2025.}
+
 \bibitem[{ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS} 2015]{abnt2015iso14001}
 \abntrefinfo{{ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS}}{{ASSOCIAÇÃO
   BRASILEIRA DE NORMAS TÉCNICAS}}{2015}
@@ -141,6 +188,12 @@ Dispon{\'\i}vel em:
   brasileiro pela primeira vez em décadas}. 2023.
 Dispon{\'\i}vel em:
   \url{https://www.bbc.com/portuguese/articles/cxr0vlvqdgqo}.}
+
+\bibitem[BENTLEY 2025]{bentley2025solucoes}
+\abntrefinfo{BENTLEY}{BENTLEY}{2025}
+{BENTLEY. \emph{Soluções de monitoramento de barragens em tempo real}. 2025.
+Dispon{\'\i}vel em: \url{https://br.bentley.com/solutions/dam-monitoring/}.
+  Acesso em: 31 maio 2025.}
 
 \bibitem[{BRASIL} 1934]{brasil1934a}
 \abntrefinfo{{BRASIL}}{{BRASIL}}{1934a}
@@ -220,6 +273,15 @@ Brasília, DF, 2010. Dispon{\'\i}vel em:
 Brasília, 2018. Dispon{\'\i}vel em:
   \url{https://www.planalto.gov.br/ccivil\_03/\_Ato2015-2018/2018/Decreto/D9406.htm}.}
 
+\bibitem[BRASIL 2020]{brasil2020lei14066}
+\abntrefinfo{BRASIL}{BRASIL}{2020}
+{BRASIL. \emph{Lei nº 14.066, de 30 de setembro de 2020. Altera a Lei nº
+  12.334, de 20 de setembro de 2010, que estabelece a Política Nacional de
+  Segurança de Barragens (PNSB)}. Brasília, DF: [s.n.], 2020.
+Dispon{\'\i}vel em:
+  \url{https://www.planalto.gov.br/ccivil\_03/\_ato2019-2022/2020/lei/l14066.htm}.
+  Acesso em: 31 maio 2025.}
+
 \bibitem[{BRASIL. Agência Nacional de Mineração} 2022]{anm2022resolucao95}
 \abntrefinfo{{BRASIL. Agência Nacional de Mineração}}{{BRASIL. Agência
   Nacional de Mineração}}{2022}
@@ -229,6 +291,14 @@ Brasília, 2018. Dispon{\'\i}vel em:
   fev. 2022.
 Dispon{\'\i}vel em:
   \url{https://www.gov.br/anm/pt-br/assuntos/barragens/legislacao/resolucao-no-95-2022.pdf}.}
+
+\bibitem[BRASIL 2022]{brasil2022indenizacoes}
+\abntrefinfo{BRASIL}{BRASIL}{2022}
+{BRASIL, C. I.~d. \emph{Indenizações por tragédia em Mariana atingiram R\$
+  8,71 bilhões em 2021}. Rio de Janeiro: [s.n.], 2022. Agência Brasil.
+Dispon{\'\i}vel em:
+  \url{https://agenciabrasil.ebc.com.br/geral/noticia/2022-01/indenizacoes-por-tragedia-em-mariana-atingiram-r-871-bilhoes-em-2021}.
+  Acesso em: 31 maio 2025.}
 
 \bibitem[{BRASIL. Comissão de Valores Mobiliários} 2009]{cvm2009instrucao480}
 \abntrefinfo{{BRASIL. Comissão de Valores Mobiliários}}{{BRASIL. Comissão de
@@ -272,6 +342,27 @@ Dispon{\'\i}vel em:
   Brasília, DF, n. 247, p. 30841-30843, 22 dez. 1997.
 Dispon{\'\i}vel em:
   \url{https://conama.mma.gov.br/?option=com\_sisconama&task=arquivo.download&id=237}.}
+
+\bibitem[{BRASIL. Ministério da Integração e do Desenvolvimento Regional}
+  2025]{mdr2025defesa}
+\abntrefinfo{{BRASIL. Ministério da Integração e do Desenvolvimento
+  Regional}}{{BRASIL. Ministério da Integração e do Desenvolvimento
+  Regional}}{2025}
+{{BRASIL. Ministério da Integração e do Desenvolvimento Regional}.
+  \emph{Defesa Civil Nacional fortalece a cooperação internacional na
+  segurança de barragens}. Brasília: [s.n.], 2025.
+Dispon{\'\i}vel em:
+  \url{https://www.gov.br/mdr/pt-br/noticias/defesa-civil-nacional-fortalece-a-cooperacao-internacional-na-seguranca-de-barragens}.
+  Acesso em: 1 jun. 2025.}
+
+\bibitem[{BRASIL. Presidência da República} 2024]{brasil2024timeline}
+\abntrefinfo{{BRASIL. Presidência da República}}{{BRASIL. Presidência da
+  República}}{2024}
+{{BRASIL. Presidência da República}. \emph{Conheça a linha do tempo da
+  tragédia de Mariana (MG)}. Brasília, DF: [s.n.], 2024. Gov.br.
+Dispon{\'\i}vel em:
+  \url{https://www.gov.br/planalto/pt-br/novo-acordo-do-rio-doce/conheca-a-linha-do-tempo-da-tragedia-de-mariana-mg}.
+  Acesso em: 22 maio 2025.}
 
 \bibitem[{BRASIL. Senado Federal} 2017]{brasil2017senado}
 \abntrefinfo{{BRASIL. Senado Federal}}{{BRASIL. Senado Federal}}{2017}
@@ -334,6 +425,14 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://ppggrd.propesp.ufpa.br/ARQUIVOS/dissertacoes/disserta\%C3\%A7oes\%20ppggrd/Disserta\%C3\%A7\%C3\%A3o\%20Almir.pdf}.}
 
+\bibitem[{CONGRESSO EM FOCO} 2025]{congressofoco2025}
+\abntrefinfo{{CONGRESSO EM FOCO}}{{CONGRESSO EM FOCO}}{2025}
+{{CONGRESSO EM FOCO}. \emph{Tragédia de Brumadinho: seis anos, 242 mortos,
+  nenhum condenado}. 2025. Congresso em Foco.
+Dispon{\'\i}vel em:
+  \url{https://www.congressoemfoco.com.br/noticia/106077/tragedia-de-brumadinho-seis-anos-242-mortos-nenhum-condenado}.
+  Acesso em: 27 maio 2025.}
+
 \bibitem[{Conselho Nacional de Recursos Hídricos} 2012]{cnrh2012}
 \abntrefinfo{{Conselho Nacional de Recursos Hídricos}}{{Conselho Nacional de
   Recursos Hídricos}}{2012}
@@ -368,6 +467,14 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em: \url{https://www.youtube.com/watch?v=Eh41IJiYqoU}.
   Publicado pelo canal CTS UFSJ - CAP.}
 
+\bibitem[{CÂMARA DOS DEPUTADOS} 2024]{camara2024familias}
+\abntrefinfo{{CÂMARA DOS DEPUTADOS}}{{CÂMARA DOS DEPUTADOS}}{2024}
+{{CÂMARA DOS DEPUTADOS}. \emph{Famílias das vítimas pedem punição para
+  responsáveis por tragédia em Brumadinho}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.camara.leg.br/noticias/1040943-familias-das-vitimas-pedem-punicao-para-responsaveis-por-tragedia-em-brumadinho/}.
+  Acesso em: 31 maio 2025.}
+
 \bibitem[Darzi 2024]{darzi2024transformacao}
 \abntrefinfo{Darzi}{DARZI}{2024}
 {DARZI, R. \emph{Transformação digital na mineração: a nova era da
@@ -395,6 +502,13 @@ Disserta\c{c}\~{a}o (Mestrado) --- Universidade Federal de Minas Gerais, Belo
 Dispon{\'\i}vel em:
   \url{https://repositorio.ufmg.br/bitstream/1843/BUDB-8AUPNJ/1/classifica\_\_o\_das\_barragens\_de\_conten\_\_o.pdf}.}
 
+\bibitem[EARTHWORKS 2024]{earthworks2024safety}
+\abntrefinfo{EARTHWORKS}{EARTHWORKS}{2024}
+{EARTHWORKS. \emph{Safety First: Guidelines for Responsible Mine Tailings
+  Management}. 2024.
+Dispon{\'\i}vel em: \url{https://earthworks.org/resources/safety-first/}.
+  Acesso em: 11 jun. 2025.}
+
 \bibitem[{Environmental Protection Agency} 2019]{EPA2019}
 \abntrefinfo{{Environmental Protection Agency}}{{Environmental Protection
   Agency}}{2019}
@@ -408,6 +522,22 @@ Washington, DC, 2019.}
 {{EQUATOR PRINCIPLES ASSOCIATION}. \emph{The Equator Principles EP4}.
 [S.l.], 2020. Dispon{\'\i}vel em:
   \url{https://equator-principles.com/app/uploads/The-Equator-Principles\_EP4\_July2020.pdf}.}
+
+\bibitem[{ESTADO DE MINAS} 2016]{estadominas2016irregular}
+\abntrefinfo{{ESTADO DE MINAS}}{{ESTADO DE MINAS}}{2016}
+{{ESTADO DE MINAS}. \emph{Obras da barragem do Fundão começaram de forma
+  irregular}. Belo Horizonte: [s.n.], 2016. Estado de Minas.
+Dispon{\'\i}vel em:
+  \url{https://www.em.com.br/app/noticia/gerais/2016/01/17/interna\_gerais,725948/obras-da-barragem-do-fundao-comecaram-de-forma-irregular.shtml}.
+  Acesso em: 26 maio 2025.}
+
+\bibitem[{ESTADO DE MINAS} 2024]{estadominas2024alerta}
+\abntrefinfo{{ESTADO DE MINAS}}{{ESTADO DE MINAS}}{2024}
+{{ESTADO DE MINAS}. \emph{Um alerta das vítimas da tragédia de Mariana para
+  os gaúchos}. Belo Horizonte: [s.n.], 2024. Estado de Minas.
+Dispon{\'\i}vel em:
+  \url{https://www.em.com.br/gerais/2024/06/6873908-um-alerta-das-vitimas-da-tragedia-de-mariana-para-os-gauchos.html}.
+  Acesso em: 27 maio 2025.}
 
 \bibitem[{EUROPEAN COMMISSION} 2020]{eu2020taxonomy}
 \abntrefinfo{{EUROPEAN COMMISSION}}{{EUROPEAN COMMISSION}}{2020}
@@ -463,12 +593,28 @@ Dispon{\'\i}vel em:
   Cultural, 2020. Dispon{\'\i}vel em:
   \url{https://www.pimentacultural.com/wp-content/uploads/2024/05/eBook\_Rejeitos-minerio-Brasil.pdf}.}
 
+\bibitem[FRONTIERS 2022]{frontiers2022visualization}
+\abntrefinfo{FRONTIERS}{FRONTIERS}{2022}
+{FRONTIERS. 3d visualization monitoring and early warning system of a tailings
+  dam—gold copper mine tailings dam in zijinshan, fujian, china.
+\emph{Frontiers in Earth Science}, 2022.
+Dispon{\'\i}vel em:
+  \url{https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.800924/full}.
+  Acesso em: 11 jun. 2025.}
+
 \bibitem[{Geoscan} 2020]{geoscan2020}
 \abntrefinfo{{Geoscan}}{{Geoscan}}{2020}
 {{Geoscan}. \emph{Classificação de barragens}. 2020.
 Dispon{\'\i}vel em:
   \url{https://www.geoscan.com.br/classificacao-de-barragens/}. Atualizado em:
   14 dez. 2024.}
+
+\bibitem[GEOSCAN 2024]{geoscan2024sistema}
+\abntrefinfo{GEOSCAN}{GEOSCAN}{2024}
+{GEOSCAN. \emph{Sistema de monitoramento de barragem}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.geoscan.com.br/sistema-de-monitoramento-de-barragem/}.
+  Acesso em: 31 maio 2025.}
 
 \bibitem[{GLOBAL REPORTING INITIATIVE} 2013]{gri2013mining}
 \abntrefinfo{{GLOBAL REPORTING INITIATIVE}}{{GLOBAL REPORTING
@@ -477,10 +623,31 @@ Dispon{\'\i}vel em:
 Amsterdam, 2013. Dispon{\'\i}vel em:
   \url{https://cdn2.hubspot.net/hubfs/2642721/Recursos/Guias\%20y\%20Estandares/Suplementos\%20sectoriales\%20G4/GRI-G4-Mining-and-Metals-Sector-Disclosures\%20(1).pdf}.}
 
+\bibitem[{GREENPEACE BRASIL} 2016]{greenpeace2016valor}
+\abntrefinfo{{GREENPEACE BRASIL}}{{GREENPEACE BRASIL}}{2016}
+{{GREENPEACE BRASIL}. \emph{Qual é o valor de um desastre ambiental no
+  Brasil?} 2016. Greenpeace Brasil.
+Dispon{\'\i}vel em:
+  \url{https://www.greenpeace.org/brasil/blog/qual-e-o-valor-de-um-desastre-ambiental-no-brasil/}.
+  Acesso em: 31 maio 2025.}
+
 \bibitem[Hartman e Mutmansky 2019]{jr2019}
 \abntrefinfo{Hartman e Mutmansky}{HARTMAN; MUTMANSKY}{2019}
 {HARTMAN, H.~L.; MUTMANSKY, J.~M. \emph{Introductory Mining Engineering}. 2.
   ed. [S.l.]: John Wiley \& Sons, 2019.}
+
+\bibitem[HEXAGON 2024]{hexagon2024monitoramento}
+\abntrefinfo{HEXAGON}{HEXAGON}{2024}
+{HEXAGON. \emph{Monitoramento da integridade estrutural da construção}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://hexagon.com/pt/solutions/structures-construction-monitoring}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[{HR WALLINGFORD} 2021]{hrwallingford2021damsat}
+\abntrefinfo{{HR WALLINGFORD}}{{HR WALLINGFORD}}{2021}
+{{HR WALLINGFORD}. \emph{DAMSAT | HR Wallingford}. 2021.
+Dispon{\'\i}vel em: \url{https://www.hrwallingford.com/projects/damsat}. Acesso
+  em: 11 jun. 2025.}
 
 \bibitem[{IBRAM} 2006]{ibram2006}
 \abntrefinfo{{IBRAM}}{{IBRAM}}{2006}
@@ -492,6 +659,14 @@ Brasília, 2006.}
 {{IBRAM}. \emph{Gestão e Manejo de Rejeitos da Mineração}.
 1. ed. Brasília, 2016. Dispon{\'\i}vel em:
   \url{https://ibram.org.br/wp-content/uploads/2021/02/Gestao-e-Manejo-de-Rejeitos-da-Mineracao-2016.pdf}.}
+
+\bibitem[IBRAM 2020]{ibram2020tecnologias}
+\abntrefinfo{IBRAM}{IBRAM}{2020}
+{IBRAM. \emph{As mais recentes tecnologias para o gerenciamento de riscos em
+  minas}. 2020.
+Dispon{\'\i}vel em:
+  \url{https://ibram.org.br/noticia/as-mais-recentes-tecnologias-para-o-gerenciamento-de-riscos-em-minas/}.
+  Acesso em: 1 jun. 2025.}
 
 \bibitem[{IBRAM} 2022]{ibramlivroverde2022}
 \abntrefinfo{{IBRAM}}{{IBRAM}}{2022}
@@ -525,6 +700,15 @@ Dispon{\'\i}vel em: \url{https://ibram.org.br/publicacoes/}.}
   1S23}.
 Brasília, 2023. Dispon{\'\i}vel em:
   \url{https://ibram.org.br/wp-content/uploads/2023/07/20230718\_Coletiva-de-Imprensa-Resultados-1S23\_rev02.pdf}.}
+
+\bibitem[{INSTITUTO CAMILA E LUIZ TALIBERTI} 2025]{taliberti2025tragedia}
+\abntrefinfo{{INSTITUTO CAMILA E LUIZ TALIBERTI}}{{INSTITUTO CAMILA E LUIZ
+  TALIBERTI}}{2025}
+{{INSTITUTO CAMILA E LUIZ TALIBERTI}. \emph{6 anos da tragédia de Brumadinho}.
+  2025.
+Dispon{\'\i}vel em:
+  \url{https://somossementes.org.br/6-anos-da-tragedia-de-brumadinho/}. Acesso
+  em: 1 jun. 2025.}
 
 \bibitem[{Instituto de Pesquisa Econômica Aplicada} 2017]{ipea2017boletim}
 \abntrefinfo{{Instituto de Pesquisa Econômica Aplicada}}{{Instituto de
@@ -569,6 +753,20 @@ Paris, 2022. Dispon{\'\i}vel em:
 London, 2020. Dispon{\'\i}vel em:
   \url{https://globaltailingsreview.org/wp-content/uploads/2020/08/global-industry-standard-on-tailings-management.pdf}.}
 
+\bibitem[{INTERNATIONAL MINING} 2024]{internationalmining2024tailings}
+\abntrefinfo{{INTERNATIONAL MINING}}{{INTERNATIONAL MINING}}{2024}
+{{INTERNATIONAL MINING}. \emph{tailings dams Archives - International Mining}.
+  2024.
+Dispon{\'\i}vel em: \url{https://im-mining.com/tag/tailings-dams/}. Acesso em:
+  11 jun. 2025.}
+
+\bibitem[{INTERNATIONAL WATER POWER} 2024]{internationalwater2024digital}
+\abntrefinfo{{INTERNATIONAL WATER POWER}}{{INTERNATIONAL WATER POWER}}{2024}
+{{INTERNATIONAL WATER POWER}. \emph{Digital twins for tailings dams}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.waterpowermagazine.com/analysis/digital-twins-for-tailings-dams/}.
+  Acesso em: 11 jun. 2025.}
+
 \bibitem[{IPEA} 2023]{ipea2023}
 \abntrefinfo{{IPEA}}{{IPEA}}{2023}
 {{IPEA}. \emph{Ipea e MME lançam estudo sobre a extensão da cadeia produtiva
@@ -592,6 +790,15 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://blog.jazida.com/as-leis-que-regulamentam-a-atividade-de-mineracao-no-brasil/}.}
 
+\bibitem[JING e GAO 2022]{jing2022monitoring}
+\abntrefinfo{JING e GAO}{JING; GAO}{2022}
+{JING, Z.; GAO, X. Monitoring and early warning of a metal mine tailings pond
+  based on a deep learning bidirectional recurrent long and short memory
+  network.
+\emph{PLoS One}, United States, v.~17, n.~10, p. e0273073, out 2022.
+Dispon{\'\i}vel em: \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC9562152/}.
+  Acesso em: 11 jun. 2025.}
+
 \bibitem[Júnior et al. 2018]{desouzajunior2018}
 \abntrefinfo{Júnior et al.}{JúNIOR et al.}{2018}
 {JúNIOR, T.~F. D.~S.; MOREIRA, E.~B.; HEINECK, K.~S. Barragens de contenção
@@ -600,12 +807,27 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://www2.ifrn.edu.br/ojs/index.php/HOLOS/article/view/7423}.}
 
+\bibitem[{KLOHN CRIPPEN BERGER} 2021]{klohn2021surveillance}
+\abntrefinfo{{KLOHN CRIPPEN BERGER}}{{KLOHN CRIPPEN BERGER}}{2021}
+{{KLOHN CRIPPEN BERGER}. \emph{Tailings Dam Surveillance Technology - KCB's
+  Experience}. 2021.
+Dispon{\'\i}vel em:
+  \url{https://klohn.com/blog/tailings-dam-surveillance-technology-kcbs-experience/}.
+  Acesso em: 11 jun. 2025.}
+
 \bibitem[Leão e Rabelo 2023]{leao2023}
 \abntrefinfo{Leão e Rabelo}{LEãO; RABELO}{2023}
 {LEãO, R.; RABELO, R. \emph{A Extensão da Cadeia Produtiva da Economia
   Mineral no PIB Brasileiro}: Sumário executivo.
 Rio de Janeiro, 2023. Dispon{\'\i}vel em:
   \url{https://repositorio.ipea.gov.br/bitstream/11058/12702/1/TD\_2950\_web.pdf}.}
+
+\bibitem[{LONDON MINING NETWORK} 2021]{londonmining2021explainer}
+\abntrefinfo{{LONDON MINING NETWORK}}{{LONDON MINING NETWORK}}{2021}
+{{LONDON MINING NETWORK}. \emph{Tailings dams: an explainer}. 2021.
+Dispon{\'\i}vel em:
+  \url{https://londonminingnetwork.org/get-informed/tailings-dams-explainer/}.
+  Acesso em: 11 jun. 2025.}
 
 \bibitem[Lozano 2006]{lozano2006}
 \abntrefinfo{Lozano}{LOZANO}{2006}
@@ -616,6 +838,54 @@ Disserta\c{c}\~{a}o (Mestrado) --- Universidade de São Paulo, São Paulo,
   2006.
 Dispon{\'\i}vel em:
   \url{http://www.teses.usp.br/teses/disponiveis/3/3145/tde-14122006-123702/}.}
+
+\bibitem[LTEC 2024]{ltec2024piezometros}
+\abntrefinfo{LTEC}{LTEC}{2024}
+{LTEC. \emph{Instrumentação em Barragens – Piezômetros - NBR 17189}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://ltec.eng.br/instrumentacao-em-barragens-piezometros-nbr-17189/}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[LTEC 2025]{ltec2025inclinometros}
+\abntrefinfo{LTEC}{LTEC}{2025}
+{LTEC. \emph{Instrumentação em obras: Inclinômetros - NBR 17189 / ASTM
+  D6230}. 2025.
+Dispon{\'\i}vel em:
+  \url{https://ltec.eng.br/instrumentacao-em-obras-inclinometros-nbr-17189-astm-d6230/}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[METRÓPOLES 2019]{metropoles2019laudos}
+\abntrefinfo{METRÓPOLES}{METRÓPOLES}{2019}
+{METRÓPOLES. \emph{Saiba o que dizem os laudos sobre as causas do rompimento
+  da barragem de Brumadinho}. 2019.
+Dispon{\'\i}vel em:
+  \url{https://www.metropoles.com/brasil/saiba-o-que-dizem-os-laudos-sobre-as-causas-do-rompimento-da-barragem-de-brumadinho}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[{MINAS GERAIS. Governo do Estado} 2024]{minasgerais2024historico}
+\abntrefinfo{{MINAS GERAIS. Governo do Estado}}{{MINAS GERAIS. Governo do
+  Estado}}{2024}
+{{MINAS GERAIS. Governo do Estado}. \emph{Histórico do rompimento das
+  barragens da Vale na Mina Córrego do Feijão}. Belo Horizonte: [s.n.], 2024.
+  Governo de Minas Gerais.
+Dispon{\'\i}vel em:
+  \url{https://www.mg.gov.br/pro-brumadinho/pagina/historico-do-rompimento-das-barragens-da-vale-na-mina-corrego-do-feijao}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[{MINE DESIGN SOLUTIONS} 2021]{minedesign2021tailings}
+\abntrefinfo{{MINE DESIGN SOLUTIONS}}{{MINE DESIGN SOLUTIONS}}{2021}
+{{MINE DESIGN SOLUTIONS}. \emph{Tailings Dam Monitoring}. 2021.
+Dispon{\'\i}vel em:
+  \url{https://mdt.ca/piezometer-monitoring/tailings-dam-monitoring/}. Acesso
+  em: 11 jun. 2025.}
+
+\bibitem[{MINERAÇÃO BRASIL} 2024]{mineracaobrasil2024metodos}
+\abntrefinfo{{MINERAÇÃO BRASIL}}{{MINERAÇÃO BRASIL}}{2024}
+{{MINERAÇÃO BRASIL}. \emph{Métodos Alternativos para as Barragens de
+  Rejeitos}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://mineracaobrasil.com/metodos-alternativos-para-as-barragens-de-rejeitos/}.
+  Acesso em: 31 maio 2025.}
 
 \bibitem[{MINING ASSOCIATION OF CANADA} 2021]{mac2021guide}
 \abntrefinfo{{MINING ASSOCIATION OF CANADA}}{{MINING ASSOCIATION OF
@@ -640,6 +910,14 @@ Dispon{\'\i}vel em:
 Brasília, DF, 2018. Dispon{\'\i}vel em:
   \url{https://www.gov.br/transportes/pt-br/centrais-de-conteudo/iso-31000-de-2018-gestao-de-riscos-pdf}.}
 
+\bibitem[MODELLI 2024]{modelli2024brumadinho}
+\abntrefinfo{MODELLI}{MODELLI}{2024}
+{MODELLI, L. \emph{Brumadinho: 5 anos da tragédia, 5 anos de injustiça
+  socioambiental}. 2024. Greenpeace Brasil.
+Dispon{\'\i}vel em:
+  \url{https://www.greenpeace.org/brasil/blog/brumadinho-5-anos-da-tragedia-5-anos-de-injustica-socioambiental/}.
+  Acesso em: 31 maio 2025.}
+
 \bibitem[Moecke 2019]{moecke2019}
 \abntrefinfo{Moecke}{MOECKE}{2019}
 {MOECKE, G.~C.
@@ -650,11 +928,91 @@ Brasília, DF, 2018. Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://repositorio.ufc.br/bitstream/riufc/49955/3/2019\_dis\_gcmoecke.pdf}.}
 
+\bibitem[{NATURE COMMUNICATIONS} 2020]{naturecomm2020advanced}
+\abntrefinfo{{NATURE COMMUNICATIONS}}{{NATURE COMMUNICATIONS}}{2020}
+{{NATURE COMMUNICATIONS}. Advanced analysis of satellite data reveals ground
+  deformation precursors to the brumadinho tailings dam collapse.
+2020.
+Dispon{\'\i}vel em: \url{https://www.nature.com/articles/s43247-020-00079-2}.
+  Acesso em: 11 jun. 2025.}
+
+\bibitem[{NATURE COMMUNICATIONS} 2022]{naturecomm2022monitoring}
+\abntrefinfo{{NATURE COMMUNICATIONS}}{{NATURE COMMUNICATIONS}}{2022}
+{{NATURE COMMUNICATIONS}. Advanced monitoring of tailings dam performance using
+  seismic noise and stress models.
+2022.
+Dispon{\'\i}vel em: \url{https://www.nature.com/articles/s43247-022-00629-w}.
+  Acesso em: 11 jun. 2025.}
+
+\bibitem[{PROJETO MANUELZÃO} 2015]{projetomanuelzao2015}
+\abntrefinfo{{PROJETO MANUELZÃO}}{{PROJETO MANUELZÃO}}{2015}
+{{PROJETO MANUELZÃO}. \emph{Barragem que se rompeu em Mariana tinha 20 vezes o
+  volume registrado pela Feam}. 2015. Universidade Federal de Minas Gerais.
+Dispon{\'\i}vel em:
+  \url{https://manuelzao.ufmg.br/barragem-que-se-rompeu-em-mariana-tinha-20-vezes-o-volume-registrado-pela-feam/}.
+  Acesso em: 26 maio 2025.}
+
+\bibitem[RADAZ 2024]{radaz2024revolucionando}
+\abntrefinfo{RADAZ}{RADAZ}{2024}
+{RADAZ. \emph{Revolucionando as operações de mineração com tecnologia de
+  radar embarcada em drones}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://radaz.com.br/na-midia/blog/103-revolucionando-as-operacoes-de-mineracao-com-tecnologia-de-radar-embarcada-em-drones}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[RAMJACK 2022]{ramjack2022tailings}
+\abntrefinfo{RAMJACK}{RAMJACK}{2022}
+{RAMJACK. \emph{Tailings Dam Monitoring}. 2022.
+Dispon{\'\i}vel em:
+  \url{https://ramjacktech.com/our-expertise/monitor/tailings-dam-monitoring/}.
+  Acesso em: 11 jun. 2025.}
+
+\bibitem[{RST INSTRUMENTS} 2022]{rstinstruments2022tailings}
+\abntrefinfo{{RST INSTRUMENTS}}{{RST INSTRUMENTS}}{2022}
+{{RST INSTRUMENTS}. \emph{Tailings dam monitoring: In-ground and above-ground
+  technologies}. 2022.
+Dispon{\'\i}vel em:
+  \url{https://rstinstruments.com/blog/tailings-dam-monitoring-in-ground-and-above-ground-technologies/}.
+  Acesso em: 11 jun. 2025.}
+
+\bibitem[{SATELLITE APPLICATIONS CATAPULT} 2023]{satellite2023tailings}
+\abntrefinfo{{SATELLITE APPLICATIONS CATAPULT}}{{SATELLITE APPLICATIONS
+  CATAPULT}}{2023}
+{{SATELLITE APPLICATIONS CATAPULT}. \emph{Tailings Dams Monitoring using
+  Satellite-Enabled Technologies}. 2023.
+Dispon{\'\i}vel em:
+  \url{https://sa.catapult.org.uk/blogs/tailings-dams-monitoring-using-satellite-enabled-technologies/}.
+  Acesso em: 11 jun. 2025.}
+
 \bibitem[{Segurança Tem Futuro} [s.d.]]{segurancatemfuturo}
 \abntrefinfo{{Segurança Tem Futuro}}{{Segurança Tem Futuro}}{[s.d.]}
 {{Segurança Tem Futuro}. \emph{A matriz de risco}. [s.d.].
 Dispon{\'\i}vel em:
   \url{https://segurancatemfuturo.com.br/index.php/home/gerenciamento-de-riscos/a-matriz-de-risco/}.}
+
+\bibitem[{SEQUÊNCIA ENGENHARIA} 2024]{sequencia2024sismografico}
+\abntrefinfo{{SEQUÊNCIA ENGENHARIA}}{{SEQUÊNCIA ENGENHARIA}}{2024a}
+{{SEQUÊNCIA ENGENHARIA}. \emph{Monitoramento Sismográfico de Barragens}.
+  2024.
+Dispon{\'\i}vel em:
+  \url{https://sequencia.eng.br/servicos/monitoramento-de-vibracoes/monitoramento-sismografico-de-barragens/}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[{SEQUÊNCIA ENGENHARIA} 2024]{sequencia2024tempo}
+\abntrefinfo{{SEQUÊNCIA ENGENHARIA}}{{SEQUÊNCIA ENGENHARIA}}{2024b}
+{{SEQUÊNCIA ENGENHARIA}. \emph{Monitoramento Sismográfico de Barragens em
+  Tempo Real}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://sequencia.eng.br/monitoramento-sismografico-de-barragens-em-tempo-real/}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[SILIXA 2024]{silixa2024dampulse}
+\abntrefinfo{SILIXA}{SILIXA}{2024}
+{SILIXA. \emph{DamPulse™ – Tailings Dam Monitoring System}. Elstree: Silixa
+  Ltd, 2024.
+Dispon{\'\i}vel em:
+  \url{https://silixa.com/sectors/mining/dampulse-tailings-dam-monitoring/}.
+  Acesso em: 11 jun. 2025. Atualizado em 2024.}
 
 \bibitem[{Sistema ESO} 2021]{sistemaeso2021avaliacao}
 \abntrefinfo{{Sistema ESO}}{{Sistema ESO}}{2021a}
@@ -675,6 +1033,13 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://mineralis.cetem.gov.br/bitstream/cetem/769/1/CCL00410010.pdf}.}
 
+\bibitem[STOCKS 2019]{stocks2019tailings}
+\abntrefinfo{STOCKS}{STOCKS}{2019}
+{STOCKS, C. \emph{Tailings dam failures – can we minimise the risks?} 2019.
+Dispon{\'\i}vel em:
+  \url{https://www.waterpowermagazine.com/analysis/tailings-dam-failures-can-we-minimise-the-risks-7217097/?cf-view}.
+  Acesso em: 12 jun. 2025.}
+
 \bibitem[{SUSTAINABILITY ACCOUNTING STANDARDS BOARD}
   2018]{sasb2018sustainability}
 \abntrefinfo{{SUSTAINABILITY ACCOUNTING STANDARDS BOARD}}{{SUSTAINABILITY
@@ -684,11 +1049,27 @@ Dispon{\'\i}vel em:
 San Francisco, 2018. Dispon{\'\i}vel em:
   \url{https://www.hecla.com/wp-content/uploads/2021-Hecla\_SASB\_2020Tables-FINAL.pdf}.}
 
+\bibitem[{SYNERGIA CONSULTORIA} 2024]{synergia2024desastres}
+\abntrefinfo{{SYNERGIA CONSULTORIA}}{{SYNERGIA CONSULTORIA}}{2024}
+{{SYNERGIA CONSULTORIA}. \emph{Desastres com barragens e o novo marco na
+  mineração}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.synergiaconsultoria.com.br/fique-por-dentro/desastres-em-barragens-e-o-novo-marco-na-mineracao/}.
+  Acesso em: 31 maio 2025.}
+
 \bibitem[{Teck Resources Limited} 2019]{teck2019}
 \abntrefinfo{{Teck Resources Limited}}{{Teck Resources Limited}}{2019}
 {{Teck Resources Limited}. \emph{Tailings safety and security at Teck}.
 [S.l.], 2019. Dispon{\'\i}vel em:
   \url{https://www.teck.com/media/Tailings-Fact-Sheet.pdf}.}
+
+\bibitem[{TETRA TECH} 2023]{tetratech2023mitigating}
+\abntrefinfo{{TETRA TECH}}{{TETRA TECH}}{2023}
+{{TETRA TECH}. \emph{Mitigating Risks for Tailings Dams with Microseismic
+  Technology}. 2023.
+Dispon{\'\i}vel em:
+  \url{https://www.tetratech.com/insights/mitigating-risks-for-tailings-dams-with-microseismic-technology/}.
+  Acesso em: 11 jun. 2025.}
 
 \bibitem[Thomé e Passini 2018]{thome2018}
 \abntrefinfo{Thomé e Passini}{THOMé; PASSINI}{2018}
@@ -698,6 +1079,23 @@ San Francisco, 2018. Dispon{\'\i}vel em:
 \emph{Ciências Sociais Aplicadas em Revista}, v.~18, n.~34, p. 49--65, 2018.
 Dispon{\'\i}vel em:
   \url{https://saber.unioeste.br/index.php/csaemrevista/article/view/19480}.}
+
+\bibitem[TRIMBLE 2025]{trimble2025melhor}
+\abntrefinfo{TRIMBLE}{TRIMBLE}{2025}
+{TRIMBLE. \emph{O Melhor Sistema de Monitoramento de Barragens da Indústria}.
+  2025.
+Dispon{\'\i}vel em:
+  \url{https://geospatial.trimble.com/en/resources/blog/o-melhor-sistema-de-monitoramento-de-barragens-da-indústria}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[{UNIVERSIDADE FEDERAL DO PARANÁ} 2021]{ufpr2021simepar}
+\abntrefinfo{{UNIVERSIDADE FEDERAL DO PARANÁ}}{{UNIVERSIDADE FEDERAL DO
+  PARANÁ}}{2021}
+{{UNIVERSIDADE FEDERAL DO PARANÁ}. \emph{Simepar faz monitoramento inteligente
+  das águas com tecnologia IoT}. 2021.
+Dispon{\'\i}vel em:
+  \url{https://ufpr.br/simepar-faz-monitoramento-inteligente-das-aguas-com-tecnologia-iot/}.
+  Acesso em: 31 maio 2025.}
 
 \bibitem[{UNIÃO EUROPEIA} 1985]{eu1985diretiva337}
 \abntrefinfo{{UNIÃO EUROPEIA}}{{UNIÃO EUROPEIA}}{1985}
@@ -744,6 +1142,39 @@ Dispon{\'\i}vel em:
   n.~10, p. 440--450, 2023.
 Dispon{\'\i}vel em:
   \url{https://periodicorease.pro.br/rease/article/view/11650}.}
+
+\bibitem[WARZYNSKI et al. 2023]{warzynski2023barragem}
+\abntrefinfo{WARZYNSKI et al.}{WARZYNSKI et al.}{2023}
+{WARZYNSKI, V.~P. et al. Barragem de rejeitos.
+\emph{Revista Ibero-Americana de Humanidades, Ciências e Educação}, [S. l.],
+  v.~9, n.~10, p. 440--450, 2023.
+Dispon{\'\i}vel em:
+  \url{https://periodicorease.pro.br/rease/article/view/11650}. Acesso em: 19
+  maio 2025.}
+
+\bibitem[{WIKIPÉDIA} 2015]{wikipedia2015mariana}
+\abntrefinfo{{WIKIPÉDIA}}{{WIKIPÉDIA}}{2015}
+{{WIKIPÉDIA}. \emph{Rompimento de barragem em Mariana}. [S.l.]: [s.n.], 2015.
+  WIKIPÉDIA: a enciclopédia livre.
+Dispon{\'\i}vel em:
+  \url{https://pt.wikipedia.org/wiki/Rompimento\_de\_barragem\_em\_Mariana}.
+  Acesso em: 31 maio 2025.}
+
+\bibitem[{WIKIPÉDIA} 2019]{wikipedia2019brumadinho}
+\abntrefinfo{{WIKIPÉDIA}}{{WIKIPÉDIA}}{2019}
+{{WIKIPÉDIA}. \emph{Rompimento de barragem em Brumadinho}. [S.l.]: [s.n.],
+  2019. WIKIPÉDIA: a enciclopédia livre.
+Dispon{\'\i}vel em:
+  \url{https://pt.wikipedia.org/wiki/Rompimento\_de\_barragem\_em\_Brumadinho}.
+  Acesso em: 26 maio 2025.}
+
+\bibitem[WORLDSENSING 2024]{worldsensing2024canadian}
+\abntrefinfo{WORLDSENSING}{WORLDSENSING}{2024}
+{WORLDSENSING. \emph{How a major Canadian tailings dam improves monitoring data
+  and increases personnel safety, while cutting costs}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.worldsensing.com/success-story/how-a-major-canadian-tailings-dam-improves-monitoring-data-and-increases-personnel-safety-while-cutting-costs/}.
+  Acesso em: 11 jun. 2025.}
 
 \bibitem[{XENITH CONSULTING} 2025]{xenith2025esg}
 \abntrefinfo{{XENITH CONSULTING}}{{XENITH CONSULTING}}{2025}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.9)  8 JUN 2025 21:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.9)  12 JUN 2025 19:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1250,16 +1250,25 @@ Overfull \hbox (1.43886pt too wide) in paragraph at lines 11--11
 
 
 
-] [13] [14] [15]) (principal.toc
-Overfull \hbox (40.81932pt too wide) in paragraph at lines 45--45
- [][] [][]$[]$[] []  
+] [13]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 58.
+ (C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `phv' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [14] [15]) (principal.toc [16
+
+
+
+]
+Overfull \hbox (1.41573pt too wide) detected at line 83
+ \T1/phv/m/n/12 100
  []
 
-) [16
-
-
-
-] [17]
+) [17]
 \openout2 = `introducao.aux'.
 
  (introducao.tex [18
@@ -1285,15 +1294,7 @@ LaTeX Warning: Citation `carvalho2012dependencia' on page 20 undefined on input 
 
 LaTeX Warning: Citation `carvalho2012dependencia' on page 20 undefined on input line 8.
 
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 16.
-(C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `phv' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [20
+[20
 
 
 
@@ -1324,17 +1325,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 62.
 
 [24] [25]
-<figures/image1_mineracao_numeros_1.png, id=466, 436.63126pt x 345.54094pt>
+<figures/image1_mineracao_numeros_1.png, id=536, 436.63126pt x 345.54094pt>
 File: figures/image1_mineracao_numeros_1.png Graphic file (type png)
 <use figures/image1_mineracao_numeros_1.png>
 Package pdftex.def Info: figures/image1_mineracao_numeros_1.png  used on input line 107.
 (pdftex.def)             Requested size: 455.0pt x 360.0817pt.
-<figures/image2_mineracao_numeros_2.png, id=468, 347.49825pt x 372.1905pt>
+<figures/image2_mineracao_numeros_2.png, id=538, 347.49825pt x 372.1905pt>
 File: figures/image2_mineracao_numeros_2.png Graphic file (type png)
 <use figures/image2_mineracao_numeros_2.png>
 Package pdftex.def Info: figures/image2_mineracao_numeros_2.png  used on input line 115.
 (pdftex.def)             Requested size: 455.0pt x 487.36868pt.
-<figures/image3_mineracao_numeros_3.png, id=469, 435.87843pt x 69.25874pt>
+<figures/image3_mineracao_numeros_3.png, id=539, 435.87843pt x 69.25874pt>
 File: figures/image3_mineracao_numeros_3.png Graphic file (type png)
 <use figures/image3_mineracao_numeros_3.png>
 Package pdftex.def Info: figures/image3_mineracao_numeros_3.png  used on input line 123.
@@ -1347,45 +1348,45 @@ LaTeX Warning: Reference `fig:image5_saldo_estoque_4tri2023' on page 27 undefine
 LaTeX Warning: Reference `fig:image5_saldo_estoque_4tri2023' on page 27 undefined on input line 136.
 
 [27 <./figures/image1_mineracao_numeros_1.png>] [28 <./figures/image2_mineracao_numeros_2.png> <./figures/image3_mineracao_numeros_3.png>]
-<figures/image4_saldo_estoque_3tri2023.png, id=498, 615.0478pt x 343.2825pt>
+<figures/image4_saldo_estoque_3tri2023.png, id=568, 615.0478pt x 343.2825pt>
 File: figures/image4_saldo_estoque_3tri2023.png Graphic file (type png)
 <use figures/image4_saldo_estoque_3tri2023.png>
 Package pdftex.def Info: figures/image4_saldo_estoque_3tri2023.png  used on input line 140.
 (pdftex.def)             Requested size: 455.0pt x 253.95697pt.
-<figures/image5_saldo_estoque_4tri2023.png, id=501, 613.54219pt x 314.67563pt>
+<figures/image5_saldo_estoque_4tri2023.png, id=571, 613.54219pt x 314.67563pt>
 File: figures/image5_saldo_estoque_4tri2023.png Graphic file (type png)
 <use figures/image5_saldo_estoque_4tri2023.png>
 Package pdftex.def Info: figures/image5_saldo_estoque_4tri2023.png  used on input line 148.
 (pdftex.def)             Requested size: 455.0pt x 233.36528pt.
  [29 <./figures/image4_saldo_estoque_3tri2023.png>]
-<figures/image6_saldo_mao_obra_3tri2023.png, id=517, 612.78937pt x 318.43968pt>
+<figures/image6_saldo_mao_obra_3tri2023.png, id=587, 612.78937pt x 318.43968pt>
 File: figures/image6_saldo_mao_obra_3tri2023.png Graphic file (type png)
 <use figures/image6_saldo_mao_obra_3tri2023.png>
 Package pdftex.def Info: figures/image6_saldo_mao_obra_3tri2023.png  used on input line 158.
 (pdftex.def)             Requested size: 455.0pt x 236.4434pt.
-<figures/image7_variacao_emprego_4tri2023.png, id=520, 614.295pt x 307.1475pt>
+<figures/image7_variacao_emprego_4tri2023.png, id=590, 614.295pt x 307.1475pt>
 File: figures/image7_variacao_emprego_4tri2023.png Graphic file (type png)
 <use figures/image7_variacao_emprego_4tri2023.png>
 Package pdftex.def Info: figures/image7_variacao_emprego_4tri2023.png  used on input line 166.
 (pdftex.def)             Requested size: 455.0pt x 227.50117pt.
-<figures/image8_estoque_mao_obra.png, id=526, 617.30624pt x 363.60844pt>
+<figures/image8_estoque_mao_obra.png, id=596, 617.30624pt x 363.60844pt>
 File: figures/image8_estoque_mao_obra.png Graphic file (type png)
 <use figures/image8_estoque_mao_obra.png>
 Package pdftex.def Info: figures/image8_estoque_mao_obra.png  used on input line 176.
 (pdftex.def)             Requested size: 455.0pt x 268.01187pt.
  [30 <./figures/image5_saldo_estoque_4tri2023.png>]
-<figures/image10_evolucao_saldo_itm.png, id=544, 613.54219pt x 274.77657pt>
+<figures/image10_evolucao_saldo_itm.png, id=614, 613.54219pt x 274.77657pt>
 File: figures/image10_evolucao_saldo_itm.png Graphic file (type png)
 <use figures/image10_evolucao_saldo_itm.png>
 Package pdftex.def Info: figures/image10_evolucao_saldo_itm.png  used on input line 188.
 (pdftex.def)             Requested size: 455.0pt x 203.7759pt.
-<figures/image10_evolucao_saldo_itm_3tri.png, id=547, 834.86906pt x 411.03563pt>
+<figures/image10_evolucao_saldo_itm_3tri.png, id=617, 834.86906pt x 411.03563pt>
 File: figures/image10_evolucao_saldo_itm_3tri.png Graphic file (type png)
 <use figures/image10_evolucao_saldo_itm_3tri.png>
 Package pdftex.def Info: figures/image10_evolucao_saldo_itm_3tri.png  used on input line 196.
 (pdftex.def)             Requested size: 455.0pt x 224.0131pt.
  [31 <./figures/image6_saldo_mao_obra_3tri2023.png> <./figures/image7_variacao_emprego_4tri2023.png>]
-<figures/image11_salarios_admissao.png, id=559, 616.55344pt x 365.11406pt>
+<figures/image11_salarios_admissao.png, id=629, 616.55344pt x 365.11406pt>
 File: figures/image11_salarios_admissao.png Graphic file (type png)
 <use figures/image11_salarios_admissao.png>
 Package pdftex.def Info: figures/image11_salarios_admissao.png  used on input line 206.
@@ -1415,25 +1416,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 216.
 
-<figures/image14_etapas_mineracao.png, id=604, 403.5075pt x 537.50812pt>
+<figures/image14_etapas_mineracao.png, id=674, 403.5075pt x 537.50812pt>
 File: figures/image14_etapas_mineracao.png Graphic file (type png)
 <use figures/image14_etapas_mineracao.png>
 Package pdftex.def Info: figures/image14_etapas_mineracao.png  used on input line 230.
 (pdftex.def)             Requested size: 409.49722pt x 545.49525pt.
 [34] [35 <./figures/image14_etapas_mineracao.png>]
-<figures/image16_operacoes_lavra.png, id=641, 581.17125pt x 182.18062pt>
+<figures/image16_operacoes_lavra.png, id=711, 581.17125pt x 182.18062pt>
 File: figures/image16_operacoes_lavra.png Graphic file (type png)
 <use figures/image16_operacoes_lavra.png>
 Package pdftex.def Info: figures/image16_operacoes_lavra.png  used on input line 246.
 (pdftex.def)             Requested size: 409.49722pt x 128.36784pt.
  [36 <./figures/image16_operacoes_lavra.png>]
-<figures/image15_metodos_lavra.png, id=665, 486.31688pt x 523.9575pt>
+<figures/image15_metodos_lavra.png, id=735, 486.31688pt x 523.9575pt>
 File: figures/image15_metodos_lavra.png Graphic file (type png)
 <use figures/image15_metodos_lavra.png>
 Package pdftex.def Info: figures/image15_metodos_lavra.png  used on input line 260.
 (pdftex.def)             Requested size: 409.49722pt x 441.19263pt.
  [37 <./figures/image15_metodos_lavra.png>] [38] [39] [40]
-<figures/image17_producao_minerio.png, id=757, 470.50781pt x 572.89032pt>
+<figures/image17_producao_minerio.png, id=827, 470.50781pt x 572.89032pt>
 File: figures/image17_producao_minerio.png Graphic file (type png)
 <use figures/image17_producao_minerio.png>
 Package pdftex.def Info: figures/image17_producao_minerio.png  used on input line 363.
@@ -1464,23 +1465,23 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 397.
 
 [45] [46]
-<figures/image18_metodo_montante.png, id=885, 621.82312pt x 136.25906pt>
+<figures/image18_metodo_montante.png, id=955, 621.82312pt x 136.25906pt>
 File: figures/image18_metodo_montante.png Graphic file (type png)
 <use figures/image18_metodo_montante.png>
 Package pdftex.def Info: figures/image18_metodo_montante.png  used on input line 426.
 (pdftex.def)             Requested size: 409.49722pt x 89.73372pt.
-<figures/image19_jusante.png, id=894, 619.56468pt x 162.6075pt>
+<figures/image19_jusante.png, id=964, 619.56468pt x 162.6075pt>
 File: figures/image19_jusante.png Graphic file (type png)
 <use figures/image19_jusante.png>
 Package pdftex.def Info: figures/image19_jusante.png  used on input line 438.
 (pdftex.def)             Requested size: 409.49722pt x 107.47263pt.
  [47 <./figures/image18_metodo_montante.png> <./figures/image19_jusante.png>]
-<figures/image18_montante_cont.png, id=910, 555.57562pt x 169.38281pt>
+<figures/image18_montante_cont.png, id=980, 555.57562pt x 169.38281pt>
 File: figures/image18_montante_cont.png Graphic file (type png)
 <use figures/image18_montante_cont.png>
 Package pdftex.def Info: figures/image18_montante_cont.png  used on input line 450.
 (pdftex.def)             Requested size: 409.49722pt x 124.84766pt.
-<figures/image20_linha_de_centro.png, id=922, 624.83438pt x 145.29282pt>
+<figures/image20_linha_de_centro.png, id=992, 624.83438pt x 145.29282pt>
 File: figures/image20_linha_de_centro.png Graphic file (type png)
 <use figures/image20_linha_de_centro.png>
 Package pdftex.def Info: figures/image20_linha_de_centro.png  used on input line 464.
@@ -1637,7 +1638,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 552--552
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [49 <./figures/image20_linha_de_centro.png>]
-<figures/image21_distribuicao_barragens_por_metodo_atual.png, id=960, 1350.54562pt x 597.73312pt>
+<figures/image21_distribuicao_barragens_por_metodo_atual.png, id=1030, 1350.54562pt x 597.73312pt>
 File: figures/image21_distribuicao_barragens_por_metodo_atual.png Graphic file (type png)
 <use figures/image21_distribuicao_barragens_por_metodo_atual.png>
 Package pdftex.def Info: figures/image21_distribuicao_barragens_por_metodo_atual.png  used on input line 568.
@@ -1677,33 +1678,33 @@ Overfull \hbox (1.04152pt too wide) in paragraph at lines 602--603
  []
 
 [54] [55] [56] [57] [58]
-<figures/image22_categoria_de_risco_ct.png, id=1171, 950.04938pt x 371.13657pt>
+<figures/image22_categoria_de_risco_ct.png, id=1241, 950.04938pt x 371.13657pt>
 File: figures/image22_categoria_de_risco_ct.png Graphic file (type png)
 <use figures/image22_categoria_de_risco_ct.png>
 Package pdftex.def Info: figures/image22_categoria_de_risco_ct.png  used on input line 670.
 (pdftex.def)             Requested size: 455.0pt x 177.7471pt.
-<figures/image23_categoria_de_risco_ec.png, id=1174, 956.82469pt x 593.21625pt>
+<figures/image23_categoria_de_risco_ec.png, id=1244, 956.82469pt x 593.21625pt>
 File: figures/image23_categoria_de_risco_ec.png Graphic file (type png)
 <use figures/image23_categoria_de_risco_ec.png>
 Package pdftex.def Info: figures/image23_categoria_de_risco_ec.png  used on input line 678.
 (pdftex.def)             Requested size: 455.0pt x 282.0884pt.
-<figures/image24_categoria_de_risco_ps.png, id=1177, 953.06062pt x 437.38406pt>
+<figures/image24_categoria_de_risco_ps.png, id=1247, 953.06062pt x 437.38406pt>
 File: figures/image24_categoria_de_risco_ps.png Graphic file (type png)
 <use figures/image24_categoria_de_risco_ps.png>
 Package pdftex.def Info: figures/image24_categoria_de_risco_ps.png  used on input line 686.
 (pdftex.def)             Requested size: 455.0pt x 208.81406pt.
-<figures/image25_dano_potencial.png, id=1180, 953.81343pt x 587.94656pt>
+<figures/image25_dano_potencial.png, id=1250, 953.81343pt x 587.94656pt>
 File: figures/image25_dano_potencial.png Graphic file (type png)
 <use figures/image25_dano_potencial.png>
 Package pdftex.def Info: figures/image25_dano_potencial.png  used on input line 694.
 (pdftex.def)             Requested size: 455.0pt x 280.4707pt.
-<figures/image26_matriz_cri_e_dpa.png, id=1188, 622.57594pt x 138.5175pt>
+<figures/image26_matriz_cri_e_dpa.png, id=1258, 622.57594pt x 138.5175pt>
 File: figures/image26_matriz_cri_e_dpa.png Graphic file (type png)
 <use figures/image26_matriz_cri_e_dpa.png>
 Package pdftex.def Info: figures/image26_matriz_cri_e_dpa.png  used on input line 724.
 (pdftex.def)             Requested size: 455.0pt x 101.23528pt.
  [59 <./figures/image22_categoria_de_risco_ct.png>] [60 <./figures/image23_categoria_de_risco_ec.png> <./figures/image24_categoria_de_risco_ps.png>] [61 <./figures/image25_dano_potencial.png> <./figures/image26_matriz_cri_e_dpa.png>]
-<figures/image27_matriz_de_classificacao_cri_e_dpa_ana.png, id=1222, 723.45282pt x 119.69719pt>
+<figures/image27_matriz_de_classificacao_cri_e_dpa_ana.png, id=1292, 723.45282pt x 119.69719pt>
 File: figures/image27_matriz_de_classificacao_cri_e_dpa_ana.png Graphic file (type png)
 <use figures/image27_matriz_de_classificacao_cri_e_dpa_ana.png>
 Package pdftex.def Info: figures/image27_matriz_de_classificacao_cri_e_dpa_ana.png  used on input line 736.
@@ -1759,7 +1760,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 777.
 
 [65]
-<figures/image28_distribuicao_barragens_marco_2025.png, id=1297, 862.72313pt x 521.69907pt>
+<figures/image28_distribuicao_barragens_marco_2025.png, id=1367, 862.72313pt x 521.69907pt>
 File: figures/image28_distribuicao_barragens_marco_2025.png Graphic file (type png)
 <use figures/image28_distribuicao_barragens_marco_2025.png>
 Package pdftex.def Info: figures/image28_distribuicao_barragens_marco_2025.png  used on input line 795.
@@ -1789,23 +1790,23 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 801.
 
-<figures/image29_distribuicao_barragens_classificacao_cri.png, id=1304, 385.44pt x 281.55188pt>
+<figures/image29_distribuicao_barragens_classificacao_cri.png, id=1374, 385.44pt x 281.55188pt>
 File: figures/image29_distribuicao_barragens_classificacao_cri.png Graphic file (type png)
 <use figures/image29_distribuicao_barragens_classificacao_cri.png>
 Package pdftex.def Info: figures/image29_distribuicao_barragens_classificacao_cri.png  used on input line 807.
 (pdftex.def)             Requested size: 364.00139pt x 265.89177pt.
-<figures/image30_distribuicao_barragens_classificacao_cri_estado.png, id=1307, 1047.915pt x 569.87906pt>
+<figures/image30_distribuicao_barragens_classificacao_cri_estado.png, id=1377, 1047.915pt x 569.87906pt>
 File: figures/image30_distribuicao_barragens_classificacao_cri_estado.png Graphic file (type png)
 <use figures/image30_distribuicao_barragens_classificacao_cri_estado.png>
 Package pdftex.def Info: figures/image30_distribuicao_barragens_classificacao_cri_estado.png  used on input line 815.
 (pdftex.def)             Requested size: 364.00139pt x 197.9476pt.
 [66 <./figures/image28_distribuicao_barragens_marco_2025.png>] [67 <./figures/image29_distribuicao_barragens_classificacao_cri.png> <./figures/image30_distribuicao_barragens_classificacao_cri_estado.png>]
-<figures/image31_evolucao_classificacao_12_meses.png, id=1330, 779.91376pt x 437.38406pt>
+<figures/image31_evolucao_classificacao_12_meses.png, id=1400, 779.91376pt x 437.38406pt>
 File: figures/image31_evolucao_classificacao_12_meses.png Graphic file (type png)
 <use figures/image31_evolucao_classificacao_12_meses.png>
 Package pdftex.def Info: figures/image31_evolucao_classificacao_12_meses.png  used on input line 829.
 (pdftex.def)             Requested size: 364.00139pt x 204.13564pt.
-<figures/image32_distribuicao_barragens_nivel_alerta.png, id=1334, 844.65562pt x 471.26062pt>
+<figures/image32_distribuicao_barragens_nivel_alerta.png, id=1404, 844.65562pt x 471.26062pt>
 File: figures/image32_distribuicao_barragens_nivel_alerta.png Graphic file (type png)
 <use figures/image32_distribuicao_barragens_nivel_alerta.png>
 Package pdftex.def Info: figures/image32_distribuicao_barragens_nivel_alerta.png  used on input line 839.
@@ -1889,38 +1890,339 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 962.
 
 [78]
-Overfull \hbox (0.64636pt too wide) in paragraph at lines 982--982
-[]$[]$ 
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 973.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 982.
+(hyperref)                removing `\@@underline' on input line 973.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 982.
+(hyperref)                removing `\hbox' on input line 973.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 982.
+(hyperref)                removing `\mathsurround' on input line 973.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 982.
+(hyperref)                removing `\z@' on input line 973.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 982.
+(hyperref)                removing `math shift' on input line 973.
+
+[79]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 989.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 982.
+(hyperref)                removing `\@@underline' on input line 989.
 
-) [79]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 989.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 989.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 989.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 989.
+
+[80]
+<figures/image35_rompimento_mariana.jpg, id=1680, 1084.05pt x 722.7pt>
+File: figures/image35_rompimento_mariana.jpg Graphic file (type jpg)
+<use figures/image35_rompimento_mariana.jpg>
+Package pdftex.def Info: figures/image35_rompimento_mariana.jpg  used on input line 999.
+(pdftex.def)             Requested size: 364.00139pt x 242.67116pt.
+<figures/image37_acidente_mariana.png, id=1683, 659.46375pt x 370.38374pt>
+File: figures/image37_acidente_mariana.png Graphic file (type png)
+<use figures/image37_acidente_mariana.png>
+Package pdftex.def Info: figures/image37_acidente_mariana.png  used on input line 1007.
+(pdftex.def)             Requested size: 364.00139pt x 204.44638pt.
+ [81 <./figures/image35_rompimento_mariana.jpg> <./figures/image37_acidente_mariana.png>]
+<figures/image33_momento_antes_brumadinho.png, id=1699, 380.17032pt x 212.29312pt>
+File: figures/image33_momento_antes_brumadinho.png Graphic file (type png)
+<use figures/image33_momento_antes_brumadinho.png>
+Package pdftex.def Info: figures/image33_momento_antes_brumadinho.png  used on input line 1019.
+(pdftex.def)             Requested size: 364.00139pt x 203.27107pt.
+<figures/image34_momento_depois_brumadinho.png, id=1702, 378.66469pt x 213.04594pt>
+File: figures/image34_momento_depois_brumadinho.png Graphic file (type png)
+<use figures/image34_momento_depois_brumadinho.png>
+Package pdftex.def Info: figures/image34_momento_depois_brumadinho.png  used on input line 1027.
+(pdftex.def)             Requested size: 364.00139pt x 204.79808pt.
+<figures/image36_acidente_brumadinho.png, id=1705, 674.52pt x 421.575pt>
+File: figures/image36_acidente_brumadinho.png Graphic file (type png)
+<use figures/image36_acidente_brumadinho.png>
+Package pdftex.def Info: figures/image36_acidente_brumadinho.png  used on input line 1035.
+(pdftex.def)             Requested size: 364.00139pt x 227.50558pt.
+ [82 <./figures/image33_momento_antes_brumadinho.png> <./figures/image34_momento_depois_brumadinho.png>] [83 <./figures/image36_acidente_brumadinho.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1061.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1061.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1061.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1061.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1061.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1061.
+
+[84]
+<figures/image38_lama_bacia_rio_doce_mariana.jpg, id=1758, 752.8125pt x 417.56pt>
+File: figures/image38_lama_bacia_rio_doce_mariana.jpg Graphic file (type jpg)
+<use figures/image38_lama_bacia_rio_doce_mariana.jpg>
+Package pdftex.def Info: figures/image38_lama_bacia_rio_doce_mariana.jpg  used on input line 1067.
+(pdftex.def)             Requested size: 364.00139pt x 201.90468pt.
+ [85 <./figures/image38_lama_bacia_rio_doce_mariana.jpg>] [86] [87]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1116.
+
+[88] [89]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1144.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1144.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1144.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1144.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1144.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1144.
+
+[90]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1156.
+
+[91]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1172.
+
+[92]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1178.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1184.
+
+[93]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1196.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1204.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 1204.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 1204.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 1204.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1204.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1204.
+
+[94]) [95]
 \openout2 = `cap2.aux'.
 
- (cap2.tex) [80
+ (cap2.tex) [96
 
 
 
@@ -1928,7 +2230,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 \openout2 = `cap3.aux'.
 
- (cap3.tex) [81
+ (cap3.tex) [97
 
 
 
@@ -1936,7 +2238,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 \openout2 = `cap4.aux'.
 
- (cap4.tex) [82
+ (cap4.tex) [98
 
 
 
@@ -1944,7 +2246,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 \openout2 = `conclusao.aux'.
 
- (conclusao.tex) [83
+ (conclusao.tex) [99
 
 
 
@@ -1954,54 +2256,64 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
  (nocite.tex) (principal.bbl
 bibitemlist
-LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <12> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 23.
 
-Underfull \hbox (badness 4713) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 19--24
+[]\T1/phv/m/n/12 (+20) AGÊNCIA NA-CI-O-NAL DE MI-NE-RA-ÇÃO. \T1/phv/m/sl/12 (+20) Agên-cia Na-ci-o-nal de Mi-ne-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--24
+\T1/phv/m/sl/12 (+20) ção con-clui o re-la-tó-rio téc-nico so-bre bar-ra-gem de Bru-ma-di-nho\T1/phv/m/n/12 (+20) . 2019.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--24
+\T1/phv/m/n/12 (+20) Dis-po-ní-vel em: []$https : / / www . gov . br / anm / pt-[]br / assuntos / noticias / 2019 /
+ []
+
+
+Overfull \hbox (25.34242pt too wide) in paragraph at lines 19--24
+\T1/phv/m/n/12 (-20) agencia-[]nacional-[]de-[]mineracao-[]conclui-[]o-[]relatorio-[]tecnico-[]sobre-[]barragem-[]de-[]brumadinho$[].
+ []
+
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <12> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 32.
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--57
+[]\T1/phv/m/n/12 (+20) AGÊNCIA NA-CI-O-NAL DE MI-NE-RA-ÇÃO. \T1/phv/m/sl/12 (+20) ANM lança sis-tema pú-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--57
+\T1/phv/m/sl/12 (+20) blico de mo-ni-to-ra-mento de bar-ra-gem de mi-ne-ra-ção\T1/phv/m/n/12 (+20) . Bra-sí-lia: [s.n.],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--57
+\T1/phv/m/n/12 (+20) 2020. Dis-po-ní-vel em: []$https : / / www . gov . br / anm / pt-[]br / assuntos / noticias /
+ []
+
+
+Underfull \hbox (badness 4713) in paragraph at lines 78--81
 []\T1/phv/m/n/12 (+20) Agência Na-ci-o-nal de Mi-ne-ra-ção. \T1/phv/m/sl/12 (+20) Bo-le-tim men-sal ^^U fe-ve-reiro 2025\T1/phv/m/n/12 (+20) . Bra-sí-
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 50--53
+Underfull \hbox (badness 1077) in paragraph at lines 78--81
 \T1/phv/m/n/12 (+20) lia, DF, 2025. Dis-po-ní-vel em: []$https : / / www . gov . br / anm / pt-[]br / assuntos / barragens /
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 56--59
+Underfull \hbox (badness 4366) in paragraph at lines 84--87
 []\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) Anuá-rio Mi-ne-ral Bra-si-leiro 2022: pré-via\T1/phv/m/n/12 (+20) . Bra-sí-lia, 2022. Dis-po-ní-vel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
 \T1/phv/m/n/12 (+20) em: []$https : / / www . gov . br / anm / pt-[]br / assuntos / economia-[]mineral / publicacoes /
  []
 
-
-Underfull \hbox (badness 7631) in paragraph at lines 68--71
-[]\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) Bo-le-tim de Bar-ra-gens de Mi-ne-ra-ção ^^U Se-tem-bro de 2023\T1/phv/m/n/12 (+20) . Bra-
- []
-
-
-Underfull \hbox (badness 5274) in paragraph at lines 68--71
-\T1/phv/m/n/12 (+20) sí-lia, 2023. Dis-po-ní-vel em: []$https : / / www . gov . br / anm / pt-[]br / assuntos / barragens /
- []
-
-
-Underfull \hbox (badness 3884) in paragraph at lines 74--77
-[]\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) In-forme Mi-ne-ral\T1/phv/m/n/12 (+20) : 3\TS1/phv/m/n/12 (+20) º \T1/phv/m/n/12 (+20) tri-mes-tre de 2023. [S.l.], 2023. 1--16 p. Dis-
- []
-
-
-Underfull \hbox (badness 3884) in paragraph at lines 80--83
-[]\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) In-forme Mi-ne-ral\T1/phv/m/n/12 (+20) : 3\TS1/phv/m/n/12 (+20) º \T1/phv/m/n/12 (+20) tri-mes-tre de 2023. [S.l.], 2023. 1--16 p. Dis-
- []
-
-
-Underfull \hbox (badness 3884) in paragraph at lines 86--89
-[]\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) In-forme Mi-ne-ral\T1/phv/m/n/12 (+20) : 4\TS1/phv/m/n/12 (+20) º \T1/phv/m/n/12 (+20) tri-mes-tre de 2023. [S.l.], 2023. 1--18 p. Dis-
- []
-
-[84
+[100
 
 
 
@@ -2009,168 +2321,468 @@ Underfull \hbox (badness 3884) in paragraph at lines 86--89
 
 
 ]
-Underfull \hbox (badness 2409) in paragraph at lines 116--120
+Underfull \hbox (badness 7631) in paragraph at lines 96--99
+[]\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) Bo-le-tim de Bar-ra-gens de Mi-ne-ra-ção ^^U Se-tem-bro de 2023\T1/phv/m/n/12 (+20) . Bra-
+ []
+
+
+Underfull \hbox (badness 5274) in paragraph at lines 96--99
+\T1/phv/m/n/12 (+20) sí-lia, 2023. Dis-po-ní-vel em: []$https : / / www . gov . br / anm / pt-[]br / assuntos / barragens /
+ []
+
+
+Underfull \hbox (badness 3884) in paragraph at lines 102--105
+[]\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) In-forme Mi-ne-ral\T1/phv/m/n/12 (+20) : 3\TS1/phv/m/n/12 (+20) º \T1/phv/m/n/12 (+20) tri-mes-tre de 2023. [S.l.], 2023. 1--16 p. Dis-
+ []
+
+
+Underfull \hbox (badness 3884) in paragraph at lines 108--111
+[]\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) In-forme Mi-ne-ral\T1/phv/m/n/12 (+20) : 3\TS1/phv/m/n/12 (+20) º \T1/phv/m/n/12 (+20) tri-mes-tre de 2023. [S.l.], 2023. 1--16 p. Dis-
+ []
+
+
+Underfull \hbox (badness 3884) in paragraph at lines 114--117
+[]\T1/phv/m/n/12 (+20) ANM. \T1/phv/m/sl/12 (+20) In-forme Mi-ne-ral\T1/phv/m/n/12 (+20) : 4\TS1/phv/m/n/12 (+20) º \T1/phv/m/n/12 (+20) tri-mes-tre de 2023. [S.l.], 2023. 1--18 p. Dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
+[]\T1/phv/m/n/12 (+20) ASCENTY. \T1/phv/m/sl/12 (+20) AIoT: a In-te-li-gên-cia Ar-ti-fi-cial na Era da In-ter-net das
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
+\T1/phv/m/sl/12 (+20) Coi-sas\T1/phv/m/n/12 (+20) . 2024. Dis-po-ní-vel em: []$https : / / ascenty . com / blog / artigos /
+ []
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 163--167
 \T1/phv/m/n/12 (+20) 2015. Dis-po-ní-vel em: []$https : / / www . normas . com . br / visualizar / abnt-[]nbr-[]nm / 10259 /
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 123--127
+Underfull \hbox (badness 1571) in paragraph at lines 170--174
 []\T1/phv/m/n/12 (+20) BARRETO, M. L. et al. \T1/phv/m/sl/12 (+20) Mi-ne-ra-ção e de-sen-vol-vi-mento sus-ten-tá-vel: de-sa-fios
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 123--127
+Underfull \hbox (badness 2726) in paragraph at lines 170--174
 \T1/phv/m/n/12 (+20) Dis-po-ní-vel em: []$https : / / livroaberto . ibict . br / bitstream / 123456789 / 922 / 1 / mineracao _
  []
 
-[85]
-Underfull \hbox (badness 2384) in paragraph at lines 257--263
+[101] [102]
+Underfull \hbox (badness 7667) in paragraph at lines 297--302
+[]\T1/phv/m/n/12 (+20) BRASIL, C. I. d. \T1/phv/m/sl/12 (+20) In-de-ni-za-ções por tra-gé-dia em Ma-ri-ana atin-gi-ram R$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--302
+\T1/phv/m/sl/12 (+20) 8,71 bi-lhões em 2021\T1/phv/m/n/12 (+20) . Rio de Ja-neiro: [s.n.], 2022. Agên-cia Bra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--302
+\T1/phv/m/n/12 (+20) sil. Dis-po-ní-vel em: []$https : / / agenciabrasil . ebc . com . br / geral / noticia / 2022-[]01 /
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 327--333
 []\T1/phv/m/n/12 (+20) BRASIL. Con-se-lho Na-ci-o-nal do Meio Am-bi-ente (CO-NAMA). \T1/phv/m/sl/12 (+20) Re-so-lu-ção CO-
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 257--263
+Underfull \hbox (badness 1769) in paragraph at lines 327--333
 \T1/phv/m/sl/12 (+20) di-ên-cias pú-bli-cas no pro-cesso de li-cen-ci-a-mento am-bi-en-tal\T1/phv/m/n/12 (+20) . 1987. Diá-rio Ofi-
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 257--263
+Underfull \hbox (badness 2961) in paragraph at lines 327--333
 \T1/phv/m/n/12 (+20) cial da União: se-ção 1, Bra-sí-lia, DF, 5 jul. 1990, p. 12945. Dis-po-ní-vel
  []
 
-[86]
-Underfull \hbox (badness 10000) in paragraph at lines 278--282
+
+Underfull \hbox (badness 5519) in paragraph at lines 351--357
+\T1/phv/m/n/12 (+20) Bra-sí-lia: [s.n.], 2025. Dis-po-ní-vel em: []$https : / / www . gov . br / mdr / pt-[]br / noticias /
+ []
+
+
+Overfull \hbox (2.23174pt too wide) in paragraph at lines 351--357
+\T1/phv/m/n/12 (-20) defesa-[]civil-[]nacional-[]fortalece-[]a-[]cooperacao-[]internacional-[]na-[]seguranca-[]de-[]barragens$[].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--366
+\T1/phv/m/n/12 (+20) novo-[]acordo-[]do-[]rio-[]doce / conheca-[]a-[]linha-[]do-[]tempo-[]da-[]tragedia-[]de-[]mariana-[]mg$[].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--373
 []\T1/phv/m/n/12 (+20) BRASIL. Se-nado Fe-de-ral. \T1/phv/m/sl/12 (+20) Lei que cria Agên-cia Na-ci-o-nal de Mi-ne-ra-
  []
 
 
-Underfull \hbox (badness 4832) in paragraph at lines 278--282
+Underfull \hbox (badness 4832) in paragraph at lines 369--373
 \T1/phv/m/sl/12 (+20) ção é san-ci-o-nada com ve-tos\T1/phv/m/n/12 (+20) . Bra-sí-lia, DF: Se-nado Fe-de-ral, 2017. Dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--282
+Underfull \hbox (badness 10000) in paragraph at lines 369--373
 \T1/phv/m/n/12 (+20) po-ní-vel em: []$https : / / www12 . senado . leg . br / noticias / materias / 2017 / 12 / 27 /
  []
 
-[87]
-Underfull \hbox (badness 6575) in paragraph at lines 414--418
+[103]
+Underfull \hbox (badness 10000) in paragraph at lines 430--435
+[]\T1/phv/m/n/12 (+20) CONGRESSO EM FOCO. \T1/phv/m/sl/12 (+20) Tra-gé-dia de Bru-ma-di-nho: seis anos,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--435
+\T1/phv/m/sl/12 (+20) 242 mor-tos, ne-nhum con-de-nado\T1/phv/m/n/12 (+20) . 2025. Con-gresso em Foco. Dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--435
+\T1/phv/m/n/12 (+20) po-ní-vel em: []$https : / / www . congressoemfoco . com . br / noticia / 106077 /
+ []
+
+[104]
+Overfull \hbox (45.49435pt too wide) in paragraph at lines 472--477
+\T1/phv/m/n/12 (-20) 1040943-[]familias-[]das-[]vitimas-[]pedem-[]punicao-[]para-[]responsaveis-[]por-[]tragedia-[]em-[]brumadinho/$[].
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 528--533
+[]\T1/phv/m/n/12 (+20) ESTADO DE MI-NAS. \T1/phv/m/sl/12 (+20) Obras da bar-ra-gem do Fun-dão co-me-ça-ram de forma
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 528--533
+\T1/phv/m/sl/12 (+20) ir-re-gu-lar\T1/phv/m/n/12 (+20) . Belo Ho-ri-zonte: [s.n.], 2016. Es-tado de Mi-nas. Dis-po-ní-vel em:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--533
+[]$\T1/phv/m/n/12 (+20) https : / / www . em . com . br / app / noticia / gerais / 2016 / 01 / 17 / interna _ gerais ,[] 725948 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--541
+[]\T1/phv/m/n/12 (+20) ESTADO DE MI-NAS. \T1/phv/m/sl/12 (+20) Um alerta das ví-ti-mas da tra-gé-dia de Ma-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--541
+\T1/phv/m/sl/12 (+20) ri-ana para os gaú-chos\T1/phv/m/n/12 (+20) . Belo Ho-ri-zonte: [s.n.], 2024. Es-tado
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--541
+\T1/phv/m/n/12 (+20) de Mi-nas. Dis-po-ní-vel em: []$https : / / www . em . com . br / gerais / 2024 / 06 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--541
+\T1/phv/m/n/12 (+20) 6873908-[]um-[]alerta-[]das-[]vitimas-[]da-[]tragedia-[]de-[]mariana-[]para-[]os-[]gauchos . html$[].
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 544--548
 []\T1/phv/m/n/12 (+20) EUROPEAN COM-MIS-SION. \T1/phv/m/sl/12 (+20) EU ta-xo-nomy for sus-tai-na-ble ac-ti-vi-ties\T1/phv/m/n/12 (+20) . Brus-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--426
+Underfull \hbox (badness 10000) in paragraph at lines 551--556
 []\T1/phv/m/n/12 (+20) FEAM. \T1/phv/m/sl/12 (+20) Mi-nas avança na des-ca-rac-te-ri-za-ção das bar-ra-gens al-te-a-das
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--426
+Underfull \hbox (badness 10000) in paragraph at lines 551--556
 \T1/phv/m/sl/12 (+20) a mon-tante\T1/phv/m/n/12 (+20) . Belo Ho-ri-zonte, 2024. Dis-po-ní-vel em: []$https : / / feam . br / w /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--426
+Underfull \hbox (badness 10000) in paragraph at lines 551--556
 \T1/phv/m/n/12 (+20) minas-[]avanca-[]na-[]descaracterizacao-[]das-[]barragens-[]alteadas-[]a-[]montante$[]. Atu-a-
  []
 
-[88]
-Underfull \hbox (badness 3039) in paragraph at lines 476--479
+[105]
+Underfull \hbox (badness 3039) in paragraph at lines 622--625
 []\T1/phv/m/n/12 (+20) GLOBAL RE-POR-TING INI-TI-A-TIVE. \T1/phv/m/sl/12 (+20) G4 Mi-ning and Me-tals Sec-tor Dis-clo-su-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--479
+Underfull \hbox (badness 10000) in paragraph at lines 622--625
 \T1/phv/m/n/12 (+20) Recursos / Guias % 20y % 20Estandares / Suplementos % 20sectoriales % 20G4 /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 492--495
+[106]
+Underfull \hbox (badness 10000) in paragraph at lines 659--662
 []\T1/phv/m/n/12 (+20) IBRAM. \T1/phv/m/sl/12 (+20) Ges-tão e Ma-nejo de Re-jei-tos da Mi-ne-ra-ção\T1/phv/m/n/12 (+20) . 1. ed. Bra-sí-lia,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--495
+Underfull \hbox (badness 10000) in paragraph at lines 659--662
 \T1/phv/m/n/12 (+20) 2016. Dis-po-ní-vel em: []$https : / / ibram . org . br / wp-[]content / uploads / 2021 / 02 /
  []
 
 
-Underfull \hbox (badness 2781) in paragraph at lines 566--571
+Underfull \hbox (badness 10000) in paragraph at lines 665--670
+[]\T1/phv/m/n/12 (+20) IBRAM. \T1/phv/m/sl/12 (+20) As mais re-cen-tes tec-no-lo-gias para o ge-ren-ci-a-mento de ris-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--670
+\T1/phv/m/sl/12 (+20) cos em mi-nas\T1/phv/m/n/12 (+20) . 2020. Dis-po-ní-vel em: []$https : / / ibram . org . br / noticia /
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 750--755
 []\T1/phv/m/n/12 (+20) INTERNATIONAL COUN-CIL ON MI-NING AND ME-TALS; UNI-TED NA-TI-ONS
  []
 
 
-Underfull \hbox (badness 3884) in paragraph at lines 566--571
+Underfull \hbox (badness 3884) in paragraph at lines 750--755
 \T1/phv/m/n/12 (+20) EN-VI-RON-MENT PRO-GRAMME; PRIN-CI-PLES FOR RES-PON-SI-BLE IN-VEST-
  []
 
 
-Underfull \hbox (badness 5119) in paragraph at lines 566--571
+Underfull \hbox (badness 5119) in paragraph at lines 750--755
 \T1/phv/m/n/12 (+20) MENT. \T1/phv/m/sl/12 (+20) Glo-bal In-dus-try Stan-dard on Tai-lings Ma-na-ge-ment\T1/phv/m/n/12 (+20) . Lon-don, 2020.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--571
+Underfull \hbox (badness 10000) in paragraph at lines 750--755
 \T1/phv/m/n/12 (+20) Dis-po-ní-vel em: []$https : / / globaltailingsreview . org / wp-[]content / uploads / 2020 / 08 /
  []
 
-[89]
-Underfull \hbox (badness 10000) in paragraph at lines 574--578
+[107]
+Underfull \hbox (badness 10000) in paragraph at lines 772--776
 []\T1/phv/m/n/12 (+20) IPEA. \T1/phv/m/sl/12 (+20) Ipea e MME lan-çam es-tudo so-bre a ex-ten-são da ca-deia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--578
+Underfull \hbox (badness 10000) in paragraph at lines 772--776
 \T1/phv/m/sl/12 (+20) pro-du-tiva da mi-ne-ra-ção no PIB bra-si-leiro\T1/phv/m/n/12 (+20) . 2023. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--578
+Underfull \hbox (badness 10000) in paragraph at lines 772--776
 []$\T1/phv/m/n/12 (+20) https : / / www . ipea . gov . br / portal / categorias / 45-[]todas-[]as-[]noticias / noticias /
  []
 
 
-Overfull \hbox (100.33876pt too wide) in paragraph at lines 574--578
+Overfull \hbox (100.33876pt too wide) in paragraph at lines 772--776
 \T1/phv/m/n/12 (-20) 14835-[]ipea-[]e-[]mme-[]lancam-[]estudo-[]sobre-[]a-[]extensao-[]da-[]cadeia-[]produtiva-[]da-[]mineracao-[]no-[]pib-[]brasileiro$[]. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--594
+Underfull \hbox (badness 10000) in paragraph at lines 788--792
 []\T1/phv/m/n/12 (+20) JAZIDA. \T1/phv/m/sl/12 (+20) As leis que re-gu-la-men-tam a ati-vi-dade de mi-ne-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--594
+Underfull \hbox (badness 10000) in paragraph at lines 788--792
 \T1/phv/m/sl/12 (+20) ção no Bra-sil\T1/phv/m/n/12 (+20) . 2022. Dis-po-ní-vel em: []$https : / / blog . jazida . com /
  []
 
-[90]
-Underfull \hbox (badness 6236) in paragraph at lines 667--670
+
+Underfull \hbox (badness 10000) in paragraph at lines 812--817
+[]\T1/phv/m/n/12 (+20) KLOHN CRIP-PEN BER-GER. \T1/phv/m/sl/12 (+20) Tai-lings Dam Sur-veil-lance Te-ch-no-logy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 812--817
+\T1/phv/m/sl/12 (+20) - KCB's Ex-pe-ri-ence\T1/phv/m/n/12 (+20) . 2021. Dis-po-ní-vel em: []$https : / / klohn . com / blog /
+ []
+
+[108]
+Underfull \hbox (badness 10000) in paragraph at lines 851--856
+[]\T1/phv/m/n/12 (+20) LTEC. \T1/phv/m/sl/12 (+20) Ins-tru-men-ta-ção em obras: In-clinô-me-tros - NBR 17189
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--856
+\T1/phv/m/sl/12 (+20) / ASTM D6230\T1/phv/m/n/12 (+20) . 2025. Dis-po-ní-vel em: []$https : / / ltec . eng . br /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--856
+\T1/phv/m/n/12 (+20) instrumentacao-[]em-[]obras-[]inclinometros-[]nbr-[]17189-[]astm-[]d6230/$[]. Acesso em:
+ []
+
+
+Overfull \hbox (33.12975pt too wide) in paragraph at lines 859--864
+\T1/phv/m/n/12 (-20) saiba-[]o-[]que-[]dizem-[]os-[]laudos-[]sobre-[]as-[]causas-[]do-[]rompimento-[]da-[]barragem-[]de-[]brumadinho$[].
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 868--874
+\T1/phv/m/sl/12 (+20) da Vale na Mina Cór-rego do Fei-jão\T1/phv/m/n/12 (+20) . Belo Ho-ri-zonte: [s.n.], 2024. Go-verno
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 884--889
+[]\T1/phv/m/n/12 (+20) MINERAÇÃO BRA-SIL. \T1/phv/m/sl/12 (+20) Mé-to-dos Al-ter-na-ti-vos para as Bar-ra-gens
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 884--889
+\T1/phv/m/sl/12 (+20) de Re-jei-tos\T1/phv/m/n/12 (+20) . 2024. Dis-po-ní-vel em: []$https : / / mineracaobrasil . com /
+ []
+
+[109]
+Underfull \hbox (badness 10000) in paragraph at lines 949--954
+[]\T1/phv/m/n/12 (+20) PROJETO MA-NU-EL-ZÃO. \T1/phv/m/sl/12 (+20) Bar-ra-gem que se rom-peu em Ma-ri-ana ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--954
+\T1/phv/m/sl/12 (+20) nha 20 ve-zes o vo-lume re-gis-trado pela Feam\T1/phv/m/n/12 (+20) . 2015. Uni-ver-si-dade
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--954
+\T1/phv/m/n/12 (+20) Fe-de-ral de Mi-nas Ge-rais. Dis-po-ní-vel em: []$https : / / manuelzao . ufmg . br /
+ []
+
+
+Overfull \hbox (0.82094pt too wide) in paragraph at lines 949--954
+\T1/phv/m/n/12 (-20) barragem-[]que-[]se-[]rompeu-[]em-[]mariana-[]tinha-[]20-[]vezes-[]o-[]volume-[]registrado-[]pela-[]feam/$[].
+ []
+
+
+Overfull \hbox (59.67026pt too wide) in paragraph at lines 957--962
+\T1/phv/m/n/12 (-20) 103-[]revolucionando-[]as-[]operacoes-[]de-[]mineracao-[]com-[]tecnologia-[]de-[]radar-[]embarcada-[]em-[]drones$[].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--977
+[]\T1/phv/m/n/12 (+20) RST INS-TRU-MENTS. \T1/phv/m/sl/12 (+20) Tai-lings dam mo-ni-to-ring: In-ground and above-
+ []
+
+
+Underfull \hbox (badness 7486) in paragraph at lines 972--977
+\T1/phv/m/sl/12 (+20) ground te-ch-no-lo-gies\T1/phv/m/n/12 (+20) . 2022. Dis-po-ní-vel em: []$https : / / rstinstruments . com / blog /
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 981--986
+\T1/phv/m/sl/12 (+20) Enabled Te-ch-no-lo-gies\T1/phv/m/n/12 (+20) . 2023. Dis-po-ní-vel em: []$https : / / sa . catapult . org . uk / blogs /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--1000
+\T1/phv/m/n/12 (+20) Dis-po-ní-vel em: []$https : / / sequencia . eng . br / servicos / monitoramento-[]de-[]vibracoes /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1008
+[]\T1/phv/m/n/12 (+20) SEQUÊNCIA EN-GE-NHA-RIA. \T1/phv/m/sl/12 (+20) Mo-ni-to-ra-mento Sis-mo-grá-fico de Bar-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1008
+\T1/phv/m/sl/12 (+20) gens em Tempo Real\T1/phv/m/n/12 (+20) . 2024. Dis-po-ní-vel em: []$https : / / sequencia . eng . br /
+ []
+
+
+Underfull \hbox (badness 6236) in paragraph at lines 1025--1028
 []\T1/phv/m/n/12 (+20) Sistema ESO. \T1/phv/m/sl/12 (+20) O que é ma-triz de risco e qual usar no PGR\T1/phv/m/n/12 (+20) . 2021.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--670
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1028
 \T1/phv/m/n/12 (+20) Dis-po-ní-vel em: []$https : / / sistemaeso . com . br / blog / seguranca-[]no-[]trabalho /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--722
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1042
+[]\T1/phv/m/n/12 (+20) STOCKS, C. \T1/phv/m/sl/12 (+20) Tai-lings dam fai-lu-res ^^U can we mi-ni-mise the risks?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1042
+\T1/phv/m/n/12 (+20) 2019. Dis-po-ní-vel em: []$https : / / www . waterpowermagazine . com / analysis /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1042
+\T1/phv/m/n/12 (+20) tailings-[]dam-[]failures-[]can-[]we-[]minimise-[]the-[]risks-[]7217097 / ?cf-[]view$[]. Acesso em:
+ []
+
+[110]
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1073
+[]\T1/phv/m/n/12 (+20) TETRA TECH. \T1/phv/m/sl/12 (+20) Mi-ti-ga-ting Risks for Tai-lings Dams with Mi-cro-seis-mic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1073
+\T1/phv/m/sl/12 (+20) Te-ch-no-logy\T1/phv/m/n/12 (+20) . 2023. Dis-po-ní-vel em: []$https : / / www . tetratech . com / insights /
+ []
+
+
+Underfull \hbox (badness 4954) in paragraph at lines 1085--1090
+[]\T1/phv/m/n/12 (+20) TRIMBLE. \T1/phv/m/sl/12 (+20) O Me-lhor Sis-tema de Mo-ni-to-ra-mento de Bar-ra-gens da In-dús-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1090
+\T1/phv/m/sl/12 (+20) tria\T1/phv/m/n/12 (+20) . 2025. Dis-po-ní-vel em: []$https : / / geospatial . trimble . com / en / resources / blog /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1090
+\T1/phv/m/n/12 (+20) o-[]melhor-[]sistema-[]de-[]monitoramento-[]de-[]barragens-[]da-[]indÃºstria$[]. Acesso em:
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 1094--1099
+[]\T1/phv/m/n/12 (+20) UNIVERSIDADE FE-DE-RAL DO PA-RANÁ. \T1/phv/m/sl/12 (+20) Si-me-par faz mo-ni-to-ra-mento in-te-li-
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 1094--1099
+\T1/phv/m/sl/12 (+20) gente das águas com tec-no-lo-gia IoT\T1/phv/m/n/12 (+20) . 2021. Dis-po-ní-vel em: []$https : / / ufpr . br /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1120
 []\T1/phv/m/n/12 (+20) VENDRAME, A. C. \T1/phv/m/sl/12 (+20) Os ris-cos da mi-ne-ra-ção: pro-te-gendo os tra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--722
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1120
 \T1/phv/m/sl/12 (+20) ba-lha-do-res con-tra aci-den-tes e do-en-ças\T1/phv/m/n/12 (+20) . 2023. Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--722
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1120
 []$\T1/phv/m/n/12 (+20) https : / / www . linkedin . com / pulse / os-[]riscos-[]da-[]minera % C3 % A7 % C3 %
  []
 
-[91]) 
+[111]
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1178
+[]\T1/phv/m/n/12 (+20) WORLDSENSING. \T1/phv/m/sl/12 (+20) How a ma-jor Ca-na-dian tai-lings dam im-pro-ves mo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1178
+\T1/phv/m/sl/12 (+20) ni-to-ring data and in-cre-a-ses per-son-nel sa-fety, while cut-ting costs\T1/phv/m/n/12 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1178
+\T1/phv/m/n/12 (+20) 2024. Dis-po-ní-vel em: []$https : / / www . worldsensing . com / success-[]story /
+ []
+
+
+Overfull \hbox (146.60391pt too wide) in paragraph at lines 1173--1178
+\T1/phv/m/n/12 (-20) how-[]a-[]major-[]canadian-[]tailings-[]dam-[]improves-[]monitoring-[]data-[]and-[]increases-[]personnel-[]safety-[]while-[]cutting-[]costs/$[].
+ []
+
+) 
 AED: lastpage setting LastPage
-[92]
+[112]
 \tf@lof=\write5
 \openout5 = `principal.lof'.
 
@@ -2191,17 +2803,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 35668 strings out of 474486
- 657909 string characters out of 5753562
- 1960542 words of memory out of 5000000
- 56557 multiletter control sequences out of 15000+600000
- 611370 words of font info for 336 fonts, out of 8000000 for 9000
+ 36065 strings out of 474486
+ 667605 string characters out of 5753562
+ 1965542 words of memory out of 5000000
+ 56832 multiletter control sequences out of 15000+600000
+ 612404 words of font info for 346 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,14n,107p,2602b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,14n,107p,2602b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on principal.pdf (95 pages, 2766212 bytes).
+Output written on principal.pdf (115 pages, 6739789 bytes).
 PDF statistics:
- 2048 PDF objects out of 2073 (max. 8388607)
- 310 named destinations out of 1000 (max. 500000)
- 44589 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 2669 PDF objects out of 2984 (max. 8388607)
+ 417 named destinations out of 1000 (max. 500000)
+ 44843 words of extra memory for PDF output out of 51595 (max. 10000000)
 

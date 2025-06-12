@@ -721,7 +721,7 @@ A partir dos valores resultantes dos somatórios, classifica-se a barragem quant
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{image26_matriz_cri_e_dpa.png}
+    \includegraphics[width=\textwidth]{figures/image26_matriz_cri_e_dpa.png}
     \caption{Matriz Categoria de Risco e Dano Potencial Associado}
     \label{fig:matriz_cri_e_dpa}
     \fonte{\cite{moecke2019} de acordo com Resolução nº 143 CNRH}
@@ -733,7 +733,7 @@ A Figura~\ref{fig:matriz_classificacao_ana} apresenta a Matriz de Categoria de R
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{image27_matriz_de_classificacao_cri_e_dpa_ana.png}
+    \includegraphics[width=\textwidth]{figures/image27_matriz_de_classificacao_cri_e_dpa_ana.png}
     \caption{Matriz de classificação de barragens quanto ao risco e dano potencial associado}
     \label{fig:matriz_classificacao_ana}
     \fonte{\cite{moecke2019} de acordo com Resolução nº 236 - ANA}
@@ -792,7 +792,7 @@ A análise da distribuição geográfica das barragens de mineração (Figura~\r
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{image28_distribuicao_barragens_marco_2025.png}
+    \includegraphics[width=0.8\textwidth]{figures/image28_distribuicao_barragens_marco_2025.png}
     \caption{Distribuição das barragens cadastradas no SIGBM em 05/03/2025.}
     \label{fig:distribuicao_barragens_marco_2025}
     \fonte{\cite{anm2025boletim}}
@@ -804,7 +804,7 @@ A Categoria de Risco (CRI) é um indicador crucial na avaliação da segurança 
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{image29_distribuicao_barragens_classificacao_cri.png}
+    \includegraphics[width=0.8\textwidth]{figures/image29_distribuicao_barragens_classificacao_cri.png}
     \caption{Distribuição de barragens cadastradas de acordo com sua classificação de CRI.}
     \label{fig:distribuicao_barragens_classificacao_cri}
     \fonte{\cite{anm2025boletim}}
@@ -812,7 +812,7 @@ A Categoria de Risco (CRI) é um indicador crucial na avaliação da segurança 
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{image30_distribuicao_barragens_classificacao_cri_estado.png}
+    \includegraphics[width=0.8\textwidth]{figures/image30_distribuicao_barragens_classificacao_cri_estado.png}
     \caption{Distribuição das barragens inseridas na PNSB por estado, segundo a classificação de CRI.}
     \label{fig:distribuicao_barragens_classificacao_cri_estado}
     \fonte{\cite{anm2025boletim}}
@@ -826,7 +826,7 @@ Essa nova regra foi incorporada ao SIGBM em 13/02/2025, após o término do praz
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{image31_evolucao_classificacao_12_meses.png}
+    \includegraphics[width=0.8\textwidth]{figures/image31_evolucao_classificacao_12_meses.png}
     \caption{Evolução da classificação de CRI ao longo dos últimos 12 meses.}
     \label{fig:evolucao_classificacao}
     \fonte{ANM (2025)}
@@ -836,7 +836,7 @@ Complementar à classificação de risco, a situação de alerta ou emergência 
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{image32_distribuicao_barragens_nivel_alerta.png}
+    \includegraphics[width=0.8\textwidth]{figures/image32_distribuicao_barragens_nivel_alerta.png}
     \caption{Distribuição das barragens em nível de alerta ou emergência por estado em 05/03/2025.}
     \label{fig:distribuicao_alerta}
     \fonte{ANM (2025)}
@@ -970,14 +970,243 @@ Tecnologias como sensoriamento remoto por satélite, drones para inspeção ambi
 \section{Acidentes em Mariana e Brumadinho}
 \label{sec:acidentes}
 
-Barragens de rejeitos são reservatórios feitos com o objetivo de reter
-água e resíduos sólidos resultantes da extração de minérios para que
-evite danos ambientais. (OBTER O TEXTO FINAL - RENATA)
+\subsection{Mecanismos de Ruptura em Barragens}
+
+Os mecanismos de ruptura em barragens constituem processos complexos onde múltiplos fatores atuam colaborativamente para provocar o colapso estrutural dessas obras de engenharia. Segundo \citeonline{arnez1999avaliacao}, três tipos fundamentais se destacam por sua natureza sinérgica e capacidade destrutiva: a erosão interna, a liquefação e o galgamento. Estes mecanismos raramente atuam de forma isolada, desenvolvendo-se através de interações que amplificam seus efeitos individuais. A compreensão detalhada de cada tipo torna-se essencial para o desenvolvimento de estratégias eficazes de prevenção e monitoramento.
+
+\subsubsection{Erosão Interna}
+
+O primeiro mecanismo, denominado erosão interna, fundamenta-se na remoção progressiva de partículas finas do interior da barragem através de gradientes hidráulicos elevados. Este processo cria vazios internos que se expandem gradualmente, formando canais preferenciais de fluxo conhecidos como \textit{piping}. A característica distintiva deste fenômeno reside em seu desenvolvimento interno e progressivo, onde a erosão aumenta a permeabilidade local, intensificando o fluxo e acelerando o processo erosivo em um ciclo de retroalimentação contínua. Diferentemente dos demais mecanismos, a erosão interna compromete a integridade estrutural de dentro para fora, preparando condições para manifestações de instabilidade geotécnica \cite{arnez1999avaliacao}.
+
+\subsubsection{Liquefação}
+
+A liquefação representa o segundo tipo de mecanismo, caracterizado pela perda súbita de resistência ao cisalhamento dos materiais devido à combinação de saturação e carregamentos dinâmicos. Este fenômeno ocorre quando solos saturados, especialmente areias fofas, perdem sua capacidade portante sob vibrações sísmicas ou outras solicitações cíclicas, transformando materiais sólidos em estado quase-líquido. A instabilidade geotécnica distingue-se pela rapidez e generalização da perda de resistência, afetando grandes volumes simultaneamente e podendo ser desencadeada por eventos externos como terremotos. Esta característica súbita e volumétrica estabelece condições propícias para a manifestação do terceiro mecanismo de ruptura \cite{arnez1999avaliacao}.
+
+\subsubsection{Galgamento}
+
+O galgamento constitui o terceiro mecanismo, combinando pressões internas excessivas com erosão superficial por transbordamento da estrutura. As sobrepressões resultam de drenagem inadequada ou colmatação dos sistemas de alívio, enquanto o galgamento provoca erosão do paramento de jusante da barragem. A diferença fundamental deste mecanismo está na ação simultânea de forças internas e externas, criando um processo de retroalimentação onde o galgamento acelera a saturação interna, intensificando as sobrepressões que facilitam a erosão externa \cite{arnez1999avaliacao}.
+
+\subsection{Casos de Estudo: Mariana e Brumadinho}
+
+Os desastres de rompimento de barragens ocorridos em Mariana (2015) e Brumadinho (2019) representam marcos trágicos na história da mineração brasileira, configurando-se como os maiores acidentes ambientais e industriais já registrados no país. Ambos os eventos envolveram empresas do grupo Vale e resultaram em perdas humanas significativas, devastação ambiental em larga escala e questionamentos profundos sobre os sistemas de licenciamento, fiscalização e segurança das estruturas de contenção de rejeitos minerários no Brasil \cite{wikipedia2019brumadinho}.
+
+\subsubsection{A Tragédia de Mariana}
+
+A tragédia de Mariana ocorreu em 5 de novembro de 2015, aproximadamente às 15h30min, quando se rompeu a barragem do Fundão, localizada no subdistrito de Bento Rodrigues, a 35 km do centro de Mariana, no estado de Minas Gerais \cite{brasil2024timeline}. Este evento foi caracterizado como a maior catástrofe ambiental da história do país e ficou marcado como o maior rompimento do mundo envolvendo barragens de rejeitos de mineração \cite{brasil2024timeline}. O colapso da estrutura pertencente à Samarco Mineração S/A, uma \textit{joint venture} das mineradoras Vale e BHP Billiton Brasil, liberou uma avalanche de rejeitos que alcançou o Rio Doce \cite{brasil2024timeline}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/image35_rompimento_mariana.jpg}
+    \caption{Rompimento de barragem em Mariana}
+    \fonte{\citeonline{wikipedia2015mariana}}
+    \label{fig:rompimento_mariana}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/image37_acidente_mariana.png}
+    \caption{Acidente de Mariana}
+    \fonte{\citeonline{warzynski2023barragem}}
+    \label{fig:acidente_mariana}
+\end{figure}
+
+\subsubsection{A Tragédia de Brumadinho}
+
+Quatro anos depois, às 12h28min do dia 25 de janeiro de 2019, outro rompimento de barragem abalaria novamente Minas Gerais, desta vez em Brumadinho, envolvendo a Barragem I (B-I), acarretando, em sequência, o rompimento das barragens B-IV e B-IV-A da Mina Córrego do Feijão, controlada diretamente pela Vale S.A., do Complexo Paraopeba II, localizada em Brumadinho, na Região Metropolitana de Belo Horizonte (MG) \cite{minasgerais2024historico}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/image33_momento_antes_brumadinho.png}
+    \caption{Momento antes da tragédia em Brumadinho}
+    \fonte{\citeonline{minasgerais2024historico}}
+    \label{fig:momento_antes_brumadinho}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/image34_momento_depois_brumadinho.png}
+    \caption{Momento do rompimento da barragem na Mina Córrego do Feijão em Brumadinho}
+    \fonte{\citeonline{minasgerais2024historico}}
+    \label{fig:momento_depois_brumadinho}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/image36_acidente_brumadinho.png}
+    \caption{Acidente de Brumadinho}
+    \fonte{\citeonline{warzynski2023barragem}}
+    \label{fig:acidente_brumadinho}
+\end{figure}
+
+\subsubsection{Comparação dos Processos Construtivos}
+
+As barragens envolvidas nos dois desastres apresentam diferenças significativas em suas origens e processos construtivos. A barragem do Fundão em Mariana teve sua construção iniciada de forma irregular em 2007, sem a apresentação adequada do projeto executivo aos órgãos de licenciamento e fiscalização de Minas Gerais \cite{estadominas2016irregular}. A autorização para construção foi concedida em junho de 2007, e poucos meses depois, em 2008, a obra já estava bastante adiantada, evidenciando falhas no processo de fiscalização da Fundação Estadual do Meio Ambiente de Minas Gerais (FEAM-MG) \cite{estadominas2016irregular}.
+
+Em contraste, a barragem de Brumadinho foi construída em 1976 pela Ferteco Mineração e posteriormente adquirida pela Vale em 2001, sendo ampliada em várias etapas e por diversos projetistas e empreiteiros \cite{wikipedia2019brumadinho}.
+
+\subsubsection{Impacto Humano e Ambiental}
+
+O impacto humano dos dois desastres revela a gravidade crescente dos acidentes de mineração no Brasil. O rompimento da barragem do Fundão em Mariana causou a morte de 19 pessoas, com outras três permanecendo desaparecidas até hoje, e despejou mais de 40 milhões de metros cúbicos de rejeitos de minério no meio ambiente \cite{brasil2024timeline}. Dados posteriores indicaram que o volume real de rejeitos liberados foi ainda maior, com a própria Samarco admitindo que 55 milhões de metros cúbicos vazaram da represa após sua ruptura \cite{projetomanuelzao2015}.
+
+O desastre de Brumadinho liberou aproximadamente 12,7 milhões de metros cúbicos de rejeitos. Desses, uma parte permaneceu na área da antiga B-I, cerca de 2 Mm³. Na calha do ribeirão Ferro-Carvão até sua confluência com o rio Paraopeba, ficaram depositados 7,8 Mm³ e a parte restante (2,2 Mm³) atingiu a calha do rio Paraopeba, propagando-se até o remanso da Usina Hidrelétrica (UHE) de Retiro Baixo, entre os municípios mineiros de Curvelo e Pompéu \cite{minasgerais2024historico}.
+
+Brumadinho superou tragicamente os números de Mariana em termos de vidas perdidas, tornando-se o maior acidente de trabalho no Brasil em perda de vidas humanas e o segundo maior desastre industrial do século \cite{wikipedia2019brumadinho}. Com 272 pessoas mortas em números oficiais e apenas duas vítimas ainda desaparecidas até o início de 2025, incluindo funcionários da mineradora soterrados no refeitório da empresa, onde o sistema de alarme falhou e moradores locais, Brumadinho demonstrou como falhas em estruturas de contenção podem resultar em catástrofes humanas de proporções ainda maiores \cite{wikipedia2019brumadinho}.
+
+\subsubsection{Deficiências nos Sistemas de Monitoramento}
+
+Os dois desastres evidenciaram graves deficiências nos sistemas de monitoramento e fiscalização de barragens no Brasil. No caso de Mariana, dados sobre a altura e o volume de rejeitos das barragens do Fundão e de Santarém estavam defasados no cadastro da FEAM desde 2012 \cite{projetomanuelzao2015}. O último relatório que incluiu o volume de rejeitos do Fundão ocorreu em 2013, constando no cadastro que a barragem comportava apenas 2,65 milhões de metros cúbicos de material, volume 20 vezes menor que o efetivamente liberado no desastre \cite{projetomanuelzao2015}.
+
+Em Brumadinho, a barragem era classificada pela própria Vale como de "baixo risco" e "alto potencial de danos", estava inativa desde 2015, demonstrando inadequações nos sistemas de avaliação de segurança \cite{wikipedia2019brumadinho}. Essas deficiências no monitoramento e na atualização de dados fundamentais para a caracterização do nível de risco das estruturas contribuíram diretamente para a magnitude dos desastres e evidenciaram a necessidade de reformulação dos sistemas de controle.
+
+\subsection{Impactos Socioambientais e Respostas Institucionais}
+
+Os impactos socioambientais dos dois desastres extrapolaram significativamente os limites geográficos imediatos dos rompimentos. Em Mariana, a lama de rejeitos contaminou toda a bacia hidrográfica do Rio Doce, cuja extensão de aproximadamente 663 km abrange 230 municípios nos estados de Minas Gerais e Espírito Santo. A lama tóxica percorreu todo esse trajeto até desaguar no Oceano Atlântico, causando a destruição de habitats aquáticos e terrestres, além de comprometer o abastecimento de água em diversas localidades \cite{wikipedia2019brumadinho, brasil2024timeline}. A devastação incluiu a destruição completa de comunidades próximas, a poluição de corpos d'água utilizados para abastecimento público e a destruição da flora e fauna regionais \cite{estadominas2016irregular}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/image38_lama_bacia_rio_doce_mariana.jpg}
+    \caption{A lama de rejeitos contaminou a bacia hidrográfica do Rio Doce, em Mariana}
+    \fonte{Adaptado de \cite{wikipedia2015mariana}}
+    \label{fig:lama_bacia_rio_doce}
+\end{figure}
+
+O desastre de Brumadinho, embora geograficamente mais localizado, atingiu rapidamente instalações administrativas da Vale, áreas residenciais e o leito do rio Paraopeba, comprometendo o abastecimento de água e a biodiversidade aquática, provocou impactos diretos nas operações da mineradora e na região de Córrego do Feijão, destruindo instalações administrativas e operacionais da empresa. Ambos os eventos resultaram em deslocamentos populacionais forçados, perda de meios de subsistência tradicionais e transformações irreversíveis nas paisagens e ecossistemas regionais \cite{wikipedia2019brumadinho, congressofoco2025}.
+
+\subsubsection{Consequências Socioeconômicas}
+
+As consequências socioeconômicas para as comunidades afetadas foram profundas e duradouras. Em Mariana, além da destruição de propriedades e meios de subsistência, houve um aumento significativo de problemas de saúde mental entre os moradores, incluindo casos de depressão e ansiedade, agravados pela demora na reparação dos danos e na reconstrução das comunidades. Em Brumadinho, a perda abrupta de vidas humanas e a destruição de infraestruturas essenciais resultaram em traumas coletivos e desafios econômicos substanciais para a região. Esses impactos ressaltam a importância de políticas públicas eficazes de apoio às vítimas e de estratégias de recuperação socioeconômica \cite{estadominas2024alerta}.
+
+\subsubsection{Gestão dos Processos Reparatórios}
+
+A gestão dos processos reparatórios evidencia abordagens fundamentalmente diferentes entre as duas tragédias. Em Mariana, a criação da Fundação Renova pelas próprias mineradoras responsáveis gerou controvérsia e desconfiança por parte do Ministério Público Federal e das comunidades atingidas. Esta estrutura foi criticada pela ausência de participação efetiva das vítimas nas decisões sobre reparação, configurando um modelo de governança questionável do ponto de vista da legitimidade democrática.
+
+O Ministério Público Federal considerou o acordo inicial insuficiente e prejudicial, conseguindo sua anulação judicial em agosto de 2016, argumentando que os governos não possuíam legitimidade para atuar em nome da população atingida. Não obstante a anulação do Acordo Interfederativo, as empresas continuaram operando com base nas diretrizes previamente estabelecidas, perpetuando as críticas sobre desvio de finalidade e ineficiência da Fundação Renova \cite{greenpeace2016valor}.
+
+\subsubsection{Respostas Institucionais}
+
+As respostas institucionais aos desastres revelaram tanto os esforços de reparação quanto as limitações dos sistemas de responsabilização corporativa, incluíram acordos de indenização e medidas legais contra as empresas responsáveis. Logo após o desastre de Mariana, foi firmado um termo de compromisso entre os governos federal, de Minas Gerais e do Espírito Santo e as mineradoras Samarco, Vale e BHP Billiton, que previa um fundo de R\$ 20 bilhões para reparação dos danos ao longo de 15 anos \cite{greenpeace2016valor, brasil2024timeline}.
+
+Em contraste, Brumadinho apresentou características distintas na resposta jurídica, e a resposta do sistema de justiça foi mais célere e incisiva, com a Advocacia-Geral do Estado ajuizando ações no mesmo dia do rompimento, resultando no bloqueio imediato de bilhões de reais da Vale S.A. e na imposição de obrigações emergenciais, como cooperação no resgate, remoção da lama e controle de vetores.
+
+O tribunal reconheceu a responsabilidade da Vale pela reparação de todos os danos decorrentes do rompimento, e houve pedidos de indenização por perdas econômicas e danos morais coletivos e sociais em valores bilionários. Além disso, foram firmados diversos acordos, incluindo pagamentos emergenciais aos atingidos, ressarcimento de gastos públicos, contratação de auditoria técnica e ambiental independente, e custeio pela Vale de projetos como a Biofábrica Wolbachia para controle de vetores, a reestruturação do laboratório da Funed para análise de amostras e monitoramento da saúde dos bombeiros, uma nova captação de água para a Copasa, e obras emergenciais para contenção dos rejeitos \cite{minasgerais2024historico}.
+
+\subsubsection{Acordos de Indenização}
+
+As respostas institucionais a ambos os desastres incluíram acordos de indenização e medidas legais contra as empresas responsáveis. No caso de Mariana, até 2021, as indenizações totalizaram aproximadamente R\$ 8,71 bilhões, administradas pela Fundação Renova, criada pelas mineradoras envolvidas \cite{brasil2022indenizacoes}. Em Brumadinho, a Vale firmou um acordo de reparação de R\$ 37,68 bilhões em 2021, considerado o maior da história do Brasil, com a participação de órgãos governamentais e do judiciário. Apesar desses esforços, críticas persistem quanto à efetividade das medidas adotadas e à celeridade na implementação das ações de reparação \cite{brasil2022indenizacoes}.
+
+\subsubsection{Ações Judiciais e Complexidade Jurídica}
+
+As ações judiciais decorrentes de ambos os desastres refletem a complexidade jurídica inerente a crimes socioambientais de tal magnitude. Em Mariana, o Ministério Público Federal apresentou denúncia contra 22 pessoas e as empresas responsáveis por crimes ambientais, paralelamente às ações civis públicas com estimativas de prejuízos alcançando R\$ 155 bilhões.
+
+As negociações para a repactuação do acordo envolveram diversas partes, incluindo governos, Ministérios Públicos, Defensorias Públicas e as mineradoras, mas foram encerradas sem acordo em setembro de 2022, com o poder público criticando o descompromisso das empresas com a responsabilidade social e ambiental, evidenciando os impasses persistentes quanto aos valores e formas de execução das ações reparatórias \cite{brasil2024timeline}.
+
+A resposta penal em Brumadinho demonstra características similares quanto à complexidade processual, porém com maior celeridade nas medidas cautelares e na identificação de responsabilidades. A falta de punição efetiva para os responsáveis da Vale e da empresa Tüv Süd, que emitiu laudos fraudulentos, permanece como ponto de indignação, reforçado por investigações que indicam decisões judiciais frequentemente desfavoráveis aos atingidos \cite{modelli2024brumadinho}.
+
+\subsubsection{Inovações Legislativas Pós-Brumadinho}
+
+O contraste mais significativo entre as respostas institucionais reside nas inovações legislativas implementadas após Brumadinho. O estado de Minas Gerais aprovou a Política Estadual de Segurança de Barragens (PESB), instituindo exigências rigorosas para licenciamento e operação, determinando a descaracterização das estruturas alteadas a montante e aumentando a qualidade e intensidade dos monitoramentos.
+
+Esta lei também estabelece auditorias técnicas de segurança e a obrigatoriedade da Declaração de Condição de Estabilidade (DCE), com suspensão imediata das operações em caso de não conformidade ou falta de estabilidade declarada \cite{minasgerais2024historico}.
 
 \section{Sistema de alerta existentes}
 \label{sec:sistema_alerta}
 
-AQUIIIIII
+Os sistemas de alertas em barragens de rejeitos representam uma evolução crítica na gestão de riscos da mineração moderna, especialmente após as catástrofes recentes que evidenciaram a fragilidade dos métodos tradicionais de monitoramento. A taxa de falha das barragens de rejeitos é estimada em 1,2\% globalmente, valor significativamente superior aos 0,01\% observados em barragens convencionais de água, demonstrando a complexidade e os riscos inerentes a essas estruturas \cite{stocks2019tailings}. A crescente pressão regulatória e social tem impulsionado o desenvolvimento de tecnologias mais sofisticadas, incluindo sistemas de monitoramento remoto por satélite, sensores de fibra óptica e redes de microsismômetros que oferecem capacidades de detecção precoce de instabilidades.
 
-\subsection{Higrômetro de Resistência e seu uso na prevenção de acidentes de barragens}
-\label{subsec:higrometro}
+\subsection{Sistemas de Monitoramento Atuais}
+
+O monitoramento por sensoriamento remoto via satélite emergiu como uma das tecnologias mais promissoras para sistemas de alerta precoce em barragens de rejeitos, oferecendo cobertura global e capacidade de detecção de deformações milimétricas. O projeto DAMSAT (Dam Monitoring from Satellites), desenvolvido pela UK Space Agency em parceria com a HR Wallingford, utiliza tecnologia de satélite para monitorar remotamente barragens de água e rejeitos, reduzindo significativamente os riscos de falha e os consequentes danos a populações e ecossistemas vulneráveis \cite{hrwallingford2021damsat}.
+
+Estudos recentes demonstraram que dados de interferometria SAR (Synthetic Aperture Radar) podem detectar deformações terrestres que precedem colapsos catastróficos, como evidenciado na análise retrospectiva da barragem de Brumadinho, onde acelerações súbitas de movimento foram identificadas nos dois meses finais antes do colapso \cite{naturecomm2020advanced}. Complementarmente, a tecnologia de radar interferométrico permite o monitoramento remoto de movimentos estruturais em barragens com precisão submilimétrica, gerando uma fonte contínua de dados de deformação e mapeamento em tempo real de deslocamentos \cite{hexagon2024monitoramento}.
+
+A implementação de sistemas de monitoramento microsísmico representa um avanço significativo na capacidade de detecção precoce de instabilidades em barragens de rejeitos, proporcionando monitoramento contínuo 24/7 através de redes de geofones estrategicamente posicionados. A Tetra Tech, desde 2018, comissionou mais de 20 sistemas e instalou mais de 180 geofones conectados a 50 estações sísmicas, principalmente em Minas Gerais, Brasil, evidenciando a crescente adoção desta tecnologia após os desastres de 2015 e 2019 \cite{tetratech2023mitigating}.
+
+Os sismógrafos registram as ondas sísmicas causadas por movimentos sísmicos naturais ou induzidos pela atividade humana, que podem afetar a estabilidade das barragens, constituindo-se como alguns dos principais dispositivos usados para o monitoramento de barragens \cite{sequencia2024sismografico}. O sistema RGR-Velox (Reactive Geohazard Radar) oferece monitoramento reativo de precisão militar para rompimentos de barragens de rejeitos, detectando, rastreando e alarmando sobre riscos geológicos em movimento em tempo real \cite{internationalmining2024tailings}.
+
+Pesquisas recentes demonstraram que a interferometria de ruído ambiente pode ser aplicada para monitorar o desempenho de barragens usando arranjos de geofones, com mudanças de velocidade sísmica inferiores a 1\% correlacionando-se fortemente com alterações no nível de água em lagoas de rejeitos adjacentes \cite{naturecomm2022monitoring}. O sucesso dos sistemas microsísmicos tem incentivado o desenvolvimento paralelo de tecnologias de sensoriamento por fibra óptica.
+
+A tecnologia de sensoriamento distribuído por fibra óptica tem revolucionado o monitoramento de barragens de rejeitos ao oferecer medições de alta resolução de temperatura, acústica e deformação ao longo de extensões contínuas da estrutura. O sistema DamPulse, desenvolvido pela Silixa, pode fornecer medições distribuídas de temperatura, deformação e acústica em tempo real através de um único cabo de fibra óptica instalado ao longo de toda a estrutura, servindo como sistema de alerta precoce com monitoramento contínuo ou como ferramenta de investigação para medir movimentos regularmente \cite{silixa2024dampulse}.
+
+As diferenças de deformação medidas correspondem ao movimento perpendicular ao cabo, permitindo uma análise detalhada das condições estruturais da barragem e processamento de dados de alta resolução para alertas acionáveis baseados em critérios de desempenho selecionados. A tecnologia SAAV Extend, da Measurand, aborda especificamente os desafios do monitoramento contínuo de deformação durante o alteamento de barragens de rejeitos, fornecendo um perfil de deformação contínuo através de múltiplas elevações da estrutura \cite{rstinstruments2022tailings}.
+
+A implementação de sistemas de monitoramento em barragens de rejeitos frequentemente enfrenta o desafio da localização remota dessas estruturas, demandando soluções de comunicação específicas para ambientes de mineração. O sistema RAMJACK exemplifica essa abordagem ao utilizar comunicação em frequência sub-gigahertz, que proporciona largura de banda suficiente para aplicações de mineração enquanto maximiza a distância de transmissão e minimiza o consumo de bateria \cite{ramjack2022tailings}.
+
+Estes sistemas integram piezômetros e outros instrumentos geotécnicos, como extensômetros, inclinômetros, células de pressão e monitores de geo-resistividade, que se comunicam wirelessly com um servidor central. A alimentação por bateria reduz a necessidade de manutenção e facilita o gerenciamento em locais remotos, enquanto a integração com gateways alimentados por linha permite comunicação de volta ao servidor central via Ethernet, WiFi ou LTE \cite{ramjack2022tailings}.
+
+O processamento e análise de dados massivos provenientes de sistemas de monitoramento têm impulsionado a adoção de técnicas de inteligência artificial e deep learning para predição de riscos em barragens de rejeitos. Li et al. desenvolveram um sistema de monitoramento e alerta precoce que integra uma rede bidirecional de memória longa e curta (BiLSTM) para processar dados temporais complexos e identificar padrões que possam indicar instabilidade iminente \cite{jing2022monitoring}.
+
+Esta abordagem de deep learning demonstra capacidade superior de extração de características, reduzindo a necessidade de descrição manual de características dos dados e fornecendo uma nova solução para processar dados massivos. O modelo bidirecional pode combinar estados históricos e memória atual para abordar problemas de séries temporais, com experimentos comparativos mostrando que o modelo baseado em rede bidirecional recorrente de memória longa e curta apresentou RMSE de 0,09966 para entrada univariada, superando o modelo multilayer perceptron com RMSE de 0,10611 \cite{jing2022monitoring}.
+
+O desenvolvimento de sistemas integrados de monitoramento tem incorporado tecnologias de visualização 3D e análise de dados em tempo real, criando plataformas abrangentes para gestão de riscos em barragens de rejeitos. O sistema desenvolvido para a barragem de rejeitos da mina de ouro-cobre Zijinshan, na China, integra aquisição de dados, transmissão, gerenciamento, armazenamento, análise, cálculo, exibição e saída em uma plataforma unificada de monitoramento e alerta precoce \cite{frontiers2022visualization}.
+
+A implementação de gêmeos digitais para barragens de rejeitos representa uma evolução significativa, utilizando sistemas de alerta precoce baseados em satélite para monitorar a estabilidade de instalações de armazenamento de rejeitos e prevenir potenciais falhas catastróficas \cite{internationalwater2024digital}. A Catapult Satellite Applications desenvolveu tecnologias habilitadas por satélite especificamente para redução de riscos em barragens de rejeitos, reconhecendo que estas estruturas frequentemente estão localizadas em áreas remotas ou de difícil acesso \cite{satellite2023tailings}. A sofisticação desses sistemas integrados contrasta significativamente com os métodos de monitoramento tradicional ainda em uso em muitas instalações.
+
+\subsection{Contexto Brasileiro Pós-Desastres}
+
+Esta evolução tecnológica tornou-se ainda mais urgente no contexto brasileiro após os desastres de Mariana (2015) e Brumadinho (2019), que evidenciaram falhas críticas nos sistemas de monitoramento e alerta existentes \cite{camara2024familias}. Os eventos trágicos impulsionaram mudanças significativas na legislação e nas práticas de segurança, criando um novo paradigma para o monitoramento de barragens no país \cite{brasil2020lei14066}.
+
+O desenvolvimento e aprimoramento dos sistemas de alertas tornou-se uma prioridade nacional para evitar novas tragédias, resultando na implementação de regulamentações mais rigorosas e na adoção de tecnologias avançadas \cite{synergia2024desastres}. Os sistemas contemporâneos de alertas em barragens de rejeitos integram múltiplas tecnologias de monitoramento para detectar mudanças comportamentais que possam indicar risco de ruptura.
+
+\subsubsection{Sistemas Multitecnológicos Integrados}
+
+Estes sistemas combinam instrumentação geotécnica tradicional, como piezômetros e inclinômetros, com tecnologias avançadas como monitoramento por radar interferométrico, sensores sísmicos e sistemas de telemetria em tempo real \cite{trimble2025melhor}. A integração desses dados através de plataformas digitais permite a análise contínua do comportamento estrutural e a emissão automática de alertas quando parâmetros críticos são ultrapassados \cite{bentley2025solucoes}.
+
+Esta abordagem multitecnológica representa uma evolução significativa em relação aos métodos de monitoramento anteriormente utilizados no Brasil, particularmente considerando as limitações dos sistemas tradicionais baseados em instrumentação geotécnica básica \cite{mineracaobrasil2024metodos}. A compreensão dessas limitações históricas torna-se fundamental para avaliar os sistemas que estavam presentes nos locais dos principais acidentes brasileiros.
+
+\subsection{Instrumentação Geotécnica Tradicional}
+
+A instrumentação geotécnica tradicional constitui a base fundamental dos sistemas de monitoramento de barragens, fornecendo dados críticos sobre o comportamento estrutural e hidráulico dessas obras. Os piezômetros, instrumentos responsáveis pela medição da pressão neutra ou poropressão nos materiais da barragem, funcionam como sensores que detectam variações na pressão exercida pela água que preenche os espaços vazios entre as partículas sólidas de um solo ou rocha, sendo instalados em diferentes profundidades e localizações estratégicas para mapear o regime hidráulico interno da estrutura \cite{geoscan2024sistema, ltec2024piezometros}.
+
+Complementarmente, os inclinômetros permitem a detecção de movimentos e deformações através da medição de deslocamentos horizontais e verticais, utilizando tubos verticais instalados no interior da barragem por onde uma sonda especializada percorre diferentes profundidades registrando inclinações e identificando possíveis planos de ruptura \cite{ltec2025inclinometros}.
+
+\subsubsection{Limitações dos Sistemas Tradicionais}
+
+Estes instrumentos tradicionais, embora fundamentais, apresentavam limitações significativas nos sistemas anteriores aos acidentes de Mariana e Brumadinho, principalmente devido à dependência de leituras manuais periódicas e à falta de integração em tempo real \cite{anm2019relatorio}. Consequentemente, os dados coletados podem tornar-se irrelevantes ou desatualizados rapidamente, comprometendo a eficácia do monitoramento. A inadequação destes métodos tradicionais impulsionou o desenvolvimento de soluções automatizadas mais avançadas \cite{ibram2020tecnologias}.
+
+\subsection{Limitações dos Sistemas em Mariana e Brumadinho}
+
+Os sistemas de monitoramento implementados nas barragens de Mariana e Brumadinho apresentavam limitações técnicas significativas que contribuíram decisivamente para a magnitude das tragédias ocorridas. No caso específico de Mariana, a barragem de Fundão apresentava deficiências estruturais em seu sistema de monitoramento, caracterizando-se por sua natureza genérica e não contemplando simulações específicas de evacuação nem instrumentação geotécnica adequada, consistindo essencialmente em piezômetros destinados à determinação dos níveis de água no corpo da barragem e suas fundações \cite{sequencia2024sismografico, geoscan2024sistema}.
+
+Em Brumadinho, a situação revelou-se igualmente problemática, onde a sirene de alerta, que deveria avisar a população sobre o rompimento iminente, jamais soou, sendo completamente engolida pela onda de lama nos primeiros instantes do colapso da barragem devido à localização inadequada e à ausência de um plano de contingência eficaz \cite{taliberti2025tragedia}. Apesar da classificação oficial de ``baixo risco'' atribuída à estrutura de Brumadinho, as recomendações técnicas indicavam a necessidade de instalação de novo equipamento de radar para monitoramento de deslocamentos frontais à barragem, tecnologia que poderia ter garantido o acionamento tempestivo das sirenes de alerta \cite{metropoles2019laudos}.
+
+\subsection{Sistemas Automatizados de Monitoramento}
+
+A implementação de sistemas automatizados de monitoramento tem transformado a gestão operacional de barragens de rejeitos, reduzindo a dependência de inspeções manuais e proporcionando coleta contínua de dados críticos. O Cleveland Dam em North Vancouver, Canadá, classificado como barragem de consequência extrema, utiliza um programa de vigilância de segurança que inclui uma rede complexa de instrumentação remotamente monitorada, incluindo piezômetros, inclinômetros, sensores de turbidez e fluxo, extensômetros, medidores de deformação e transdutores de pressão, integrados com sistema SCADA (Supervisory Control and Data Acquisition) \cite{klohn2021surveillance}.
+
+A Worldsensing desenvolveu soluções de monitoramento que reduzem significativamente os custos comparados à coleta manual de dados, proporcionando acesso a dados de todas as áreas críticas da barragem de rejeitos sem necessidade de envio de técnicos ao campo para leituras de data loggers \cite{worldsensing2024canadian}. O sistema LSG6 de aquisição de dados wireless de longo alcance da Worldsensing, implementado pela Mine Design Solutions, simplifica o monitoramento de barragens de rejeitos ao integrar instrumentos geotécnicos como contratomêtros e extensômetros para medir o comportamento da parede da barragem e taludes, atendendo aos desafios únicos apresentados por barragens de rejeitos que tendem a aumentar constantemente de tamanho ao longo do tempo \cite{minedesign2021tailings}.
+
+\subsection{Desafios Regulatórios Internacionais}
+
+A ausência de regulamentação internacional uniforme para barragens de rejeitos representa um desafio significativo para a implementação padronizada de sistemas de alerta, apesar dos avanços tecnológicos observados após desastres recentes. Não existe um órgão internacional independente ou imparcial regulamentando barragens de rejeitos ou qualquer aspecto da indústria mineradora, resultando em abordagens fragmentadas para segurança e monitoramento \cite{londonmining2021explainer}.
+
+As instalações de rejeitos estão falhando com frequência e severidade crescentes, e os padrões atuais da indústria não são suficientes para proteger adequadamente comunidades e ecossistemas de falhas \cite{earthworks2024safety}. A conscientização sobre monitoramento de segurança de barragens de rejeitos se ampliou devido aos desastres recentes causados por falhas dessas estruturas, com a maioria das diretrizes de monitoramento sugerindo que os proprietários desenvolvam programas robustos de vigilância para detectar possíveis indicadores de falhas potenciais.
+
+\subsection{Transformações no Marco Regulatório Brasileiro}
+
+Os desastres de Mariana e Brumadinho provocaram transformações profundas no marco regulatório brasileiro para segurança de barragens de mineração, criando o Sistema Nacional de Informações sobre Segurança de Barragens e implementando novas leis, decretos e resoluções que amplificaram o alcance da segurança visando diminuir as ocorrências de desastres \cite{brasil2020lei14066, synergia2024desastres}.
+
+A Agência Nacional de Mineração implementou o Sistema Integrado de Gestão de Barragens de Mineração (SIGBM), que exige monitoramento contínuo e relatórios periódicos de segurança, fornecendo dados sobre categoria de risco, altura, volume e método construtivo, permitindo que tanto fiscais quanto empresas insiram informações sobre vistorias em campo \cite{anm2020sistema}.
+
+\subsubsection{Nova Política Nacional de Segurança das Barragens}
+
+A implementação da nova Política Nacional de Segurança das Barragens (PNSB), instituída pela Lei nº 14.066, de 30 de setembro de 2020, estabeleceu marcos regulatórios fundamentais para o setor de mineração brasileiro, tornando compulsória a elaboração do Plano de Ação de Emergência (PAE) para todas as barragens destinadas à acumulação ou disposição de rejeitos de mineração \cite{brasil2020lei14066}.
+
+Paralelamente, a Resolução ANM nº 40, de 6 de julho de 2020, determina que os empreendedores devem implementar sistemas de monitoramento de barragens em conformidade com a classificação do Dano Potencial Associado, estabelecendo prazo de 24 meses para a instalação dos equipamentos necessários \cite{anm2021resolucao56}. Essas transformações regulatórias brasileiras têm servido de referência para o desenvolvimento de cooperação internacional na área de segurança de barragens.
+
+\subsection{Experiências Internacionais}
+
+As experiências internacionais demonstram que sistemas de alertas eficazes requerem integração tecnológica, protocolos rigorosos de resposta e treinamento adequado das equipes operacionais. Países como Canadá, Austrália e Chile desenvolveram protocolos abrangentes que incluem monitoramento automatizado, sistemas de comunicação redundantes e planos de evacuação bem estruturados \cite{bentley2025solucoes}.
+
+O iTwin IoT fornece insights práticos que incorporam todas as fontes de vigilância de barragens para identificar os primeiros sinais de mudança de comportamento que representam um risco para o desempenho e a integridade estrutural \cite{bentley2025solucoes}. Estas experiências internacionais servem como referência para o desenvolvimento de sistemas mais robustos no contexto brasileiro, especialmente considerando a aplicação de tecnologias emergentes como Internet das Coisas (IoT) e inteligência artificial \cite{ascenty2024aiot}.
+
+A cooperação internacional tem se intensificado como resposta aos desafios globais de segurança em barragens, com eventos especializados como o Dam World 2025, realizado em Lisboa, Portugal, reunindo especialistas mundiais para tratar da segurança de barragens e representando uma oportunidade fundamental para troca de experiências e desenvolvimento de parcerias \cite{mdr2025defesa}.
+
+\subsection{Perspectivas Futuras}
+
+A evolução dos sistemas de alerta em barragens de rejeitos aponta para uma crescente integração de múltiplas tecnologias de sensoriamento, análise de dados avançada e inteligência artificial para predição de falhas. A aplicação de tecnologias de gêmeos digitais está sendo desenvolvida para criar modelos virtuais abrangentes que incorporem dados de múltiplas fontes de monitoramento, permitindo simulações preditivas e análises de cenários de risco em tempo real.
+
+A integração de sistemas de monitoramento por satélite com redes de sensores terrestres está criando capacidades de monitoramento multi-escala que podem detectar desde deformações milimétricas até movimentos de massa regionais. O desenvolvimento de algoritmos de aprendizado de máquina para análise de padrões de dados de monitoramento promete revolucionar a capacidade de predição de falhas, identificando precursores sutis que podem não ser detectados por análises convencionais, sendo evidenciado pelo Monitoramento Sismográfico de Barragens em Tempo Real como uma solução moderna e eficaz para garantir a segurança das barragens no Brasil e no mundo \cite{sequencia2024tempo}.
+
+A tecnologia de radar interferométrico permite o monitoramento remoto de movimentos estruturais em barragens com precisão submilimétrica, gerando uma fonte contínua de dados de deformação e mapeamento em tempo real de deslocamentos \cite{hexagon2024monitoramento}. Simultaneamente, o desenvolvimento de protocolos de comunicação avançados baseados em IoT e sistemas de resposta automatizada promete reduzir significativamente o tempo entre a detecção de problemas e a implementação de medidas de segurança \cite{ufpr2021simepar}.
+
+Estas inovações tecnológicas, combinadas com o fortalecimento do marco regulatório, representam a esperança de um futuro mais seguro para as comunidades que vivem no entorno de barragens de rejeitos no Brasil, convergindo para criar sistemas de alerta mais precisos, confiáveis e capazes de proporcionar tempo de resposta adequado para medidas preventivas efetivas \cite{radaz2024revolucionando}.

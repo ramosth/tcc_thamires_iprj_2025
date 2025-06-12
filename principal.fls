@@ -544,6 +544,11 @@ OUTPUT siglas.aux
 INPUT .\siglas.tex
 INPUT .\siglas.tex
 INPUT siglas.tex
+INPUT C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1phv.fd
+INPUT C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1phv.fd
+INPUT C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1phv.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8c.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8c.vf
 INPUT .\principal.toc
 INPUT .\principal.toc
 INPUT principal.toc
@@ -562,11 +567,6 @@ OUTPUT cap1.aux
 INPUT .\cap1.tex
 INPUT .\cap1.tex
 INPUT cap1.tex
-INPUT C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1phv.fd
-INPUT C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1phv.fd
-INPUT C:\Users\THAMIRES\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1phv.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8c.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvr8c.vf
 INPUT .\figures\image1_mineracao_numeros_1.png
 INPUT .\figures\image1_mineracao_numeros_1.png
 INPUT .\figures\image1_mineracao_numeros_1.png
@@ -755,6 +755,8 @@ INPUT .\figures\image26_matriz_cri_e_dpa.png
 INPUT .\figures\image26_matriz_cri_e_dpa.png
 INPUT .\figures\image26_matriz_cri_e_dpa.png
 INPUT .\figures\image26_matriz_cri_e_dpa.png
+INPUT .\figures\image26_matriz_cri_e_dpa.png
+INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
 INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
 INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
 INPUT .\figures\image27_matriz_de_classificacao_cri_e_dpa_ana.png
@@ -767,6 +769,8 @@ INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
 INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
 INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
 INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
+INPUT .\figures\image28_distribuicao_barragens_marco_2025.png
+INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
 INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
 INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
 INPUT .\figures\image29_distribuicao_barragens_classificacao_cri.png
@@ -779,6 +783,8 @@ INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
 INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
 INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
 INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
+INPUT .\figures\image30_distribuicao_barragens_classificacao_cri_estado.png
+INPUT .\figures\image31_evolucao_classificacao_12_meses.png
 INPUT .\figures\image31_evolucao_classificacao_12_meses.png
 INPUT .\figures\image31_evolucao_classificacao_12_meses.png
 INPUT .\figures\image31_evolucao_classificacao_12_meses.png
@@ -791,6 +797,49 @@ INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
 INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
 INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
 INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
+INPUT .\figures\image32_distribuicao_barragens_nivel_alerta.png
+INPUT .\figures\image35_rompimento_mariana.jpg
+INPUT .\figures\image35_rompimento_mariana.jpg
+INPUT .\figures\image35_rompimento_mariana.jpg
+INPUT .\figures\image35_rompimento_mariana.jpg
+INPUT .\figures\image35_rompimento_mariana.jpg
+INPUT .\figures\image35_rompimento_mariana.jpg
+INPUT .\figures\image35_rompimento_mariana.jpg
+INPUT .\figures\image37_acidente_mariana.png
+INPUT .\figures\image37_acidente_mariana.png
+INPUT .\figures\image37_acidente_mariana.png
+INPUT .\figures\image37_acidente_mariana.png
+INPUT .\figures\image37_acidente_mariana.png
+INPUT .\figures\image37_acidente_mariana.png
+INPUT .\figures\image37_acidente_mariana.png
+INPUT .\figures\image33_momento_antes_brumadinho.png
+INPUT .\figures\image33_momento_antes_brumadinho.png
+INPUT .\figures\image33_momento_antes_brumadinho.png
+INPUT .\figures\image33_momento_antes_brumadinho.png
+INPUT .\figures\image33_momento_antes_brumadinho.png
+INPUT .\figures\image33_momento_antes_brumadinho.png
+INPUT .\figures\image33_momento_antes_brumadinho.png
+INPUT .\figures\image34_momento_depois_brumadinho.png
+INPUT .\figures\image34_momento_depois_brumadinho.png
+INPUT .\figures\image34_momento_depois_brumadinho.png
+INPUT .\figures\image34_momento_depois_brumadinho.png
+INPUT .\figures\image34_momento_depois_brumadinho.png
+INPUT .\figures\image34_momento_depois_brumadinho.png
+INPUT .\figures\image34_momento_depois_brumadinho.png
+INPUT .\figures\image36_acidente_brumadinho.png
+INPUT .\figures\image36_acidente_brumadinho.png
+INPUT .\figures\image36_acidente_brumadinho.png
+INPUT .\figures\image36_acidente_brumadinho.png
+INPUT .\figures\image36_acidente_brumadinho.png
+INPUT .\figures\image36_acidente_brumadinho.png
+INPUT .\figures\image36_acidente_brumadinho.png
+INPUT .\figures\image38_lama_bacia_rio_doce_mariana.jpg
+INPUT .\figures\image38_lama_bacia_rio_doce_mariana.jpg
+INPUT .\figures\image38_lama_bacia_rio_doce_mariana.jpg
+INPUT .\figures\image38_lama_bacia_rio_doce_mariana.jpg
+INPUT .\figures\image38_lama_bacia_rio_doce_mariana.jpg
+INPUT .\figures\image38_lama_bacia_rio_doce_mariana.jpg
+INPUT .\figures\image38_lama_bacia_rio_doce_mariana.jpg
 INPUT .\cap2.tex
 INPUT .\cap2.tex
 OUTPUT cap2.aux
