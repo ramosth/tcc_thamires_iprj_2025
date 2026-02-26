@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99e
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: principal.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
@@ -48,7 +48,7 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
-Reallocating 'field_info' (item size: 4) to 15695 items.
+Reallocating 'field_info' (item size: 4) to 17696 items.
 Database file #1: abntex2-options.bib
 Database file #2: tcc.bib
 Warning--I didn't find a database entry for "fernandes2016mineracao"
@@ -56,6 +56,7 @@ Warning--I didn't find a database entry for "wpr2024mineral"
 Warning--I didn't find a database entry for "rbm2024mineracao"
 Warning--I didn't find a database entry for "carvalho2012dependencia"
 Warning--I didn't find a database entry for "desouzaaraujo2018"
+Warning--I didn't find a database entry for "fowler2003uml"
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -65,45 +66,45 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 150 entries,
+You've used 178 entries,
             6711 wiz_defined-function locations,
-            1980 strings with 42454 characters,
-and the built_in function-call counts, 326185 in all, are:
-= -- 44048
-> -- 2548
-< -- 12322
-+ -- 13215
-- -- 828
-* -- 18392
-:= -- 38421
-add.period$ -- 691
-call.type$ -- 151
-change.case$ -- 1045
-chr.to.int$ -- 185
-cite$ -- 148
-duplicate$ -- 40914
-empty$ -- 8413
-format.name$ -- 3853
-if$ -- 59289
-int.to.chr$ -- 12
+            2142 strings with 49274 characters,
+and the built_in function-call counts, 385839 in all, are:
+= -- 52018
+> -- 3071
+< -- 14468
++ -- 15567
+- -- 994
+* -- 21800
+:= -- 45404
+add.period$ -- 834
+call.type$ -- 179
+change.case$ -- 1272
+chr.to.int$ -- 222
+cite$ -- 176
+duplicate$ -- 48219
+empty$ -- 10088
+format.name$ -- 4636
+if$ -- 70353
+int.to.chr$ -- 15
 int.to.str$ -- 2
-missing$ -- 2425
-newline$ -- 777
-num.names$ -- 741
-pop$ -- 2922
+missing$ -- 2923
+newline$ -- 917
+num.names$ -- 876
+pop$ -- 3578
 preamble$ -- 1
-purify$ -- 471
+purify$ -- 563
 quote$ -- 0
-skip$ -- 41478
+skip$ -- 48872
 stack$ -- 1
-substring$ -- 15296
-swap$ -- 14026
-text.length$ -- 168
+substring$ -- 17986
+swap$ -- 16537
+text.length$ -- 194
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 66
 warning$ -- 0
-while$ -- 1057
+while$ -- 1246
 width$ -- 0
-write$ -- 2309
-(There were 5 warnings)
+write$ -- 2761
+(There were 6 warnings)
