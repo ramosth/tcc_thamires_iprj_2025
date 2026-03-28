@@ -1,502 +1,60 @@
-\chapter{MATERIAL E MÉTODOS}\label{cap3MatMet}
+\chapter{OBJETIVOS}
+\label{cap:objetivos}
 
-\section{Desenvolvimento de Protótipo e Validação Experimental}
+% -------------------------------------------------------------
+\section{Objetivo Geral}
+\label{sec:objetivo-geral}
+% -------------------------------------------------------------
 
-O desenvolvimento de protótipos constitui uma etapa fundamental para a validação de projetos de engenharia, permitindo a verificação antecipada da funcionalidade dos sistemas propostos. A prototipagem possibilita a identificação de falhas e a implementação de melhorias de forma segura e controlada, proporcionando um ambiente de aprendizado que favorece o refinamento do projeto \cite{pressman2016engenharia}. Através da construção de protótipos, obtém-se um \textit{feedback} elaborado e antecipado sobre o desempenho do sistema, viabilizando modificações mais eficientes durante as fases iniciais de desenvolvimento \cite{sommerville2011engenharia}. Esta abordagem metodológica constitui a base para o estabelecimento dos parâmetros de instrumentação e definição dos limites operacionais do sistema.
+Desenvolver um sistema automatizado de monitoramento e alerta para
+barragens de rejeitos de mineração, baseado em tecnologia IoT, capaz
+de mensurar continuamente a umidade do solo, integrar dados
+meteorológicos obtidos por meio de APIs externas, calcular um índice
+de risco geotécnico em tempo real e disponibilizar as informações em
+uma plataforma \textit{web} de monitoramento, contribuindo para a
+prevenção de acidentes em estruturas de contenção de rejeitos.
 
-\subsection{Definição de Parâmetros e Instrumentação Adequada}
+% -------------------------------------------------------------
+\section{Objetivos Específicos}
+\label{sec:objetivos-especificos}
+% -------------------------------------------------------------
 
-A determinação dos limites operacionais e a seleção da instrumentação adequada representam aspectos cruciais para o funcionamento eficaz do sistema de monitoramento. Com base na revisão bibliográfica conduzida, estabeleceram-se sete parâmetros fundamentais para a avaliação do risco de ruptura, agrupados em três categorias conforme especificado a seguir:
+Para alcançar o objetivo geral, foram estabelecidos os seguintes
+objetivos específicos:
 
-\begin{enumerate}
-    \item \textbf{Índice pluviométrico:} Quantificação da precipitação acumulada em múltiplas janelas temporais (24 horas, 7 dias e 30 dias) e previsão meteorológica para as próximas 24 horas
-    \item \textbf{Saturação do solo:} Medição do teor de umidade instantâneo através de sensor higrômetro e taxa de variação temporal da umidade como indicador de saturação progressiva
-    \item \textbf{Indicadores de instabilidade atmosférica:} Queda de pressão atmosférica como sinal precursor de eventos pluviométricos intensos
+\begin{enumerate}[label=\alph*)]
+
+    \item Desenvolver um protótipo de \textit{hardware} embarcado
+    baseado no microcontrolador ESP8266 NodeMCU, integrado a sensor
+    higrômetro para medição contínua da umidade do solo, com
+    sinalização visual por LEDs e sonora por \textit{buzzer}
+    proporcional ao nível de risco identificado;
+
+    \item Implementar a integração com as APIs meteorológicas
+    BNDMET/DECEA e OpenWeatherMap para obtenção de dados de
+    precipitação histórica acumulada nas janelas de 24 horas, 7 dias
+    e 30 dias, e de previsão pluviométrica para as próximas 24 horas;
+
+    \item Formular e implementar um modelo de avaliação de risco
+    integrado composto por sete variáveis ponderadas, que expressam
+    condições geotécnicas e meteorológicas, com mecanismo de
+    amplificação ativado quando o solo apresenta saturação elevada
+    concomitante a previsão de chuva moderada ou superior;
+
+    \item Desenvolver o \textit{backend} do sistema com banco de dados
+    de séries temporais, expondo uma API RESTful responsável pelo
+    recebimento, processamento e persistência das leituras enviadas
+    pelo dispositivo embarcado;
+
+    \item Implementar uma interface \textit{web} de monitoramento em
+    tempo real que permita visualizar o histórico de leituras, os
+    níveis de alerta ativos e os dados meteorológicos integrados,
+    além de gerenciar os usuários cadastrados para recebimento de
+    notificações;
+
+    \item Estabelecer um sistema de envio automático de alertas por
+    e-mail aos usuários cadastrados quando o índice de risco atingir
+    os níveis AMARELO (atenção) ou VERMELHO (crítico), acompanhado
+    do relatório de dados do ciclo de análise correspondente.
+
 \end{enumerate}
-
-A mensuração destes parâmetros é realizada através de instrumentos específicos ou mediante a utilização de interfaces de programação de aplicações (\textit{APIs}) externas, garantindo a precisão e confiabilidade dos dados coletados. A cada variável medida é atribuído um peso específico, determinado de acordo com o nível de risco que representa para a ocorrência de ruptura, permitindo a obtenção de um valor final de risco integrado apresentado ao usuário em escala padronizada.
-
-\subsubsection{Quantificação do Índice Pluviométrico}
-
-Para a quantificação do índice pluviométrico, adotou-se uma abordagem multitemporal que contempla tanto o histórico de precipitação quanto a previsão meteorológica de curto prazo. Esta segmentação permite capturar a \textit{memória hídrica} do solo, reconhecendo que a susceptibilidade à ruptura é função não apenas da chuva imediata, mas do acúmulo progressivo de precipitação ao longo do tempo \cite{rico2008mine}. A metodologia implementada contempla quatro vertentes de análise pluviométrica:
-
-\begin{enumerate}
-    \item \textbf{Precipitação nas últimas 24 horas:} Evento pluviométrico recente que eleva diretamente a saturação superficial
-    \item \textbf{Precipitação acumulada nos últimos 7 dias:} Indicador de saturação de médio prazo, associado a episódios de chuva persistente
-    \item \textbf{Precipitação acumulada nos últimos 30 dias:} Indicador de saturação profunda e elevação do lençol freático
-    \item \textbf{Previsão de intensidade pluviométrica para as próximas 24 horas:} Estimativa prospectiva do risco iminente
-\end{enumerate}
-
-\subsubsection{Seleção da Fonte de Dados Meteorológicos Históricos}
-
-Os dados históricos de precipitação (janelas de 24 horas, 7 dias e 30 dias) são obtidos através da API do Banco Nacional de Dados Meteorológicos e Climáticos (BNDMET), mantido pelo Departamento de Controle do Espaço Aéreo (DECEA). O acesso à API foi formalizado por meio de solicitação eletrônica ao DECEA, apresentando as credenciais acadêmicas da UERJ-IPRJ, resumo do trabalho em desenvolvimento e justificativa técnica para utilização dos dados no contexto da pesquisa.
-
-O planejamento inicial do projeto previa a utilização da estação automática do Instituto Nacional de Meteorologia (INMET) de código \textbf{A555} --- \textit{Ibirité (Rola Moça)}, localizada a 23~km da área de interesse e a de maior proximidade da rede INMET na região. Contudo, ao consultar a API BNDMET durante a fase de integração, verificou-se que a estação A555 apresentava situação de \textbf{pane operacional} (conforme Tabela~\ref{tab:estacoes_candidatas}), inviabilizando sua utilização como fonte de dados contínuos e confiáveis para o sistema de monitoramento.
-
-Diante disso, procedeu-se à análise das demais estações automáticas disponíveis no entorno da área monitorada. Concomitantemente, havia sido encaminhada solicitação formal à Agência Nacional de Águas e Saneamento Básico (ANA) para acesso à sua API hidrometeorológica própria (\textit{HidroWebService}). Antes mesmo do retorno da ANA, identificou-se que a estação \textbf{D6594} --- \textit{Alberto Flores}, pertencente à rede da ANA e localizada a apenas 5~km do ponto de referência --- já estava disponível para consulta diretamente pela API do BNDMET, sem necessidade de credencial adicional. Optou-se, portanto, por adotar essa estação como fonte definitiva, consolidando a integração exclusivamente via BNDMET.
-
-A seleção da estação foi realizada de forma técnica e rastreável por meio do \textit{endpoint} \texttt{/v1/estacoes-proximas} da API BNDMET, que retorna estações automáticas ordenadas por proximidade geográfica em relação a um par de coordenadas fornecido como parâmetro. A consulta foi parametrizada com as coordenadas geográficas do município de Brumadinho/MG --- área de interesse do projeto e ponto de referência adotado para a busca de estações (latitude \texttt{-20.1433}, longitude \texttt{-44.1997}) ---, conforme os valores apresentados na Tabela~\ref{tab:bndmet_params}.
-
-\begin{table}[htb]
-\centering
-\caption{Parâmetros da consulta ao \textit{endpoint} \texttt{/v1/estacoes-proximas} da API BNDMET}
-\label{tab:bndmet_params}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Parâmetro} & \textbf{Valor utilizado} & \textbf{Descrição} \\
-\hline
-\texttt{tipo}       & \texttt{automatica}  & Tipo de estação (automática ou convencional) \\
-\texttt{latitude}   & \texttt{-20.1433}    & Latitude de Brumadinho/MG \\
-\texttt{longitude}  & \texttt{-44.1997}    & Longitude de Brumadinho/MG \\
-\texttt{quantidade} & \texttt{5}           & Estações a retornar (mín. 1, máx. 5) \\
-\texttt{distancia}  & \texttt{100}         & Distância máxima em km (máx. 300; padrão 80) \\
-\hline
-\end{tabular}
-\fonte{Documentação da API BNDMET/DECEA.}
-\end{table}
-
-A resposta da API retornou cinco estações automáticas dentro do raio de 100~km. A Tabela~\ref{tab:estacoes_candidatas} apresenta os metadados completos de todas as estações retornadas, possibilitando a análise comparativa que fundamentou a escolha definitiva.
-
-\begin{table}[htb]
-\centering
-\small
-\caption{Estações automáticas candidatas — resultado da consulta à API BNDMET/DECEA}
-\label{tab:estacoes_candidatas}
-\begin{tabular}{|l|p{4.5cm}|l|c|c|l|}
-\hline
-\textbf{Código} & \textbf{Nome} & \textbf{Entidade} & \textbf{Dist. (km)} & \textbf{Alt. (m)} & \textbf{Situação} \\
-\hline
-D6594 & Alberto Flores                      & ANA   & 5  & 725{,}0  & \textbf{Operante} \\
-A555  & Ibirité (Rola Moça)                 & INMET & 23 & 1198{,}8 & Pane \\
-D8400 & UHE Retiro Baixo P.\,N. do Paraopeba & ANA  & 24 & 0{,}0    & Operante \\
-D6581 & Ponte Nova do Paraopeba             & ANA   & 24 & 695{,}0  & Pane \\
-A501  & Contagem                            & INMET & 25 & 980{,}0  & Desativada \\
-\hline
-\end{tabular}
-\fonte{API BNDMET/DECEA --- consulta realizada em 2026.}
-\end{table}
-
-Da análise da Tabela~\ref{tab:estacoes_candidatas}, depreende-se que, dentre as cinco estações retornadas, apenas duas encontravam-se em situação operante no momento da consulta: a D6594 e a D8400. A estação D8400 (UHE Retiro Baixo), embora operante, apresenta altitude registrada de 0~m, indicando ausência de dado altimétrico confiável, e está localizada a 24~km do ponto de referência. A estação A555 do INMET --- que era o alvo original do projeto por ser a estação INMET mais próxima --- encontrava-se em pane operacional. As demais estações (D6581 e A501) estavam, respectivamente, em pane e desativada. A estação D6594 destacou-se como a única alternativa com distância inferior a 10~km, altitude compatível com o perfil topográfico da região (725~m) e operação contínua desde dezembro de 2021, sendo selecionada como fonte definitiva de dados pluviométricos históricos. Seus metadados completos são detalhados na Tabela~\ref{tab:estacao_d6594}.
-
-\begin{table}[htb]
-\centering
-\caption{Metadados da estação pluviométrica D6594 — Fonte: API BNDMET/DECEA}
-\label{tab:estacao_d6594}
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Campo}                  & \textbf{Valor}                        \\
-\hline
-Código da estação               & D6594                                 \\
-Nome                            & Alberto Flores                        \\
-Estado                          & Minas Gerais (MG)                     \\
-Região                          & Sudeste (SE)                          \\
-Latitude                        & $-20{,}1667$                          \\
-Longitude                       & $-44{,}1606$                          \\
-Distância ao ponto de referência & 5~km                                 \\
-Situação                        & Operante                              \\
-Altitude                        & 725~m                                 \\
-Entidade responsável            & ANA                                   \\
-Início de operação              & 31 de dezembro de 2021                \\
-Fim de operação                 & Em operação (sem data de encerramento)\\
-\hline
-\end{tabular}
-\fonte{API BNDMET/DECEA --- consulta realizada em 2026.}
-\end{table}
-
-A estação D6594 está localizada a apenas 5~km do ponto de referência do projeto e opera de forma contínua desde dezembro de 2021, sem interrupções registradas. Sua altitude de 725~m é compatível com o perfil topográfico da região de Brumadinho, e a responsabilidade operacional da ANA garante padrões de qualidade e rastreabilidade dos dados. Esta combinação — disponibilidade via BNDMET, proximidade geográfica e continuidade operacional — tornou a estação D6594 a escolha técnica mais adequada para fornecer os dados pluviométricos históricos utilizados no sistema de monitoramento.
-
-Os dados de previsão meteorológica são obtidos através da API OpenWeatherMap, \textit{endpoint} \texttt{/forecast}, configurada para retornar oito blocos de três horas cada, cobrindo uma janela de previsão de 24 horas.
-
-\paragraph{Precipitação nas últimas 24 horas ($V_{ch.24h}$)}
-
-Para o parâmetro de precipitação nas últimas 24 horas, estabeleceu-se o valor de 50~mm como limiar máximo de referência ($Fator_{ch.24h} = 1$), valor fundamentado em dois referenciais da literatura especializada: o acidente de Merriespruit (África do Sul, 1994), no qual precipitação de 50~mm em poucas horas precedeu o rompimento da barragem de rejeitos \cite{rico2008mine}, e os critérios de alerta de nível~3 do sistema AlertaRio, que classifica precipitações acima de 50~mm/24h como de alto potencial de risco \cite{sistemaalertario2025}. O fator correspondente é calculado conforme a Equação~\ref{eq:fator_chuva_24h}:
-
-\begin{equation}
-Fator_{ch.24h} = \frac{\text{precipita\c{c}\~ao acumulada 24h (mm)}}{50}
-\label{eq:fator_chuva_24h}
-\end{equation}
-
-O valor final para este parâmetro, com peso de 0,08, é obtido conforme a Equação~\ref{eq:valor_chuva_24h}:
-
-\begin{equation}
-V_{ch.24h} = Fator_{ch.24h} \times 0{,}08
-\label{eq:valor_chuva_24h}
-\end{equation}
-
-\paragraph{Precipitação acumulada nos últimos 7 dias ($V_{ch.7d}$)}
-
-O limiar de 150~mm para a janela de 7 dias foi definido pelo autor como critério técnico deste trabalho. \citeonline{rico2008mine}, em análise de 147 casos mundiais de rompimento, identificaram chuvas intensas como principal causa de falhas na Europa (35\%) e relevante causa global (25\%). \citeonline{hu2021}, por meio de ensaios experimentais, demonstraram que a chuva contínua eleva progressivamente a pressão de poros e reduz a resistência ao cisalhamento dos rejeitos, e que períodos de chuva antecedente encurtam o tempo até a ruptura por saturação. O valor de 150~mm em 7 dias foi estabelecido pelo autor como estimativa de volume acumulado suficiente para elevar a pressão de poros a níveis críticos, reconhecendo-se que a definição de limiares quantitativos precisos dependeria de estudos hidrológicos específicos para cada bacia e tipologia de barragem. O fator é calculado conforme a Equação~\ref{eq:fator_chuva_7d}:
-
-\begin{equation}
-Fator_{ch.7d} = \frac{\text{precipita\c{c}\~ao acumulada 7 dias (mm)}}{150}
-\label{eq:fator_chuva_7d}
-\end{equation}
-
-O valor final, com peso de 0,12, é obtido conforme a Equação~\ref{eq:valor_chuva_7d}:
-
-\begin{equation}
-V_{ch.7d} = Fator_{ch.7d} \times 0{,}12
-\label{eq:valor_chuva_7d}
-\end{equation}
-
-\paragraph{Precipitação acumulada nos últimos 30 dias ($V_{ch.30d}$)}
-
-A janela de 30 dias captura o estado de saturação profunda do maciço, associado à elevação do nível freático por acúmulo prolongado de precipitação. O limiar de 300~mm foi definido com base no padrão pluviométrico histórico observado para a região de Brumadinho, a partir de dados reais da estação D6594 obtidos via \textit{endpoint} \texttt{/v1/estacoes/D6594/fenomenos/I006} da API BNDMET, que retorna séries de precipitação acumulada diária mediante os parâmetros \texttt{dataInicio} e \texttt{dataFinal} no formato \texttt{YYYY-MM-DD}. A análise foi conduzida por meio de janela deslizante de 30 dias consecutivos sobre os dados históricos, identificando o período de maior acúmulo em cada temporada chuvosa. Para a temporada 2025/2026, a janela mais chuvosa compreendeu o período de 02 a 31 de janeiro de 2026, com acúmulo de 346~mm. Para a temporada 2024/2025, a janela mais chuvosa foi de 05 de janeiro a 03 de fevereiro de 2025, totalizando 310~mm. A média entre as duas temporadas aponta para um pico de saturação regional da ordem de 328~mm, fundamentando a adoção de 300~mm como limiar conservador de referência para o sistema. O fator é calculado conforme a Equação~\ref{eq:fator_chuva_30d}:
-
-\begin{equation}
-Fator_{ch.30d} = \frac{\text{precipita\c{c}\~ao acumulada 30 dias (mm)}}{300}
-\label{eq:fator_chuva_30d}
-\end{equation}
-
-O valor final, com peso de 0,10, é obtido conforme a Equação~\ref{eq:valor_chuva_30d}:
-
-\begin{equation}
-V_{ch.30d} = Fator_{ch.30d} \times 0{,}10
-\label{eq:valor_chuva_30d}
-\end{equation}
-
-\paragraph{Previsão de intensidade pluviométrica ($V_{ch.fut}$)}
-
-A previsão de intensidade pluviométrica para as próximas 24 horas é obtida através da soma dos volumes de precipitação dos oito blocos de três horas retornados pela API OpenWeatherMap (\textit{endpoint} \texttt{/forecast}, parâmetro \texttt{cnt=8}). A API disponibiliza previsões em passo temporal de três horas para um horizonte máximo de cinco dias (40 blocos), sendo o parâmetro \texttt{cnt} utilizado para limitar a resposta aos oito blocos correspondentes a um ciclo completo de 24 horas. O valor retornado pelo campo \texttt{rain.3h} representa o volume acumulado em milímetros para cada bloco de três horas, de modo que a soma direta dos oito blocos fornece o total previsto para as próximas 24 horas.
-
-A classificação da intensidade pluviométrica segue a nomenclatura estabelecida pelo sistema AlertaRio \cite{sistemaalertario2025}, adaptada para a janela temporal de 24 horas com limiares calibrados a partir dos dados reais de precipitação da estação D6594 para o período de janeiro a março de 2026. A análise deste período revelou máximo diário de 65~mm e ausência de eventos acima de 80~mm, fundamentando os limiares adotados conforme apresentado na Tabela~\ref{tab:intensidade_fatores}.
-
-\begin{table}[htb]
-\centering
-\caption{Classificação da intensidade pluviométrica prevista (24 horas) e fator correspondente}
-\label{tab:intensidade_fatores}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Intensidade} & \textbf{Acumulado previsto 24h (mm)} & \textbf{Fator\textsubscript{ch.fut.}} \\
-\hline
-Fraca            & $< 5$~mm                      & 0{,}00 \\
-Moderada         & $\geq 5$ e $< 25$~mm          & 0{,}25 \\
-Forte            & $\geq 25$ e $< 50$~mm         & 0{,}50 \\
-Muito Forte      & $\geq 50$ e $< 80$~mm         & 0{,}75 \\
-Pancada de Chuva & $\geq 80$~mm                  & 1{,}00 \\
-\hline
-\end{tabular}
-\fonte{Elaborado pela autora}
-\end{table}
-
-O valor final para este parâmetro, com peso de 0,15, é obtido conforme a Equação~\ref{eq:valor_chuva_fut}:
-
-\begin{equation}
-V_{ch.fut} = Fator_{ch.fut.} \times 0{,}15
-\label{eq:valor_chuva_fut}
-\end{equation}
-
-\subsection{Instrumentação para Monitoramento da Saturação do Solo}
-
-A medição da saturação do solo representa um parâmetro crítico para a avaliação da estabilidade geotécnica, sendo originalmente concebida através do emprego de medidores de nível d'água. Entretanto, optou-se pela utilização de higrômetros como alternativa mais adequada às características específicas do protótipo. O higrômetro constitui um sensor de umidade capaz de detectar variações na umidade do solo através de duas hastes equipadas com resistências elétricas de alta precisão \cite{eletrogate2017}, apresentado na Figura~\ref{fig:higrômetro_eletrogate}. O princípio de funcionamento baseia-se na correlação inversa entre a umidade do solo e a resistência elétrica medida: solos com maior teor de umidade apresentam menor resistência, enquanto solos secos resultam em valores elevados de resistência.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/image50_higrometro.png}
-    \caption{Higrômetro.}
-    \fonte{\cite{eletrogate2017}}
-    \label{fig:higrômetro_eletrogate}
-\end{figure}
-
-\subsubsection{Especificações Técnicas do Higrômetro}
-
-As especificações técnicas do sensor higrômetro selecionado contemplam os seguintes parâmetros operacionais:
-
-\begin{enumerate}
-    \item \textbf{Tensão de operação:} 3,3~V a 5~V DC
-    \item \textbf{Sensibilidade:} Ajustável via potenciômetro integrado
-    \item \textbf{Tipos de saída:} Digital e analógica simultâneas
-    \item \textbf{Indicadores visuais:} LED vermelho para tensão e LED verde para saída digital
-    \item \textbf{Comparador:} Circuito integrado LM393
-    \item \textbf{Dimensões da PCB:} 3~$\times$~1,5~cm
-    \item \textbf{Dimensões da sonda:} 6~$\times$~2~cm
-\end{enumerate}
-
-A configuração de pinagem do dispositivo compreende quatro conexões principais: VCC (alimentação 3,3--5~V), GND (referência de terra), D0 (saída digital) e A0 (saída analógica) \cite{eletrogate2017}. Esta configuração técnica proporciona flexibilidade na integração com diferentes sistemas de aquisição de dados, garantindo a confiabilidade e precisão necessárias para o monitoramento contínuo da saturação do solo.
-
-\subsubsection{Nível do Lençol Freático ($V_{lençol}$)}
-
-Para estabelecer os limites de saturação crítica do terreno, reconhece-se que seria necessário um estudo geológico aprofundado para determinar com precisão a localização da linha de ruptura. Considerando as limitações práticas para a realização de tal estudo no contexto do protótipo, adotaram-se as seguintes premissas de calibração:
-
-\begin{enumerate}
-    \item \textbf{Linha de ruptura:} 30\% da leitura do higrômetro
-    \item \textbf{Valor crítico de referência:} 25\% da leitura máxima
-    \item \textbf{Fator máximo:} $Fator_{lençol} = 1$ para umidade $\geq$ 25\%
-    \item \textbf{Peso atribuído:} 0,40 para o parâmetro ``Nível do Lençol Freático''
-\end{enumerate}
-
-Os demais valores são calculados proporcionalmente através da relação matemática expressa na Equação~\ref{eq:fator_lencol}:
-
-\begin{equation}
-Fator_{lençol} = \frac{\text{leitura do higrômetro (\%)}}{25}
-\label{eq:fator_lencol}
-\end{equation}
-
-O valor final para este parâmetro é obtido conforme a Equação~\ref{eq:valor_lencol}:
-
-\begin{equation}
-V_{lençol} = Fator_{lençol} \times 0{,}40
-\label{eq:valor_lencol}
-\end{equation}
-
-\subsubsection{Taxa de Variação da Umidade do Solo ($V_{taxa}$)}
-
-Além do valor absoluto da umidade, o comportamento dinâmico do solo constitui um indicador relevante de risco. A taxa de variação da umidade mensura a velocidade de saturação do maciço ao longo do tempo, permitindo detectar situações em que o solo absorve água rapidamente mesmo partindo de condições iniciais de baixa umidade. Este parâmetro é calculado a partir de um \textit{buffer} circular de leituras históricas do higrômetro, conforme a Equação~\ref{eq:taxa_variacao}:
-
-\begin{equation}
-V_{taxa} = \frac{\max(\Delta U, 0)}{10} \times 0{,}10
-\label{eq:taxa_variacao}
-\end{equation}
-
-\noindent onde $\Delta U$ representa a variação percentual de umidade entre a leitura mais recente e a mais antiga armazenada no \textit{buffer}, e o divisor 10 normaliza o valor para a escala [0, 1]. O peso atribuído ao parâmetro é de 0,10, refletindo seu papel como indicador complementar ao valor absoluto da umidade.
-
-\subsection{Indicadores de Instabilidade Atmosférica}
-
-\subsubsection{Queda de Pressão Atmosférica ($V_{pressão}$)}
-
-A pressão atmosférica constitui um indicador precursor de eventos meteorológicos adversos: quedas rápidas de pressão sinalizam a aproximação de frentes frias ou sistemas de baixa pressão tipicamente associados a precipitações intensas \cite{openweathermap2025guide}. Este parâmetro é obtido através do campo \texttt{grnd\_level} da API OpenWeatherMap, \textit{endpoint} \texttt{/weather}, que fornece a pressão ao nível do solo em hectopascais (hPa), sendo este valor mais preciso que a pressão ao nível do mar para localidades com altitude significativa.
-
-O limiar de referência adotado foi de 5~hPa em 3 horas, correspondendo a uma taxa de queda expressiva indicativa de instabilidade atmosférica iminente. O valor normalizado é calculado conforme a Equação~\ref{eq:valor_pressao}:
-
-\begin{equation}
-V_{pressão} = \frac{\max(\Delta P, 0)}{5} \times 0{,}05
-\label{eq:valor_pressao}
-\end{equation}
-
-\noindent onde $\Delta P$ representa a queda de pressão em hPa no intervalo de 3 horas entre leituras consecutivas. O peso atribuído é de 0,05, refletindo seu caráter de indicador antecipatório, cujo valor principal reside na ativação do mecanismo de amplificação descrito na Seção~\ref{sec:amplificacao}.
-
-\subsection{Sistema Integrado de Avaliação de Riscos}\label{sec:sistema_risco}
-
-A avaliação integrada do risco de ruptura é realizada através do cálculo do fator de risco ($Fator_{risco}$), obtido pela soma ponderada das sete variáveis monitoradas conforme a Equação~\ref{eq:fator_risco}:
-
-\begin{equation}
-Fator_{risco} = V_{lençol} + V_{ch.24h} + V_{ch.7d} + V_{ch.30d} + V_{ch.fut} + V_{taxa} + V_{pressão}
-\label{eq:fator_risco}
-\end{equation}
-
-A distribuição de pesos adotada, apresentada na Tabela~\ref{tab:pesos_variaveis}, foi estabelecida de forma que a soma total resulte em 1,00, garantindo que o $Fator_{risco}$ varie entre 0 e 1 em condições normais de operação.
-
-\begin{table}[htb]
-\centering
-\caption{Variáveis do modelo de risco, fontes de dados e pesos atribuídos}
-\label{tab:pesos_variaveis}
-\begin{tabular}{|l|l|c|c|}
-\hline
-\textbf{Variável} & \textbf{Fonte} & \textbf{Peso} & \textbf{Limiar máx.} \\
-\hline
-$V_{lençol}$  & Higrômetro (sensor físico) & 0{,}40 & Umidade $\geq$ 25\% \\
-$V_{ch.24h}$  & BNDMET / I006              & 0{,}08 & 50 mm \\
-$V_{ch.7d}$   & BNDMET / I006              & 0{,}12 & 150 mm \\
-$V_{ch.30d}$  & BNDMET / I006              & 0{,}10 & 300 mm \\
-$V_{ch.fut}$  & OpenWeatherMap /forecast   & 0{,}15 & $\geq$ 80 mm/24h \\
-$V_{taxa}$    & Higrômetro (\textit{buffer} circular) & 0{,}10 & $\Delta U \geq 10$\% \\
-$V_{pressão}$ & OpenWeatherMap /weather    & 0{,}05 & Queda $\geq$ 5 hPa/3h \\
-\hline
-\textbf{Total} & & \textbf{1{,}00} & \\
-\hline
-\end{tabular}
-\fonte{Elaborado pela autora}
-\end{table}
-
-\subsubsection{Mecanismo de Amplificação por Condições Concomitantes}\label{sec:amplificacao}
-
-Reconhecendo que a ocorrência simultânea de solo saturado e evento pluviométrico intenso previsto representa uma condição de risco qualitativamente superior à soma linear das contribuições individuais, o modelo incorpora um mecanismo de amplificação do fator de risco. Este mecanismo é ativado quando duas condições são verificadas simultaneamente:
-
-\begin{enumerate}
-    \item $Fator_{lençol} \geq 0{,}70$, indicando que o solo já se encontra em estado avançado de saturação (equivalente a umidade $\geq$ 17,5\%)
-    \item Acumulado previsto para as próximas 24 horas classificado como ``Moderada'' ou superior (acumulado $\geq$ 5~mm/24h)
-\end{enumerate}
-
-Quando ambas as condições são satisfeitas, o fator de risco calculado é multiplicado pelo coeficiente de amplificação de 1,20, conforme a Equação~\ref{eq:amplificacao}:
-
-\begin{equation}
-Fator_{risco}^{*} = Fator_{risco} \times 1{,}20
-\label{eq:amplificacao}
-\end{equation}
-
-Esta abordagem é fundamentada no comportamento geotécnico observado em acidentes históricos: em Brumadinho (2019), a barragem já apresentava nível d'água interno elevado de forma persistente, e o período foi precedido por chuvas intensas que reduziram a resistência do material na zona acima do lençol freático. Somada à deformação interna lenta e progressiva dos rejeitos ao longo do tempo, essa combinação de fatores criou uma condição de vulnerabilidade que modelos de análise convencionais não seriam capazes de identificar adequadamente \cite{robertson2019feijao}.
-
-\subsubsection{Limites de Alerta e Sinalização Visual}
-
-Os limites de alerta foram calibrados considerando a distribuição de pesos da equação expandida, de forma que o sistema seja sensível a situações de risco progressivo. Os critérios de classificação e a sinalização visual correspondente são apresentados na Tabela~\ref{tab:analise_riscos}.
-
-\begin{table}[htb]
-\centering
-\caption{Classificação do nível de alerta com base no fator de risco integrado}
-\label{tab:analise_riscos}
-\begin{tabular}{|c|c|l|}
-\hline
-\textbf{Fator de Risco} & \textbf{LED} & \textbf{Situação} \\
-\hline
-0{,}00 -- 0{,}50 & Verde   & Condições normais de operação \\
-0{,}51 -- 0{,}80 & Amarelo & Atenção — monitoramento intensificado \\
-Acima de 0{,}80  & Vermelho & Alerta crítico — ação imediata requerida \\
-\hline
-\end{tabular}
-\fonte{Elaborado pela autora}
-\end{table}
-
-\subsubsection{Exemplos de Aplicação do Sistema de Avaliação}
-
-Para exemplificar o funcionamento do sistema de avaliação de riscos, consideram-se os seguintes cenários práticos, baseados em condições representativas observadas na região de Brumadinho:
-
-\begin{enumerate}
-    \item \textbf{Cenário de alerta verde} (condições normais de estação seca):
-    Umidade do solo em 10\% ($Fator_{lençol} = 0{,}40$; $V_{lençol} = 0{,}16$), precipitação nas últimas 24h de 5~mm ($V_{ch.24h} = 0{,}008$), acumulado de 7 dias de 15~mm ($V_{ch.7d} = 0{,}012$), acumulado de 30 dias de 40~mm ($V_{ch.30d} = 0{,}013$), previsão de chuva fraca ($V_{ch.fut} = 0$), variação de umidade nula ($V_{taxa} = 0$) e pressão estável ($V_{pressão} = 0$). Resultado: $Fator_{risco} = 0{,}19$, LED verde, condições seguras.
-
-    \item \textbf{Cenário de alerta amarelo} (período chuvoso com acúmulo prolongado):
-    Umidade em 18\% ($Fator_{lençol} = 0{,}72$; $V_{lençol} = 0{,}29$), precipitação 24h de 20~mm ($V_{ch.24h} = 0{,}032$), acumulado de 7 dias de 80~mm ($V_{ch.7d} = 0{,}064$), acumulado de 30 dias de 180~mm ($V_{ch.30d} = 0{,}060$), previsão de intensidade moderada 15~mm/24h ($V_{ch.fut} = 0{,}038$), variação de umidade de 5\% ($V_{taxa} = 0{,}05$) e queda de pressão de 2~hPa ($V_{pressão} = 0{,}020$). Resultado: $Fator_{risco} = 0{,}51$, LED amarelo, monitoramento intensificado.
-
-    \item \textbf{Cenário de alerta vermelho} (evento extremo com saturação crítica):
-    Umidade em 23\% ($Fator_{lençol} = 0{,}92$; $V_{lençol} = 0{,}37$), precipitação 24h de 42~mm ($V_{ch.24h} = 0{,}067$), acumulado de 7 dias de 130~mm ($V_{ch.7d} = 0{,}104$), acumulado de 30 dias de 270~mm ($V_{ch.30d} = 0{,}090$), previsão de chuva forte 30~mm/24h ($V_{ch.fut} = 0{,}075$), variação de umidade de 8\% ($V_{taxa} = 0{,}08$) e queda de pressão de 4~hPa ($V_{pressão} = 0{,}040$). Soma base: $Fator_{risco} = 0{,}83$. Como $Fator_{lençol} \geq 0{,}70$ e há previsão de chuva moderada ou superior, aplica-se a amplificação: $Fator_{risco}^{*} = 0{,}83 \times 1{,}20 = 0{,}99$, LED vermelho, alerta crítico.
-\end{enumerate}
-
-Estes exemplos demonstram a sensibilidade e eficácia do sistema proposto na detecção de condições de risco progressivo, validando a metodologia de ponderação multivariável desenvolvida. Nota-se que o mecanismo de amplificação eleva o cenário~3 de uma situação de alerta vermelho limítrofe para um nível crítico máximo, refletindo adequadamente a gravidade da condição de solo saturado combinada com chuva intensa prevista.
-
-\subsection{Análise de Custos e Viabilidade Econômica}
-
-A análise de custos da instrumentação necessária para a implementação do sistema demonstra sua viabilidade econômica. O levantamento detalhado dos componentes requeridos apresenta a seguinte estrutura de custos:
-
-\begin{enumerate}
-    \item \textbf{Módulo microcontrolador:} ESP8266 NodeMCU com conectividade Wi-Fi integrada -- R\$~59,90
-    \item \textbf{Buzzer ativo:} 5~V para sinalização sonora -- R\$~2,30
-    \item \textbf{Higrômetro:} Sensor de umidade do solo com saída analógica -- R\$~7,50
-    \item \textbf{LEDs indicadores RGB:} Conjunto para sinalização visual tricolor -- R\$~0,60
-\end{enumerate}
-
-O custo total da instrumentação soma R\$~70,30, representando um investimento significativamente acessível para implementação em larga escala \cite{eletrogate2017}. Esta estrutura de custos reduzidos, combinada com a eficácia demonstrada do sistema de monitoramento, torna a solução economicamente viável para aplicação em diversas localidades que requerem monitoramento de estabilidade geotécnica. A relação custo-benefício favorável do sistema proposto constitui um fator determinante para sua adoção em projetos de monitoramento de barragens e estruturas similares.
-
-% ===========================================================
-\section{Desenvolvimento do Sistema de Software}
-% ===========================================================
-
-O desenvolvimento do sistema de \textit{software} constitui um componente essencial para a operacionalização efetiva do monitoramento geotécnico automatizado. O sistema proposto visa elaborar uma solução computacional integrada com funcionalidades de registro, monitoração de dados geotécnicos e transmissão de alertas preventivos à população \cite{pressman2016engenharia}. A arquitetura do \textit{software} baseia-se na integração de um subsistema de aquisição de dados com plataformas de análise e comunicação, permitindo que usuários sejam notificados antecipadamente quando os níveis de estabilidade do solo são comprometidos. A divulgação dos alertas será realizada através do envio de mensagens eletrônicas, configurando um sistema de comunicação eficiente e abrangente para situações de risco em determinadas regiões.
-
-Para a descrição e modelagem do sistema, utilizou-se a linguagem UML (\textit{Unified Modeling Language}), evidenciando as funcionalidades através de diagramas de casos de uso e diagramas de classes. Esta abordagem metodológica permite uma representação clara e estruturada das interações entre os diferentes componentes do sistema. Os sistemas desenvolvidos requerem intervenção direta de operadores humanos para comandar tarefas específicas, garantindo supervisão adequada e controle operacional. A modelagem UML facilita a compreensão das funcionalidades do sistema e serve como base para o desenvolvimento e manutenção posterior do \textit{software}.
-
-O projeto consiste em um sistema de monitoramento automático e contínuo para medição dos níveis de umidade do solo, com transmissão de dados à longa distância através de conectividade Wi-Fi. Para apoiar a tomada de decisões, o sistema integra informações meteorológicas fornecidas por APIs do BNDMET (Banco Nacional de Dados Meteorológicos e Climáticos) e OpenWeatherMap \cite{openweathermap2025guide}.
-
-O acesso à API do BNDMET requereu um processo formal de solicitação, no qual foi necessário enviar correspondência eletrônica ao DECEA, apresentando as credenciais acadêmicas da UERJ-IPRJ, um resumo detalhado do trabalho de conclusão de curso em desenvolvimento e a justificativa técnica para a utilização dos dados meteorológicos no contexto da pesquisa. Este procedimento institucional garante o uso adequado e autorizado dos dados governamentais para fins acadêmicos e de pesquisa científica.
-
-Paralelamente, foi encaminhada solicitação formal à Agência Nacional de Águas e Saneamento Básico (ANA) para acesso à sua API hidrometeorológica (\textit{HidroWebService}), disponível em \url{https://www.ana.gov.br/hidrowebservice/swagger-ui.html\#/}. A ANA concedeu o acesso por correspondência eletrônica, encaminhada pelo setor de Telemetria (\texttt{telemetria@ana.gov.br}), com cadastro concluído e senha de acesso fornecida.
-
-Contudo, após análise da documentação técnica da API da ANA, identificou-se uma restrição operacional relevante para o contexto de sistemas embarcados: o campo \texttt{tokenautenticacao}, necessário para autenticação em todas as requisições, possui validade de apenas 60 minutos, exigindo renovação periódica. A própria documentação da ANA alerta que requisições de autenticação em alta frequência são monitoradas e podem resultar em \textbf{bloqueio automático do IP} pelos sistemas de segurança da agência. Este comportamento é incompatível com o perfil de operação autônoma e contínua do módulo ESP8266, que opera sem supervisão humana e necessita de um mecanismo de autenticação estável e de baixa complexidade.
-
-Diante disso, e considerando que a estação D6594 --- de responsabilidade operacional da ANA --- já estava disponível para consulta diretamente pela API do BNDMET mediante autenticação por chave estática (\textit{API key}), optou-se por consolidar a integração exclusivamente pela interface do BNDMET. Esta decisão atendeu simultaneamente aos critérios de disponibilidade imediata dos dados, unicidade de ponto de acesso, autenticação estável sem renovação periódica e simplificação da camada de autenticação no \textit{firmware} embarcado.
-
-\subsection{Objetivos e Funcionalidades do Sistema}
-
-O sistema desenvolvido foi projetado para atender objetivos específicos que garantem sua eficácia operacional. A arquitetura funcional contempla os seguintes objetivos principais:
-
-\begin{enumerate}
-    \item \textbf{Aquisição e armazenamento de dados:} Receber valores obtidos por instrumentos de medição e armazená-los em banco de dados, utilizando conectividade Wi-Fi em rede local para garantir transmissão confiável dos dados
-
-    \item \textbf{Integração meteorológica:} Acessar dados meteorológicos através das APIs do BNDMET e OpenWeatherMap, integrando informações externas em múltiplas janelas temporais (24 horas, 7 dias, 30 dias e previsão de 24 horas) para análise de risco abrangente
-
-    \item \textbf{Gestão de usuários:} Fornecer mecanismos robustos para cadastro de usuários, permitindo a gestão adequada dos destinatários dos alertas
-
-    \item \textbf{Sistema de comunicação:} Enviar mensagens para pessoas cadastradas, alertando sobre instabilidades da barragem em suas respectivas regiões e os riscos de rompimento diante das condições de saturação e previsão meteorológica vigentes
-
-    \item \textbf{Manutenção de dados:} Manter atualizados tanto os dados meteorológicos quanto as medições experimentais, permitindo consultas futuras e análises históricas do comportamento do sistema
-\end{enumerate}
-
-A implementação destes objetivos foi concebida com a utilização do microcontrolador ESP8266 para aquisição de dados geotécnicos e comunicação com as APIs externas, garantindo que os requisitos do sistema sejam satisfeitos de forma eficiente e confiável.
-
-\subsection{Requisitos de Sistemas de Alerta Operacionais}
-
-Os sistemas de alerta em funcionamento em contextos reais geralmente possuem requisitos específicos que garantem sua eficácia operacional. A análise da literatura especializada e das normas técnicas vigentes permite identificar sete categorias principais de requisitos:
-
-\begin{enumerate}
-    \item \textbf{Instrumentação para monitoramento de sólidos e vazão:} Contempla a avaliação da capacidade da barragem e medição da vazão de rejeito mineral como parâmetro fundamental, incluindo piezômetros para pressão neutra, medidores de recalque e deslocamento, marcos topográficos de referência e instrumentos para monitoramento de percolação \cite{endress2025}
-
-    \item \textbf{Sistema de inspeções periódicas:} Estabelece inspeções regulares por técnicos especializados, revisões por empresas externas independentes para atualização das condições de segurança física e hidráulica, monitoramento visual de anomalias estruturais e registros fotográficos documentais \cite{vale2023barragens}
-
-    \item \textbf{Tecnologias de monitoramento remoto:} Abrange sensores automatizados para coleta contínua, sistemas de radar para detecção de movimentação, tecnologia LiDAR para monitoramento topográfico e estações meteorológicas automatizadas \cite{geoscan2020barragem}
-
-    \item \textbf{Sistema integrado de comunicação emergencial:} Compreende identificação de situações de emergência, rede de comunicação para transmissão de dados em tempo real, sistema de alerta para situações críticas e comunicação com órgãos fiscalizadores e comunidades \cite{anm2022resolucao95}
-
-    \item \textbf{Gestão centralizada de dados:} Inclui sistema central para armazenamento de dados históricos, gestão durante todo o ciclo de vida dos rejeitos, \textit{software} para análise e interpretação de dados, relatórios periódicos de segurança e base de dados integrada \cite{mrn2025barragens}
-
-    \item \textbf{Cumprimento de requisitos normativos:} Contempla monitoramento ativo com período mínimo de 2 anos, medidas específicas para rejeitos perigosos e implementação de Plano de Ação Emergencial (PAE) \cite{brasil612022barragens, anm2020resolucao32}
-
-    \item \textbf{Monitoramento de propriedades estruturais:} Engloba monitoramento da resistência ao cisalhamento dos materiais, controle da permeabilidade da fundação, monitoramento do método de lançamento e compactação do rejeito e avaliação contínua da estabilidade estrutural \cite{revistaft2023contencao}
-\end{enumerate}
-
-Quando estes requisitos são satisfeitos adequadamente, um sistema de alerta adquire ampla capacidade para cumprir sua principal função: alertar a população sobre instabilidades críticas em barragens, permitindo que as pessoas se protejam adequadamente contra sinais de risco.
-
-\subsection{Arquitetura Modular do Sistema Proposto}
-
-Baseando-se no contexto apresentado, o sistema proposto foi estruturado com funcionalidades específicas que garantem sua eficácia operacional. A arquitetura modular contempla os seguintes componentes fundamentais:
-
-\begin{enumerate}
-    \item \textbf{Interface \textit{web}:} Sistema para interação dos usuários através da Internet, proporcionando acesso remoto e facilidade de uso \cite{pressman2016engenharia}
-
-    \item \textbf{Sistema de comunicação:} Conta de e-mail dedicada para envio de mensagens de alerta aos usuários cadastrados, de acordo com as necessidades identificadas pelo sistema de análise
-
-    \item \textbf{Subsistema de gestão:} Responsável pelo envio de dados à base de dados e gestão para tomada de decisões, garantindo a integridade e disponibilidade das informações coletadas
-\end{enumerate}
-
-Em sistemas de alerta, tradicionalmente são utilizadas três fases para elaborar o plano de alerta à população: aquisição de dados, análise e alerta. Esta metodologia foi implementada através da seguinte estrutura modular:
-
-\subsubsection{Módulo 1: Aquisição de Dados}
-
-O Módulo de Aquisição dos Dados é responsável pela coleta e inclusão dos dados na base de dados. Este módulo subdivide-se em duas categorias principais:
-
-\begin{enumerate}
-    \item \textbf{Monitoramento Meteorológico:}
-    \begin{enumerate}
-        \item BNDMET/DECEA --- Precipitação histórica diária (fenômenos I006 e I175, estação D6594)
-        \item OpenWeatherMap --- Condições meteorológicas atuais (\textit{endpoint} \texttt{/weather}) e previsão de 24 horas (\textit{endpoint} \texttt{/forecast}, \texttt{cnt=8})
-    \end{enumerate}
-
-    \item \textbf{Monitoramento Geotécnico:}
-    \begin{enumerate}
-        \item Instalação e operação de sensor higrômetro para medição da umidade do solo
-        \item Aquisição contínua com armazenamento em \textit{buffer} circular para cálculo de taxa de variação
-    \end{enumerate}
-\end{enumerate}
-
-\subsubsection{Módulo 2: Análise de Dados}
-
-O Módulo de Análise realiza o cruzamento entre informações meteorológicas e saturação do solo, calculando o fator de risco integrado pela Equação~\ref{eq:fator_risco} e aplicando o mecanismo de amplificação quando pertinente. Este módulo implementa os algoritmos de ponderação multivariável apresentados na Seção~\ref{sec:sistema_risco}, gerando o índice de risco e o nível de alerta correspondente.
-
-\subsubsection{Módulo 3: Sistema de Alerta}
-
-O Módulo de Alerta é responsável pelo acionamento dos indicadores visuais (LED RGB), sonoros (buzzer) e pelo envio de notificações quando uma situação de risco é detectada pelo Módulo de Análise. Esta arquitetura modular garante escalabilidade, manutenibilidade e eficiência operacional do sistema \cite{sommerville2011engenharia}.
-
-\subsection{Modelagem através de Diagramas UML}
-
-A modelagem do sistema através de diagramas UML constitui uma etapa fundamental para a especificação clara das funcionalidades e interações do sistema proposto. A metodologia UML (\textit{Unified Modeling Language}) oferece um conjunto padronizado de ferramentas de modelagem que facilitam a compreensão e documentação de sistemas complexos \cite{larman2007utilizando, sommerville2011engenharia}.
-
-\subsubsection{Diagramas de Caso de Uso}
-
-Um diagrama de caso de uso ilustra de forma estruturada o conjunto de casos de uso para o sistema, seus atores e as relações existentes entre os atores e os casos de uso \cite{schneider2001applying, larman2007utilizando}. Os principais elementos contemplados na modelagem incluem:
-
-\begin{enumerate}
-    \item \textbf{Atores do sistema:}
-    \begin{enumerate}
-        \item Usuários cadastrados (população em área de risco)
-        \item Administradores do sistema
-        \item Sensores de campo (higrômetros)
-        \item APIs meteorológicas externas (BNDMET e OpenWeatherMap)
-    \end{enumerate}
-
-    \item \textbf{Casos de uso principais:}
-    \begin{enumerate}
-        \item Cadastro e autenticação de usuários
-        \item Coleta de dados meteorológicos históricos e de previsão
-        \item Monitoramento contínuo da umidade do solo
-        \item Processamento e análise integrada de riscos
-        \item Geração e envio de alertas
-        \item Consulta de dados históricos
-    \end{enumerate}
-
-    \item \textbf{Relacionamentos:}
-    \begin{enumerate}
-        \item Associações entre atores e casos de uso
-        \item Relacionamentos de inclusão e extensão
-        \item Dependências entre diferentes funcionalidades
-    \end{enumerate}
-\end{enumerate}
-
-Esta representação gráfica facilita a compreensão das funcionalidades do sistema por parte de desenvolvedores, usuários e \textit{stakeholders} envolvidos no projeto. A utilização de diagramas UML padroniza a documentação do sistema e serve como base para as fases subsequentes de desenvolvimento, implementação e manutenção do \textit{software} proposto. A integração entre os módulos permite uma resposta coordenada e automatizada às condições de risco detectadas, estabelecendo um sistema robusto e confiável para monitoramento de estabilidade geotécnica.

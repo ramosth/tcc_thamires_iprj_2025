@@ -1,88 +1,150 @@
 \chapter{FUNDAMENTAÇÃO TEÓRICA}
+\label{cap2Fundamentacao}
 
-A implementação da nova Política Nacional de Segurança das Barragens (PNSB), instituída pela Lei nº 14.066, de 30 de setembro de 2020, estabeleceu marcos regulatórios fundamentais para o setor de mineração brasileiro, tornando compulsória a elaboração do Plano de Ação de Emergência (PAE) para todas as barragens destinadas à acumulação ou disposição de rejeitos de mineração \cite{brasil2020lei14066}.
+O monitoramento eficaz de barragens de mineração apoia-se em dois pilares
+complementares: a instrumentação geotécnica, que fornece os dados físicos sobre
+o comportamento estrutural da obra, e a automação dos sistemas de coleta e
+transmissão, que transforma leituras periódicas em vigilância contínua. Este
+capítulo apresenta os fundamentos teóricos que embasam o sistema proposto,
+cobrindo os marcos regulatórios que tornam esse monitoramento obrigatório, os
+principais instrumentos utilizados e os recursos tecnológicos que permitem sua
+operação autônoma.
 
-Paralelamente, a Resolução ANM nº 40, de 6 de julho de 2020, determina que os empreendedores devem implementar sistemas de monitoramento de barragens em conformidade com a classificação do Dano Potencial Associado, estabelecendo prazo de 24 meses para a instalação dos equipamentos necessários \cite{anm2021resolucao56}. Além disso, a sofisticação do sistema de acompanhamento está condicionada à categorização do Dano Potencial Associado (DPA), o qual, quando classificado como elevado, onde há presença de população a jusante da estrutura com pontuação 10, bem como características construtivas que apresentem pontuação 10, demanda que esse controle seja contínuo e abrangente, cabendo à empresa a seleção da tecnologia, dos equipamentos e metodologias de monitoramento \cite{silva2019sistema}.
+A Lei n.º~14.066/2020 (nova Política Nacional de Segurança de Barragens --
+PNSB) tornou compulsória a elaboração do Plano de Ação de Emergência (PAE)
+para todas as barragens destinadas à acumulação ou disposição de rejeitos de
+mineração \cite{brasil2020lei14066}. A Resolução ANM n.º~40/2020 determina
+que os empreendedores implementem sistemas de monitoramento compatíveis com
+a classificação do Dano Potencial Associado (DPA) da estrutura, estabelecendo
+prazo de 24 meses para a instalação dos equipamentos necessários
+\cite{anm2021resolucao56}. Quando o DPA é classificado como elevado --- situação
+em que há presença de população a jusante e características construtivas de alta
+pontuação ---, o controle deve ser contínuo e abrangente, sendo a empresa
+responsável pela seleção da tecnologia e metodologia de monitoramento
+\cite{silva2019sistema}.
 
-Conforme \cite{desouzajunior2018}, torna-se imprescindível que as estruturas de contenção possuam sistemas de acompanhamento e controle periódicos, visando antecipar comportamentos deformacionais nas barragens. Para \citeonline{castro2008}, além do acompanhamento sistemático, o próprio programa de monitoramento necessita de avaliação contínua, analisando seu desempenho e verificando se as condições estabelecidas estão sendo atendidas adequadamente. O autor ainda destaca que o projeto executivo bem estruturado constituirá o fundamento inicial para o monitoramento da barragem, devendo fornecer subsídios para que o responsável técnico avalie a eficácia da instrumentação implementada e determine quando serão necessários ajustes.
+A norma ABNT NBR~13028:2017 estabelece, em seu item 5.4.16\,i, que o manual
+operacional da estrutura deve contemplar procedimentos de inspeção \textit{in
+loco} e monitoramento, especificando os componentes a acompanhar, a
+periodicidade das inspeções de campo, as leituras instrumentais e os parâmetros
+de análise dos dados coletados \cite{abnt2017}. Complementarmente,
+\citeonline{castro2008} destaca que o próprio programa de monitoramento necessita
+de avaliação contínua, verificando se as condições estabelecidas em projeto estão
+sendo atendidas e determinando quando são necessários ajustes.
 
-A norma ABNT NBR 13028, em seus requisitos para elaboração e apresentação de projetos, especificamente no capítulo 5.4.16, item "i", estabelece que deve ser considerado o manual operacional da estrutura, contemplando procedimentos de inspeção in loco e monitoramento. Quanto ao monitoramento, a norma determina que sejam especificados os componentes a serem acompanhados, a periodicidade das inspeções de campo, as leituras instrumentais e os parâmetros de análise dos dados coletados \cite{abnt2017}.
+% =============================================================
+\section{A relevância da Instrumentação de Barragens de Mineração}
+\label{sec:relevancia_instrumentacao}
+% =============================================================
 
-Dessa forma, evidencia-se que o monitoramento eficaz das barragens de mineração fundamenta-se nas inspeções de campo, executadas por equipe técnica especializada, e nas informações de variáveis que subsidiam as decisões relacionadas à integridade estrutural. Diversos pesquisadores como \citeonline{machado2007}, \citeonline{castro2008} e \citeonline{soares2010} indicam em seus estudos que os principais parâmetros a serem monitorados nas barragens relacionam-se às diferentes modalidades de entrada e saída de água do reservatório, as quais evidenciarão as variações hidrostáticas das estruturas e, consequentemente, sua estabilidade. Tais informações essenciais são obtidas mediante sistema de instrumentação instalado nas barragens de mineração, auxiliando no processo decisório e apresentando o estado real das estruturas.
+A instrumentação possibilita a aquisição, o registro e o processamento
+sistemático de informações coletadas por dispositivos instalados em distintas
+seções e zonas das barragens, permitindo avaliar os parâmetros-limite de cada
+ponto observado e identificar anomalias com antecedência
+\cite{fonseca2003auscultacao}. Por meio dela, identificam-se pontos onde existem
+níveis críticos de segurança estrutural --- comprometendo a estabilidade da obra
+--- e de segurança operacional --- relacionada ao funcionamento dos equipamentos
+\cite{machado2007}.
 
-\section{A relevância da Instrumentação de barragens de mineração}
-
-O processo de instrumentação das estruturas, conforme destacado por \cite{fonseca2003auscultacao}, possibilita a execução sistemática de aquisição, registro e processamento detalhado de informações coletadas através dos dispositivos de medição instalados em distintas seções e zonas das barragens. As avaliações contemplam os parâmetros limite de cada ponto observado no programa de instrumentação, visando acelerar a identificação de possíveis anomalias. Dessa forma, um programa de instrumentação objetiva assegurar precisão e disponibilizar parâmetros associados à confiabilidade das medições e correspondência entre os critérios projetuais e a metodologia executiva.
-
-Segundo \cite{machado2007}, visando minimizar os riscos de acidentes em empreendimentos de barragens, considerando os impactos gerados por tais ocorrências, justifica-se a preocupação atual em instrumentar barragens utilizando tecnologia moderna e, quando viável, nacional. Por meio da instrumentação, identificam-se pontos nas barragens onde existem níveis críticos de segurança estrutural e operacional. A segurança estrutural apresenta maior relevância, uma vez que compromete a estabilidade da barragem. A segurança operacional relaciona-se ao funcionamento dos equipamentos da barragem, como medidores de vazão.
-
-Conforme \cite{machado2007}, apesar da grande ênfase atribuída à segurança, a instrumentação de barragens possui como objetivo fundamental a obtenção de redução global nos custos do empreendimento. A instrumentação possibilita trabalhar com margem de segurança adequada, dispensando segurança adicional desnecessária, o que resultaria em elevação dos custos financeiros da obra.
-
-Observa-se que a utilização de instrumentos para monitoramento de barragens de mineração demanda projeto bem fundamentado, além de programa de instrumentação que deve constituir mecanismo dinâmico para acompanhamento e análise dos dados. A Figura \ref{fig:rotina_instrumentacao} apresenta, esquematicamente, os principais elementos da rotina de um projeto de instrumentação \cite{machado2007}.
+Além do aspecto de segurança, \citeonline{machado2007} ressalta que a
+instrumentação tem como objetivo fundamental a redução global dos custos do
+empreendimento: ao trabalhar com margem de segurança adequada, dispensa-se
+o superdimensionamento conservador que elevaria desnecessariamente o custo
+da obra. A Figura~\ref{fig:rotina_instrumentacao} apresenta esquematicamente
+os elementos da rotina de um programa de instrumentação.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/image39_rotina_instrumentacao_barragem.png}
     \caption{Rotina de um programa de instrumentação de barragem.}
-    \fonte{\cite{machado2007}}
     \label{fig:rotina_instrumentacao}
+    \fonte{\cite{machado2007}}
 \end{figure}
 
-A instrumentação, mediante informações obtidas através da realização de leituras, complementa as inspeções visuais de barragens e garante o monitoramento das medições de deslocamento, pressão, percolação e drenagem, além de outros fatores que influenciam o comportamento da estrutura, como nível do reservatório e precipitação \cite{machado2007}.
+O monitoramento eficaz fundamenta-se na combinação de inspeções de campo,
+executadas por equipe técnica especializada, e nas leituras dos instrumentos
+instalados na estrutura. Os principais parâmetros a monitorar relacionam-se às
+modalidades de entrada e saída de água do reservatório --- precipitação,
+piezometria, percolação, vazão de jusante e nível do reservatório --- que
+evidenciam as variações hidrostáticas e, consequentemente, a estabilidade da
+barragem \cite{machado2007, castro2008, soares2010}.
 
+% =============================================================
 \section{Instrumentação para Barragens de Rejeito}
+\label{sec:instrumentacao_barragens}
+% =============================================================
 
-Torna-se imprescindível o acompanhamento da evolução comportamental dessas estruturas ao longo do tempo, demandando a instalação de instrumentos adequados para o monitoramento, proporcionando leituras dos parâmetros mais significativos relacionados ao seu desempenho \cite{machado2007}.
-
-As metodologias de auscultação comportamental de barragens abrangem a seleção tipológica e a quantificação dos instrumentos a serem empregados, seu posicionamento e instalação, a coleta de dados (automatizada ou baseada em leituras periódicas realizadas por equipe capacitada), análise e interpretação dos resultados. Este conjunto de metodologias constitui o denominado sistema de instrumentação geotécnica, sendo objeto de considerável interesse e desenvolvimento no Brasil nos últimos anos \cite{machado2007}.
-
-O programa de instrumentação objetiva principalmente a adequação do monitoramento da estrutura aos parâmetros necessários para acompanhamento da integridade da barragem, devendo constituir um mecanismo ativo e constantemente reavaliado \cite{silva2019sistema}. As etapas de um programa de monitoramento são apresentadas de forma resumida na Figura \ref{fig:fases_programa_monitoramento}.
+As metodologias de auscultação comportamental de barragens abrangem a seleção
+e quantificação dos instrumentos, seu posicionamento e instalação, a coleta de
+dados (automatizada ou por leituras periódicas), e a análise e interpretação dos
+resultados. Esse conjunto constitui o sistema de instrumentação geotécnica
+\cite{machado2007}. O programa de instrumentação deve ser um mecanismo ativo e
+constantemente reavaliado, objetivando adequar o monitoramento aos parâmetros
+necessários para acompanhamento da integridade da estrutura
+\cite{silva2019sistema}. A Figura~\ref{fig:fases_programa_monitoramento}
+sintetiza as fases de um programa de monitoramento.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/image40_fases_programa_monitoramento.png}
     \caption{Fases de um programa de monitoramento.}
-    \fonte{\cite{machado2007}}
     \label{fig:fases_programa_monitoramento}
+    \fonte{\cite{machado2007}}
 \end{figure}
 
-A instrumentação de auscultação implementada em barragens de rejeitos objetiva avaliar o comportamento real dos rejeitos quanto ao desenvolvimento de deformações e pressões intersticiais, obter dados de deslocamento, tensão total, vazão, nível d'água e comparar estes dados coletados através de leituras periódicas aos respectivos valores de controle, máximo e mínimo, especificados nos critérios de projeto. Os relatórios dos programas de inspeção e instrumentação devem ser analisados tecnicamente de forma a possibilitar a adoção de ações efetivas imediatas, quando necessário \cite{machado2007}.
-
-Os principais dados monitorados pelos instrumentos referem-se à piezometria, vazão de jusante, pluviometria, nível de água do reservatório e os marcos topográficos superficiais. Conforme já mencionado, tais informações apresentarão principalmente o comportamento da variação hídrica no reservatório e nas estruturas, além da capacidade da barragem em absorver, drenar e vertê-la para jusante \cite{silva2019sistema}. A figura \ref{fig:formas_entrada_saida_agua_barragens} apresenta genericamente os principais mecanismos de entrada e saída de água dos reservatórios das barragens de mineração.
+A instrumentação em barragens de rejeitos busca avaliar o comportamento real dos
+rejeitos quanto ao desenvolvimento de deformações e pressões intersticiais,
+comparando os dados coletados aos valores de controle especificados em projeto.
+Os relatórios dos programas de inspeção devem ser analisados tecnicamente de
+forma a possibilitar ações imediatas quando necessário \cite{machado2007}. A
+Figura~\ref{fig:formas_entrada_saida_agua_barragens} ilustra os mecanismos de
+entrada e saída de água em reservatórios de barragens de mineração.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/image41_formas_entrada_saida_agua_barragens.png}
     \caption{Formas de entrada e saída de água das barragens.}
-    \fonte{\cite{silva2019sistema}}
     \label{fig:formas_entrada_saida_agua_barragens}
+    \fonte{\cite{silva2019sistema}}
 \end{figure}
 
+% -------------------------------------------------------------
 \subsection{Instrumentação para medições do comportamento do nível d'água}
+\label{subsec:piezometria}
+% -------------------------------------------------------------
 
-A determinação da posição da linha freática constitui elemento essencial para estudos relacionados ao comportamento geotécnico de estruturas de contenção. O sistema de monitoramento das manifestações hidráulicas caracteriza-se, fundamentalmente, como um dispositivo destinado ao registro permanente dos níveis de água, estabelecendo limites críticos que desencadeiam alertas e implementação de medidas preventivas para correção de eventuais anomalias \cite{machado2007}.
-
-Os equipamentos piezométricos têm sido extensivamente empregados no acompanhamento e análise preditiva do comportamento de inúmeras barragens mundialmente \cite{machado2007}. A oscilação dos dados piezométricos pode manifestar-se mediante a ocorrência de uma das seguintes situações: incremento da vazão de percolação; elevação dos níveis d'água à montante e jusante; ampliação da permeabilidade dos materiais situados à montante do piezômetro; diminuição da permeabilidade dos materiais posicionados à jusante do piezômetro \cite{machado2007}.
-
-Constituem instrumentos que viabilizam a mensuração dos níveis piezométricos na interface maciço/fundação, proporcionando uma análise dos parâmetros de subpressão estabelecidos no dimensionamento. Tais instrumentos podem ser posicionados em distintas profundidades à jusante da estrutura \cite{machado2007}.
-
-Dentre os modelos de equipamentos disponibilizados comercialmente, destacam-se os mais empregados: Medidor de nível d'água, Tubo aberto (standpipe), Pneumáticos, Hidráulicos, Elétricos e de Corda Vibrante \cite{machado2007}. No presente trabalho será enfatizado o modelo de medidor de nível d'água, razão pela qual será apresentado subsequentemente.
+A piezometria é o conjunto de técnicas e instrumentos destinados à medição da
+pressão neutra (poropressão) na massa de solo e na fundação da barragem. Os
+equipamentos piezométricos são amplamente empregados no acompanhamento e
+na análise preditiva do comportamento de barragens, pois a oscilação dos dados
+piezométricos pode indicar: incremento da vazão de percolação, variação dos
+níveis d'água a montante e a jusante, ou alteração da permeabilidade dos
+materiais da estrutura \cite{machado2007}. Os modelos mais empregados
+comercialmente são o medidor de nível d'água (tubo aberto ou \textit{standpipe}),
+e os piezômetros pneumáticos, hidráulicos, elétricos e de corda vibrante.
 
 \subsubsection{Medidor de Nível d'água}
+\label{subsubsec:medidor_nivel}
 
-Uma das metodologias para mensurar a saturação do solo consiste na utilização de um medidor de nível d'água. Este dispositivo caracteriza-se por um tubo perfurado inserido no solo até alcançar o lençol freático, similarmente a um poço. Desta maneira, torna-se imprescindível o conhecimento prévio das características do terreno para determinar a profundidade adequada de inserção \cite{victorino2003piezometro}.
+O medidor de nível d'água é um dos instrumentos mais elementares e de menor
+custo para monitoramento de barragens. Consiste em um tubo de PVC perfurado
+inserido no solo até atingir o lençol freático, funcionando de modo análogo a um
+poço de observação. No interior do tubo acumula-se apenas a água correspondente
+ao nível freático e aos aquíferos presentes no terreno \cite{victorino2003piezometro}.
 
-Conforme descrito por \cite{victorino2003piezometro}, o sistema instalado no terreno é constituído utilizando-se:
-
+O sistema instalado é composto por \cite{victorino2003piezometro}:
 \begin{enumerate}
-\item Tubo de PVC, com perfurações preparadas ao longo de sua extensão;
-\item Conexões do tubo, tampas superior e inferior;
-\item Areia lavada para constituir um filtro ao redor do tubo;
-\item Geotêxtil, que favorece exclusivamente a passagem de água para o interior do tubo;
-\item Bentonita ou cimento para vedação do sistema.
+    \item Tubo de PVC com perfurações ao longo de sua extensão;
+    \item Conexões do tubo, tampas superior e inferior;
+    \item Areia lavada constituindo filtro ao redor do tubo;
+    \item Geotêxtil, favorecendo exclusivamente a passagem de água para o interior;
+    \item Bentonita ou cimento para vedação do sistema.
 \end{enumerate}
 
-O equipamento, de baixo investimento, possivelmente o instrumento mais elementar de construir e operar, permite que no interior do tubo seja armazenada somente a água correspondente ao nível do lençol freático e demais aquíferos presentes no terreno \cite{victorino2003piezometro}. Um esquema do mesmo encontra-se representado na Figura \ref{fig:sistema_medidor_dagua}.
+A Figura~\ref{fig:sistema_medidor_dagua} esquematiza o sistema. A medição é
+executada por meio de um cabo graduado com sensor na extremidade que emite
+sinal sonoro e luminoso ao tocar a superfície da água, identificando a cota do
+nível freático \cite{fonseca2003auscultacao, machado2007}.
 
 \begin{figure}[htbp]
     \centering
@@ -92,10 +154,6 @@ O equipamento, de baixo investimento, possivelmente o instrumento mais elementar
     \fonte{\cite{victorino2003piezometro}}
 \end{figure}
 
-Para \cite{fonseca2003auscultacao}, a informação referente ao nível do lençol freático no interior das estruturas da barragem é indispensável para execução das análises de estabilidade ou para interpretação dos resultados piezométricos. A aplicação destes instrumentos para mensuração de nível de água das estruturas fundamenta-se em acessar diretamente a água em profundidade e realizar a medição da cota da superfície. Usualmente o acesso à água é executado por meio de métodos simples como sondagem ou perfurações de trado, e na medição da cota utiliza-se comumente um cabo graduado que possui um sensor na extremidade inferior e que emite um sinal sonoro e luminoso ao alcançar a água.
-
-A mensuração é executada normalmente de forma manual, com uma escala ou equipamento, visualizado na Figura \ref{fig:indicador_nivel_dagua}, que identifique a superfície da água no interior do tubo, que no caso deste instrumento corresponderá sempre, precisamente, ao nível freático \cite{machado2007}.
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/image44_indicador_nivel_dagua.png}
@@ -104,19 +162,29 @@ A mensuração é executada normalmente de forma manual, com uma escala ou equip
     \fonte{\cite{machado2007}}
 \end{figure}
 
+% -------------------------------------------------------------
 \subsection{Instrumentação para medições de deslocamentos}
+\label{subsec:deslocamentos}
+% -------------------------------------------------------------
 
-As barragens de terra e rejeitos encontram-se continuamente expostas a deslocamentos e deformações, decorrentes de suas características intrínsecas e dimensões, bem como de fatores internos e externos. Nesse contexto, torna-se fundamental aprofundar o estudo desse fenômeno e a aplicação de metodologias e tecnologias inovadoras que possam auxiliar no monitoramento dessas estruturas \cite{machado2007}.
-
-A quantificação de deslocamentos e deformações representa a sistematização das observações acerca do comportamento estrutural, constituindo uma prática de crescente relevância na atualidade. Tal importância deriva das dimensões que as barragens de rejeitos alcançam mediante alteamentos sucessivos, reflexo do incremento da produção mineira, resultando em maior volume de rejeitos e, consequentemente, reforçando a significância dessas medições \cite{machado2007}.
-
-As principais dificuldades relacionam-se, de modo geral, com a mensuração de deformações e deslocamentos horizontais, bem como distorções. Nas décadas recentes, observou-se um crescimento considerável não apenas no número, mas também na altura das barragens. Por essa razão, intensificaram-se as exigências por qualidade e precisão nos métodos de instrumentação e auscultação \cite{machado2007}.
+As barragens de terra e rejeitos estão continuamente sujeitas a deslocamentos e
+deformações decorrentes de suas características e dimensões, bem como de fatores
+internos e externos. Com o crescimento das estruturas por alteamentos sucessivos,
+as exigências por qualidade e precisão nos métodos de auscultação intensificaram-se
+\cite{machado2007}.
 
 \subsubsection{Inclinômetro}
+\label{subsubsec:inclinometro}
 
-Os inclinômetros são empregados com a finalidade de quantificar deformações e deslocamentos horizontais em massas de solo, além de identificar regiões com concentração de deformações, ou seja, superfícies potenciais de ruptura. Estes instrumentos apresentam particular adequação para tal aplicação, uma vez que as medições são realizadas no interior da massa de solo \cite{machado2007}.
-
-O funcionamento do equipamento ocorre da seguinte maneira: o inclinômetro é constituído por uma haste cilíndrica contendo um sensor de inclinação incorporado em seu interior e duas ou quatro rodas distribuídas lateralmente. As rodas se ajustam às ranhuras presentes em um tubo flexível instalado no solo, permitindo que o sensor acompanhe a orientação do tubo. Procede-se então à medição da inclinação do tubo em intervalos regulares, calculando-se, a partir do ângulo de inclinação, o deslocamento de cada segmento tubular. O tubo é normalmente instalado no furo de sondagem, sendo realizadas medições de deslocamento ao longo do tempo para monitorar a movimentação do solo \cite{dunnicliff1988geotechnical}. A Figura~\ref{fig:inclinometro_funcionamento} ilustra seu funcionamento.
+O inclinômetro é utilizado para quantificar deslocamentos horizontais em massas de
+solo e identificar superfícies potenciais de ruptura, realizando medições no interior
+da massa de solo \cite{machado2007}. O equipamento consiste em uma haste cilíndrica
+com sensor de inclinação incorporado e rodas laterais que se ajustam às ranhuras de
+um tubo flexível instalado no solo. Procede-se à medição da inclinação do tubo em
+intervalos regulares ao longo de sua extensão; a partir do ângulo registrado em cada
+segmento, calcula-se o deslocamento acumulado, que é monitorado ao longo do tempo
+\cite{dunnicliff1988geotechnical}. A Figura~\ref{fig:inclinometro_funcionamento}
+ilustra o funcionamento do equipamento.
 
 \begin{figure}[htbp]
     \centering
@@ -126,77 +194,82 @@ O funcionamento do equipamento ocorre da seguinte maneira: o inclinômetro é co
     \fonte{\cite{dunnicliff1988geotechnical}}
 \end{figure}
 
+% -------------------------------------------------------------
 \subsection{Instrumentação para medições hidrológicas}
+\label{subsec:hidrometria}
+% -------------------------------------------------------------
 
-Informações hidrológicas, incluindo precipitação, pluviometria e precipitação média regional, viabilizam a análise tanto da bacia de interesse quanto de bacias situadas a jusante. O conhecimento das características pluviométricas constitui elemento fundamental para a hidrologia, especialmente no dimensionamento de vertedores em estruturas de barragens.
-
-A quantificação da variável precipitação pode ser realizada de forma pontual mediante a utilização de dois equipamentos meteorológicos: o pluviômetro e o pluviógrafo. A distinção principal entre estes instrumentos reside no fato de que o pluviógrafo efetua o registro automático das informações, enquanto o pluviômetro demanda leituras manuais em intervalos temporais predefinidos.
+Informações hidrológicas --- precipitação, pluviometria e precipitação média
+regional --- viabilizam a análise da bacia de interesse e de bacias a jusante,
+constituindo elemento fundamental para a hidrologia aplicada ao dimensionamento
+de vertedores e ao monitoramento de risco pluviométrico. A quantificação da
+precipitação pode ser realizada de forma pontual por dois instrumentos: o
+\textbf{pluviômetro}, que demanda leituras manuais em intervalos predefinidos, e
+o \textbf{pluviógrafo}, que registra automaticamente os dados de chuva ao longo
+do tempo.
 
 \subsubsection{Instituto Nacional de Meteorologia (INMET)}
+\label{subsubsec:inmet}
 
-O Instituto Nacional de Meteorologia (INMET), órgão vinculado ao Ministério da Agricultura e Pecuária, tem como missão institucional promover e coordenar atividades destinadas à produção de informações meteorológicas oportunas e relevantes, visando a mitigação de riscos e o desenvolvimento sustentável do setor agropecuário, a conservação ambiental e a segurança da sociedade brasileira \cite{inmet2025sobre}.
+O Instituto Nacional de Meteorologia (INMET), órgão vinculado ao Ministério da
+Agricultura e Pecuária, é responsável pelo monitoramento das condições
+meteorológicas e climáticas no Brasil, pela elaboração de previsões, pela emissão
+de alertas de tempo severo e pela disponibilização de dados de apoio ao setor
+agrícola e à segurança da sociedade \cite{inmet2025sobre}. O sistema de coleta do
+INMET é constituído por estações meteorológicas de superfície em operação
+contínua, formando a maior rede de estações automáticas da América do Sul, que
+registram temperatura, umidade relativa do ar, direção e velocidade do vento,
+pressão atmosférica e precipitação, entre outras variáveis \cite{inmet2025sobre}.
 
-Entre as principais competências do INMET destacam-se o monitoramento das condições meteorológicas e climáticas, a elaboração de previsões meteorológicas e climáticas, a emissão de alertas de tempo severo e a disponibilização de diversos produtos de apoio ao setor agrícola, incluindo atividades de pesquisa e desenvolvimento \cite{inmet2025sobre}.
-
-O Sistema de Coleta e Distribuição de Dados Meteorológicos da instituição (temperatura, umidade relativa do ar, direção e velocidade do vento, pressão atmosférica, precipitação, entre outras variáveis) é constituído por estações meteorológicas de superfície operando continuamente; além da maior rede de estações automáticas da América do Sul \cite{inmet2025sobre}.
-
-Este órgão realiza o monitoramento e análise das previsões meteorológicas, fornecendo informações detalhadas sobre índices pluviométricos nos estados brasileiros. A plataforma digital do INMET disponibiliza informações relevantes que contribuem para alertas preventivos e adequados sobre riscos de desastres naturais. Complementarmente aos alertas, são divulgados no portal dados referentes ao início e término dos eventos, grau de severidade dos fenômenos, além das medidas preventivas recomendadas à população \cite{inmet2025sobre}.
-
-Adicionalmente, é possível obter através da plataforma do INMET informações sobre o acúmulo pluviométrico nas últimas 24 horas em diversas regiões do território nacional. A Figura \ref{fig:precipitacao_24h} apresenta um exemplo de mapeamento de precipitação referente ao dia 28/04/2025 \cite{inmet2025precipitacao}.
+A plataforma digital do INMET disponibiliza o acúmulo pluviométrico nas últimas
+24 horas em diferentes regiões do território nacional, além de alertas preventivos
+com indicação de início e término dos eventos, grau de severidade e medidas
+recomendadas à população \cite{inmet2025sobre}. A Figura~\ref{fig:precipitacao_24h}
+apresenta um exemplo de mapeamento de precipitação referente ao dia 28/04/2025.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/image46_precipitacao_acumulada_24h.png}
-    \caption{Mapeamento de precipitação referente ao dia 28/04/2025.}
+    \caption{Mapeamento de precipitação acumulada em 24 horas -- 28/04/2025.}
     \label{fig:precipitacao_24h}
     \fonte{\cite{inmet2025precipitacao}}
 \end{figure}
 
-Outra metodologia para análise da precipitação de determinada localidade através dos dados disponibilizados pelo INMET consiste na utilização de tabelas que indicam a taxa pluviométrica (mm/h) em local específico para o período desejado, complementadas por informações de temperatura (°C), umidade (%), ponto de orvalho (%), pressão (hPa), vento (m/s) e radiação (kJ/m²). A Figura \ref{fig:dados_inmet} apresenta uma tabela deste modelo para o município de Ibirité, Minas Gerais, em um intervalo temporal que se estende das 00:00 horas do dia 28/04/2025 até as 21:00 horas do dia 30/04/2025 \cite{inmet2025estacao}.
+Complementarmente ao mapa de precipitação, o INMET disponibiliza tabelas com
+dados horários de taxa pluviométrica (mm/h), temperatura (°C), umidade (\%),
+pressão (hPa), vento (m/s) e radiação (kJ/m²) para estações específicas. A
+Figura~\ref{fig:dados_inmet} exemplifica esses dados para o município de
+Ibirité (MG), no intervalo de 28/04/2025 a 30/04/2025 \cite{inmet2025estacao}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/image47_principais_dados_mensurados_inmet.png}
-    \caption{Principais dados meteorológicos mensurados pelo INMET para Ibirité, MG.}
+    \caption{Principais dados meteorológicos mensurados pelo INMET -- Ibirité, MG.}
     \label{fig:dados_inmet}
     \fonte{\cite{inmet2025estacao}}
 \end{figure}
 
+% =============================================================
 \section{Automação da Instrumentação}
+\label{sec:automacao}
+% =============================================================
 
-Em projetos geotécnicos de grande escala, os sistemas de instrumentação e monitoramento constituem elementos fundamentais para a identificação de pontos críticos relacionados à segurança estrutural e operacional. A implementação de sistemas automatizados de monitoramento e instrumentação dessas estruturas proporciona à equipe técnica responsável pela gestão dos dados das barragens acesso às informações da instrumentação em tempo real. Consequentemente, o processo se torna mais eficiente, proporcionando maior agilidade na interpretação dos dados e, por conseguinte, maior confiabilidade no processo decisório. Ademais, a automação das barragens possibilita o incremento da frequência de leituras e elimina a necessidade de coleta manual dos dados por profissional especializado \cite{chammas2016monitoramento}.
+Em projetos geotécnicos de grande escala, a automação dos sistemas de
+instrumentação proporciona acesso às informações em tempo real, aumenta a
+frequência de leituras, elimina erros de coleta manual e agiliza o processo
+decisório \cite{chammas2016monitoramento}. Para os principais instrumentos
+empregados em barragens --- indicadores de nível d'água, piezômetros,
+inclinômetros e marcos superficiais --- existem versões automatizadas utilizadas
+tanto na fase construtiva quanto na fase operacional \cite{quispe2018instrumentacao}.
 
-Com o desenvolvimento tecnológico, o conceito de automatização emergiu na área de instrumentação de barragens. Para os instrumentos mais empregados nestes empreendimentos, tais como indicadores de nível de água, piezômetros, inclinômetros e marcos superficiais, existem suas respectivas versões automatizadas, as quais devem ser utilizadas tanto na fase construtiva quanto na operacional da barragem. A adequada leitura e interpretação dos resultados produzidos pela instrumentação permite verificar as condições que determinam a estabilidade da barragem, estabelecendo níveis de alarme para atuações de caráter preventivo. O desenvolvimento de microcontroladores, dataloggers e, dentre outros, a transmissão de dados via rádio, fibra ótica e até comunicação satelital propiciaram um sistema de automatização da instrumentação de barragens. Com a evolução das tecnologias para instrumentação, foram alcançados avanços significativos relacionados à coleta de dados, transmissão, processamento e análise de informações \cite{quispe2018instrumentacao}.
-
-Ainda conforme \cite{quispe2018instrumentacao}, os instrumentos automatizados garantem confiabilidade para aquisição dos dados, contudo, existe um custo substancial para implementação e previsão de retorno a longo prazo.
-
-Segundo \cite{machado2007}, em contrapartida ao sistema convencional, o sistema com instrumentação automática pode apresentar falhas nos sensores e nos equipamentos eletrônicos devido à sua sensibilidade perante as condições reais de operação em campo.
-
-O monitoramento automático é executado através de um conjunto de equipamentos eletrônicos constituindo um sistema programável, no qual as tarefas de medição e controle são desempenhadas. A este denomina-se sistema de aquisição e transmissão automática de dados (SATAD). Os dados de cada instrumento são enviados ao SATAD e este, por sua vez, transmite as informações para um Centro de Controle onde os dados são processados e avaliados pela equipe competente. Nesta central é realizada a gestão dos dados com o auxílio de um programa de controle que pode armazenar e organizar as informações recebidas. Além disso, este programa possui as funcionalidades de indicar o status atual de segurança vigente para cada instrumento ou conjunto deles, possibilidade de modificação da frequência das leituras, geração de relatórios, emissão de alertas sonoros e visuais \cite{machado2007}.
-
-O monitoramento inicial constitui o período no qual são ajustados os instrumentos, verificam-se as discrepâncias de calibração dos mesmos, analisados os instrumentos inoperantes e ajustado o sistema de automação. Esta representa uma das fases mais importantes no processo, quando então são coletados os dados, razão pela qual a supervisão e manutenção do sistema de monitoramento devem ser realizadas com total atenção e zelo \cite{machado2007}.
-
-A verificação em campo torna-se necessária quando existem dúvidas sobre valores que ultrapassam os limites sem, aparentemente, observar anomalias na estrutura. Para que seja possível identificar comportamentos anômalos tanto das estruturas quanto dos próprios instrumentos, é importante que exista uma definição de faixas de valores aceitáveis para cada instrumento \cite{machado2007}.
-
-Segundo \cite{machado2007}, as duas modalidades de obtenção de dados da instrumentação são utilizadas, sendo:
-
-\begin{itemize}
-    \item \textbf{Aquisição Manual:} sistema tradicional de coleta de dados, utilizado em diversas barragens. Os dados, após terem sido coletados manualmente através de instrumentos de leitura visual pelo técnico, são transcritos em tabelas para serem, posteriormente, interpretados e apresentados sob forma de gráfico;
-    
-    \item \textbf{Aquisição Automatizada:} o sistema automático constitui uma prática amplamente difundida atualmente. Este sistema oferece um número considerável de medidas ao longo do dia. Neste processo evitam-se erros de leitura obtidos por leitura manual.
-\end{itemize}
-
-E ainda segundo \cite{machado2007}, as principais grandezas comumente monitoradas em barragens de terra e rejeito são:
-
-\begin{itemize}
-    \item Deslocamentos;
-    \item Deformações e tensões;
-    \item Níveis piezométricos em fundação;
-    \item Pressões de água;
-    \item Vazão.
-\end{itemize}
-
-Os instrumentos mais comuns são os marcos superficiais, os inclinômetros, os piezômetros, os deformímetros e estações meteorológicas \cite{machado2007}. A Figura \ref{fig:instrumentacao_barragem_terra} apresenta o mapeamento dos principais locais e instrumentos possíveis de serem instalados em barragem de terra.
+O monitoramento automático é executado por um sistema de aquisição e transmissão
+automática de dados (SATAD): os dados de cada instrumento são enviados ao SATAD
+e este os transmite a um centro de controle, onde são processados e avaliados pela
+equipe técnica. O sistema de controle permite armazenar e organizar as informações,
+indicar o status de segurança de cada instrumento, modificar a frequência das
+leituras, gerar relatórios e emitir alertas sonoros e visuais \cite{machado2007}.
+A Figura~\ref{fig:instrumentacao_barragem_terra} apresenta os principais
+instrumentos e sua disposição típica em uma barragem de terra.
 
 \begin{figure}[htbp]
     \centering
@@ -206,11 +279,54 @@ Os instrumentos mais comuns são os marcos superficiais, os inclinômetros, os p
     \fonte{\cite{machado2007}}
 \end{figure}
 
+As duas modalidades de coleta de dados são \cite{machado2007}:
+
+\begin{itemize}
+    \item \textbf{Aquisição manual:} sistema tradicional em que o técnico coleta
+    os dados visualmente e os transcreve em tabelas para posterior interpretação
+    e geração de gráficos;
+    \item \textbf{Aquisição automatizada:} sistema que realiza um número
+    considerável de medições ao longo do dia, eliminando erros de leitura manual
+    e permitindo resposta imediata a variações críticas.
+\end{itemize}
+
+As principais grandezas monitoradas em barragens de terra e rejeito são:
+deslocamentos, deformações e tensões, níveis piezométricos em fundação, pressões
+de água e vazão \cite{machado2007}. A verificação em campo torna-se necessária
+quando valores ultrapassam limites estabelecidos sem observação de anomalia
+aparente na estrutura, reforçando a importância de faixas de valores aceitáveis
+definidas para cada instrumento \cite{machado2007}.
+
+Apesar das vantagens, \citeonline{quispe2018instrumentacao} ressaltam que sistemas
+automatizados têm custo substancial de implantação e retorno a longo prazo.
+\citeonline{machado2007} complementam que instrumentos eletrônicos são mais
+suscetíveis a falhas de sensores e de equipamentos frente às condições reais de
+operação em campo, tornando o monitoramento inicial --- período de ajuste e
+calibração --- uma das fases mais críticas do processo.
+
+% -------------------------------------------------------------
 \subsection{Dataloggers}
+\label{subsec:dataloggers}
+% -------------------------------------------------------------
 
-O \textit{datalogger} constitui um equipamento eletrônico composto por um microcontrolador e um voltímetro com memória. Este dispositivo possui as funcionalidades para realizar diversas tarefas como produzir tensão pré-estabelecida com intervalos definidos, ler tensões e também para armazenar dados. Além disso, pode ser configurado para executar cálculos e armazenar os resultados, como por exemplo, converter a leitura de um piezômetro para diferentes unidades. Os instrumentos são interligados às conexões ou às denominadas "portas" no equipamento e a coleta de leitura é realizada em intervalos selecionados. Dispositivos periféricos podem ser interligados às portas de controle e de excitação para executar funções específicas, como telefonia celular e testadores de cabo. Os dataloggers interligados à instrumentação eletrônica podem executar tarefas distintas automaticamente, como em determinado nível de alarme de um sensor ativar uma ação, como alarme luminoso ou sirene \cite{kane2000instrumentation}.
+O \textit{datalogger} é o componente central de uma estação de campo para
+automação da instrumentação. Trata-se de um equipamento eletrônico composto
+por microcontrolador e voltímetro com memória, capaz de: gerar tensão
+pré-estabelecida em intervalos definidos, ler tensões dos sensores conectados,
+armazenar dados, executar cálculos (como conversão das leituras de piezômetros
+para diferentes unidades) e acionar dispositivos periféricos --- como alarmes
+luminosos ou sirenes --- quando determinado nível de alerta é atingido
+\cite{kane2000instrumentation}.
 
-De acordo com \cite{cerqueira2016estudo}, o \textit{datalogger} constitui o principal componente de uma estação de campo para automatização da instrumentação de uma barragem. Este dispositivo tem por finalidade receber, armazenar e converter os dados de campo. Com a interligação dos instrumentos a este equipamento, é possível realizar a programação para registro contínuo das leituras dos piezômetros eliminando a necessidade de coleta periódica manual dos instrumentos. \cite{santos2012utilizacao} complementa que os \textit{dataloggers} podem também realizar a medição desejada periodicamente em intervalo pré-definido e estas serem salvas em um banco de dados interno. Sendo necessário, de acordo com o grau de automação, a conexão e extração destes dados no equipamento. A Figura \ref{fig:datalogger_automacao} apresenta um exemplo de um \textit{datalogger} frequentemente utilizado em projetos para automação de barragens de mineração.
+Com a interligação dos instrumentos ao \textit{datalogger}, é possível programar
+o registro contínuo das leituras em intervalos predefinidos, eliminando a
+necessidade de coleta periódica manual \cite{cerqueira2016estudo,
+santos2012utilizacao}. Na maior parte das aplicações, os \textit{dataloggers}
+integram uma solução de automação em rede: são instalados próximos aos sensores
+e compartilham os resultados com servidores remotos, onde softwares especializados
+interpretam os dados, plotam gráficos e permitem novas configurações
+\cite{silva2019sistema}. A Figura~\ref{fig:datalogger_automacao} apresenta um
+exemplo de \textit{datalogger} utilizado em sistemas de automação de barragens.
 
 \begin{figure}[htbp]
     \centering
@@ -219,5 +335,3 @@ De acordo com \cite{cerqueira2016estudo}, o \textit{datalogger} constitui o prin
     \label{fig:datalogger_automacao}
     \fonte{\cite{inmet2025estacao}}
 \end{figure}
-
-Na maior parte das aplicações, os dataloggers constituem parte de uma solução de automação e são interligados via rede para a aquisição dos dados por eles coletados. São instalados próximos aos sensores e os resultados são armazenados em formato de arquivo e compartilhados com estações servidoras remotas nas quais possuem softwares proprietários capazes de interpretar, plotar gráficos e realizar novas configurações nestes equipamentos \cite{silva2019sistema}.
