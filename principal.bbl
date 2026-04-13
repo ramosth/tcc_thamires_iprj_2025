@@ -130,13 +130,6 @@ Dispon{\'\i}vel em:
   \url{https://educapes.capes.gov.br/bitstream/capes/175231/1/Legislacao\_Juliana.pdf}.
   Acesso em: 24 maio 2025.}
 
-\bibitem[{BBC News Brasil} 2023]{BBC2023}
-\abntrefinfo{{BBC News Brasil}}{{BBC News Brasil}}{2023}
-{{BBC News Brasil}. \emph{Como agro e mineração superaram a manufatura no PIB
-  brasileiro pela primeira vez em décadas}. 2023.
-Dispon{\'\i}vel em: \url{https://www.bbc.com/portuguese/articles/cxr0vlvqdgqo}.
-  Acesso em: 20 abr. 2025.}
-
 \bibitem[{BBC News Brasil} 2025]{bbc2025texas}
 \abntrefinfo{{BBC News Brasil}}{{BBC News Brasil}}{2025}
 {{BBC News Brasil}. \emph{Por que as enchentes no Texas que mataram mais de 100
@@ -251,6 +244,15 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://repositorio.ufu.br/bitstream/123456789/22203/3/EstudoCausasImpacto.pdf}.
   Acesso em: 7 jun. 2025.}
+
+\bibitem[Carvalho et al. 2012]{carvalho2012dependencia}
+\abntrefinfo{Carvalho et al.}{CARVALHO et al.}{2012}
+{CARVALHO, C.~G. et al. A dependência da arrecadação do município de {Ouro
+  Preto} do setor mineral.
+\emph{REM: Revista Escola de Minas}, v.~65, n.~3, set 2012.
+Dispon{\'\i}vel em:
+  \url{https://www.scielo.br/j/rem/a/JY6LcTRRJy9mhK3k5Ysgqvc/}. Acesso em: 30
+  mar. 2026.}
 
 \bibitem[Carvalho et al. 2018]{carvalho2018}
 \abntrefinfo{Carvalho et al.}{CARVALHO et al.}{2018}
@@ -394,13 +396,6 @@ Dispon{\'\i}vel em:
   \url{https://www.eletrogate.com/modulo-sensor-de-umidade-de-solo}. Acesso em:
   20 mar. 2026.}
 
-\bibitem[{Environmental Protection Agency} 2019]{EPA2019}
-\abntrefinfo{{Environmental Protection Agency}}{{Environmental Protection
-  Agency}}{2019}
-{{Environmental Protection Agency}. \emph{Management of Mining Waste: Technical
-  Guidelines}.
-Washington, DC, 2019.}
-
 \bibitem[{ESTADO DE MINAS} 2016]{estadominas2016irregular}
 \abntrefinfo{{ESTADO DE MINAS}}{{ESTADO DE MINAS}}{2016}
 {{ESTADO DE MINAS}. \emph{Obras da barragem do Fundão começaram de forma
@@ -425,8 +420,15 @@ Dispon{\'\i}vel em:
   \url{https://feam.br/w/minas-avanca-na-descaracterizacao-das-barragens-alteadas-a-montante}.
   Acesso em: 22 maio 2025. Atualizado em: 12 nov. 2024.}
 
+\bibitem[Fernandes e Araujo 2016]{fernandes2016mineracao}
+\abntrefinfo{Fernandes e Araujo}{FERNANDES; ARAUJO}{2016a}
+{FERNANDES, F. R.~C.; ARAUJO, E.~R. \emph{Mineração no Brasil}: crescimento
+  econômico e conflitos ambientais. CETEM/MCTI, 2016. Dispon{\'\i}vel em:
+  \url{http://mineralis.cetem.gov.br/bitstream/cetem/1909/1/conflitos\_ambientais\_cap.2\%20p65.pdf}.
+  Acesso em: 27 abr. 2025.}
+
 \bibitem[Fernandes e Araujo 2016]{fernandes2016}
-\abntrefinfo{Fernandes e Araujo}{FERNANDES; ARAUJO}{2016}
+\abntrefinfo{Fernandes e Araujo}{FERNANDES; ARAUJO}{2016b}
 {FERNANDES, F. R.~C.; ARAUJO, E.~R. \emph{Mineração no Brasil}: crescimento
   econômico e conflitos ambientais. CETEM/MCTI, 2016. Dispon{\'\i}vel em:
   \url{http://mineralis.cetem.gov.br/bitstream/cetem/1909/1/conflitos\_ambientais\_cap.2\%20p65.pdf}.
@@ -550,14 +552,6 @@ Brasília, 2024. Dispon{\'\i}vel em:
   \url{https://ibram.org.br/wp-content/uploads/2025/02/DADOS\_Setor-Mineral\_2024\_5FEV2025.pdf}.
   Acesso em: 27 abr. 2025.}
 
-\bibitem[{Instituto Brasileiro de Mineração} 2020]{IBRAM2020}
-\abntrefinfo{{Instituto Brasileiro de Mineração}}{{Instituto Brasileiro de
-  Mineração}}{2020}
-{{Instituto Brasileiro de Mineração}. \emph{Relatório Anual de Atividades:
-  Mineração Brasileira}. 2020.
-Dispon{\'\i}vel em: \url{https://ibram.org.br/publicacoes/}. Acesso em: 20 abr.
-  2025.}
-
 \bibitem[{Instituto Brasileiro de Mineração} 2023]{ibram2023coletiva}
 \abntrefinfo{{Instituto Brasileiro de Mineração}}{{Instituto Brasileiro de
   Mineração}}{2023}
@@ -575,15 +569,6 @@ Brasília, 2023. Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://somossementes.org.br/6-anos-da-tragedia-de-brumadinho/}. Acesso
   em: 1 jun. 2025.}
-
-\bibitem[{Instituto de Pesquisa Econômica Aplicada} 2017]{ipea2017boletim}
-\abntrefinfo{{Instituto de Pesquisa Econômica Aplicada}}{{Instituto de
-  Pesquisa Econômica Aplicada}}{2017}
-{{Instituto de Pesquisa Econômica Aplicada}. \emph{Boletim Regional, Urbano e
-  Ambiental (BRU)}.
-[S.l.], 2017. Dispon{\'\i}vel em:
-  \url{https://repositorio.ipea.gov.br/handle/11058/7916}. Acesso em: 8 maio
-  2025.}
 
 \bibitem[{Instituto Nacional de Meteorologia} 2025]{inmet2025estacao}
 \abntrefinfo{{Instituto Nacional de Meteorologia}}{{Instituto Nacional de
@@ -617,15 +602,6 @@ Dispon{\'\i}vel em: \url{https://portal.inmet.gov.br/sobre}. Acesso em: 22 jun.
 Paris, 2022. Dispon{\'\i}vel em:
   \url{https://unece.org/sites/default/files/2023-04/S4-1Andy\%20Small\_ENG.pdf}.
   Acesso em: 24 maio 2025.}
-
-\bibitem[{International Council on Mining and Metals} 2021]{ICMM2021}
-\abntrefinfo{{International Council on Mining and Metals}}{{International
-  Council on Mining and Metals}}{2021}
-{{International Council on Mining and Metals}. \emph{Global Industry Standard
-  on Tailings Management}.
-[S.l.], 2021. Dispon{\'\i}vel em:
-  \url{https://www.icmm.com/en-gb/our-work/environmental-resilience/tailings}.
-  Acesso em: 20 abr. 2025.}
 
 \bibitem[{INTERNATIONAL COUNCIL ON MINING AND METALS} et al.
   2020]{icmm2020global}
@@ -903,6 +879,14 @@ Dispon{\'\i}vel em:
   \url{https://repositorio.ufc.br/bitstream/riufc/64704/1/2008\_art\_mrico.pdf}.
   Acesso em: 06 mar. 2026.}
 
+\bibitem[Robertson et al. 2019]{robertson2019feijaoson2019}
+\abntrefinfo{Robertson et al.}{ROBERTSON et al.}{2019}
+{ROBERTSON, P.~K. et al. \emph{Report of the Expert Panel on the Technical
+  Causes of the Failure of {Feijão} Dam {I}}.
+Brumadinho, Minas Gerais, Brasil, 2019. Dispon{\'\i}vel em:
+  \url{https://bdrb1investigationstacc.z15.web.core.windows.net/assets/Feijao-Dam-I-Expert-Panel-Report-ENG.pdf}.
+  Acesso em: 10 mar. 2026.}
+
 \bibitem[{RST INSTRUMENTS} 2022]{rstinstruments2022tailings}
 \abntrefinfo{{RST INSTRUMENTS}}{{RST INSTRUMENTS}}{2022}
 {{RST INSTRUMENTS}. \emph{Tailings dam monitoring: In-ground and above-ground
@@ -1121,6 +1105,14 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://pt.wikipedia.org/wiki/Rompimento\_de\_barragem\_em\_Brumadinho}.
   Acesso em: 26 maio 2025.}
+
+\bibitem[{World Mining Data} 2024]{wpr2024mineral}
+\abntrefinfo{{World Mining Data}}{{World Mining Data}}{2024}
+{{World Mining Data}. \emph{World Mining Data 2024}. 2024. International
+  Organising Committee for the World Mining Congresses.
+Dispon{\'\i}vel em:
+  \url{https://www.world-mining-data.info/?World\_Mining\_Data\_\_\_Data\_Section}.
+  Acesso em: 10 maio 2025.}
 
 \bibitem[WORLDSENSING 2024]{worldsensing2024canadian}
 \abntrefinfo{WORLDSENSING}{WORLDSENSING}{2024}

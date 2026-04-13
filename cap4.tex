@@ -447,9 +447,9 @@ na Tabela~\ref{tab:alertas}.
 \hline
 \textbf{Fator de Risco} & \textbf{LED} & \textbf{Situação}                       \\
 \hline
-$0{,}00 \leq F_{risco} \leq 0{,}50$ & Verde   & Condições normais de operação           \\
-$0{,}51 \leq F_{risco} \leq 0{,}80$ & Amarelo & Atenção — monitoramento intensificado   \\
-$F_{risco} > 0{,}80$                 & Vermelho & Alerta crítico — ação imediata requerida \\
+$0{,}00 \leq F_{risco} \leq 0{,}45$ & Verde   & Condições normais de operação \\
+$0{,}46 \leq F_{risco} \leq 0{,}75$ & Amarelo & Atenção — monitoramento intensificado \\
+$F_{risco} > 0{,}75$                 & Vermelho & Alerta crítico — ação imediata requerida \\
 \hline
 \end{tabular}
 \fonte{Elaborado pela autora.}
@@ -816,8 +816,8 @@ realizada; estruturas \texttt{dadosLocais}, \texttt{dadosBNDMET},
         se $F_{len} \geq 0{,}70$ e previsão $\geq 5$\,mm/24h,
         aplica o coeficiente $\times 1{,}20$.
   \item O sistema classifica o nível por faixa: VERDE
-        ($\leq 0{,}50$), AMARELO ($\leq 0{,}80$) ou VERMELHO
-        ($> 0{,}80$).
+        ($\leq 0{,}45$), AMARELO ($\leq 0{,}75$) ou VERMELHO
+        ($> 0{,}75$).
   \item O sistema calcula o índice de confiabilidade,
         descontando pontos por: sensor com falha ($-40$),
         BNDMET indisponível ($-25$), OWM indisponível ($-15$),
@@ -1155,6 +1155,18 @@ para o envio de alertas em massa.
 \end{enumerate}
 
 \begin{enumerate}
+  \renewcommand{\theenumi}{5b}
+  \renewcommand{\labelenumi}{\theenumi.}
+  \item Campos obrigatórios inválidos no passo 5
+  \begin{enumerate}
+  \item O sistema exibe mensagens de erro inline em cada
+        campo inválido via \textit{react-hook-form}.
+  \item O botão ``Cadastrar'' permanece habilitado.
+  \item O sistema retorna ao passo 3 do fluxo básico.
+  \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
   \renewcommand{\theenumi}{7a}
   \renewcommand{\labelenumi}{\theenumi.}
   \item E-mail já cadastrado no passo 7
@@ -1411,9 +1423,7 @@ conta em \texttt{usuarios\_admin} com \texttt{ativo = true}.
         \texttt{crypto.randomBytes(32).toString('hex')},
         define expiração em 2 horas e persiste em
         \texttt{tokenReset} e \\ \texttt{tokenResetExpira}.
-  \item O \textit{backend} retorna o token diretamente
-        na resposta (fase de desenvolvimento; em produção
-        seria enviado por e-mail).
+  \item O \textit{backend} envia o token diretamente por e-mail.
 \end{enumerate}
 
 \textbf{Extensões (Fluxo Alternativo):}

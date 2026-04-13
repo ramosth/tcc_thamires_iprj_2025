@@ -50,13 +50,15 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
-Reallocating 'field_info' (item size: 4) to 14798 items.
+Reallocating 'field_info' (item size: 4) to 14867 items.
 Database file #1: abntex2-options.bib
 Database file #2: tcc.bib
-Warning--I didn't find a database entry for "fernandes2016mineracao"
-Warning--I didn't find a database entry for "wpr2024mineral"
-Warning--I didn't find a database entry for "carvalho2012dependencia"
-Warning--I didn't find a database entry for "robertson2019feijaoson2019"
+Warning--I didn't find a database entry for "BBC2023"
+Warning--I didn't find a database entry for "IBRAM2020"
+Warning--I didn't find a database entry for "ipea2017boletim"
+Warning--I didn't find a database entry for "EPA2019"
+Warning--I didn't find a database entry for "ICMM2021"
+Warning--I didn't find a database entry for "rico2008"
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -66,45 +68,45 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 138 entries,
+You've used 137 entries,
             6711 wiz_defined-function locations,
-            1948 strings with 38050 characters,
-and the built_in function-call counts, 299537 in all, are:
-= -- 40396
-> -- 2430
-< -- 11178
-+ -- 12038
-- -- 785
-* -- 17058
-:= -- 35320
-add.period$ -- 724
-call.type$ -- 139
-change.case$ -- 975
-chr.to.int$ -- 177
-cite$ -- 136
-duplicate$ -- 37319
-empty$ -- 7898
-format.name$ -- 3663
-if$ -- 54798
-int.to.chr$ -- 11
+            1949 strings with 38195 characters,
+and the built_in function-call counts, 301910 in all, are:
+= -- 40755
+> -- 2485
+< -- 11293
++ -- 12176
+- -- 799
+* -- 17228
+:= -- 35546
+add.period$ -- 722
+call.type$ -- 138
+change.case$ -- 990
+chr.to.int$ -- 178
+cite$ -- 135
+duplicate$ -- 37661
+empty$ -- 7853
+format.name$ -- 3740
+if$ -- 55192
+int.to.chr$ -- 12
 int.to.str$ -- 2
-missing$ -- 2252
-newline$ -- 714
-num.names$ -- 681
-pop$ -- 2568
+missing$ -- 2247
+newline$ -- 709
+num.names$ -- 676
+pop$ -- 2587
 preamble$ -- 1
-purify$ -- 439
+purify$ -- 441
 quote$ -- 0
-skip$ -- 37637
+skip$ -- 37955
 stack$ -- 1
-substring$ -- 13857
-swap$ -- 12950
-text.length$ -- 151
+substring$ -- 13943
+swap$ -- 13070
+text.length$ -- 153
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 54
 warning$ -- 0
-while$ -- 968
+while$ -- 961
 width$ -- 0
-write$ -- 2217
-(There were 4 warnings)
+write$ -- 2207
+(There were 6 warnings)

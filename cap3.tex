@@ -43,7 +43,7 @@ objetivos específicos:
 
     \item Desenvolver o \textit{backend} do sistema com banco de dados
     de séries temporais, expondo uma API RESTful responsável pelo
-    recebimento, processamento e persistência das leituras enviadas
+    recebimento, validação e persistência das leituras enviadas
     pelo dispositivo embarcado;
 
     \item Implementar uma interface \textit{web} de monitoramento em
@@ -52,9 +52,10 @@ objetivos específicos:
     além de gerenciar os usuários cadastrados para recebimento de
     notificações;
 
-    \item Estabelecer um sistema de envio automático de alertas por
-    e-mail aos usuários cadastrados quando o índice de risco atingir
-    os níveis AMARELO (atenção) ou VERMELHO (crítico), acompanhado
-    do relatório de dados do ciclo de análise correspondente.
+    \item Estabelecer um sistema de envio de alertas por e-mail,
+    acionado manualmente pelo administrador do sistema, aos usuários
+    cadastrados, com formulário de composição da mensagem, seleção
+    de destinatários por perfil e registro de auditoria de cada
+    disparo.
 
 \end{enumerate}

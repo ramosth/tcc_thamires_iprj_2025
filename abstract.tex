@@ -18,16 +18,49 @@
 
 \noindent
 \begin{flushleft}
-\entradaAutor{}. \textit{\englishTitle{}} 2024.\pageref{LastPage} f. Trabalho de Conclusão de Curso (Graduação em Engenharia de Computação) - Instituto Politécnico, Universidade do Estado do Rio de Janeiro, Nova Friburgo, 2024.
+\entradaAutor{}. \textit{\englishTitle{}}. \the\year. \pageref{LastPage} p. Undergraduate Thesis (Bachelor's Degree in Computer Engineering) - Instituto Politécnico, Universidade do Estado do Rio de Janeiro, Nova Friburgo, \the\year.
 \end{flushleft}
 \vspace{\onelineskip}
 
 \setlength{\parindent}{1.3cm}
 
-Mining plays an essential role in the Brazilian economy, contributing to regional and national development, as well as generating jobs and boosting GDP. However, inadequate management of the tailings resulting from these activities can lead to serious environmental and social impacts, as demonstrated by the disasters in Mariana and Brumadinho. Given this scenario, there is an urgent need to improve safety and prevention systems for tailings dams. Computer engineering offers innovative solutions to meet this challenge, through the implementation of advanced technologies and sophisticated monitoring systems. This paper investigates the application of monitoring systems based on resistance hygrometers for disaster prevention in mining tailings dams, a critical problem highlighted by the catastrophic incidents in Mariana and Brumadinho. The methodology is based on the integration of Arduino devices equipped with high-precision hygrometric sensors and advanced geotechnical instrumentation, establishing a continuous monitoring network for the early detection of changes in soil moisture that could compromise the structural stability of dams. The system developed incorporates a data processing layer that combines readings from local sensors with meteorological information obtained in real time via APIs from the CEMADEN and INMET portals, making it possible to correlate data on accumulated precipitation, rainfall forecasts and soil saturation. Preliminary results show that the proposed platform detects critical changes in humidity patterns 72 to 96 hours in advance, making it possible to automatically issue multiple levels of safety alerts to authorities and the potentially affected population. It is concluded that the technological solution presented constitutes an economically viable and technically robust approach to significantly increase safety in tailings dams, contributing to safer and more sustainable mining operations. The research aims to make a significant contribution to the safety of mining operations and the protection of the environment and affected communities by offering an innovative and technologically advanced approach to mitigating the risks associated with tailings dams.
+The failures of tailings dams in Mariana (2015) and Brumadinho (2019)
+exposed critical weaknesses in the monitoring and warning systems of the
+Brazilian mining sector, resulting in hundreds of deaths and
+environmental damage of historic proportions. In this context, this
+work proposes the development of an automated monitoring and alert
+system for mining tailings dams, based on IoT technology, with the
+objective of continuously measuring soil moisture, integrating external
+meteorological data and calculating a real-time geotechnical risk index.
+The system comprises an embedded hardware prototype built on the
+ESP8266 NodeMCU microcontroller with a resistive hygrometer sensor,
+indicator LEDs and a buzzer, programmed in C++ using the Arduino IDE.
+The firmware integrates the BNDMET/DECEA and OpenWeatherMap
+meteorological APIs to retrieve historical precipitation data and
+rainfall forecasts, transmitting readings to the backend at adaptive
+intervals according to the calculated risk level. The integrated risk
+assessment model combines seven weighted variables expressing geotechnical
+conditions --- soil moisture and rate of change --- and meteorological
+conditions --- accumulated precipitation over multiple time windows,
+rainfall forecast and atmospheric pressure --- with an amplification
+mechanism triggered when high soil saturation coincides with forecast
+rainfall. The software platform adopts a three-layer client-server
+architecture: embedded firmware, a backend developed in Node.js with
+TypeScript and a PostgreSQL database with the TimescaleDB extension for
+time-series data, and a React/Next.js frontend providing a real-time
+monitoring interface, reading history, user management and an alert
+center. The system classifies risk into three levels --- GREEN, YELLOW
+and RED ---, signalled physically by the LEDs and buzzer on the embedded
+device and displayed on the web platform. The administrator has access to
+an alert center that enables the manual dispatch of bulk e-mail
+notifications to registered users, accompanied by the corresponding
+analysis cycle report. The proposed solution demonstrates that it is
+possible to develop, using low-cost hardware and open-source technologies,
+a functional system for continuous geotechnical risk monitoring,
+contributing to accident prevention in mining tailings dams.
 
 \vspace{\onelineskip}
-\noindent Keywords: Tailings dams; Arduino; Hygrometers; Environmental monitoring; Warning systems; Brumadinho; Environmental accident; Environmental risk. 
+\noindent Keywords: Tailings dams. Internet of Things. Geotechnical monitoring. Arduino. ESP8266. Risk index. Alert systems. Dam safety. Mining. Brumadinho.
 
 \end{SingleSpace}
 \end{otherlanguage*}
