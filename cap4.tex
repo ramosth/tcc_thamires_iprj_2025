@@ -447,8 +447,8 @@ na Tabela~\ref{tab:alertas}.
 \hline
 \textbf{Fator de Risco} & \textbf{LED} & \textbf{Situação}                       \\
 \hline
-$0{,}00 \leq F_{risco} \leq 0{,}45$ & Verde   & Condições normais de operação \\
-$0{,}46 \leq F_{risco} \leq 0{,}75$ & Amarelo & Atenção — monitoramento intensificado \\
+$0{,}00 \leq F_{risco} \leq 0{,}45$ & Verde   & Condições normais de operação           \\
+$0{,}46 \leq F_{risco} \leq 0{,}75$ & Amarelo & Atenção — monitoramento intensificado   \\
 $F_{risco} > 0{,}75$                 & Vermelho & Alerta crítico — ação imediata requerida \\
 \hline
 \end{tabular}
@@ -1042,6 +1042,22 @@ e previsão pluviométrica para as próximas 24 horas.
   \end{enumerate}
 \end{enumerate}
 
+\begin{enumerate}
+  \renewcommand{\theenumi}{0a}
+  \renewcommand{\labelenumi}{\theenumi.}
+  \item OWM ainda não consultada com sucesso desde o boot
+  \begin{enumerate}
+  \item A disponibilidade da OWM é inferida pelo campo
+        \texttt{dadosMeteo.timestamp}: enquanto nenhuma consulta
+        bem-sucedida ocorreu, \texttt{timestamp = 0} e o sistema
+        trata a OWM como indisponível, aplicando desconto de
+        $-15\%$ na confiabilidade e usando \textit{retry} de 30
+        segundos. Essa condição é transitória e ocorre nos
+        primeiros ciclos após o boot, mesmo quando a rede está
+        disponível.
+  \end{enumerate}
+\end{enumerate}
+
 \textbf{Pós-Condições:} campos \texttt{pressaoAtmosferica},
 \texttt{chuvaFutura24h}, \\ \texttt{intensidadePrevisao} e
 \texttt{fatorIntensidade} populados em \texttt{dadosMeteo}
@@ -1050,8 +1066,11 @@ e \texttt{previsao}.
 \textbf{Requisitos especiais:} chave de API OWM válida com
 acesso ao plano Pro (\texttt{pro.openweathermap.org}).
 
-\textbf{Frequência:} a cada 30 minutos em operação normal; a
-cada 30 segundos em modo de \textit{retry} após falha.
+\textbf{Frequência:} \texttt{/weather} consultado a cada 10 minutos;
+\texttt{/forecast} consultado a cada 30 minutos; ambos com
+\textit{retry} acelerado a cada 30 segundos em caso de falha.
+Os dois \textit{timers} são independentes entre si e em relação
+ao nível de alerta vigente.
 
 % ─────────────────────────────────────────────────────────────
 \paragraph{UC06 --- Consultar status da API}\hfill\break
@@ -1146,18 +1165,6 @@ para o envio de alertas em massa.
   \renewcommand{\theenumi}{5a}
   \renewcommand{\labelenumi}{\theenumi.}
   \item Campos obrigatórios não preenchidos no passo 5
-  \begin{enumerate}
-  \item O sistema exibe mensagens de erro inline em cada
-        campo inválido via \textit{react-hook-form}.
-  \item O botão ``Cadastrar'' permanece habilitado.
-  \item O sistema retorna ao passo 3 do fluxo básico.
-  \end{enumerate}
-\end{enumerate}
-
-\begin{enumerate}
-  \renewcommand{\theenumi}{5b}
-  \renewcommand{\labelenumi}{\theenumi.}
-  \item Campos obrigatórios inválidos no passo 5
   \begin{enumerate}
   \item O sistema exibe mensagens de erro inline em cada
         campo inválido via \textit{react-hook-form}.
@@ -1423,7 +1430,9 @@ conta em \texttt{usuarios\_admin} com \texttt{ativo = true}.
         \texttt{crypto.randomBytes(32).toString('hex')},
         define expiração em 2 horas e persiste em
         \texttt{tokenReset} e \\ \texttt{tokenResetExpira}.
-  \item O \textit{backend} envia o token diretamente por e-mail.
+  \item O \textit{backend} retorna o token diretamente
+        na resposta (fase de desenvolvimento; em produção
+        seria enviado por e-mail).
 \end{enumerate}
 
 \textbf{Extensões (Fluxo Alternativo):}
@@ -1666,24 +1675,23 @@ JWT válido.
 
 \textbf{Cenário de Sucesso Principal (Fluxo Básico):}
 \begin{enumerate}
-  \item O Administrador acessa \texttt{/dashboard}.
+  \item O Administrador acessa o \textit{dashboard}.
   \item O sistema exibe os KPIs: umidade atual, fator de
         risco, nível de alerta com borda colorida dinâmica,
         precipitação 24h, temperatura e confiabilidade
         da análise.
-  \item O \textit{header} inicia dois intervalos:
-        \texttt{checkHealth()} a cada 30 segundos via
-        \path{GET /api/health} e
-        \texttt{loadNotifications()} a cada 60 segundos
-        via \path{GET /api/sensor/alertas?limite=10}.
+  \item O \textit{header} inicia dois intervalos de
+        verificação automática: integridade do sistema a
+        cada 30 segundos e carregamento de notificações
+        de alerta a cada 60 segundos.
   \item O sistema exibe o status do sistema no
         \textit{header} como ``Online'' (verde),
         ``Degradado'' (laranja) ou ``Offline''
-        (vermelho) com base no campo \texttt{status}
-        retornado pelo \texttt{/health}.
+        (vermelho) com base na resposta da verificação
+        de integridade.
   \item O sino exibe \textit{badge} apenas para alertas
-        com \texttt{nivelAlerta = VERMELHO} ou
-        \texttt{indiceRisco = 100} das últimas 24 horas.
+        com nível VERMELHO ou ruptura das últimas
+        24 horas.
 \end{enumerate}
 
 \textbf{Extensões (Fluxo Alternativo):}
@@ -1691,28 +1699,45 @@ JWT válido.
 \begin{enumerate}
   \renewcommand{\theenumi}{5a}
   \renewcommand{\labelenumi}{\theenumi.}
-  \item Sensor \textit{offline} detectado no passo 5
+  \item Dados do sensor atrasados no passo 5
   \begin{enumerate}
-  \item Quando \texttt{minutosUltimaLeitura} $\geq 10$,
-        o \texttt{/health} retorna
-        \texttt{sensor: ``offline''}.
-  \item O \textit{header} exibe status ``Degradado''.
+  \item Quando a última leitura do sensor tem mais de
+        3 minutos, o sistema de integridade classifica
+        o sensor como degradado.
+  \item O \textit{header} exibe status ``Degradado''
+        em laranja; o \textit{backend} e o banco de
+        dados permanecem operacionais.
   \end{enumerate}
 \end{enumerate}
 
 \begin{enumerate}
   \renewcommand{\theenumi}{5b}
   \renewcommand{\labelenumi}{\theenumi.}
+  \item \textit{Backend} inacessível no passo 5
+  \begin{enumerate}
+  \item A verificação de integridade não obtém resposta
+        do servidor e o \textit{frontend} força
+        internamente o estado mais grave.
+  \item O \textit{header} exibe status ``Offline''
+        em vermelho.
+  \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+  \renewcommand{\theenumi}{5c}
+  \renewcommand{\labelenumi}{\theenumi.}
   \item Banco de dados indisponível no passo 5
   \begin{enumerate}
-  \item O \texttt{/health} retorna
-        \texttt{status: ``unhealthy''} com HTTP 503.
-  \item O \textit{header} exibe status ``Indisponível''.
+  \item O sistema de integridade detecta falha na
+        conexão com o banco de dados e retorna estado
+        crítico ao \textit{frontend}.
+  \item O \textit{header} exibe status ``Indisponível''
+        em vermelho.
   \end{enumerate}
 \end{enumerate}
 
 \textbf{Pós-Condições:} \textit{dashboard} exibido com dados
-atualizados; intervalos de \textit{polling} ativos enquanto
+atualizados; intervalos de verificação ativos enquanto
 a tela permanece aberta.
 
 \textbf{Requisitos especiais:} Nenhum.
@@ -2469,12 +2494,67 @@ ativa e acessível pelo Usuário Básico.
 
 \textbf{Frequência:} Ocasionalmente.
 
+
+% ─────────────────────────────────────────────────────────────
+\paragraph{UC28 --- Consultar log de alertas enviados}\hfill\break
+
+\textbf{Ator Principal:} Administrador.
+
+\textbf{Interessado e Interesse:}
+
+Administrador: verificar o histórico de alertas enviados pela
+Central de Alertas, incluindo os resultados de entrega por
+destinatário, para fins de auditoria e controle operacional.
+
+\textbf{Pré-condição:} Administrador autenticado com token JWT
+válido.
+
+\textbf{Cenário de Sucesso Principal (Fluxo Básico):}
+\begin{enumerate}
+  \item O Administrador acessa a tela de Alertas e clica
+        em ``Log de Envios''.
+  \item O \textit{frontend} envia
+        \path{GET /auth/logs-alertas?pagina=1&limite=10}
+        com token JWT.
+  \item O \textit{backend} consulta a tabela
+        \texttt{logs\_alertas}, ordenada por
+        \texttt{createdAt DESC}, e retorna a lista paginada.
+  \item O sistema exibe o modal com a tabela de registros:
+        data e hora do envio, título, nível de criticidade,
+        tipo de destinatário, canal, e resultado discriminado
+        por sucessos e falhas.
+  \item O Administrador clica em ``Detalhes'' em um
+        registro para expandir a sub-tabela com o resultado
+        individual por destinatário (nome, e-mail, status e
+        mensagem de erro quando aplicável).
+\end{enumerate}
+
+\textbf{Extensões (Fluxo Alternativo):}
+
+\begin{enumerate}
+  \renewcommand{\theenumi}{3a}
+  \renewcommand{\labelenumi}{\theenumi.}
+  \item Nenhum alerta enviado até o momento
+  \begin{enumerate}
+  \item O modal exibe estado vazio com a mensagem
+        ``Nenhum alerta foi enviado ainda.''.
+  \item O fluxo encerra sem exibir a tabela.
+  \end{enumerate}
+\end{enumerate}
+
+\textbf{Pós-Condições:} histórico exibido sem alteração de
+estado no banco de dados.
+
+\textbf{Requisitos especiais:} Nenhum.
+
+\textbf{Frequência:} Ocasionalmente.
+
 % ══════════════════════════════════════════════════════════════
 \paragraph{Parte 4 --- Gestão de Usuários e Área Super Administrador}\hfill\break
 % ══════════════════════════════════════════════════════════════
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC28 --- Gerenciar usuários básicos}\hfill\break
+\paragraph{UC29 --- Gerenciar usuários básicos}\hfill\break
 
 \textbf{Ator Principal:} Administrador.
 
@@ -2508,17 +2588,7 @@ sistema.
 \begin{enumerate}
   \renewcommand{\theenumi}{4a}
   \renewcommand{\labelenumi}{\theenumi.}
-  \item Criação de usuário (UC29) no passo 4
-  \begin{enumerate}
-  \item O sistema executa o fluxo do UC29.
-  \item O sistema retorna ao passo 5 do fluxo básico.
-  \end{enumerate}
-\end{enumerate}
-
-\begin{enumerate}
-  \renewcommand{\theenumi}{4b}
-  \renewcommand{\labelenumi}{\theenumi.}
-  \item Edição de usuário (UC30) no passo 4
+  \item Criação de usuário (UC30) no passo 4
   \begin{enumerate}
   \item O sistema executa o fluxo do UC30.
   \item O sistema retorna ao passo 5 do fluxo básico.
@@ -2526,11 +2596,21 @@ sistema.
 \end{enumerate}
 
 \begin{enumerate}
-  \renewcommand{\theenumi}{4c}
+  \renewcommand{\theenumi}{4b}
   \renewcommand{\labelenumi}{\theenumi.}
-  \item Desativação ou reativação (UC31) no passo 4
+  \item Edição de usuário (UC31) no passo 4
   \begin{enumerate}
   \item O sistema executa o fluxo do UC31.
+  \item O sistema retorna ao passo 5 do fluxo básico.
+  \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+  \renewcommand{\theenumi}{4c}
+  \renewcommand{\labelenumi}{\theenumi.}
+  \item Desativação ou reativação (UC32) no passo 4
+  \begin{enumerate}
+  \item O sistema executa o fluxo do UC32.
   \item O sistema retorna ao passo 5 do fluxo básico.
   \end{enumerate}
 \end{enumerate}
@@ -2543,7 +2623,7 @@ atualizada refletindo as operações realizadas.
 \textbf{Frequência:} Ocasionalmente.
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC29 --- Cadastrar usuário básico (pelo Administrador)}\hfill\break
+\paragraph{UC30 --- Cadastrar usuário básico (pelo Administrador)}\hfill\break
 
 \textbf{Ator Principal:} Administrador.
 
@@ -2597,7 +2677,7 @@ e listado no painel.
 \textbf{Frequência:} Ocasionalmente.
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC30 --- Editar usuário básico}\hfill\break
+\paragraph{UC31 --- Editar usuário básico}\hfill\break
 
 \textbf{Ator Principal:} Administrador.
 
@@ -2648,7 +2728,7 @@ atualizados em \texttt{usuarios\_basicos}.
 \textbf{Frequência:} Raramente.
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC31 --- Ativar / Desativar usuário}\hfill\break
+\paragraph{UC32 --- Ativar / Desativar usuário}\hfill\break
 
 \textbf{Ator Principal:} Administrador (usuários básicos);
 Super Administrador (administradores).
@@ -2722,7 +2802,7 @@ de alertas conforme o caso.
 \textbf{Frequência:} Raramente.
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC32 --- Filtrar usuários por nome ou e-mail}\hfill\break
+\paragraph{UC33 --- Filtrar usuários por nome ou e-mail}\hfill\break
 
 \textbf{Ator Principal:} Administrador.
 
@@ -2777,7 +2857,7 @@ para o conjunto filtrado.
 \textbf{Frequência:} Ocasionalmente.
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC33 --- Alternar aba de usuários}\hfill\break
+\paragraph{UC34 --- Alternar aba de usuários}\hfill\break
 
 \textbf{Ator Principal:} Administrador.
 
@@ -2805,7 +2885,7 @@ Gestão de Usuários aberta.
         \path{GET /auth/usuarios-basicos} ou
         \path{GET /auth/usuarios-admin} conforme o caso.
   \item O sistema atualiza a tabela, os KPIs e o contexto
-        de exportação (UC34) para refletir o tipo de
+        de exportação (UC35) para refletir o tipo de
         usuário da aba ativa.
 \end{enumerate}
 
@@ -2834,7 +2914,7 @@ de usuário correspondente; filtros anteriores limpos.
 \textbf{Frequência:} Ocasionalmente.
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC34 --- Exportar usuários em CSV}\hfill\break
+\paragraph{UC35 --- Exportar usuários em CSV}\hfill\break
 
 \textbf{Ator Principal:} Administrador.
 
@@ -2902,7 +2982,7 @@ corrente.
 \textbf{Frequência:} Raramente.
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC35 --- Gerenciar administradores}\hfill\break
+\paragraph{UC36 --- Gerenciar administradores}\hfill\break
 
 \textbf{Ator Principal:} Super Administrador.
 
@@ -2966,7 +3046,7 @@ atualizada refletindo as operações realizadas.
 \textbf{Frequência:} Raramente.
 
 % ─────────────────────────────────────────────────────────────
-\paragraph{UC36 --- Cadastrar administrador}\hfill\break
+\paragraph{UC37 --- Cadastrar administrador}\hfill\break
 
 \textbf{Ator Principal:} Super Administrador.
 
@@ -3260,10 +3340,16 @@ de hardware (LEDs, buzzer) e funções de conectividade WiFi. O ciclo de operaç
 controlado pela função \texttt{loop()}, que verifica temporizadores individuais para
 cada subsistema — leitura de sensor, consulta BNDMET, consulta OWM, análise de risco
 e envio para o \textit{backend} — e aciona cada um no intervalo adequado ao nível de
-alerta vigente. Os intervalos de envio para o \textit{backend} são adaptativos:
-60 segundos no nível VERDE, 20 segundos no nível AMARELO e 10 segundos no
-nível VERMELHO, priorizando a frequência de atualização nos cenários de maior
-criticidade.
+alerta vigente. Os intervalos são adaptativos em todos os subsistemas: a leitura do
+higrômetro ocorre a cada 30 segundos no nível VERDE, 10 segundos no nível AMARELO
+e 5 segundos no nível VERMELHO; a consulta à API BNDMET ocorre a cada 5 minutos no
+nível VERDE, 2 minutos no nível AMARELO e 1 minuto no nível VERMELHO; o envio ao
+\textit{backend} ocorre a cada 60 segundos no nível VERDE, 20 segundos no nível
+AMARELO e 10 segundos no nível VERMELHO. As consultas à OpenWeatherMap seguem
+timers fixos independentes do nível de alerta: \texttt{/weather} a cada 10 minutos e
+\texttt{/forecast} a cada 30 minutos. Essa granularidade diferenciada por subsistema
+permite que o sistema intensifique simultaneamente a aquisição local, a atualização
+meteorológica e a comunicação com o \textit{backend} nos cenários de maior criticidade.
 
 % -------------------------------------------------------------
 \subsubsection{Diagrama de Sequência}

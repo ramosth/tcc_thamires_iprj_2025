@@ -50,7 +50,7 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
-Reallocating 'field_info' (item size: 4) to 14867 items.
+Reallocating 'field_info' (item size: 4) to 14798 items.
 Database file #1: abntex2-options.bib
 Database file #2: tcc.bib
 Warning--I didn't find a database entry for "BBC2023"
@@ -58,7 +58,6 @@ Warning--I didn't find a database entry for "IBRAM2020"
 Warning--I didn't find a database entry for "ipea2017boletim"
 Warning--I didn't find a database entry for "EPA2019"
 Warning--I didn't find a database entry for "ICMM2021"
-Warning--I didn't find a database entry for "rico2008"
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -70,7 +69,7 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 +---------------------------------------------------------+
 You've used 137 entries,
             6711 wiz_defined-function locations,
-            1949 strings with 38195 characters,
+            1948 strings with 38187 characters,
 and the built_in function-call counts, 301910 in all, are:
 = -- 40755
 > -- 2485
@@ -109,4 +108,4 @@ warning$ -- 0
 while$ -- 961
 width$ -- 0
 write$ -- 2207
-(There were 6 warnings)
+(There were 5 warnings)

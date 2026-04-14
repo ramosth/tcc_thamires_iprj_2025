@@ -216,16 +216,22 @@ superiores a 90\%.
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-Se o sensor for desconectado ou apresentar curto-circuito --- situação
-detectada por leituras ADC nos limites do conversor ---, o sistema
+Se o sensor for desconectado ou apresentar curto-circuito, o sistema
 identifica a falha, registra \textit{sensorOk} como inativo no monitor
-serial e aplica um desconto no índice de confiabilidade da análise. O
-cálculo de risco prossegue com os demais componentes disponíveis, conforme ilustram as \autoref{fig:serial_sensor_falha_pt1} e \autoref{fig:serial_sensor_falha_pt2}. Quando
-o administrador acessa o comando de simulação via monitor serial
-(\texttt{alerta amarelo} ou \texttt{alerta vermelho}, por exemplo), o LED correspondente ao nível
+serial e aplica um desconto no índice de confiabilidade da análise.
+A detecção é precisa: \texttt{sensorOk} é definido como \texttt{false}
+exclusivamente quando o ADC retorna o valor~0 --- indicando
+curto-circuito na sonda --- ou o valor~1023 --- indicando circuito
+aberto por desconexão. Qualquer leitura intermediária, mesmo que produza
+uma umidade calculada duvidosa, é tratada como operação normal pelo
+firmware. O cálculo de risco prossegue com os demais componentes
+disponíveis, conforme ilustram as \autoref{fig:serial_sensor_falha_pt1}
+e \autoref{fig:serial_sensor_falha_pt2}. Quando o administrador acessa
+o comando de simulação via monitor serial (\texttt{alerta amarelo} ou
+\texttt{alerta vermelho}, por exemplo), o LED correspondente ao nível
 forçado acende imediatamente e o intervalo de envio ao \textit{backend}
-assume o valor do nível simulado; na próxima leitura real do sensor, o
-sistema restaura automaticamente o nível calculado pelo modelo, conforme ilustram a \autoref{fig:serial_modo_manual} e a \autoref{fig:serial_modo_manual_vermelho}.
+assume o valor do nível simulado, conforme ilustram a
+\autoref{fig:serial_modo_manual} e a \autoref{fig:serial_modo_manual_vermelho}.
 
 \begin{figure}[htbp]
     \centering
@@ -338,6 +344,18 @@ SIM (1,2$\times$)'', conforme demonstra a
     \fonte{Elaborado pela autora.}
 \end{figure}
 
+A recomendação operacional gerada em cada ciclo é composta dinamicamente
+pela função \texttt{gerarRecomendacaoDetalhada()}: parte de uma mensagem
+base correspondente ao nível de alerta e acrescenta sufixos contextuais
+de acordo com o estado atual do sistema. Quando o acumulado de 7 dias
+supera 50\,mm, é adicionado ``\texttt{| Solo saturado por chuvas
+recentes}''; quando a API BNDMET está indisponível, acrescenta-se
+``\texttt{| Dados BNDMET indisponíveis}''; e quando o mecanismo de
+amplificação está ativo, inclui-se ``\texttt{| Amplificação de risco
+ativa}''. Esses sufixos podem ser combinados, de modo que a recomendação
+exibida no \textit{dashboard} e enviada nos alertas por e-mail reflete
+com precisão o conjunto de condições vigentes em cada momento.
+
 Quando a API BNDMET retorna erro ou JSON inválido, o sistema exibe
 ``BNDMET FALHA'' no monitor serial, zera os componentes pluviométricos
 históricos e aplica desconto de 25 pontos na confiabilidade da análise.
@@ -347,12 +365,16 @@ do intervalo normal adaptativo, conforme ilustram as
 \autoref{fig:serial_bndmet_falha_pt2}. Se a sincronização NTP ainda não tiver
 sido concluída no momento em que a consulta BNDMET seria realizada,
 o sistema a adia, exibindo ``NTP ainda não sincronizado --- consulta
-BNDMET adiada''. Dados BNDMET disponíveis
-mas com qualidade inferior a 80\% também geram um desconto adicional de
-10 pontos na confiabilidade, porém são utilizados normalmente no modelo.
-Se a precipitação horária I175 não registrar medições para o horário
-atual, o valor de chuva atual é assumido como zero, sem prejuízo às
-demais variáveis.
+BNDMET adiada''. Nesses registros, o campo \texttt{bndmetInicializado}
+é serializado como \texttt{false} no \textit{payload} JSON enviado ao
+\textit{backend}, que os identifica e os exclui do cálculo da qualidade
+média BNDMET exibido no relatório --- evitando que zeros transitórios
+dos primeiros ciclos contaminem as estatísticas do período. Dados BNDMET
+disponíveis mas com qualidade inferior a 80\% também geram um desconto
+adicional de 10 pontos na confiabilidade, porém são utilizados
+normalmente no modelo. Se a precipitação horária I175 não registrar
+medições para o horário atual, o valor de chuva atual é assumido como
+zero, sem prejuízo às demais variáveis.
 
 \begin{figure}[htbp]
     \centering
@@ -455,39 +477,56 @@ Durante o estado de ruptura ativa, a confiabilidade é fixada em 100\% independe
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-Em situações de falha persistente de conectividade Wi-Fi, o dispositivo
-tenta reconectar automaticamente a cada 30 segundos e, após exceder o
-limite de tentativas sem sucesso, reinicia de forma controlada para
-garantir que o sistema retorne a um estado limpo. O mesmo mecanismo
-se aplica a falhas repetidas de envio ao \textit{backend}: após o limite
-ser atingido, a conexão Wi-Fi é reestabelecida do zero, conforme ilustra a \autoref{fig:serial_wifi_falha_envio}. Quando a memória
-disponível do dispositivo cai abaixo de 5.000 bytes, o sistema reinicia
-automaticamente para prevenir travamentos por esgotamento de \textit{heap}.
+O \textit{firmware} implementa um mecanismo de supervisão periódica ---
+executado a cada cinco minutos --- que monitora três condições de falha e
+toma a ação corretiva correspondente a cada uma delas.
+
+O primeiro gatilho atua sobre a conectividade Wi-Fi: a cada 30 segundos,
+a função de verificação tenta reconectar o módulo à rede. Quando o número
+de tentativas consecutivas sem sucesso ultrapassa dez, o dispositivo
+executa uma reinicialização completa via \texttt{ESP.restart()},
+garantindo que o sistema retorne a um estado inicial limpo, conforme
+ilustra a \autoref{fig:serial_wifi_falha_envio}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{figures/cap5_serial_wifi_falha_envio.png}
-    \caption{Monitor serial durante falha persistente de Wi-Fi no envio ao \textit{backend}: tentativas de reconexão automática a cada 30 segundos, reconexão forçada do módulo Wi-Fi após exceder o limite de falhas consecutivas.}
+    \caption{Monitor serial durante falha persistente de Wi-Fi: tentativas
+    de reconexão automática a cada 30 segundos e reinicialização completa
+    do dispositivo ao atingir dez falhas consecutivas sem sucesso.}
     \label{fig:serial_wifi_falha_envio}
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-Quando o \textit{backend} para de responder mesmo com Wi-Fi ativo, o comportamento observado é distinto: o contador de falhas de API é incrementado até acionar a reconexão forçada, conforme ilustra a \autoref{fig:serial_backend_sem_resposta}.
+O segundo gatilho atua sobre as falhas de comunicação com o
+\textit{backend}: quando o contador de envios sem resposta ultrapassa dez
+ocorrências consecutivas, o módulo Wi-Fi é desconectado e reconectado sem
+reinicializar o dispositivo --- o contador é zerado e o sistema retoma as
+tentativas de envio normalmente, conforme ilustra a
+\autoref{fig:serial_backend_sem_resposta}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{figures/cap5_serial_backend_sem_resposta.png}
-    \caption{Monitor serial com \textit{backend} sem resposta e Wi-Fi ativo: contador de falhas de API incrementado ciclo a ciclo e reconexão forçada do Wi-Fi ao atingir o limite de tentativas.}
+    \caption{Monitor serial com \textit{backend} sem resposta e Wi-Fi
+    ativo: contador de falhas incrementado ciclo a ciclo e reconexão do
+    módulo Wi-Fi ao atingir dez falhas consecutivas, sem reinicialização
+    do dispositivo.}
     \label{fig:serial_backend_sem_resposta}
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-O terceiro gatilho do \textit{watchdog} ocorre quando a memória disponível cai abaixo do limite seguro, resultando em reinicialização automática, conforme demonstra a \autoref{fig:serial_heap_critico}.
+O terceiro gatilho atua sobre a memória disponível: quando a
+\textit{heap} livre cai abaixo de 5.000 bytes, o dispositivo reinicia
+automaticamente para prevenir travamentos por esgotamento de memória,
+conforme demonstra a \autoref{fig:serial_heap_critico}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{figures/cap5_serial_heap_critico.png}
-    \caption{Monitor serial com \textit{heap} crítico detectado: memória livre abaixo de 5.000 bytes, alerta registrado e reinicialização automática do dispositivo para recuperar o estado limpo.}
+    \caption{Monitor serial com \textit{heap} crítico detectado: memória
+    livre abaixo de 5.000 bytes e reinicialização automática do
+    dispositivo.}
     \label{fig:serial_heap_critico}
     \fonte{Elaborado pela autora.}
 \end{figure}
@@ -549,9 +588,18 @@ vermelho}) foram especialmente úteis durante os testes: ao forçar um
 nível específico, é possível observar a resposta dos LEDs, o comportamento
 do \textit{buzzer} e a alteração do intervalo de envio ao
 \textit{backend} sem aguardar condições naturais que acionem o alerta.
-A próxima leitura real do sensor desfaz a simulação automaticamente.
-Quando um comando não reconhecido é digitado, o sistema responde com
-``Comando não reconhecido. Digite \texttt{help}'', conforme ilustra a \autoref{fig:serial_comando_nao_reconhecido}.
+Cada simulação realiza exatamente três envios ao \textit{backend} com os
+dados do nível forçado e, ao concluir o terceiro envio, encerra-se
+automaticamente: as \textit{flags} \texttt{simulacaoAtiva} e
+\texttt{modoManual} retornam a \texttt{false}, o \textit{buzzer} é
+silenciado e o sistema retorna ao modo automático sem intervenção do
+operador. Durante toda a simulação, a leitura do higrômetro é suspensa
+--- a função \texttt{atualizarDadosLocais()} retorna imediatamente
+quando \texttt{modoManual = true} --- garantindo que nenhuma leitura
+real sobrescreva os valores forçados antes que os três envios sejam
+concluídos. Quando um comando não reconhecido é digitado, o sistema
+responde com ``Comando não reconhecido. Digite \texttt{help}'', conforme
+ilustra a \autoref{fig:serial_comando_nao_reconhecido}.
 
 \begin{figure}[htbp]
     \centering
@@ -1075,30 +1123,42 @@ atmosférica e velocidade do vento da última leitura disponível.
     \label{fig:dashboard_grafico}
     \fonte{Elaborado pela autora.}
 \end{figure}
-
-Quando o sensor para de enviar dados por mais de 10 minutos, o indicador
-no \textit{header} passa a exibir ``Degradado'' em laranja, conforme ilustra a \autoref{fig:dashboard_degradado}.
+Quando o sensor para de enviar dados por mais de 3 minutos, o indicador
+no \textit{header} passa a exibir ``Degradado'' em laranja, conforme
+ilustra a \autoref{fig:dashboard_degradado}. Esse estado reflete um
+atraso nas leituras do dispositivo embarcado, mas o sistema continua
+operacional: o \textit{backend} e o banco de dados permanecem acessíveis
+e os KPIs exibem os valores da última leitura disponível.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/cap5_dashboard_degradado.png}
-    \caption{\textit{Header} do \textit{dashboard} com status ``Degradado'' em laranja: sensor sem envio de dados há mais de 10 minutos; demais KPIs exibidos com os valores da última leitura disponível.}
+    \caption{\textit{Header} do \textit{dashboard} com status ``Degradado''
+    em laranja: sensor sem envio de dados há mais de 3 minutos; demais
+    KPIs exibidos com os valores da última leitura disponível.}
     \label{fig:dashboard_degradado}
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-Quando a própria API local fica inacessível, o \textit{backend} retorna erro de saúde e o indicador passa ao estado mais grave - muda para ``Offline'' em vermelho, conforme mostra a \autoref{fig:dashboard_indisponivel}.
+Quando o próprio \textit{backend} fica inacessível --- por desligamento
+do servidor ou falha de rede local ---, o \textit{frontend} não consegue
+completar a verificação de saúde e força o estado mais grave: o indicador
+muda para ``Offline'' em vermelho, conforme mostra a
+\autoref{fig:dashboard_indisponivel}. Nesse caso, nenhum dado novo pode
+ser recebido ou exibido até que o serviço seja restaurado.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/cap5_dashboard_indisponivel.png}
-    \caption{\textit{Header} do \textit{dashboard} com status ``Offline'' em vermelho: banco de dados inacessível, \textit{backend} retornando HTTP 503 na rota de saúde.}
+    \caption{\textit{Header} do \textit{dashboard} com status ``Offline''
+    em vermelho: \textit{backend} inacessível, verificação de saúde sem
+    resposta e sistema incapaz de receber ou exibir novos dados.}
     \label{fig:dashboard_indisponivel}
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-Falhas ao carregar as estatísticas fazem com que os KPIs sejam exibidos com valor zero
-enquanto o sistema aguarda nova tentativa, conforme ilustra a \autoref{fig:dashboard_kpis_zerados}.
+Falhas ao carregar as estatísticas fazem com que os KPIs sejam exibidos
+com valor zero enquanto o sistema aguarda nova tentativa, conforme ilustra a \autoref{fig:dashboard_kpis_zerados}.
 
 \begin{figure}[htbp]
     \centering
@@ -1539,18 +1599,19 @@ Brasília e o rodapé de identificação do sistema, conforme ilustra a
 Falhas síncronas de entrega SMTP --- como endereços com formato inválido,
 rejeitados pelo próprio \textit{Nodemailer} antes do envio --- são
 detectadas imediatamente pelo \textit{backend}, registradas individualmente
-em \texttt{logs\_alertas}, conforme ilustra a
-\autoref{fig:email_recebido_pt5} e contabilizadas no \textit{toast} de confirmação
+em \texttt{logs\_alertas} e contabilizadas no \textit{toast} de confirmação
 exibido ao administrador, conforme ilustra a
-\autoref{fig:alertas_entrega_parcial_pt2}, sem interromper os demais envios do lote. Falhas
-assíncronas, como rejeições por domínio inexistente (\textit{bounce}),
-ocorrem após o servidor SMTP aceitar a mensagem: o \textit{backend}
-registra o envio como bem-sucedido e a notificação de falha retorna
-posteriormente à caixa do remetente, conforme ilustra a
-\autoref{fig:email_recebido_pt6}, fora do controle do sistema. Esse
-comportamento é inerente ao protocolo SMTP e exigiria integração com
-serviço especializado de monitoramento de bounces para tratamento
-automatizado.
+\autoref{fig:alertas_entrega_parcial_pt2}, sem interromper os demais envios
+do lote. Após recarregar a tela, a lista de alertas críticos reflete o
+estado atualizado do sistema, como mostra a
+\autoref{fig:email_recebido_pt5}. Falhas assíncronas, como
+rejeições por domínio inexistente (\textit{bounce}), ocorrem após o servidor
+SMTP aceitar a mensagem: o \textit{backend} registra o envio como
+bem-sucedido e a notificação de falha retorna posteriormente à caixa do
+remetente, conforme ilustra a \autoref{fig:email_recebido_pt6}, fora do
+controle do sistema. Esse comportamento é inerente ao protocolo SMTP e
+exigiria integração com serviço especializado de monitoramento de
+\textit{bounces} para tratamento automatizado.
 
 \begin{figure}[htbp]
     \centering
@@ -1591,8 +1652,8 @@ automatizado.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.80\textwidth]{figures/cap5_email_recebido_pt5.png}
-    \caption{Detalhe no banco de dados (parte~5):
+    \includegraphics[width=0.95\textwidth]{figures/cap5_email_recebido_pt5.png}
+    \caption{Modal ``Log de Alertas Enviados'' (parte~5): Tela de Alertas atualizada (parte~5):
     registradas individualmente em \texttt{logs\_alertas} os sucessos e falhas.}
     \label{fig:email_recebido_pt5}
     \fonte{Elaborado pela autora.}
@@ -1604,6 +1665,74 @@ automatizado.
     \caption{E-mail de alerta recebido pelo remetente (parte~6):
     notificação de falha retorna posteriormente à caixa do remetente.}
     \label{fig:email_recebido_pt6}
+    \fonte{Elaborado pela autora.}
+\end{figure}
+
+% -------------------------------------------------------------
+\subsection{Log de Alertas Enviados}
+\label{subsec:alertas-log}
+% -------------------------------------------------------------
+
+O botão ``Log de Envios'', posicionado no cabeçalho da tela de Alertas
+ao lado dos botões ``Atualizar'' e ``Enviar Alerta'', abre um modal com
+o histórico completo de alertas disparados pela Central de Alertas. Ao
+ser acionado, o \textit{frontend} consulta o endpoint
+\path{GET /auth/logs-alertas} e exibe os registros da tabela
+\texttt{logs\_alertas} em ordem decrescente de data e hora, paginados
+a dez por página. A \autoref{fig:alertas_log} mostra o modal com a
+tabela de registros.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/cap5_alertas_log.png}
+    \caption{Modal ``Log de Alertas Enviados'': tabela paginada com
+    data e hora, título, nível de criticidade, tipo de destinatário,
+    canal e resultado discriminado por sucessos e falhas.}
+    \label{fig:alertas_log}
+    \fonte{Elaborado pela autora.}
+\end{figure}
+
+Cada linha da tabela exibe sete colunas: data e hora do disparo,
+título do alerta (truncado com \textit{tooltip} ao passar o cursor),
+nível de criticidade representado por \textit{badge} colorido
+(Informativo, Atenção ou Crítico), tipo de destinatário selecionado
+(Todos, Usuários Básicos ou Administradores), canal de envio, e o
+resultado do envio indicado pelo par \textit{sucessos}/\textit{total}
+com ícone verde quando todos os e-mails foram entregues, amarelo quando
+houve entregas parciais e vermelho quando todos falharam. Quando um
+registro apresenta falhas, o número de e-mails não entregues é exibido
+abaixo do par de contagem.
+
+Ao clicar em ``Detalhes'' em qualquer linha, uma sub-tabela
+expande-se imediatamente abaixo, exibindo o resultado individual por
+destinatário: nome, endereço de e-mail, status de entrega e, quando
+aplicável, a mensagem de erro retornada pelo servidor SMTP. A
+\autoref{fig:alertas_log_detalhe} ilustra a linha expandida com os
+detalhes de entrega por destinatário.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/cap5_alertas_log_detalhe.png}
+    \caption{Log de Alertas com linha expandida: sub-tabela de
+    detalhes por destinatário exibindo nome, e-mail, status de
+    entrega e mensagem de erro quando aplicável.}
+    \label{fig:alertas_log_detalhe}
+    \fonte{Elaborado pela autora.}
+\end{figure}
+
+Quando nenhum alerta foi enviado até o momento, o modal exibe o estado
+vazio com a mensagem ``Nenhum alerta foi enviado ainda.''. O botão
+``Atualizar'' no cabeçalho do modal recarrega a lista sem necessidade de
+fechar e reabrir o painel. Os dados exibidos são somente de leitura e
+não alteram nenhum registro no banco de dados, conforme ilustra a
+\autoref{fig:alertas_log_vazio}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/cap5_alertas_log_vazio.png}
+    \caption{Log de Alertas vazio: modal exibe o estado
+vazio com a mensagem ``Nenhum alerta foi enviado ainda.''.}
+    \label{fig:alertas_log_vazio}
     \fonte{Elaborado pela autora.}
 \end{figure}
 
@@ -2288,42 +2417,45 @@ implementado.
 \hline
 a & Protótipo ESP8266 com higrômetro, LEDs e \textit{buzzer} proporcional
 ao risco &
-Protótipo montado e em operação; LEDs acendem no nível correspondente; \textit{buzzer} soa com frequência e cadência crescentes conforme a gravidade do índice (80--84\%, 85--89\% e $\geq$90\%) \\
+Protótipo montado e em operação; LEDs acendem no nível correspondente;
+\textit{buzzer} soa com frequência e cadência crescentes conforme a
+gravidade do índice (80--84\%, 85--89\% e $\geq$90\%) \\
 \hline
 b & Integração com BNDMET/DECEA e OpenWeatherMap para precipitação
 histórica e previsão &
-Ambas as APIs integradas e em operação; acumulados de 24h, 7d e 30d via BNDMET e previsão de 24h via OWM; proteção pré-NTP e \textit{retry} acelerado implementados \\
+Ambas as APIs integradas e em operação; acumulados de 24h, 7d e 30d via
+BNDMET e previsão de 24h via OWM; proteção pré-NTP e \textit{retry}
+acelerado implementados \\
 \hline
 c & Modelo de sete variáveis ponderadas com mecanismo de amplificação
 $\times 1{,}20$ &
-Modelo em operação; todos os sete componentes calculados e exibidos; amplificação registrada no monitor serial e no \textit{dashboard}; protocolo de ruptura com \textit{cooldown} de três leituras validado \\
+Modelo em operação; todos os sete componentes calculados e exibidos;
+amplificação registrada no monitor serial e no \textit{dashboard};
+protocolo de ruptura com \textit{cooldown} de três leituras validado \\
 \hline
 d & \textit{Backend} Node.js com banco de séries temporais e API
-RESTful &
-\textit{Backend} em operação com PostgreSQL e TimescaleDB; dados recebidos e persistidos sem recálculo; 41 campos por leitura; autenticação JWT funcional \\
+RESTful para recebimento, validação e persistência das leituras &
+\textit{Backend} em operação com PostgreSQL e TimescaleDB; dados
+recebidos, validados e persistidos; 41 campos por leitura;
+autenticação JWT funcional \\
 \hline
 e & Interface \textit{web} com histórico, alertas, meteorologia e
 gestão de usuários &
-Seis telas implementadas e funcionais: \textit{dashboard}, Sensores, Alertas, Relatórios, Usuários e Configurações; todos os fluxos de sucesso e alternativos validados \\
+Seis telas implementadas e funcionais: \textit{dashboard}, Sensores,
+Alertas, Relatórios, Usuários e Configurações; todos os fluxos de
+sucesso e alternativos validados \\
 \hline
-f & Sistema de envio de alertas por e-mail acionado pelo administrador &
+f & Sistema de envio de alertas por e-mail acionado manualmente pelo
+administrador, com formulário de composição, seleção de destinatários
+por perfil e registro de auditoria &
 Central de alertas operacional com formulário de composição, seleção
-de destinatários por perfil, envio em massa e registro de auditoria;
-e-mail HTML colorido por criticidade entregue aos destinatários \\
+de destinatários por perfil, envio em massa e registro de auditoria
+por disparo; e-mail HTML colorido por criticidade entregue aos
+destinatários \\
 \hline
 \end{tabular}
 \fonte{Elaborado pela autora.}
 \end{table}
-
-Sobre o objetivo específico~f), registra-se que a especificação original
-previa envio automático de alertas. O sistema implementado adota envio
-manual acionado pelo administrador, decisão tomada durante o
-desenvolvimento por razões de controle operacional: em cenários reais,
-o disparo automático de alertas de evacuação sem validação humana pode
-gerar falsos alarmes com consequências sociais significativas. O
-administrador analisa o contexto completo --- incluindo os dados de
-confiabilidade e os componentes individuais do modelo --- antes de
-decidir pelo acionamento da notificação.
 
 % =============================================================
 \section{Discussão dos Resultados}
@@ -2336,68 +2468,113 @@ da solução proposta. O custo total do protótipo de \textit{hardware}
 geotécnicos profissionais como piezômetros elétricos automatizados e
 inclinômetros de corda vibrante, cujos valores de aquisição e instalação
 podem superar dezenas de milhares de reais por ponto de monitoramento
-\cite{quispe2018instrumentacao}. Isso demonstra que tecnologias de
-baixo custo, quando bem integradas, são capazes de produzir fluxo
-contínuo de dados geotécnicos e meteorológicos --- funcionalidade
-ausente nos sistemas manuais que predominavam em Mariana e Brumadinho
-no momento dos acidentes \cite{taliberti2025tragedia}.
+\cite{quispe2018instrumentacao}. Tecnologias de baixo custo, quando bem
+integradas, são capazes de produzir fluxo contínuo de dados geotécnicos
+e meteorológicos --- funcionalidade ausente nos sistemas manuais que
+predominavam em Mariana e Brumadinho no momento dos acidentes
+\cite{taliberti2025tragedia}.
 
 A abordagem multidimensional do modelo de risco tem respaldo direto
-na literatura. \citeonline{rico2008} identificaram que 39\% dos
+na literatura. \citeonline{rico2008mine} identificaram que 39\% dos
 rompimentos documentados resultaram da combinação de múltiplos fatores,
-não de uma causa isolada, o que justifica a integração de variáveis
+não de uma causa isolada --- o que justifica integrar variáveis
 geotécnicas, pluviométricas históricas, prospectivas e atmosféricas em
-um único índice. O peso maior atribuído à variável de lençol freático
---- correspondente a 40\% do índice --- está alinhado à preponderância
-de causas de saturação do maciço nos acidentes documentados
+um único índice. O peso maior atribuído à variável de lençol freático,
+correspondente a 40\% do índice, está alinhado à preponderância de
+causas de saturação do maciço nos acidentes documentados
 \cite{robertson2019feijaoson2019}. A inclusão da pressão atmosférica
 como indicador antecipatório representa uma contribuição específica do
 modelo, fundamentada no estudo de sistemas de monitoramento integrado
 discutido no \autoref{cap1Revisao}.
 
-O índice de confiabilidade auditável diferencia o sistema desenvolvido
-da maioria das soluções de baixo custo descritas na literatura, que
-emitem alertas sem qualificar a incerteza dos dados subjacentes. A
-capacidade de o administrador consultar, para qualquer leitura histórica,
-quais fontes estavam indisponíveis e qual o impacto quantitativo dessa
-indisponibilidade está alinhada às recomendações do ICOLD sobre
-transparência em sistemas de monitoramento \cite{icold2022tailings}.
+O índice de confiabilidade auditável diferencia o sistema da maioria
+das soluções de baixo custo descritas na literatura, que emitem alertas
+sem qualificar a incerteza dos dados subjacentes. Para qualquer leitura
+histórica, o administrador pode consultar quais fontes estavam
+indisponíveis e qual o impacto quantitativo de cada indisponibilidade
+--- propriedade alinhada às recomendações do ICOLD sobre transparência
+em sistemas de monitoramento \cite{icold2022tailings}. A decisão de
+processar o cálculo de risco integralmente no microcontrolador garante
+que a análise continue ocorrendo localmente mesmo diante de falhas de
+conectividade, o que é crítico para sistemas destinados a ambientes
+industriais remotos.
 
-Três limitações merecem destaque. A primeira diz respeito ao sensor
-higrômetro resistivo FC-28: por ser um componente voltado a aplicações
-educacionais, apresenta precisão e durabilidade inferiores às de
-instrumentos geotécnicos certificados. A eletrólise acelerada nos
-eletrodos em solo permanentemente úmido compromete a longevidade da
-sonda em instalações de longa duração. Em uma implantação real, o
-sensor deveria ser substituído por instrumento com certificação
-metrológica, e o sistema estaria posicionado como camada complementar
-à instrumentação geotécnica convencional prevista pela
-Lei n.º~14.066/2020 e pela NBR~13028:2017
-\cite{brasil2020lei14066, abnt2017}.
+Seis limitações precisam ser registradas, distribuídas entre o
+\textit{firmware}, o modelo de risco e a operação da plataforma.
 
-A segunda limitação refere-se à dependência de conectividade Wi-Fi
-e de APIs externas com disponibilidade variável. Embora o sistema
-implemente \textit{retry} automático e o modelo de confiabilidade
-penalize indisponibilidades, a ausência prolongada dos dados BNDMET
-suprime três dos sete componentes do índice de risco, reduzindo
-substancialmente sua acurácia. Em instalações reais, conectividade
-redundante --- Wi-Fi associada a módulo 4G --- e uma estação
-pluviométrica local minimizariam essa dependência.
+A primeira é espacial: o modelo atribui 40% do índice de risco à
+variável de lençol freático, estimada a partir de um único sensor em
+um único ponto do maciço. Barragens de rejeitos reais têm extensão de
+centenas de metros, e o nível de umidade varia de um ponto para outro
+da estrutura --- regiões próximas a drenos internos ou a camadas de
+solo com granulometria diferente podem estar em estados de saturação
+completamente distintos do ponto monitorado. Uma leitura isolada não
+captura esse comportamento distribuído, e é exatamente essa variação ao
+longo de toda a estrutura que determina se ela está estável ou em risco.
+Um único ponto de medição, por mais representativo que seja na média,
+não oferece essa visão completa \cite{rico2008mine}.
 
-A terceira limitação refere-se ao escopo de validação: o sistema foi
-testado em ambiente controlado de bancada, sem implantação \textit{in
-loco} em uma barragem real. A representatividade dos dados pluviométricos
-da estação D6594 para um ponto específico de monitoramento, a localização
-ideal da sonda no perfil do maciço e a calibração dos limiares para
-diferentes tipos de rejeito demandariam validação geotécnica
-especializada antes de uma aplicação operacional.
+A segunda envolve o sensor e sua calibração. O higrômetro resistivo
+FC-28 é um componente voltado a aplicações educacionais: a eletrólise
+acelerada nos eletrodos em solo permanentemente úmido compromete sua
+longevidade em instalações de longa duração. Agrava essa condição o
+fato de que a calibração é feita manualmente via monitor serial, sem
+procedimento periódico de verificação contra instrumento de referência
+e sem registro de data da última calibração. Com o envelhecimento dos
+eletrodos, a curva de resposta se desloca progressivamente, e o sistema
+não possui mecanismo para detectar nem sinalizar esse desvio ao
+administrador. Em uma implantação real, o sensor deveria ser substituído
+por instrumento com certificação metrológica, e o sistema estaria
+posicionado como camada complementar à instrumentação geotécnica
+convencional prevista pela Lei~n.º~14.066/2020 e pela
+NBR~13028:2017 \cite{brasil2020lei14066, abnt2017}.
 
-Em relação ao TCC de referência desta instituição --- o Med Alarm, de
-\citeonline{larman2007utilizando} --- o presente trabalho apresenta maior
-complexidade de integração, reunindo três camadas funcionais, duas APIs
-externas, banco de dados de séries temporais e modelo matemático
-embarcado em um único sistema. A decisão de processar o cálculo de risco
-integralmente no microcontrolador garante análise contínua mesmo em
-cenários de conectividade intermitente, propriedade crítica para sistemas
-destinados a ambientes industriais remotos onde a infraestrutura de rede
-pode ser instável.
+A terceira é metodológica e incide sobre a formulação do componente de
+previsão pluviométrica. O fator~$F_{int}$, que compõe~$V_{ch.fut}$,
+é um valor discreto em cinco classes (0,00 / 0,25 / 0,50 / 0,75 /
+1,00), o que introduz descontinuidades abruptas no índice: uma previsão
+de 4,9\,mm e outra de 0,1\,mm produzem o mesmo fator zero, enquanto
+o salto de 4,9\,mm para 5,0\,mm causa um incremento instantâneo de
+0,038 no índice, independentemente das demais variáveis. Uma formulação
+com interpolação linear dentro de cada faixa, mantendo os valores
+extremos atuais como âncoras, reduziria esse efeito sem alterar a
+estrutura conceitual do modelo.
+
+A quarta decorre do ciclo de vida do \textit{firmware}. Os buffers
+históricos --- o circular de umidade, usado em~$V_{taxa}$, e o de
+pressão atmosférica, usado em~$V_{press}$ --- são inicializados com
+zeros a cada reinicialização do dispositivo. Reinicializações
+involuntárias, por estouro de \textit{heap} ou interrupção de energia,
+fazem com que os primeiros ciclos pós-\textit{boot} calculem taxas de
+variação e quedas de pressão comparando leituras reais contra zeros
+históricos, podendo gerar valores artificialmente elevados para esses
+dois componentes até que os buffers completem um ciclo completo ---
+período que pode chegar a três horas no caso do histórico de pressão,
+dado o intervalo de 30 minutos entre consultas ao OWM.
+
+A quinta diz respeito ao escopo de validação do modelo. Os pesos das
+sete variáveis foram definidos com base na literatura técnica
+especializada \cite{rico2008mine, robertson2019feijaoson2019}, mas não
+passaram por processo de calibração estatística sobre casos históricos
+de ruptura em barragens de rejeitos brasileiras. Os limiares de 25\%,
+30\%, 50\,mm, 150\,mm e 300\,mm têm respaldo bibliográfico, mas foram
+adotados sem ajuste para as características específicas dos rejeitos de
+minério de ferro predominantes no contexto de referência. A
+representatividade da estação D6594 para um ponto específico de
+monitoramento, a localização ideal da sonda no perfil do maciço e a
+calibração dos limiares para diferentes tipos de rejeito demandariam
+validação geotécnica especializada antes de qualquer aplicação
+operacional.
+
+A sexta afeta a operação cotidiana da plataforma. Quando o dispositivo
+perde conectividade, os ciclos de leitura são calculados localmente mas
+não persistidos para envio posterior --- o que gera lacunas na série
+temporal registrada no banco. Além disso, o sistema não emite
+notificação automática ao administrador quando o nível de alerta evolui
+de AMARELO para VERMELHO: o sino no \textit{header} exibe o
+\textit{badge} apenas para quem estiver com o painel aberto no momento
+da atualização periódica. Em um cenário operacional real, em que o
+responsável pelo monitoramento não permanece continuamente diante da
+interface, isso representa um risco de resposta tardia. Conectividade
+redundante --- Wi-Fi associada a módulo 4G --- e mecanismos de alerta
+proativo por \textit{push} ou SMS mitigariam as duas fragilidades.
