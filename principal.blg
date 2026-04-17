@@ -50,14 +50,12 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
-Reallocating 'field_info' (item size: 4) to 14798 items.
+Reallocating 'field_info' (item size: 4) to 14936 items.
 Database file #1: abntex2-options.bib
 Database file #2: tcc.bib
-Warning--I didn't find a database entry for "BBC2023"
-Warning--I didn't find a database entry for "IBRAM2020"
-Warning--I didn't find a database entry for "ipea2017boletim"
-Warning--I didn't find a database entry for "EPA2019"
-Warning--I didn't find a database entry for "ICMM2021"
+Warning--I didn't find a database entry for "abnt-emphasize=italic"
+Warning--I didn't find a database entry for "abnt-repeated-author=no"
+Warning--I didn't find a database entry for "abnt-upper-cite=no"
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -67,45 +65,45 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 137 entries,
+You've used 141 entries,
             6711 wiz_defined-function locations,
-            1948 strings with 38187 characters,
-and the built_in function-call counts, 301910 in all, are:
-= -- 40755
-> -- 2485
-< -- 11293
-+ -- 12176
-- -- 799
-* -- 17228
-:= -- 35546
-add.period$ -- 722
-call.type$ -- 138
-change.case$ -- 990
-chr.to.int$ -- 178
-cite$ -- 135
-duplicate$ -- 37661
-empty$ -- 7853
-format.name$ -- 3740
-if$ -- 55192
-int.to.chr$ -- 12
-int.to.str$ -- 2
-missing$ -- 2247
-newline$ -- 709
-num.names$ -- 676
-pop$ -- 2587
+            1958 strings with 38606 characters,
+and the built_in function-call counts, 306395 in all, are:
+= -- 41312
+> -- 2516
+< -- 11443
++ -- 12337
+- -- 810
+* -- 17472
+:= -- 36062
+add.period$ -- 732
+call.type$ -- 142
+change.case$ -- 1008
+chr.to.int$ -- 184
+cite$ -- 137
+duplicate$ -- 38168
+empty$ -- 8054
+format.name$ -- 3786
+if$ -- 56072
+int.to.chr$ -- 14
+int.to.str$ -- 3
+missing$ -- 2300
+newline$ -- 719
+num.names$ -- 686
+pop$ -- 2638
 preamble$ -- 1
-purify$ -- 441
+purify$ -- 453
 quote$ -- 0
-skip$ -- 37955
+skip$ -- 38541
 stack$ -- 1
-substring$ -- 13943
-swap$ -- 13070
-text.length$ -- 153
+substring$ -- 14138
+swap$ -- 13244
+text.length$ -- 155
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 54
 warning$ -- 0
-while$ -- 961
+while$ -- 975
 width$ -- 0
-write$ -- 2207
-(There were 5 warnings)
+write$ -- 2238
+(There were 3 warnings)

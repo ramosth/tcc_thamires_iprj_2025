@@ -3117,7 +3117,7 @@ e perfil definido; administrador pode realizar
 \textbf{Frequência:} Raramente.
 
 % -------------------------------------------------------------
-\subsubsection{Diagrama de Classes}
+\subsubsection{Diagramas de Classes}
 \label{subsubsec:classes}
 % -------------------------------------------------------------
 
@@ -3352,7 +3352,7 @@ permite que o sistema intensifique simultaneamente a aquisição local, a atuali
 meteorológica e a comunicação com o \textit{backend} nos cenários de maior criticidade.
 
 % -------------------------------------------------------------
-\subsubsection{Diagrama de Sequência}
+\subsubsection{Diagramas de Sequência}
 \label{subsubsec:sequencia}
 
 O diagrama de sequência é um dos diagramas comportamentais da UML e tem por
@@ -3435,8 +3435,7 @@ contaminem as métricas de qualidade dos dados pluviométricos no banco de dados
 \end{figure}
 
 A Figura~\ref{fig:seq_1d} apresenta a verificação do \textit{backend} local. O
-firmware consulta o endpoint \texttt{GET /api/sensor/status} — e não
-\texttt{/api/health} — via HTTP simples sem TLS, pois ESP8266 e servidor encontram-se
+firmware consulta o endpoint \texttt{GET /api/sensor/status} — via HTTP simples sem TLS, pois ESP8266 e servidor encontram-se
 na mesma rede local. A comunicação com as APIs externas BNDMET e OpenWeatherMap
 utiliza HTTPS com TLS via \texttt{WiFiClientSecure}. Um \textit{timeout} de 5.000
 milissegundos é configurado para a requisição; em caso de falha, o sistema continua
@@ -3949,3 +3948,812 @@ de todas as notificações disparadas pelo sistema.
   \label{fig:seq_7e}
   \fonte{Autora, 2025.}
 \end{figure}
+
+% -------------------------------------------------------------
+\subsubsection{Diagramas de Lógica do Sistema}
+\label{subsubsubsec:diagramas-logica}
+% -------------------------------------------------------------
+
+Os fluxogramas apresentados nesta seção representam processos do
+sistema que envolvem decisões condicionais relevantes para a
+compreensão do comportamento operacional. 
+
+Foram elaborados nove fluxogramas, distribuídos entre
+as três camadas da arquitetura. A Figura~\ref{fig:fluxograma_visao_geral}
+apresenta o mapa geral com os identificadores e as relações entre
+os diagramas.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=\textwidth]
+    {figures/cap4_fluxograma_f0_visao_geral.png}
+\caption{Mapa geral dos fluxogramas de lógica do sistema}
+\label{fig:fluxograma_visao_geral}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+No \textit{firmware} embarcado: F1 —
+loop principal (Figura~\ref{fig:fluxograma_loop}); F2 — análise
+de risco integrado (Figura~\ref{fig:fluxograma_risco}); F3 —
+protocolo de ruptura (Figura~\ref{fig:fluxograma_ruptura}); F4 —
+índice de confiabilidade (Figura~\ref{fig:fluxograma_confiabilidade});
+e F9 — simulação de nível via Serial
+(Figura~\ref{fig:fluxograma_simulacao}).
+
+No \textit{backend}: F5 — recebimento e persistência de leitura
+(Figura~\ref{fig:fluxograma_backend_sensor}); F6 — autenticação
+JWT (Figura~\ref{fig:fluxograma_auth}); e F10 —
+envio de alerta em massa
+(Figura~\ref{fig:fluxograma_alerta_massa}).
+
+No \textit{frontend}: F7 — detecção de status do sensor
+(Figura~\ref{fig:fluxograma_status_sensor}).
+
+% -------------------------------------------------------------
+\subsubsubsection{Fluxograma do Ciclo de Análise de Risco Integrado}
+\label{subsubsec:fluxograma-risco}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_risco} apresenta o fluxograma do
+ciclo de análise de risco integrado executado pelo \textit{firmware}
+do ESP8266 a cada intervalo de análise de 10 segundos, sempre que
+o nível de umidade do solo está abaixo do limiar de ruptura e não
+há simulação ativa em andamento.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.75\textwidth]
+    {figures/cap4_fluxograma_f2_ciclo_analise_risco.png}
+\caption{Fluxograma do ciclo de análise de risco integrado}
+\label{fig:fluxograma_risco}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+O ciclo tem início com o cálculo dos sete componentes da
+Equação~\ref{eq:frisco}. Cada componente é obtido de forma
+independente a partir das estruturas de dados globais já
+preenchidas pelos subsistemas de coleta: $V_{len}$ utiliza a
+leitura mais recente do higrômetro; $V_{ch.24h}$, $V_{ch.7d}$ e
+$V_{ch.30d}$ utilizam os acumulados pluviométricos obtidos da API
+BNDMET/DECEA via fenômeno I006; $V_{ch.fut}$ é derivado da
+classificação da previsão de precipitação das próximas 24 horas
+obtida via \textit{endpoint} \texttt{/forecast} da API
+OpenWeatherMap; $V_{taxa}$ é calculado sobre o \textit{buffer}
+circular das dez últimas leituras de umidade; e $V_{press\~ao}$ é
+obtido a partir da queda de pressão atmosférica registrada na
+janela de três horas. Os pesos aplicados a cada componente somam
+exatamente 1,00, de forma que o fator de risco integrado
+$F_{risco}$ é adimensional e naturalmente limitado ao intervalo
+$[0;\,1]$ em condições normais.
+
+Após a soma dos sete componentes, o sistema avalia a condição de
+amplificação. O mecanismo é ativado quando dois critérios são
+satisfeitos simultaneamente: o $F_{len\c{c}ol}$ calculado para a
+leitura atual atinge ou supera 0,70 — o que equivale a uma umidade
+do solo igual ou superior a 17,5\% — e a precipitação prevista
+para as próximas 24 horas é igual ou superior a 5\,mm, classe
+mínima ``Moderada'' na tabela de intensidade pluviométrica
+\cite{sistemaalertario2025}. Quando ambas as condições estão
+presentes, a soma dos componentes é multiplicada por 1,20, elevando
+o fator de risco em 20\%. A justificativa para esse mecanismo reside
+na combinação de solo já próximo da saturação com previsão de chuva
+iminente: isoladamente, cada condição pode não ser suficiente para
+elevar o risco à faixa crítica; conjuntamente, aumentam
+significativamente a probabilidade de rompimento
+\cite{robertson2019feijaoson2019}. O resultado final é limitado ao
+intervalo $[0;\,1]$ pela função \texttt{constrain}, evitando que
+amplificações extremas produzam valores fora da escala do modelo.
+
+A classificação do nível de alerta é realizada em seguida, com base
+em três faixas definidas na Tabela~5 do trabalho: fator de risco
+igual ou inferior a 0,45 corresponde ao nível VERDE (\textit{status}
+``SEGURO''); acima de 0,45 e até 0,75, ao nível AMARELO
+(\textit{status} ``ATENÇÃO''); acima de 0,75, ao nível VERMELHO
+(\textit{status} ``CRÍTICO''). Os limiares foram escolhidos de forma
+a manter o nível VERDE associado a situações de baixa combinação de
+fatores e o VERMELHO reservado a cenários de risco elevado, com a
+faixa AMARELO funcionando como zona de vigilância ativa.
+
+Concluída a classificação, o ciclo executa em sequência três
+subprocessos encadeados: o cálculo do índice de confiabilidade da
+análise, a atualização do histórico interno de risco e a geração da
+mensagem de recomendação operacional. Por fim, a função
+\texttt{controlarSistemaFisico()} traduz o nível de alerta em ações
+concretas de hardware: no nível VERDE, o LED verde é acionado e o
+\textit{buzzer} permanece em silêncio; no nível AMARELO, o LED
+amarelo é acionado, também sem acionamento sonoro; no nível VERMELHO,
+o LED vermelho é acionado e o \textit{buzzer} passa ao estado ativo,
+emitindo sinal intermitente com frequência proporcional ao índice de
+risco — 2.000\,Hz para índice entre 80\% e 84\%, 2.200\,Hz entre
+85\% e 89\%, e 2.400\,Hz para índice igual ou superior a 90\%. Vale
+destacar que \texttt{controlarSistemaFisico()} contém uma guarda
+explícita para o caso de ruptura: quando a umidade do solo está
+acima de 30\%, o controle de hardware já foi realizado diretamente
+por \texttt{acionarRuptura()} e a função retorna sem executar
+qualquer ação adicional, garantindo que o LED vermelho e o
+\textit{buzzer} de ruptura não sejam inadvertidamente desligados
+durante o ciclo seguinte.
+
+% -------------------------------------------------------------
+\subsubsubsection{Fluxograma do Protocolo de Ruptura e Desescalada}
+\label{subsubsec:fluxograma-ruptura}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_ruptura} apresenta o fluxograma do
+protocolo de ruptura, executado a cada leitura do sensor de umidade
+do solo. Este protocolo opera em paralelo ao ciclo de análise de
+risco descrito na Seção~\ref{subsubsec:fluxograma-risco} e tem
+precedência sobre ele: sempre que a condição de ruptura é detectada,
+o mecanismo de análise ponderada é integralmente substituído por um
+acionamento direto de emergência.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]
+    {figures/cap4_fluxograma_f3_protocolo_ruptura.png}
+\caption{Fluxograma do protocolo de ruptura e desescalada}
+\label{fig:fluxograma_ruptura}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+O fluxo tem início com a verificação do limiar de ruptura: se a
+umidade do solo lida pelo higrômetro é igual ou superior a 30\%,
+a função \texttt{acionarRuptura()} é chamada imediatamente. Esta
+função não executa a equação de risco ponderada — ao contrário, ela
+força diretamente os valores de emergência: o fator de risco
+integrado é fixado em 1,0, o índice de risco em 100\%, o nível de
+alerta em VERMELHO e o campo \texttt{statusTexto} em
+``\textsc{ruptura}''. O componente $V_{len\c{c}ol}$ é fixado no seu
+valor máximo de 0,40, correspondente à saturação completa do fator
+do lençol freático; o componente $V_{taxa}$ é recalculado com os
+dados reais do \textit{buffer} circular naquele instante, garantindo
+que a velocidade de saturação seja auditável mesmo durante a ruptura.
+O mecanismo de amplificação não é aplicado — a ruptura já representa
+o estado crítico máximo do modelo. Em seguida, o índice de
+confiabilidade da análise é forçado para 100\% com o campo
+\texttt{estado\_especial = "RUPTURA"}, refletindo que, neste estado,
+o sensor físico confirma a condição de emergência diretamente, sem
+dependência das APIs externas. Por fim, o hardware é acionado de
+forma imediata — sem aguardar o próximo ciclo do
+\texttt{loop()} —: o LED vermelho é ligado e o \textit{buzzer} emite
+sinal contínuo na frequência de 2.400\,Hz.
+
+A mesma verificação de ruptura está presente na função
+\texttt{setup()}, executada uma única vez ao energizar o dispositivo.
+Caso a umidade já esteja acima de 30\% no instante da inicialização
+— cenário que pode ocorrer se o dispositivo for religado após um
+evento crítico —, o protocolo é acionado antes de qualquer coleta
+de dados meteorológicos ou análise de risco, garantindo que o
+sistema entre em estado de emergência imediatamente após o
+\textit{boot}.
+
+Quando a umidade retorna abaixo de 30\%, o sistema não retoma a
+análise normal de imediato. O fluxograma mostra que, se o
+\texttt{statusTexto} ainda é ``\textsc{ruptura}'' mas a leitura
+atual já está abaixo do limiar, o sistema entra na janela de
+desescalada (\textit{cooldown}). A cada nova leitura segura, um
+contador interno é incrementado e a variável
+\texttt{aguardandoResetRuptura} é marcada como verdadeira — o que
+faz com que os registros enviados ao \textit{backend} durante esse
+período carreguem a indicação de ``\textsc{retorno de ruptura}'' no
+campo \texttt{dadosBrutos}, permitindo que o painel \textit{web}
+exiba uma mensagem diferenciada ao operador. Somente após três
+leituras consecutivas com umidade abaixo do limiar o contador é
+zerado, a \textit{flag} \texttt{aguardandoResetRuptura} é desativada
+e a função \texttt{analisarRiscoIntegrado()} é chamada, retomando o
+ciclo ponderado normal.
+
+A exigência de três confirmações consecutivas antes de encerrar o
+estado de ruptura decorre da necessidade de garantir que a queda de
+umidade não seja transitória — provocada, por exemplo, por uma
+oscilação do sensor ou por um movimento de solo que redistribua
+momentaneamente a umidade na vizinhança da sonda. Três leituras
+consecutivas abaixo do limiar, nos intervalos adaptativos do nível
+VERMELHO (5 segundos entre cada leitura), correspondem a uma janela
+mínima de 10 segundos de estabilidade antes da reabertura do ciclo
+analítico, conferindo robustez ao critério de desescalada.
+
+% -------------------------------------------------------------
+\subsubsubsection{Fluxograma do Loop Principal de Orquestração}
+\label{subsubsec:fluxograma-loop}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_loop} apresenta o fluxograma do
+\textit{loop} principal do \textit{firmware}, função executada
+continuamente pelo microcontrolador após a conclusão do
+\texttt{setup()}. O \textit{loop} não executa todos os subsistemas
+a cada iteração: a orquestração é baseada em cinco temporizadores
+independentes, cada um comparando o instante atual obtido por
+\texttt{millis()} com o instante do último disparo de cada
+subsistema. Esta abordagem é característica de sistemas embarcados de baixo
+custo, nos quais a ausência de um sistema operacional dedicado
+exige que o próprio programa controle a ordem e o momento de
+execução de cada tarefa \cite{sommerville2011engenharia}.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.80\textwidth]
+    {figures/cap4_fluxograma_f1_loop_principal.png}
+\caption{Fluxograma do \textit{loop} principal de orquestração do
+\textit{firmware}}
+\label{fig:fluxograma_loop}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+O primeiro temporizador controla a leitura do higrômetro. O
+intervalo entre leituras é adaptativo e determinado pelo nível de
+alerta vigente: 30 segundos no nível VERDE, 10 segundos no nível
+AMARELO e 5 segundos no nível VERMELHO. Quando o timer dispara,
+o firmware lê o valor ADC do pino A0, mapeia o resultado para o
+intervalo de 0\% a 100\% de umidade, atualiza o \textit{buffer}
+circular de dez posições utilizado no cálculo da taxa de variação
+e incrementa o contador total de leituras. A decisão de ruptura e
+o ciclo de análise de risco, acionados em seguida conforme as
+condições descritas nos Fluxogramas~\ref{fig:fluxograma_risco}
+e~\ref{fig:fluxograma_ruptura}, integram este mesmo bloco de
+leitura do sensor.
+
+O segundo temporizador controla a consulta à API BNDMET/DECEA.
+Em condições normais, o intervalo é adaptativo por nível de alerta:
+5 minutos no nível VERDE, 2 minutos no nível AMARELO e 1 minuto
+no nível VERMELHO. Quando a última consulta à API terminou em
+falha — indicado pelo campo \texttt{apiDisponivel = false} —, o
+intervalo é substituído por um valor fixo de 30 segundos,
+independentemente do nível de alerta. Esse mecanismo de
+\textit{retry} acelerado garante que os dados pluviométricos
+sejam recuperados o mais rapidamente possível após uma falha
+transitória de rede ou de indisponibilidade da API, sem
+sobrecarregar o servidor em condições de falha persistente.
+
+O terceiro temporizador controla as consultas à API OpenWeatherMap.
+Diferentemente do sensor e do BNDMET, o intervalo do OWM não varia
+com o nível de alerta: o \textit{endpoint} \texttt{/forecast} é
+consultado a cada 30 minutos fixos, e o \texttt{/weather} a cada
+10 minutos, ambos acionados pela mesma função
+\texttt{atualizarDadosMeteorologicos()}. Quando a API ainda não foi
+consultada com sucesso desde o \textit{boot} — identificado pelo
+campo \texttt{timestamp = 0} da estrutura \texttt{DadosMeteorologicos}
+—, o mesmo intervalo de \textit{retry} de 30 segundos é aplicado
+até que a primeira resposta válida seja obtida.
+
+O quarto temporizador executa a análise de risco integrado a cada
+10 segundos fixos. Antes de chamar \texttt{analisarRiscoIntegrado()},
+duas condições de bloqueio são verificadas: se uma simulação de nível
+está ativa (\texttt{simulacaoAtiva = true}), a análise é suspensa
+para preservar os valores injetados manualmente; e se a umidade do
+solo está acima de 30\%, a análise também é bloqueada, pois o
+estado de ruptura já está sendo gerenciado pelo protocolo descrito
+no Fluxograma~\ref{fig:fluxograma_ruptura}. Ambas as guardas evitam
+que o ciclo analítico sobrescreva estados críticos ou de teste
+indevidamente.
+
+O quinto temporizador controla o envio dos dados ao
+\textit{backend} local. O intervalo de envio é adaptativo por nível
+de alerta: 60 segundos no nível VERDE, 20 segundos no nível
+AMARELO e 10 segundos no nível VERMELHO. O envio só ocorre se a
+conexão Wi-Fi está estabelecida. Em caso de falha no envio com mais
+de cinco tentativas consecutivas acumuladas, o sistema chama
+\texttt{verificarConectividade()} para tentar a reconexão. Quando
+uma simulação de nível está ativa, cada envio bem-sucedido decrementa
+o contador \texttt{simulacaoEnviosRestantes}; ao atingir zero, a
+simulação é encerrada automaticamente — as \textit{flags}
+\texttt{simulacaoAtiva} e \texttt{modoManual} são desativadas, o
+\textit{buzzer} é silenciado e o \textit{firmware} retorna ao
+modo de operação automático.
+
+Após os cinco temporizadores, o \textit{loop} chama
+\texttt{ativarAlarmeBuzzer()} — função que gerencia o padrão
+intermitente do \textit{buzzer} quando \texttt{buzzerAtivo = true},
+variando a frequência e o intervalo de pulsação conforme o índice de
+risco. Por fim, o laço verifica se há bytes disponíveis na porta
+Serial e, se houver, lê e processa o comando recebido. Os comandos
+disponíveis permitem consultar o status do sistema, forçar análises
+manuais, executar calibração do sensor e acionar simulações de
+nível para fins de teste e demonstração.
+
+% -------------------------------------------------------------
+\subsubsubsection{Fluxograma do Cálculo do Índice de Confiabilidade}
+\label{subsubsec:fluxograma-confiabilidade}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_confiabilidade} apresenta o fluxograma
+do cálculo do índice de confiabilidade da análise, executado ao
+final de cada ciclo de \texttt{analisarRiscoIntegrado()} e também
+dentro de \texttt{acionarRuptura()}, garantindo que todo registro
+persistido no banco de dados carregue um percentual de confiabilidade
+auditável. O índice expressa o grau de completude e atualidade dos
+dados que alimentaram o cálculo de risco naquele ciclo específico,
+variando de 0\% a 100\%.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]
+    {figures/cap4_fluxograma_f4_confiabilidade.png}
+\caption{Fluxograma do cálculo do índice de confiabilidade da análise}
+\label{fig:fluxograma_confiabilidade}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+O fluxo se divide em dois caminhos desde o primeiro nó de decisão.
+Quando o campo \texttt{statusTexto} da estrutura \texttt{AnaliseRisco}
+contém o valor ``\textsc{ruptura}'', o sistema entra no caminho de
+estado especial: todos os descontos são zerados e a confiabilidade é
+fixada em 100\%, independentemente de qualquer falha de sensor ou
+API que possa estar presente naquele instante. A justificativa é que,
+no estado de ruptura, o sensor físico confirma diretamente a condição
+crítica por meio da leitura de umidade acima de 30\% — não há
+ambiguidade sobre o estado do sistema e a informação primária está
+disponível com máxima certeza. O campo \texttt{estado\_especial}
+é preenchido com ``\textsc{ruptura}'' no objeto
+\texttt{confiabilidade\_detalhes} serializado em \texttt{dadosBrutos},
+permitindo que o painel \textit{web} exiba a indicação correspondente
+ao operador.
+
+Quando o sistema não está em estado de ruptura, o cálculo segue o
+caminho normal por descontos cumulativos, partindo de uma base de
+100\% e subtraindo percentuais específicos para cada fonte de
+degradação identificada. As cinco avaliações são independentes entre
+si, com exceção de uma exclusividade mútua entre dois descontos
+relacionados ao BNDMET, descrita a seguir.
+
+O primeiro desconto avalia o sensor físico: se o valor ADC lido no
+pino A0 está fora do intervalo esperado — indicado pelo campo
+\texttt{sensorOK = false} —, aplica-se um desconto de 40 pontos.
+Trata-se do maior desconto individual do modelo, refletindo que a
+umidade do solo é o dado primário do sistema e sua ausência
+compromete o componente de maior peso da equação de risco.
+
+A segunda avaliação trata os dados pluviométricos da API
+BNDMET/DECEA com dois descontos mutuamente exclusivos. Se a API
+estava indisponível na última consulta (\texttt{apiDisponivel =
+false}), aplica-se um desconto de 25 pontos e o desconto de
+qualidade é zerado — não faz sentido avaliar a qualidade dos dados
+de uma API que não respondeu. Se a API respondeu mas a qualidade dos
+dados retornados é inferior a 80\%, aplica-se um desconto de 10
+pontos.
+
+O terceiro desconto avalia a disponibilidade da API OpenWeatherMap:
+quando o campo \texttt{timestamp} da estrutura
+\texttt{DadosMeteorologicos} é zero — indicando que a API nunca
+respondeu com sucesso desde o \textit{boot} ou que a última
+tentativa falhou —, aplica-se um desconto de 15 pontos, pois os
+componentes $V_{ch.fut}$ e $V_{press\~ao}$ não possuem dados reais
+para o ciclo.
+
+O quarto desconto avalia a conectividade Wi-Fi: quando a conexão
+está inativa, aplica-se um desconto de 10 pontos. É importante
+destacar que a desconexão Wi-Fi não impede o cálculo de risco — o
+\textit{firmware} continua operando com os últimos dados disponíveis
+em memória e acionando os indicadores físicos locais. O desconto
+reflete apenas que a transmissão dos dados ao \textit{backend} está
+comprometida, reduzindo a completude da análise do ponto de vista
+do sistema como um todo.
+
+O quinto e último desconto avalia o histórico do \textit{buffer}
+circular de umidade: quando o contador total de leituras desde o
+\textit{boot} é inferior a cinco (\texttt{totalLeiturasSensor < 5}),
+aplica-se um desconto de 10 pontos, indicando que o componente
+$V_{taxa}$ não dispõe de histórico suficiente para uma estimativa
+confiável da velocidade de saturação do solo.
+
+Ao final das cinco avaliações, os descontos são somados e
+subtraídos da base de 100, com o resultado limitado a zero por
+\texttt{max(0, 100 - totalDesconto)}, garantindo que o índice
+nunca assuma valores negativos mesmo em cenários de múltiplas
+falhas simultâneas. O resultado e o detalhamento individual de
+cada desconto são armazenados na estrutura
+\texttt{ConfiabilidadeDetalhes} e serializados no campo
+\texttt{dadosBrutos} do \textit{payload} JSON enviado ao
+\textit{backend}, onde são persistidos na coluna \texttt{dados\_brutos}
+do tipo \texttt{jsonb} na tabela \texttt{leituras\_sensor}, tornando
+cada decisão de confiabilidade auditável pelo painel \textit{web}.
+
+% -------------------------------------------------------------
+\subsubsection{Fluxograma de Recebimento e Persistência de Leitura}
+\label{subsubsec:fluxograma-backend-sensor}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_backend_sensor} apresenta o fluxograma
+do processo de recebimento, validação e persistência de leituras
+do sensor, executado pelo \textit{backend} Node.js a cada requisição
+\texttt{POST /api/sensor/dados} enviada pelo \textit{firmware} do
+ESP8266.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]
+    {figures/cap4_fluxograma_f5_backend_sensor.png}
+\caption{Fluxograma de recebimento e persistência de leitura no
+\textit{backend}}
+\label{fig:fluxograma_backend_sensor}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+A rota \texttt{POST /api/sensor/dados} é a única rota do sistema
+que não exige autenticação JWT — uma decisão deliberada de projeto,
+pois o ESP8266 opera em rede local e não possui mecanismo nativo
+de gestão de tokens com renovação periódica. A requisição chega ao
+método \texttt{SensorController.receberDados()}, que realiza uma
+validação inicial de estrutura: se o corpo da requisição estiver
+ausente ou não for um objeto, o \textit{backend} retorna
+imediatamente \texttt{HTTP 400} com mensagem de erro, sem invocar
+a camada de serviço. Passada a validação, o processamento é
+delegado ao método \texttt{SensorService.salvarDados()}.
+
+Antes de persistir os dados, o serviço executa três normalizações
+sobre campos críticos. O campo \texttt{sensorOk}, que indica se o
+sensor está operacional, é forçado para \texttt{false} explícito
+quando chega como \texttt{undefined} ou \texttt{null} — situação
+que ocorre quando o valor ADC lido pelo ESP8266 é 1024, indicando
+sensor desconectado, e o campo é omitido do \textit{payload}. O
+campo \texttt{amplificado} é avaliado por comparação estrita
+(\texttt{=== true}), evitando que valores \textit{truthy} não
+booleanos sejam gravados como \texttt{true} na coluna correspondente.
+O campo \texttt{modoManual} recebe tratamento diferenciado: quando
+enviado pelo \textit{firmware} em operação automática, carrega o
+valor \texttt{false}; durante a simulação de nível via Serial, o
+\textit{firmware} seta \texttt{modoManual = true} explicitamente
+antes do envio, e o campo chega ao \textit{backend} como booleano
+\texttt{true}; quando a requisição é enviada manualmente por
+ferramentas como Postman ou \textit{curl}, o campo é omitido e o
+serviço interpreta sua ausência como \texttt{true}, sinalizando ao
+banco que aquela leitura não foi gerada pelo ciclo automático.
+
+A persistência é realizada via Prisma ORM com o método
+\texttt{prisma.leiturasSensor.create()}, que insere um registro
+com aproximadamente 40 colunas na tabela \texttt{leituras\_sensor},
+gerenciada pelo TimescaleDB como hipertabela particionada por
+\texttt{timestamp}. O campo \texttt{dadosBrutos}, de tipo
+\texttt{jsonb} no PostgreSQL, recebe o objeto de diagnóstico do
+\textit{firmware} sem mapeamento de colunas — isso inclui os
+detalhes individuais de confiabilidade, o indicador de janela de
+\textit{cooldown} de ruptura e o sinalizador de inicialização do
+BNDMET, todos acessíveis por consultas ao campo \texttt{jsonb}
+diretamente no banco ou via API.
+
+Em caso de falha na persistência, o método lança uma exceção que
+é capturada pelo \texttt{try-catch} do controlador, que retorna
+\texttt{HTTP 500} ao ESP8266. Do lado do \textit{firmware}, a
+ausência de HTTP 201 na resposta incrementa o contador
+\texttt{tentativasEnvioAPI}, que pode acionar a verificação de
+conectividade após cinco falhas consecutivas.
+
+Após a persistência bem-sucedida, o serviço classifica o nível
+do log de operação com base em dois campos: \texttt{nivelAlerta}
+e \texttt{riscoIntegrado}. Registros com \texttt{riscoIntegrado}
+igual ou superior a 1,0 e \texttt{nivelAlerta = VERMELHO} são
+tratados como \textsc{critical} quando a ruptura está ativa, e
+como \textsc{warning} quando o sistema está na janela de
+desescalada (\texttt{aguardandoResetRuptura = true}), separando
+os dois estados na tabela de logs para facilitar a análise
+posterior. Registros com nível VERDE são classificados como
+\textsc{info}, e os demais como \textsc{warning} ou
+\textsc{critical} conforme os limiares da equação de risco.
+Adicionalmente, registros gerados antes da sincronização NTP
+--- identificados pelo campo \texttt{bndmet\_inicializado = false}
+dentro de \texttt{dadosBrutos} --- produzem um aviso no console
+do servidor, sinalizando que os dados pluviométricos daquele
+ciclo não refletem uma consulta real à API BNDMET.
+
+O log de operação é persistido na tabela \texttt{logs\_sistema}
+com o campo \texttt{dadosExtras} em \texttt{jsonb}, contendo o
+identificador da leitura associada, o fator de risco, o nível de
+alerta, o índice de confiabilidade, o indicador de amplificação
+e o status da API BNDMET naquele ciclo. Por fim, o controlador
+retorna \texttt{HTTP 201} ao ESP8266 com o corpo
+\texttt{\{"success": true\}}, encerrando o ciclo de envio do
+\textit{firmware}.
+
+% -------------------------------------------------------------
+\subsubsubsection{Fluxograma de Autenticação JWT e Validação de Sessão}
+\label{subsubsec:fluxograma-auth}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_auth} apresenta o fluxograma do
+mecanismo de autenticação do sistema, composto por três fluxos
+complementares: o login, que cria a sessão; a validação de token
+pelo \textit{middleware}, que protege as rotas autenticadas; e o
+\textit{logout}, que invalida a sessão no banco de dados.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]
+    {figures/cap4_fluxograma_f6_autenticacao_jwt.png}
+\caption{Fluxograma de autenticação JWT e validação de sessão}
+\label{fig:fluxograma_auth}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+O fluxo de login tem início com a validação dos campos de entrada
+pelo \textit{middleware} \texttt{express-validator}: se o corpo da
+requisição contiver campos ausentes ou com formato inválido, o
+\textit{backend} retorna \texttt{HTTP 400} antes de qualquer consulta
+ao banco. Passada essa validação, o serviço busca na tabela
+\texttt{usuarios\_admin} um registro cujo e-mail, normalizado para
+letras minúsculas, coincida com o fornecido e cujo campo
+\texttt{ativo} seja verdadeiro. A normalização para minúsculas
+evita falhas de autenticação por diferença de capitalização no
+e-mail. Se nenhum registro for encontrado, ou se o \textit{hash}
+bcrypt da senha fornecida não coincidir com o armazenado, o serviço
+lança uma exceção genérica com a mensagem ``Credenciais
+inválidas'' --- a mesma em ambos os casos, deliberadamente, para
+não revelar ao requisitante se o e-mail existe no sistema.
+
+Após a validação bem-sucedida das credenciais, o serviço gera um
+token JWT assinado com a chave \texttt{JWT\_SECRET} e validade
+configurada por \texttt{JWT\_EXPIRES\_IN}. O \textit{payload} do
+token contém o identificador UUID do usuário, seu e-mail e seu
+perfil (\texttt{admin} ou \texttt{super\_admin}). Em seguida, a
+sessão é persistida na tabela \texttt{sessoes\_usuario} com o
+token completo, o endereço IP, o agente de usuário e a data de
+expiração calculada a partir do valor de \texttt{JWT\_EXPIRES\_IN}
+--- suportando sufixos \texttt{h} (horas), \texttt{d} (dias) e
+\texttt{m} (minutos). Por fim, o campo \texttt{ultimoLogin} do
+administrador é atualizado e o token é retornado ao
+\textit{frontend} junto com os dados do usuário e a data de
+expiração da sessão.
+
+O fluxo de validação de token é executado pelo
+\textit{middleware} \texttt{verificarAutenticacao} a cada
+requisição a uma rota protegida. A primeira verificação é
+estrutural: o cabeçalho \texttt{Authorization} deve estar presente
+e iniciar com o prefixo \texttt{Bearer} seguido de espaço; caso
+contrário, a requisição é rejeitada imediatamente com
+\texttt{HTTP 401} sem consulta ao banco. Em seguida, o token é
+extraído e submetido a \texttt{jwt.verify()}, que valida a
+assinatura criptográfica e verifica se o token não está expirado
+por tempo --- esta verificação é inteiramente local, sem acesso ao
+banco. Somente após a validação criptográfica bem-sucedida o
+serviço consulta a tabela \texttt{sessoes\_usuario} com três
+condições simultâneas: o token deve corresponder exatamente ao
+registrado, o campo \texttt{ativo} da sessão deve ser verdadeiro
+e a data de expiração deve ser posterior ao instante atual. Esta
+dupla verificação --- criptográfica e no banco --- permite que
+sessões sejam invalidadas explicitamente por \textit{logout} ou
+por desativação do usuário, mesmo que o token JWT ainda não
+tenha expirado por tempo. Se a sessão for encontrada e o usuário
+estiver ativo, o objeto \texttt{req.user} é populado com os dados
+do administrador e o \textit{middleware} chama \texttt{next()},
+liberando a execução para o \textit{controller} correspondente.
+
+O fluxo de \textit{logout} é o mais simples dos três: o
+\textit{backend} extrai o token do cabeçalho de autorização ---
+sem retornar erro se o cabeçalho estiver ausente --- e executa
+\texttt{prisma.sessoesUsuario.updateMany()} para marcar
+\texttt{ativo = false} em todos os registros com aquele token.
+A deleção lógica preserva o histórico de sessões no banco para
+fins de auditoria e, na próxima requisição com o mesmo token,
+a consulta da etapa de validação não encontrará nenhuma sessão
+ativa, resultando em \texttt{HTTP 401} imediato.
+
+% -------------------------------------------------------------
+\subsubsubsection{Fluxograma de Detecção de Status do Sensor no
+\textit{Frontend}}
+\label{subsubsec:fluxograma-status-sensor}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_status_sensor} apresenta o fluxograma
+do mecanismo de detecção do status operacional do sistema na
+interface \textit{web}, distinguindo os três estados possíveis
+exibidos no cabeçalho da aplicação: \textbf{Online},
+\textbf{Degradado} e \textbf{Offline}. A distinção entre esses
+estados é relevante porque cada um é produzido por uma lógica
+diferente, com fontes de dados e critérios independentes.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]
+    {figures/cap4_fluxograma_f7_status_sensor.png}
+\caption{Fluxograma de detecção de status do sensor no
+\textit{frontend}}
+\label{fig:fluxograma_status_sensor}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+O componente \texttt{Header.js} executa um \textit{health check}
+a cada 30 segundos via \texttt{setInterval}, chamando
+\texttt{systemService.getHealth()} que acessa o \textit{endpoint}
+\texttt{GET /health} do \textit{backend}. Quando a requisição
+falha por erro de rede — tratado no bloco \texttt{catch} do
+\texttt{try-catch} —, o estado local é atualizado com
+\texttt{\{ status: 'unhealthy' \}}, o que resulta na exibição do
+\textit{label} ``Offline'' com ícone e cor vermelhos. Quando a
+requisição é bem-sucedida, o campo \texttt{status} da resposta
+alimenta a lógica de classificação visual: \texttt{'healthy'} ou
+\texttt{'online'} produzem o \textit{label} ``Online'' em verde;
+\texttt{'degraded'} produz ``Degradado'' em laranja; qualquer
+outro valor resulta em ``Offline'' em vermelho.
+
+A classificação do \textit{status} em si é responsabilidade do
+\textit{backend}. O método \texttt{SensorService.verificarConectividade()},
+chamado dentro do \textit{endpoint} de \textit{status}, consulta
+a leitura mais recente da tabela \texttt{leituras\_sensor} e
+calcula a diferença em minutos entre o instante atual e o
+\textit{timestamp} dessa leitura. Se a diferença for inferior
+a 10 minutos, o \textit{backend} retorna \texttt{status: 'online'};
+caso contrário, retorna \texttt{status: 'offline'}. Na ausência de
+qualquer leitura no banco, o retorno é igualmente
+\texttt{status: 'offline'} com \texttt{ultimaLeitura: null}.
+
+O estado ``Degradado'' segue uma lógica distinta e inteiramente
+local ao \textit{frontend}. Ele não depende de uma nova requisição
+ao \textit{backend} e não é produzido pelo \textit{endpoint} de
+\textit{status}: é calculado diretamente sobre os dados de leitura
+já carregados em memória pelo componente. Quando a diferença entre
+o instante atual e o \textit{timestamp} da última leitura conhecida
+supera 3 minutos — equivalente a 180.000 milissegundos —, o
+componente exibe ``Degradado'', sinalizando que o sensor está com
+atraso de transmissão mas o \textit{backend} permanece acessível.
+Essa separação é deliberada: o estado ``Offline'' indica que o
+\textit{backend} está inacessível ou sem dados recentes (critério
+de 10 minutos avaliado pelo servidor); o estado ``Degradado''
+indica que o \textit{backend} responde normalmente, mas a última
+leitura do sensor está atrasada além do esperado para o intervalo
+de transmissão do \textit{firmware} (critério de 3 minutos
+avaliado localmente pelo \textit{frontend}).
+
+Essa arquitetura de dois critérios independentes permite ao
+operador distinguir falhas de conectividade do ESP8266 com o
+\textit{backend} — que resultariam em ``Offline'' — de falhas
+de transmissão do próprio sensor para o servidor local — que
+resultariam em ``Degradado'' —, sem que uma condição mascare a
+outra.
+
+% -------------------------------------------------------------
+\subsubsubsection{Fluxograma do Modo de Simulação de Nível via
+Serial}
+\label{subsubsec:fluxograma-simulacao}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_simulacao} apresenta o fluxograma
+do modo de simulação de nível, ativado por comandos enviados
+pelo operador pela porta Serial do ESP8266. O mecanismo foi
+implementado para viabilizar a coleta de registros representativos
+dos três níveis de alerta durante a fase de testes do sistema,
+sem depender da ocorrência real das condições geotécnicas e
+meteorológicas que cada nível exige.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.85\textwidth]
+    {figures/cap4_fluxograma_f9_simulacao_nivel.png}
+\caption{Fluxograma do modo de simulação de nível via Serial}
+\label{fig:fluxograma_simulacao}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+O fluxo tem início com a leitura de um comando na porta Serial.
+Os três comandos de simulação disponíveis são \texttt{alerta verde},
+\texttt{alerta amarelo} e \texttt{alerta vermelho}; qualquer
+outro valor resulta na exibição de mensagem de erro e retorno
+ao \textit{loop} sem modificação de estado. Ao reconhecer um
+dos três comandos, o \textit{firmware} injeta imediatamente um
+conjunto de valores predefinidos nas estruturas
+\texttt{DadosLocais} e \texttt{AnaliseRisco}, substituindo os
+dados reais do sensor e do modelo de risco pelos valores
+representativos do nível solicitado.
+
+Os valores injetados foram definidos para representar cenários
+internamente consistentes de cada nível. Para o nível VERDE,
+a umidade do solo é fixada em 5,0\%, o fator de risco integrado
+em 0,300 e o \textit{status} em ``\textsc{seguro}'', sem
+amplificação. Para o nível AMARELO, a umidade é fixada em
+21,0\% — posicionando o $F_{len\c{c}ol}$ em 0,840, acima do
+limiar de amplificação de 0,70 —, o fator de risco em 0,600 e
+o \textit{status} em ``\textsc{atenção}'', com amplificação
+ativa. Para o nível VERMELHO, a umidade é fixada
+deliberadamente em 27,0\% — três pontos percentuais abaixo do
+limiar de ruptura de 30\% —, o fator de risco em 0,850 e o
+\textit{status} em ``\textsc{crítico}'', também com amplificação
+ativa. O valor de 27,0\% foi escolhido para garantir que o
+protocolo de ruptura por \textit{hardware} não seja
+inadvertidamente acionado durante a simulação, pois
+\texttt{acionarRuptura()} é chamado sempre que a leitura real
+do sensor supera 30\%, independentemente do estado de simulação.
+Os componentes $V_{ch.7d}$ e $V_{ch.30d}$ não são zerados —
+eles utilizam os dados reais do BNDMET já disponíveis em memória,
+preservando a coerência meteorológica do registro.
+
+Após a injeção dos valores, três \textit{flags} são ativadas
+simultaneamente: \texttt{modoManual = true}, que suspende a
+leitura do higrômetro pela função \texttt{atualizarDadosLocais()};
+\texttt{simulacaoAtiva = true}, que bloqueia o recálculo da
+análise de risco nos dois pontos de guarda do \textit{loop}
+(timer de leitura do sensor e timer de análise); e o contador
+\texttt{simulacaoEnviosRestantes = 3}, que define quantos
+envios bem-sucedidos ao \textit{backend} a simulação realizará
+antes de encerrar. Em seguida, o hardware é acionado
+imediatamente: o LED correspondente ao nível é ligado, os demais
+são desligados, e o \textit{buzzer} é ativado no nível VERMELHO
+ou silenciado nos demais com \texttt{noTone()}. Por fim, um
+primeiro envio à API é realizado de forma síncrona antes de
+retornar ao \textit{loop}, garantindo que pelo menos um registro
+seja persistido independentemente do estado do timer de envio.
+
+Durante os ciclos seguintes do \textit{loop}, o timer de envio
+continua disparando nos intervalos adaptativos do nível ativo —
+10 segundos para VERMELHO, 20 segundos para AMARELO e 60 segundos
+para VERDE. A cada envio bem-sucedido com \texttt{simulacaoAtiva
+= true}, o contador \texttt{simulacaoEnviosRestantes} é
+decrementado. Quando o contador atinge zero, a simulação é
+encerrada automaticamente: \texttt{simulacaoAtiva} e
+\texttt{modoManual} são desativados, \texttt{buzzerAtivo} é
+forçado para \texttt{false} e \texttt{noTone()} é chamado para
+garantir silêncio imediato mesmo que o nível simulado fosse
+VERMELHO. A mensagem ``\textit{Simulação encerrada — retornando
+ao modo automático}'' é exibida na porta Serial. A partir do
+próximo ciclo de leitura do sensor, os valores reais do
+higrômetro e o ciclo analítico normal são retomados.
+
+% -------------------------------------------------------------
+\subsubsubsection{Fluxograma de Envio de Alerta em Massa}
+\label{subsubsec:fluxograma-alerta-massa}
+% -------------------------------------------------------------
+
+A Figura~\ref{fig:fluxograma_alerta_massa} apresenta o fluxograma
+do processo de envio de alerta em massa, acionado pelo Administrador
+pela Central de Alertas do painel \textit{web} e processado
+integralmente pelo \textit{backend} via \textit{endpoint}
+\texttt{POST /auth/enviar-alerta}.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]
+    {figures/cap4_fluxograma_f10_alerta_massa.png}
+\caption{Fluxograma do processo de envio de alerta em massa}
+\label{fig:fluxograma_alerta_massa}
+\fonte{Elaborado pela autora.}
+\end{figure}
+
+O processo tem início com a seleção dos destinatários, determinada
+pelo campo \texttt{tipoDestinatario} da requisição. Quando o tipo
+é \texttt{basico}, o serviço consulta a tabela
+\texttt{usuarios\_basicos} com os filtros \texttt{ativo = true} e
+\texttt{receberNotificacoes = true}; quando é \texttt{admin},
+consulta \texttt{usuarios\_admin} com \texttt{ativo = true}; quando
+é \texttt{todos}, ambas as consultas são executadas em paralelo via
+\texttt{Promise.all()} e os resultados são concatenados. Em qualquer
+um dos três casos, se o campo \texttt{destinatariosIds} for fornecido
+com identificadores não vazios, a consulta é restrita a esses
+registros; caso contrário, todos os usuários que atendam aos filtros
+são incluídos. Se nenhum destinatário for encontrado para os critérios
+informados, o serviço lança uma exceção e retorna
+\texttt{HTTP 400} sem processar envios.
+
+Com a lista de destinatários definida, o fluxo avalia dois critérios
+independentes para determinar o método de envio. O primeiro critério
+é o canal: se \texttt{canaisEnvio} não contém \texttt{'email'} —
+cenário de SMS ou \textit{push} —, o serviço chama o método privado
+\texttt{simularEnvioAlertas()}, que itera sobre todos os destinatários
+e simula uma taxa de sucesso de 95\% por registro, retornando os
+totais e o detalhe individual de cada envio. O segundo critério, que
+se aplica apenas quando o canal é \texttt{email}, é a disponibilidade
+do \textit{transporter} SMTP: se as variáveis de ambiente
+\texttt{SMTP\_HOST}, \texttt{SMTP\_USER} e \texttt{SMTP\_PASS}
+não estiverem configuradas, o \texttt{EmailService} é inicializado
+sem \textit{transporter} e cada chamada a \texttt{enviarAlerta()}
+cai automaticamente no método privado \texttt{simularEnvio()}, que
+também aplica a taxa de 95\% de sucesso aleatório e registra o evento
+no console com o prefixo \texttt{[SIMULADO]}. Quando o SMTP está
+disponível, o método \texttt{enviarLote()} processa os destinatários
+em grupos de cinco, com pausa de dois segundos entre grupos para
+respeitar os limites do servidor de e-mail, e envia para cada
+destinatário uma mensagem com \textit{template} HTML colorizado
+conforme o nível de criticidade e \textit{fallback} em texto
+simples para clientes que não suportam HTML.
+
+Independentemente do método de envio utilizado — SMTP real ou
+simulação —, os resultados são acumulados na mesma estrutura
+\texttt{\{ sucessos, falhas, detalhes[] \}}, onde \texttt{detalhes}
+contém o resultado individual de cada destinatário com
+\textit{timestamp}, \textit{status} e mensagem de erro quando
+aplicável. Essa estrutura é então persistida na tabela
+\texttt{logs\_alertas} via Prisma ORM, com o campo
+\texttt{detalhesEnvio} armazenado como \texttt{jsonb} no
+PostgreSQL. O registro inclui o identificador do administrador que
+disparou o alerta, os totais de sucesso e falha, o nível de
+criticidade e o título e mensagem utilizados, constituindo uma
+trilha de auditoria completa de todas as notificações enviadas pelo
+sistema. O \textit{frontend} exibe o resultado da operação via
+\textit{toast} de confirmação e recarrega o modal de Log de Envios
+para refletir o novo registro.

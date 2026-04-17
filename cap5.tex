@@ -1014,11 +1014,6 @@ operacional gerada pelo dispositivo.
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-O \textit{header} da aplicação exibe o status ``Online'' enquanto o
-sistema recebe leituras dentro do intervalo esperado. Esse indicador
-é atualizado a cada 30 segundos pela consulta de saúde do \textit{backend},
-e as notificações de novos alertas são verificadas a cada 60 segundos.
-
 % -------------------------------------------------------------
 \subsection{Sistema em Nível AMARELO}
 \label{subsec:dashboard-amarelo}
@@ -1108,14 +1103,6 @@ atmosférica e velocidade do vento da última leitura disponível.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.95\textwidth]{figures/cap5_dashboard_grafico_inferior.png}
-    \caption{Parte inferior do \textit{dashboard}: painel de atividade recente e painel meteorológico.}
-    \label{fig:dashboard_grafico_inferior}
-    \fonte{Elaborado pela autora.}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
     \includegraphics[width=0.95\textwidth]{figures/cap5_dashboard_grafico.png}
     \caption{Gráfico histórico com quatro séries temporais das últimas
     24 horas: umidade do solo, precipitação acumulada, previsão de
@@ -1123,6 +1110,21 @@ atmosférica e velocidade do vento da última leitura disponível.
     \label{fig:dashboard_grafico}
     \fonte{Elaborado pela autora.}
 \end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/cap5_dashboard_grafico_inferior.png}
+    \caption{Parte inferior do \textit{dashboard}: painel de atividade recente e painel meteorológico.}
+    \label{fig:dashboard_grafico_inferior}
+    \fonte{Elaborado pela autora.}
+\end{figure}
+
+Em condições normais de operação, o \textit{header} exibe o status "Online" em verde, 
+confirmando que o dispositivo embarcado está enviando leituras dentro do intervalo 
+esperado, conforme ilustra a \autoref{fig:dashboard_verde}. Esse indicador
+é atualizado a cada 30 segundos pela consulta de saúde do \textit{backend},
+e as notificações de novos alertas são verificadas a cada 60 segundos.
+
 Quando o sensor para de enviar dados por mais de 3 minutos, o indicador
 no \textit{header} passa a exibir ``Degradado'' em laranja, conforme
 ilustra a \autoref{fig:dashboard_degradado}. Esse estado reflete um
@@ -1242,10 +1244,18 @@ dos sensores'' e mantém os dados zerados nos KPIs; na área de Gráfico de Daod
 \label{subsec:sensores-filtros}
 % -------------------------------------------------------------
 
-Três botões de período fixo --- ``Últimas 24h'', ``7 dias'' e ``30 dias''
---- permitem alternar o intervalo de análise com um clique. O botão
-ativo fica destacado em azul e a tabela é recarregada com os dados do
-novo período, com KPIs recalculados, conforme ilustra a \autoref{fig:sensores_periodo_fixo}. Para intervalos específicos, o
+A \autoref{fig:sensores_tabela_pt1} exibe o estado inicial
+da tela com o período padrão de 24 horas ativo e o botão
+``Últimas 24h'' destacado. Três botões de período fixo
+--- ``Últimas 24h'', ``7 dias'' e
+``30 dias'' --- permitem alternar o intervalo de análise
+com um clique. Ao selecionar um novo período, por exemplo em ``7 dias'', o botão anterior
+perde o destaque, o botão selecionado passa a ser exibido em
+azul e a tabela é recarregada com os dados do intervalo
+escolhido e os KPIs recalculados, conforme ilustra a
+\autoref{fig:sensores_periodo_fixo}.
+
+Para intervalos específicos, o
 filtro de período customizado aceita data e hora de início e de fim;
 ao clicar em ``Aplicar'', os dados do intervalo definido são carregados, conforme ilustra a \autoref{fig:sensores_periodo_data}.
 
@@ -1373,24 +1383,41 @@ os níveis ``Crítico'' e ``Ruptura'' são ilustrados como ilustram as \autoref{
 \subsection{Exportação de Leituras em CSV}
 \label{subsec:sensores-csv}
 % -------------------------------------------------------------
-
-O botão ``CSV'' gera um arquivo com BOM UTF-8 para
-compatibilidade com o Microsoft Excel, contendo todas as leituras do
-período selecionado com 41 colunas. O nome do arquivo inclui a data do
-dia da exportação. As \autoref{fig:sensores_csv_pt1},
-\autoref{fig:sensores_csv_pt2} e \autoref{fig:sensores_csv_pt3} exibem
-o arquivo aberto no Excel, com os cabeçalhos das colunas identificados.
-Quando o conjunto de dados filtrado está vazio, o botão de exportação é
-exibido desabilitado, conforme ilustra a
-\autoref{fig:sensores_csv_desabilitado}.
-
+Quando o período selecionado contém leituras, o botão
+\textbf{"CSV"} é exibido habilitado na interface, conforme
+ilustra a \autoref{fig:sensores_csv_habilitado}. Ao clicar, o
+sistema gera um arquivo com BOM UTF-8 para compatibilidade com
+o Microsoft Excel, contendo todas as leituras do período com
+41 colunas, e ao concluir, o \textit{toast} ``CSV exportado!'' confirma o 
+\textit{download} automaticamente no navegador, conforme ilustra a \autoref{fig:sensores_csv_toast}.
+O nome do arquivo inclui a data do dia da exportação.
+ 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.95\textwidth]{figures/cap5_sensores_csv_desabilitado.png}
-    \caption{Tela de Sensores com botão ``CSV'' desabilitado: nenhum registro disponível no conjunto filtrado atualmente visível na tabela.}
-    \label{fig:sensores_csv_desabilitado}
+    \includegraphics[width=0.85\textwidth]
+        {figures/cap5_sensores_csv_habilitado.png}
+    \caption{Tela de Sensores com botão \textbf{"CSV"} habilitado:
+    período selecionado contém leituras disponíveis para
+    exportação.}
+    \label{fig:sensores_csv_habilitado}
     \fonte{Elaborado pela autora.}
 \end{figure}
+ 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]
+        {figures/cap5_sensores_csv_toast.png}
+    \caption{Tela de Sensores após exportação em CSV:
+    \textit{download} iniciado e arquivo disponível no
+    navegador.}
+    \label{fig:sensores_csv_toast}
+    \fonte{Elaborado pela autora.}
+\end{figure}
+ 
+As \autoref{fig:sensores_csv_pt1},
+\autoref{fig:sensores_csv_pt2} e
+\autoref{fig:sensores_csv_pt3} exibem o arquivo aberto no
+Excel, com os cabeçalhos das colunas identificados.
 
 \begin{figure}[htbp]
     \centering
@@ -1422,6 +1449,17 @@ exibido desabilitado, conforme ilustra a
     \fonte{Elaborado pela autora.}
 \end{figure}
 
+Quando o conjunto de dados filtrado está vazio, o botão de exportação é
+exibido desabilitado, conforme ilustra a \autoref{fig:sensores_csv_desabilitado}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/cap5_sensores_csv_desabilitado.png}
+    \caption{Tela de Sensores com botão ``CSV'' desabilitado: nenhum registro disponível no conjunto filtrado atualmente visível na tabela.}
+    \label{fig:sensores_csv_desabilitado}
+    \fonte{Elaborado pela autora.}
+\end{figure}
+
 % =============================================================
 \section{Central de Alertas}
 \label{sec:alertas}
@@ -1434,15 +1472,17 @@ exibido desabilitado, conforme ilustra a
 
 A Central de Alertas reúne todos os ciclos de leitura classificados como
 AMARELO, VERMELHO ou RUPTURA. A \autoref{fig:alertas_lista} mostra a tela
-com os quatro KPIs de contagem por categoria no topo --- Total, Crítico,
-Atenção e Ruptura --- seguidos da lista
+com os cinco KPIs de contagem por categoria no topo --- Total, Crítico,
+Atenção, Ruptura e Alertas enviados (30 dias) --- seguidos da lista
 de alertas ordenada do mais recente para o mais antigo, com paginação
-a 10 registros por página.
+a 10 registros por página. Cada card exibe, em seu estado fechado, o \textit{timestamp},
+o nível de alerta representado por um \textit{badge} colorido,
+o índice de risco integrado e o botão \textbf{"Notificar"}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/cap5_alertas_lista.png}
-    \caption{Central de Alertas: KPIs de contagem por categoria e lista paginada de registros.}
+    \caption{Central de Alertas: KPIs de contagem por categoria e lista paginada de registros com card em estado fechado.}
     \label{fig:alertas_lista}
     \fonte{Elaborado pela autora.}
 \end{figure}
@@ -1477,7 +1517,7 @@ administrador, como demonstram as \autoref{fig:alertas_form_preenchido_notificar
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-Cada card de alerta é expansível e, além dos quatro blocos de detalhe
+Cada card de alerta é expansível ao clicar em ``Detalhes'' e, além dos quatro blocos de detalhe
 presentes na tela de Sensores, exibe um quinto bloco exclusivo ---
 ``Cálculo de Confiabilidade'' --- que apresenta os descontos individuais
 aplicados naquele ciclo, com desconto máximo possível, valor aplicado e
@@ -1485,9 +1525,10 @@ descrição da condição que motivou cada penalidade. A linha de rodapé do
 bloco mostra o resultado final: 100\% menos o total de descontos
 acumulados. Na situação especial de RUPTURA, o bloco exibe a mensagem
 ``100\% --- Estado Especial: RUPTURA'', informando que a confiabilidade
-é fixada pelo hardware e não sofre descontos. As
-\autoref{fig:alertas_expandido_pt1}, \autoref{fig:alertas_expandido_pt2}
-e \autoref{fig:alertas_expandido_pt3} exibem os alertas dos níveis Vermelho, Amarelo e Ruptura, respectivamente.
+é fixada pelo hardware e não sofre descontos. Os níveis Vermelho, Amarelo e Ruptura são exibidos
+conforme ilustram as \autoref{fig:alertas_expandido_pt1},
+\autoref{fig:alertas_expandido_pt2} e
+\autoref{fig:alertas_expandido_pt3}, respectivamente.
 
 \begin{figure}[htbp]
     \centering
@@ -1746,12 +1787,28 @@ vazio com a mensagem ``Nenhum alerta foi enviado ainda.''.}
 \label{subsec:relatorio-geracao}
 % -------------------------------------------------------------
 
-A tela de Relatórios carrega automaticamente, ao ser aberta, um relatório
-referente aos últimos sete dias. O administrador pode redefinir o período
-pelos campos de data de início e fim e clicar em ``Gerar Relatório'' para
-atualizar a análise. As \autoref{fig:relatorio_gerado_pt1} a
-\autoref{fig:relatorio_gerado_pt6} exibem a tela com o relatório gerado
-para um período customizado.
+Ao acessar a tela de Relatórios, o administrador visualiza os
+campos de seleção de período --- data de início e data de fim
+--- e o botão \textbf{"Gerar Relatório"}, enquanto o sistema
+carrega automaticamente o relatório dos últimos sete dias,
+conforme ilustra a \autoref{fig:relatorios_estado_inicial}. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]
+        {figures/cap5_relatorios_estado_inicial.png}
+    \caption{Tela de Relatórios ao ser aberta: campos de seleção
+    de período disponíveis e relatório padrão dos últimos sete
+    dias carregado automaticamente pelo sistema.}
+    \label{fig:relatorios_estado_inicial}
+    \fonte{Elaborado pela autora.}
+\end{figure}
+
+Para redefinir o intervalo de análise, o administrador informa
+as datas de início e fim e clica em \textbf{"Gerar Relatório"};
+o relatório atualizado é exibido nas seis seções colapsáveis,
+conforme ilustram as \autoref{fig:relatorio_gerado_pt1} a
+\autoref{fig:relatorio_gerado_pt6}.
 
 \begin{figure}[htbp]
     \centering
@@ -2019,10 +2076,26 @@ por página.
     \fonte{Elaborado pela autora.}
 \end{figure}
 
-Ao alternar para a aba ``Administradores'', a lista é recarregada e as 
-opções de exportação refletem o novo contexto. Filtros e termos
-de busca são limpos automaticamente na troca de aba. Quando a busca não
-encontra resultado, o sistema exibe o \textit{toast} ``Erro ao carregar usuários'', conforme ilustra a \autoref{fig:usuarios_filtro_sem_resultado}. 
+Ao clicar em
+\textbf{"Administradores"}, a lista é recarregada com os
+registros de administradores, os filtros anteriores são limpos
+e as opções de exportação refletem o novo contexto, conforme
+ilustra a \autoref{fig:usuarios_admins}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]
+        {figures/cap5_usuarios_admins.png}
+    \caption{Tela de Gestão de Usuários após alternância para a
+    aba \textbf{"Administradores"} (perfil \texttt{super\_admin}):
+    lista recarregada, filtros limpos e opções de exportação
+    atualizadas para o contexto de administradores.}
+    \label{fig:usuarios_aba_admins}
+    \fonte{Elaborado pela autora.}
+\end{figure}
+
+Quando a busca não encontra resultado, o sistema exibe o \textit{toast} ``Erro ao carregar usuários'', 
+conforme ilustra a \autoref{fig:usuarios_filtro_sem_resultado}. 
 O botão ``Limpar'' remove o filtro e recarrega a lista completa. Administradores sem perfil \textit{super\_admin}
 que acessam a aba de Administradores visualizam a tabela, mas os botões
 de editar e desativar ficam desabilitados, conforme ilustra a \autoref{fig:usuarios_admins_sem_permissao}.
@@ -2392,8 +2465,8 @@ A senha atual incorreta é detectada apenas no \textit{backend}, produzindo um \
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/cap5_alterar_senha_atual_incorreta.png}
     \caption{Modal de alteração de senha com \textit{toast} de erro por senha atual incorreta: \textit{backend} retorna HTTP 400 ``Senha atual incorreta''; formulário retorna para correção.}
+    \includegraphics[width=0.75\textwidth]{figures/cap5_alterar_senha_atual_incorreta.png}
     \label{fig:alterar_senha_atual_incorreta}
     \fonte{Elaborado pela autora.}
 \end{figure}

@@ -34,7 +34,16 @@
 %\usepackage[hyphenbreaks]{breakurl}
 % \usepackage[alf]{abntex2cite}
 % \usepackage[alf,abnt-etal-list=0,abnt-etal-cite=3]{abntex2cite} %et al qnd cita apenas
-\usepackage[alf,bibjustif,abnt-etal-cite=2]{abntex2cite} %et al na referência tbm e justificada
+\usepackage[
+    alf,                    % estilo alfabético    
+    bibjustif,              % justifica as referências
+    abnt-etal-cite=2,       % “et al.” a partir de 2 autores nas citações
+    abnt-etal-list=3,       % até 3 nomes nas entradas da bibliografia
+    abnt-full-initials=no,  % iniciais mínimas nos nomes
+    abnt-emphasize=italic,  % títulos de obras em itálico
+    abnt-repeated-author=no,% não repete sobrenome em entradas subsequentes
+    abnt-upper-cite=no      % DESATIVA caixa alta nas citações
+]{abntex2cite}
 \usepackage{hyperref}
 
 %\usepackage[hyphenbreaks]{breakurl}
